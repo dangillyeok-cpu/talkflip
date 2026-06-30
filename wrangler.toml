@@ -1,0 +1,6 @@
+name = "talkflip"
+compatibility_date = "2025-06-01"
+
+# Static site (no Worker script): serve the PWA folder as assets.
+[assets]
+directory = "./talkflip_pwa"
