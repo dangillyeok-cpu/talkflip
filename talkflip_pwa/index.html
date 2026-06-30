@@ -9,7 +9,8 @@
 <meta name="theme-color" content="#5b6bff" />
 <meta name="apple-mobile-web-app-title" content="TalkFlip" />
 <link rel="apple-touch-icon" href="icons/apple-touch-icon-180.png" />
-<title>TalkFlip (Web Test)</title>
+<title>TalkFlip</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5582757393756677" crossorigin="anonymous"></script>
 <style>
   :root {
     --brand1: #5b6bff;
@@ -356,7 +357,7 @@ const CARDS = CARDS_FILE.cards;
 const DECKS = DECKS_FILE.decks;
 
 /* ===== Install link shown on the share image (edit when the app store URL exists) ===== */
-const SHARE_URL = "talkflip.app";
+const SHARE_URL = "talkflip.wealthviewlounge.com";
 // Visible language options. Add "both" back to re-enable the KR·EN (bilingual) mode.
 const LANG_OPTIONS = ["ko", "en"];
 
@@ -364,7 +365,7 @@ const LANG_OPTIONS = ["ko", "en"];
    Leave ADSENSE_CLIENT empty to run fully ad-free. Set it to your approved
    AdSense publisher id (e.g. "ca-pub-1234567890123456") and deploy over HTTPS
    on a domain added to your AdSense account to activate ads. */
-const ADSENSE_CLIENT = "";            // "" = ads OFF
+const ADSENSE_CLIENT = "ca-pub-5582757393756677";   // verification + ad breaks
 const ADS_TEST = false;               // true = request test ads for your AdSense test setup
 const INTERSTITIAL_COOLDOWN_MS = 90000;
 
@@ -1364,12 +1365,7 @@ let _lastInterstitial = 0;
 function initAds(){
   if(!ADSENSE_CLIENT || ADSENSE_CLIENT.indexOf("ca-pub-") !== 0) return; // disabled / not configured
   try {
-    const s = document.createElement("script");
-    s.async = true; s.crossOrigin = "anonymous";
-    s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + ADSENSE_CLIENT;
-    if(ADS_TEST) s.setAttribute("data-adbreak-test", "on");
-    s.setAttribute("data-ad-frequency-hint", "60s");
-    document.head.appendChild(s);
+    // adsbygoogle.js is loaded via the static <head> snippet; just enable ad breaks.
     window.adsbygoogle = window.adsbygoogle || [];
     window.adsbygoogle.push({ preloadAdBreaks: "on" });
     _adsReady = true;
