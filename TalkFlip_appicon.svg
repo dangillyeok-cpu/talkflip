@@ -1,0 +1,39 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5b6bff"/>
+      <stop offset="0.55" stop-color="#b13bff"/>
+      <stop offset="1" stop-color="#ff3d8b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.28" cy="0.22" r="0.9">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bubble" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5b6bff"/>
+      <stop offset="1" stop-color="#ff3d8b"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="26" stdDeviation="34" flood-color="#1a0b2e" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+
+  <!-- Full-bleed background (iOS masks the corners) -->
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <rect width="1024" height="1024" fill="url(#glow)"/>
+
+  <!-- Back card (the "flip") -->
+  <g transform="rotate(9 512 512)">
+    <rect x="312" y="268" width="400" height="488" rx="52" fill="#ffffff" opacity="0.28"/>
+  </g>
+
+  <!-- Front card (the "talk") -->
+  <g transform="rotate(-8 512 512)" filter="url(#soft)">
+    <rect x="300" y="258" width="424" height="508" rx="56" fill="#ffffff"/>
+    <!-- Speech bubble -->
+    <path d="M372 360 h280 a44 44 0 0 1 44 44 v92 a44 44 0 0 1 -44 44 h-150 l-58 56 v-56 h-72 a44 44 0 0 1 -44 -44 v-92 a44 44 0 0 1 44 -44 z" fill="url(#bubble)"/>
+    <circle cx="446" cy="450" r="20" fill="#ffffff"/>
+    <circle cx="512" cy="450" r="20" fill="#ffffff"/>
+    <circle cx="578" cy="450" r="20" fill="#ffffff"/>
+  </g>
+</svg>

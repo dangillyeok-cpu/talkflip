@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<title>TalkFlip (Web Test)</title>
+<style>
+  :root {
+    --brand1: #5b6bff;
+    --brand2: #ff3d8b;
+    --pop: #ffb020;
+    --bg: #f3f2fb;
+    --bg2: #fbe9f3;
+    --surface: #ffffff;
+    --surface2: #f1f1f7;
+    --text: #16161d;
+    --muted: #8b8b97;
+    --line: rgba(20,20,40,0.07);
+    --ring: rgba(91,107,255,0.5);
+    --shadow: 0 10px 30px rgba(40,30,90,0.12);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d0c14;
+      --bg2: #1a0f1c;
+      --surface: #1a1922;
+      --surface2: #25232f;
+      --text: #f4f3fa;
+      --muted: #9a99a8;
+      --line: rgba(255,255,255,0.08);
+      --shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: #000;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Pretendard", "Malgun Gothic", Roboto, sans-serif;
+    color: var(--text);
+    display: flex; justify-content: center; min-height: 100vh;
+  }
+  #phone {
+    width: 100%; max-width: 440px; min-height: 100vh;
+    background:
+      radial-gradient(120% 60% at 100% 0%, var(--bg2), transparent 60%),
+      radial-gradient(120% 60% at 0% 100%, rgba(91,107,255,0.10), transparent 55%),
+      var(--bg);
+    position: relative; overflow: hidden; display: flex; flex-direction: column;
+  }
+  button { font-family: inherit; }
+  button:active { transform: scale(0.97); }
+  .btn, .btn-start, .icon-btn, .modecell, .deckrow { transition: transform .12s ease, box-shadow .15s ease, background .15s ease, border-color .15s ease; }
+
+  /* Top bar */
+  .topbar { display: flex; align-items: center; justify-content: space-between;
+    padding: calc(12px + env(safe-area-inset-top)) max(18px, env(safe-area-inset-right)) 6px max(18px, env(safe-area-inset-left));
+    flex: 0 0 auto; }
+  .brand { font-size: 22px; font-weight: 900; letter-spacing: -0.5px;
+    background: linear-gradient(100deg, var(--brand1), var(--brand2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .topbar-actions { display: flex; align-items: center; gap: 8px; }
+  .icon-btn { width: 40px; height: 40px; border-radius: 50%; border: none; background: var(--surface); box-shadow: var(--shadow);
+    font-size: 17px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--brand2); }
+
+  .scroll { flex: 1 1 auto; overflow-y: auto; -webkit-overflow-scrolling: touch;
+    padding: 2px max(16px, env(safe-area-inset-right)) calc(100px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left)); }
+
+  /* Hero */
+  .hero-tag { font-size: 22px; font-weight: 900; line-height: 1.12; letter-spacing: -0.6px; margin: 4px 2px 12px; }
+  .hero-tag .accent { background: linear-gradient(100deg, var(--brand1), var(--brand2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+  .herocard {
+    border-radius: 22px; padding: 18px; min-height: 132px; color: #fff;
+    background: linear-gradient(140deg, #5b6bff, #b13bff 55%, #ff3d8b);
+    position: relative; overflow: hidden;
+    box-shadow: 0 14px 30px rgba(120,40,200,0.32);
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .herocard .kicker { font-size: 11px; font-weight: 800; opacity: 0.82; display: flex; justify-content: space-between; align-items: center; letter-spacing: .3px; }
+  .herocard .kicker button { background: rgba(255,255,255,0.18); border: none; color: #fff; font-weight: 800; font-size: 11px; padding: 6px 11px; border-radius: 30px; cursor: pointer; }
+  .herocard .q { font-size: 20px; font-weight: 900; line-height: 1.25; white-space: pre-line; letter-spacing: -0.4px; }
+  .herocard .foot { display: none; }
+  .herocard .ghost { position: absolute; right: -4px; bottom: -10px; font-size: 56px; font-weight: 900; opacity: 0.13; transform: rotate(-8deg); }
+
+  /* Group labels */
+  .glabel { font-size: 13px; font-weight: 800; margin: 16px 4px 9px; display: flex; align-items: center; gap: 7px; }
+
+  /* Language mini toggle */
+  .lang-seg { display: inline-flex; background: var(--surface2); border-radius: 30px; padding: 3px; gap: 2px; }
+  .lang-seg button { border: none; background: none; padding: 7px 14px; border-radius: 30px; font-size: 13px; font-weight: 700; color: var(--muted); cursor: pointer; }
+  .lang-seg button.active { background: var(--surface); color: var(--text); box-shadow: var(--shadow); }
+
+  /* Players */
+  .players { display: flex; align-items: center; justify-content: space-between; background: var(--surface); border-radius: 20px; padding: 16px 18px; box-shadow: var(--shadow); }
+  .players .who { display: flex; align-items: center; gap: 10px; }
+  .players .who .em { font-size: 22px; }
+  .players .who .val { font-size: 19px; font-weight: 800; }
+  .players .pm { display: flex; gap: 8px; }
+  .players .pm button { width: 44px; height: 44px; border-radius: 50%; border: none; background: var(--surface2); color: var(--text); font-size: 24px; font-weight: 700; cursor: pointer; line-height: 1; }
+  .players .pm button:active { background: var(--brand1); color: #fff; }
+
+  /* Modes */
+  .modegrid { display: flex; gap: 10px; overflow-x: auto; padding: 2px 2px 4px; scroll-snap-type: x proximity; scrollbar-width: none; }
+  .modegrid::-webkit-scrollbar { display: none; }
+  .modecell { position: relative; flex: 0 0 124px; scroll-snap-align: start; text-align: left; border: 2px solid transparent; background: var(--surface); border-radius: 18px; padding: 13px; cursor: pointer; color: var(--text); box-shadow: var(--shadow); overflow: hidden; }
+  .modecell .m-ico { font-size: 24px; }
+  .modecell .m-title { font-size: 15px; font-weight: 800; margin-top: 6px; }
+  .modecell .m-sub { font-size: 10px; color: var(--muted); font-weight: 600; margin-top: 1px; }
+  .modecell .m-min { font-size: 11px; color: var(--muted); font-weight: 700; margin-top: 8px; }
+  .modecell.active { border-color: var(--brand1); background: linear-gradient(160deg, rgba(91,107,255,0.14), rgba(177,59,255,0.10)); }
+  .modecell.filmable .m-film { position: absolute; top: 10px; right: 10px; color: var(--brand2); background: rgba(255,61,139,0.15); padding: 3px; border-radius: 30px; display: flex; }
+  .modecell.filmable.active { border-color: var(--brand1); }
+  .filmnudge { text-align: center; font-size: 13px; font-weight: 800; color: var(--brand2); margin-top: 2px; }
+
+  /* Decks */
+  #deckList { display: flex; gap: 12px; overflow-x: auto; padding: 2px 2px 4px; scroll-snap-type: x proximity; scrollbar-width: none; }
+  #deckList::-webkit-scrollbar { display: none; }
+  .deckrow { flex: 0 0 158px; scroll-snap-align: start; display: flex; flex-direction: column; gap: 6px; border: 2px solid transparent; background: var(--surface); border-radius: 18px; padding: 13px; cursor: pointer; color: var(--text); box-shadow: var(--shadow); }
+  .deckrow.active { border-color: var(--brand1); }
+  .deckrow.disabled { opacity: 0.5; cursor: not-allowed; box-shadow: none; }
+  .deckrow .d-top { display: flex; align-items: center; justify-content: space-between; }
+  .deckrow .d-badge { width: 42px; height: 42px; border-radius: 13px; display: flex; align-items: center; justify-content: center; flex: 0 0 auto; }
+  .deckrow .name { font-size: 16px; font-weight: 800; }
+  .deckrow .desc { font-size: 11.5px; color: var(--muted); font-weight: 500; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .deckrow .d-status { font-size: 11px; font-weight: 800; text-align: right; }
+  .deckrow .d-status .cnt { color: var(--muted); }
+  .deckrow .d-status .vd { color: var(--brand2); display: block; margin-top: 1px; }
+
+  /* Sticky start */
+  .startbar { position: absolute; left: 0; right: 0; bottom: 0; padding: 14px 18px calc(16px + env(safe-area-inset-bottom));
+    background: linear-gradient(to top, var(--bg) 70%, transparent); }
+  .btn-start { width: 100%; border: none; border-radius: 18px; padding: 17px; color: #fff; cursor: pointer;
+    background: linear-gradient(100deg, var(--brand1), var(--brand2)); box-shadow: 0 12px 26px rgba(120,40,200,0.4);
+    font-size: 18px; font-weight: 900; letter-spacing: 0.2px;
+    display: flex; align-items: center; justify-content: center; gap: 6px; }
+  .btn-start .bs-main { font-size: 18px; font-weight: 900; letter-spacing: 0.2px; }
+  .btn-start:disabled { opacity: 0.45; box-shadow: none; }
+
+  /* Game */
+  .game { flex: 1; display: flex; flex-direction: column;
+    padding: calc(12px + env(safe-area-inset-top)) max(18px, env(safe-area-inset-right)) calc(22px + env(safe-area-inset-bottom)) max(18px, env(safe-area-inset-left));
+    gap: 16px; }
+  .gtop { display: flex; align-items: center; justify-content: space-between; }
+  .gtop .round-icon { width: 38px; height: 38px; border-radius: 50%; border: none; background: var(--surface); box-shadow: var(--shadow); font-size: 16px; cursor: pointer; color: var(--text); }
+  .gtop .progress { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 13px; font-weight: 800; }
+  .gamecard {
+    flex: 1; min-height: 360px; border-radius: 30px; padding: 26px; color: #fff;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; text-align: center;
+    box-shadow: 0 22px 44px rgba(0,0,0,0.28); position: relative; overflow: hidden;
+    transition: transform 0.16s ease; transform-style: preserve-3d;
+  }
+  .gamecard .modetag { position: absolute; top: 20px; left: 24px; font-size: 12px; font-weight: 900; letter-spacing: .6px; text-transform: uppercase; opacity: 0.85; }
+  .gamecard .timer { position: absolute; top: 18px; right: 24px; font-size: 19px; font-weight: 900; }
+  .gamecard .ghost { position: absolute; right: -4px; bottom: -6px; font-size: 40px; font-weight: 900; opacity: 0.12; transform: rotate(-8deg); }
+  .gamecard .qko { font-size: 30px; font-weight: 900; line-height: 1.26; letter-spacing: -0.5px; }
+  .gamecard .qen { font-size: 21px; font-weight: 700; line-height: 1.26; }
+  .gamecard.flip { transform: rotateY(90deg); }
+  .banned { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+  .banned .chip { background: rgba(255,255,255,0.22); padding: 8px 14px; border-radius: 30px; font-weight: 800; font-size: 14px; }
+  .banned-label { font-size: 12px; font-weight: 800; opacity: 0.85; }
+  .follow { border-top: 1px solid rgba(255,255,255,0.35); padding-top: 12px; font-weight: 800; font-size: 15px; }
+
+  .controls { display: flex; flex-direction: column; gap: 10px; }
+  .actionbar { display: flex; gap: 10px; justify-content: center; }
+  .actionbar button { flex: 1; }
+  .row { display: flex; gap: 12px; }
+  .row > button { flex: 1; }
+  .btn { border: none; border-radius: 16px; padding: 15px; font-size: 16px; font-weight: 800; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; }
+  .btn.bordered { background: var(--surface); color: var(--brand1); box-shadow: var(--shadow); }
+  .btn.prominent { background: linear-gradient(100deg, var(--brand1), var(--brand2)); color: #fff; box-shadow: 0 10px 22px rgba(120,40,200,0.35); }
+  .btn.ghost { background: transparent; color: var(--muted); box-shadow: none; }
+  .pill { flex: 1; text-align: center; border-radius: 30px; padding: 11px; font-size: 14px; font-weight: 800; }
+
+  .complete { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; text-align: center; padding: 20px; }
+  .complete .party { font-size: 60px; animation: pop .5s ease; }
+  @keyframes pop { 0%{ transform: scale(0.4); opacity: 0; } 70%{ transform: scale(1.15);} 100%{ transform: scale(1); opacity: 1; } }
+  .complete h2 { font-size: 32px; font-weight: 900; margin: 0; letter-spacing: -0.5px; }
+  .complete .sub { color: var(--muted); font-weight: 600; margin: 0; }
+  .complete .stack { display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 280px; margin-top: 8px; }
+
+  /* Modal */
+  .modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,0.55); display: flex; align-items: flex-end; justify-content: center; z-index: 50; backdrop-filter: blur(2px); animation: fade .2s ease; }
+  @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+  .modal { background: var(--bg); width: 100%; max-width: 440px; max-height: 88vh; border-radius: 26px 26px 0 0; overflow: hidden; display: flex; flex-direction: column; animation: slideup .26s cubic-bezier(.2,.8,.2,1); }
+  @keyframes slideup { from { transform: translateY(40px); } to { transform: translateY(0); } }
+  .modal .mhead { display: flex; align-items: center; justify-content: space-between; padding: 18px 18px 12px; }
+  .modal .mhead .t { font-weight: 900; font-size: 18px; }
+  .modal .mhead button { background: none; border: none; color: var(--brand1); font-weight: 800; font-size: 15px; cursor: pointer; }
+  .modal .mbody { overflow-y: auto; padding: 4px 18px calc(24px + env(safe-area-inset-bottom)); }
+  .favitem { background: var(--surface); border-radius: 18px; padding: 16px; margin-bottom: 12px; box-shadow: var(--shadow); }
+  .favitem .fko { font-weight: 800; font-size: 16px; }
+  .favitem .fen { color: var(--muted); font-size: 14px; margin-top: 3px; }
+  .favitem .frow { display: flex; gap: 8px; margin-top: 12px; align-items: center; }
+  .favitem .frow button { font-size: 13px; padding: 9px 14px; border-radius: 30px; border: none; cursor: pointer; font-weight: 800; }
+  .favitem .frow .share { background: var(--surface2); color: var(--brand1); }
+  .favitem .frow .rm { background: var(--surface2); color: #ff3b30; margin-left: auto; }
+  .empty { text-align: center; color: var(--muted); padding: 50px 30px; }
+  .empty .big { font-size: 52px; }
+  .insights { background: var(--surface); border-radius: 18px; padding: 6px 16px; margin-top: 8px; box-shadow: var(--shadow); }
+  .insights .ir { display: flex; justify-content: space-between; padding: 11px 0; border-bottom: 1px solid var(--line); }
+  .insights .ir:last-child { border-bottom: none; }
+  .insights .ir .v { font-weight: 900; font-variant-numeric: tabular-nums; }
+  #shareCanvasWrap { text-align: center; }
+  #shareCanvasWrap img { width: 100%; max-width: 300px; border-radius: 18px; box-shadow: 0 12px 28px rgba(0,0,0,0.35); }
+  #shareCanvasWrap .srow { display: flex; gap: 10px; margin-top: 16px; }
+  #shareCanvasWrap .srow button { flex: 1; }
+
+  /* Icons */
+  .ic { display: block; flex: 0 0 auto; }
+  .brand { display: flex; align-items: center; gap: 9px; }
+  .brand .mark { border-radius: 8px; flex: 0 0 auto; }
+  .glabel .ic { color: var(--muted); }
+  .modecell .m-ico { color: var(--brand1); height: 28px; display: flex; align-items: center; }
+  .modecell.filmable .m-ico { color: var(--brand2); }
+  .m-film { display: flex; align-items: center; }
+  .m-film .ic { width: 12px; height: 12px; }
+  .players .who .ic { color: var(--brand1); }
+  .deckrow .chev .ic { color: var(--muted); }
+  .complete .party { color: var(--brand2); display: flex; justify-content: center; }
+  .herocard .kicker button { display: inline-flex; align-items: center; gap: 6px; }
+  .gtop .round-icon { display: flex; align-items: center; justify-content: center; }
+  .players .pm button { display: flex; align-items: center; justify-content: center; }
+  .modecell .m-min { display: flex; align-items: center; gap: 5px; }
+  .favitem .frow button { display: inline-flex; align-items: center; gap: 6px; }
+
+  /* Players + Quick start (beside players) */
+  .players-row { display: flex; gap: 12px; align-items: stretch; }
+  .players-row .players { flex: 1; min-width: 0; }
+  .quick-btn { flex: 0 0 auto; min-width: 104px; border: none; border-radius: 20px; cursor: pointer; color: #fff;
+    background: linear-gradient(140deg, var(--brand1), var(--brand2)); box-shadow: 0 10px 22px rgba(120,40,200,0.35);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 10px 14px;
+    font-size: 13px; font-weight: 900; line-height: 1.1; }
+
+  /* Hints */
+  .hint { font-size: 12px; font-weight: 600; color: var(--muted); margin: -2px 4px 9px; }
+  .turnhint { text-align: center; font-size: 12.5px; font-weight: 700; color: var(--muted); }
+
+  /* Onboarding */
+  .onboard { flex: 1; display: flex; flex-direction: column;
+    padding: calc(20px + env(safe-area-inset-top)) max(22px, env(safe-area-inset-left)) calc(22px + env(safe-area-inset-bottom)) max(22px, env(safe-area-inset-right)); }
+  .ob-skip { align-self: flex-end; background: none; border: none; color: var(--muted); font-weight: 700; font-size: 14px; cursor: pointer; padding: 4px 2px; }
+  .ob-main { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 18px; }
+  .ob-art { display: flex; align-items: center; justify-content: center; }
+  .ob-art .mark { width: 76px; height: 76px; border-radius: 22px; }
+  .ob-circle { width: 104px; height: 104px; border-radius: 50%; display: flex; align-items: center; justify-content: center; gap: 8px; color: #fff;
+    background: linear-gradient(140deg, var(--brand1), var(--brand2)); box-shadow: 0 14px 30px rgba(120,40,200,0.32); }
+  .ob-title { font-size: 28px; font-weight: 900; letter-spacing: -0.6px; margin: 0; }
+  .ob-text { font-size: 16px; font-weight: 500; color: var(--muted); line-height: 1.5; margin: 0; max-width: 300px; }
+  .ob-foot { display: flex; flex-direction: column; gap: 16px; align-items: center; }
+  .ob-dots { display: flex; gap: 8px; }
+  .ob-dots span { width: 8px; height: 8px; border-radius: 50%; background: var(--line); }
+  .ob-dots span.on { background: var(--brand1); width: 22px; border-radius: 8px; }
+  .ob-foot .btn-start { width: 100%; }
+
+  /* Settings */
+  .set-label { font-size: 12px; font-weight: 800; color: var(--muted); margin: 4px 2px 8px; }
+  .lang-seg-wide { display: flex; width: 100%; margin-bottom: 16px; }
+  .lang-seg-wide button { flex: 1; }
+  .set-card { background: var(--surface); border-radius: 18px; padding: 16px; margin-bottom: 12px; box-shadow: var(--shadow); }
+  .set-row { display: flex; align-items: center; gap: 9px; font-size: 16px; }
+  .set-sub { font-size: 13px; color: var(--muted); margin-top: 7px; line-height: 1.5; font-weight: 500; }
+  .set-danger { width: 100%; color: #ff3b30; margin-top: 4px; }
+  .set-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 16px; justify-content: center; }
+  .set-links a { color: var(--muted); font-size: 13px; font-weight: 700; text-decoration: none; }
+  .set-links a:hover { color: var(--brand1); }
+
+  /* Splash */
+  .splash { position: absolute; inset: 0; z-index: 80; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px;
+    background: radial-gradient(120% 80% at 50% 32%, #6a4bff, #b13bff 55%, #ff3d8b); color: #fff;
+    opacity: 1; transition: opacity 0.4s ease; }
+  .splash.hide { opacity: 0; pointer-events: none; }
+  .splash .mark { width: 88px; height: 88px; border-radius: 26px; box-shadow: 0 18px 44px rgba(0,0,0,0.32); }
+  .splash .sp-name { font-size: 30px; font-weight: 900; letter-spacing: -0.5px; }
+
+  /* Accessibility */
+  :focus-visible { outline: 3px solid var(--ring); outline-offset: 2px; border-radius: 10px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+<div id="phone"></div>
+
+<script>
+/* ===== Injected data ===== */
+const CARDS_FILE = {"version":"0.1","cards":[{"id":"warm_up_answer_001","deck":"warm_up","cardType":"answer","modes":["classic_flip","hot_seat"],"en":"What tiny thing instantly improves your mood?","ko":"기분을 바로 좋아지게 만드는 작은 일은 뭐야?"},{"id":"warm_up_answer_002","deck":"warm_up","cardType":"answer","modes":["classic_flip","hot_seat"],"en":"What app do you open way too often?","ko":"너무 자주 열게 되는 앱은 뭐야?"},{"id":"warm_up_answer_003","deck":"warm_up","cardType":"answer","modes":["classic_flip","hot_seat"],"en":"What food could rescue a bad day?","ko":"힘든 날을 살려주는 음식은 뭐야?"},{"id":"warm_up_answer_004","deck":"warm_up","cardType":"answer","modes":["classic_flip","hot_seat"],"en":"What is a small win you had recently?","ko":"최근에 있었던 작지만 기분 좋은 승리는?"},{"id":"warm_up_answer_005","deck":"warm_up","cardType":"answer","modes":["classic_flip","hot_seat"],"en":"If today had a title, what would it be?","ko":"오늘 하루에 제목을 붙이면 뭐라고 할래?"},{"id":"warm_up_answer_006","deck":"warm_up","cardType":"answer","modes":["classic_flip","hot_seat"],"en":"What is one thing you never regret buying?","ko":"사고 나서 후회한 적 없는 물건은 뭐야?"},{"id":"warm_up_answer_007","deck":"warm_up","cardType":"answer","modes":["classic_flip","hot_seat"],"en":"What is your current comfort show or video?","ko":"요즘 편하게 틀어두는 영상이나 콘텐츠는?"},{"id":"warm_up_answer_008","deck":"warm_up","cardType":"answer","modes":["classic_flip","hot_seat"],"en":"What small routine makes your day feel better?","ko":"하루를 조금 낫게 만드는 작은 루틴은?"},{"id":"warm_up_answer_009","deck":"warm_up","cardType":"answer","modes":["classic_flip","hot_seat"],"en":"What is something you are surprisingly good at?","ko":"생각보다 내가 잘하는 건 뭐야?"},{"id":"warm_up_answer_010","deck":"warm_up","cardType":"answer","modes":["classic_flip","hot_seat"],"en":"What is your go-to snack lately?","ko":"요즘 자주 찾는 간식은 뭐야?"},{"id":"warm_up_answer_011","deck":"warm_up","cardType":"answer","modes":["classic_flip","hot_seat"],"en":"What is a song you can always listen to?","ko":"언제 들어도 좋은 노래는 뭐야?"},{"id":"warm_up_answer_012","deck":"warm_up","cardType":"answer","modes":["classic_flip","hot_seat"],"en":"What is your favorite time of day?","ko":"하루 중 가장 좋아하는 시간대는 언제야?"},{"id":"warm_up_answer_013","deck":"warm_up","cardType":"answer","modes":["classic_flip","hot_seat"],"en":"What is one thing you are looking forward to?","ko":"요즘 기대하고 있는 일 하나는 뭐야?"},{"id":"warm_up_answer_014","deck":"warm_up","cardType":"answer","modes":["classic_flip","hot_seat"],"en":"What is a place that makes you feel calm?","ko":"가면 마음이 편해지는 장소는 어디야?"},{"id":"warm_up_answer_015","deck":"warm_up","cardType":"answer","modes":["classic_flip","hot_seat"],"en":"What is something you liked as a kid and still like?","ko":"어릴 때도 좋아했고 지금도 좋아하는 건 뭐야?"},{"id":"warm_up_answer_016","deck":"warm_up","cardType":"answer","modes":["classic_flip","hot_seat"],"en":"What is your easiest way to recharge?","ko":"가장 쉽게 충전되는 방법은 뭐야?"},{"id":"warm_up_answer_017","deck":"warm_up","cardType":"answer","modes":["classic_flip","hot_seat"],"en":"What is a tiny habit you are glad you have?","ko":"내가 가진 작은 습관 중 마음에 드는 건?"},{"id":"warm_up_answer_018","deck":"warm_up","cardType":"answer","modes":["classic_flip","hot_seat"],"en":"What is something you always notice first?","ko":"어딜 가든 제일 먼저 보게 되는 건 뭐야?"},{"id":"warm_up_answer_019","deck":"warm_up","cardType":"answer","modes":["classic_flip","hot_seat"],"en":"What is a small thing that makes a room feel nice?","ko":"공간을 기분 좋게 만드는 작은 건 뭐야?"},{"id":"warm_up_answer_020","deck":"warm_up","cardType":"answer","modes":["classic_flip","hot_seat"],"en":"What is something you could talk about for ten minutes?","ko":"10분은 거뜬히 말할 수 있는 주제는 뭐야?"},{"id":"warm_up_answer_021","deck":"warm_up","cardType":"answer","modes":["classic_flip","hot_seat"],"en":"What is your favorite simple pleasure?","ko":"소소하지만 확실히 좋은 즐거움은 뭐야?"},{"id":"warm_up_answer_022","deck":"warm_up","cardType":"answer","modes":["classic_flip","hot_seat"],"en":"What is something that makes you feel at home?","ko":"집에 온 것처럼 편하게 느껴지는 건 뭐야?"},{"id":"warm_up_answer_023","deck":"warm_up","cardType":"answer","modes":["classic_flip","hot_seat"],"en":"What is a small thing you are picky about?","ko":"사소하지만 은근히 까다로운 부분은 뭐야?"},{"id":"warm_up_answer_024","deck":"warm_up","cardType":"answer","modes":["classic_flip","hot_seat"],"en":"What is one thing that made you smile this week?","ko":"이번 주에 웃게 만든 일 하나는 뭐야?"},{"id":"warm_up_choice_001","deck":"warm_up","cardType":"choice","modes":["this_or_that"],"en":"Unlimited snacks or unlimited sleep?","ko":"간식 무제한 vs 잠 무제한?"},{"id":"warm_up_choice_002","deck":"warm_up","cardType":"choice","modes":["this_or_that"],"en":"Always early or always lucky?","ko":"항상 일찍 도착하기 vs 항상 운 좋기?"},{"id":"warm_up_choice_003","deck":"warm_up","cardType":"choice","modes":["this_or_that"],"en":"Coffee at midnight or ramen at midnight?","ko":"밤 12시 커피 vs 밤 12시 라면?"},{"id":"warm_up_choice_004","deck":"warm_up","cardType":"choice","modes":["this_or_that"],"en":"Morning plans or late-night plans?","ko":"아침 약속 vs 밤 약속?"},{"id":"warm_up_choice_005","deck":"warm_up","cardType":"choice","modes":["this_or_that"],"en":"A cozy night in or a spontaneous night out?","ko":"집에서 편한 밤 vs 즉흥 외출?"},{"id":"warm_up_choice_006","deck":"warm_up","cardType":"choice","modes":["this_or_that"],"en":"Perfect weather or perfect food?","ko":"완벽한 날씨 vs 완벽한 음식?"},{"id":"warm_up_choice_007","deck":"warm_up","cardType":"choice","modes":["this_or_that"],"en":"One long vacation or many short breaks?","ko":"긴 휴가 한 번 vs 짧은 휴식 여러 번?"},{"id":"warm_up_choice_008","deck":"warm_up","cardType":"choice","modes":["this_or_that"],"en":"Text first or wait first?","ko":"먼저 연락하기 vs 기다리기?"},{"id":"warm_up_choice_009","deck":"warm_up","cardType":"choice","modes":["this_or_that"],"en":"A familiar favorite or something new?","ko":"익숙한 최애 vs 새로운 도전?"},{"id":"warm_up_choice_010","deck":"warm_up","cardType":"choice","modes":["this_or_that"],"en":"Clean desk or cozy mess?","ko":"깔끔한 책상 vs 편한 어질러짐?"},{"id":"warm_up_choice_011","deck":"warm_up","cardType":"choice","modes":["this_or_that"],"en":"Music on the way or silence on the way?","ko":"이동 중 음악 vs 이동 중 조용함?"},{"id":"warm_up_choice_012","deck":"warm_up","cardType":"choice","modes":["this_or_that"],"en":"Plan everything or see what happens?","ko":"전부 계획하기 vs 되는대로 가보기?"},{"id":"warm_up_story_001","deck":"warm_up","cardType":"story","modes":["classic_flip","hot_seat"],"en":"Tell a short story about a time you got unexpectedly lucky.","ko":"예상 못 하게 운 좋았던 적 있어? 언제야?"},{"id":"warm_up_story_002","deck":"warm_up","cardType":"story","modes":["classic_flip","hot_seat"],"en":"Tell a short story about a small moment that made your day.","ko":"최근에 하루를 살린 사소한 순간은?"},{"id":"warm_up_story_003","deck":"warm_up","cardType":"story","modes":["classic_flip","hot_seat"],"en":"Tell a short story about something you tried for the first time.","ko":"최근에 처음 해본 거 있어? 어땠어?"},{"id":"warm_up_story_004","deck":"warm_up","cardType":"story","modes":["classic_flip","hot_seat"],"en":"Tell a short story about a place you want to visit again.","ko":"다시 가보고 싶은 곳 있어? 왜 거기야?"},{"id":"funny_answer_001","deck":"funny","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"funny","en":"What is your most useless but impressive talent?","ko":"쓸모는 없지만 묘하게 자랑스러운 재능은?"},{"id":"funny_answer_002","deck":"funny","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"funny","en":"What is your strongest NPC behavior?","ko":"내가 봐도 가장 NPC 같은 행동은?"},{"id":"funny_answer_003","deck":"funny","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"funny","en":"What tiny problem makes you way too dramatic?","ko":"별일 아닌데 내가 너무 드라마틱해지는 순간은?"},{"id":"funny_answer_004","deck":"funny","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"funny","en":"If your brain had a loading tip, what would it say?","ko":"내 머릿속 로딩 화면에 팁이 뜬다면 뭐라고 나올까?"},{"id":"funny_answer_005","deck":"funny","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"funny","en":"What opinion would you defend for no good reason?","ko":"딱히 이유는 없지만 끝까지 주장하고 싶은 의견은?"},{"id":"funny_answer_006","deck":"funny","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"funny","en":"What is your most harmless red flag?","ko":"내 가장 무해한 레드 플래그는 뭐야?"},{"id":"funny_answer_007","deck":"funny","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"funny","en":"What gives you fake confidence for no reason?","ko":"이유 없이 자신감 생기게 하는 건 뭐야?"},{"id":"funny_answer_008","deck":"funny","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"funny","en":"What is something you pretend to hate but secretly enjoy?","ko":"싫어하는 척하지만 사실 은근 좋아하는 건?"},{"id":"funny_answer_009","deck":"funny","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"funny","en":"What is your personal brain-rot habit?","ko":"나만의 무의미한 콘텐츠 소비 습관은 뭐야?"},{"id":"funny_answer_010","deck":"funny","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"funny","en":"What is the most random thing you take seriously?","ko":"쓸데없는데 괜히 진지해지는 건 뭐야?"},{"id":"funny_answer_011","deck":"funny","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"funny","en":"What small inconvenience instantly changes your whole personality?","ko":"작은 불편인데 내 성격을 바로 바꾸는 건?"},{"id":"funny_answer_012","deck":"funny","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"funny","en":"What is a normal thing you are weirdly bad at?","ko":"남들은 평범하게 하는데 나는 이상하게 못하는 건?"},{"id":"funny_answer_013","deck":"funny","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"funny","en":"What is your most dramatic food opinion?","ko":"음식에 대해 가장 과하게 진심인 의견은?"},{"id":"funny_answer_014","deck":"funny","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"funny","en":"What is something you always overpack?","ko":"항상 괜히 많이 챙기게 되는 건 뭐야?"},{"id":"funny_answer_015","deck":"funny","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"funny","en":"What is your most unnecessary little ritual?","ko":"굳이 안 해도 되는데 꼭 하는 작은 의식은?"},{"id":"funny_answer_016","deck":"funny","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"funny","en":"What is a tiny thing that makes you feel rich?","ko":"별거 아닌데 괜히 부자 된 느낌이 드는 건?"},{"id":"funny_answer_017","deck":"funny","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"funny","en":"What is your most oddly specific fear?","ko":"이상하게 구체적인 내 걱정거리는 뭐야?"},{"id":"funny_answer_018","deck":"funny","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"funny","en":"What is something you are convinced you could win at?","ko":"왠지 내가 이길 수 있다고 확신하는 건 뭐야?"},{"id":"funny_choice_001","deck":"funny","cardType":"choice","modes":["this_or_that"],"tone":"funny","en":"Main character energy or peaceful background character?","ko":"주인공 모드 vs 평화로운 배경 인물?"},{"id":"funny_choice_002","deck":"funny","cardType":"choice","modes":["this_or_that"],"tone":"funny","en":"Perfect timing or perfect charm?","ko":"완벽한 타이밍 vs 완벽한 매력?"},{"id":"funny_choice_003","deck":"funny","cardType":"choice","modes":["this_or_that"],"tone":"funny","en":"Never lose your keys or never lose your charger?","ko":"열쇠 절대 안 잃어버리기 vs 충전기 절대 안 잃어버리기?"},{"id":"funny_choice_004","deck":"funny","cardType":"choice","modes":["this_or_that"],"tone":"funny","en":"Be funny in texts or funny in person?","ko":"문자로 웃기기 vs 실제로 웃기기?"},{"id":"funny_choice_005","deck":"funny","cardType":"choice","modes":["this_or_that"],"tone":"funny","en":"Always know the gossip or always avoid the drama?","ko":"소문 다 알기 vs 드라마 전부 피하기?"},{"id":"funny_choice_006","deck":"funny","cardType":"choice","modes":["this_or_that"],"tone":"funny","en":"Win every small argument or never get embarrassed?","ko":"사소한 말싸움 다 이기기 vs 절대 안 민망해지기?"},{"id":"funny_choice_007","deck":"funny","cardType":"choice","modes":["this_or_that"],"tone":"funny","en":"Be slightly late forever or slightly overdressed forever?","ko":"항상 살짝 늦기 vs 항상 살짝 과하게 차려입기?"},{"id":"funny_choice_008","deck":"funny","cardType":"choice","modes":["this_or_that"],"tone":"funny","en":"Have elite snack taste or elite meme taste?","ko":"간식 취향 천재 vs 밈 취향 천재?"},{"id":"funny_choice_009","deck":"funny","cardType":"choice","modes":["this_or_that"],"tone":"funny","en":"Accidentally send the wrong text or accidentally like an old post?","ko":"문자 잘못 보내기 vs 옛날 게시물 실수로 좋아요?"},{"id":"funny_choice_010","deck":"funny","cardType":"choice","modes":["this_or_that"],"tone":"funny","en":"Have too much confidence or too much curiosity?","ko":"자신감 과다 vs 호기심 과다?"},{"id":"funny_vote_001","deck":"funny","cardType":"vote","modes":["whos_most_likely"],"tone":"funny","en":"Who here is most likely to make a tiny problem dramatic?","ko":"작은 문제를 가장 드라마틱하게 만들 사람은?"},{"id":"funny_vote_002","deck":"funny","cardType":"vote","modes":["whos_most_likely"],"tone":"funny","en":"Who here gives the strongest 'I have a story' face?","ko":"지금 가장 '나 할 말 있어' 표정인 사람은?"},{"id":"funny_vote_003","deck":"funny","cardType":"vote","modes":["whos_most_likely"],"tone":"funny","en":"Who here would become obsessed with a random hobby overnight?","ko":"갑자기 이상한 취미에 진심 될 사람은?"},{"id":"funny_vote_004","deck":"funny","cardType":"vote","modes":["whos_most_likely"],"tone":"funny","en":"Who here would name the group chat something weird?","ko":"단톡방 이름을 제일 이상하게 지을 사람은?"},{"id":"funny_vote_005","deck":"funny","cardType":"vote","modes":["whos_most_likely"],"tone":"funny","en":"Who here would order one thing and regret not ordering another?","ko":"주문하고 나서 남의 메뉴를 부러워할 사람은?"},{"id":"funny_vote_006","deck":"funny","cardType":"vote","modes":["whos_most_likely"],"tone":"funny","en":"Who here would turn a simple plan into a full spreadsheet?","ko":"간단한 계획을 표로 만들 것 같은 사람은?"},{"id":"funny_vote_007","deck":"funny","cardType":"vote","modes":["whos_most_likely"],"tone":"funny","en":"Who here would laugh first in a serious moment?","ko":"진지한 순간에 제일 먼저 웃을 것 같은 사람은?"},{"id":"funny_vote_008","deck":"funny","cardType":"vote","modes":["whos_most_likely"],"tone":"funny","en":"Who here would accidentally start a group debate?","ko":"어쩌다 단체 토론을 시작할 것 같은 사람은?"},{"id":"funny_story_001","deck":"funny","cardType":"story","modes":["classic_flip","hot_seat"],"tone":"funny","en":"Tell a short story about a time you were confidently wrong.","ko":"완전 자신 있게 틀렸던 적 있지? 풀어봐."},{"id":"funny_story_002","deck":"funny","cardType":"story","modes":["classic_flip","hot_seat"],"tone":"funny","en":"Tell a short story about a tiny mistake that got funnier later.","ko":"그땐 실수였는데 지금 생각하면 웃긴 일 있어?"},{"id":"funny_story_003","deck":"funny","cardType":"story","modes":["classic_flip","hot_seat"],"tone":"funny","en":"Tell a short story about a time you tried to act normal.","ko":"속으론 당황했는데 아무렇지 않은 척한 적 있어?"},{"id":"funny_story_004","deck":"funny","cardType":"story","modes":["classic_flip","hot_seat"],"tone":"funny","en":"Tell a short story about something that was not that deep, but felt huge.","ko":"별것 아닌데 그때는 엄청 크게 느껴졌던 일 있어?"},{"id":"party_answer_001","deck":"party","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"party","en":"What is your role in a group hangout?","ko":"모임에서 나는 보통 어떤 역할이야?"},{"id":"party_answer_002","deck":"party","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"party","en":"What is one thing that makes a group instantly more fun?","ko":"모임을 바로 더 재밌게 만드는 건 뭐야?"},{"id":"party_answer_003","deck":"party","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"party","en":"What is your go-to move when the room gets quiet?","ko":"분위기가 조용해질 때 내가 하는 행동은?"},{"id":"party_answer_004","deck":"party","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"party","en":"What snack would you bring to this group?","ko":"이 모임에 간식을 가져온다면 뭘 가져올래?"},{"id":"party_answer_005","deck":"party","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"party","en":"What group activity sounds more fun than it should?","ko":"생각보다 재밌을 것 같은 단체 활동은 뭐야?"},{"id":"party_answer_006","deck":"party","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"party","en":"What is a simple rule that would make tonight funnier?","ko":"오늘을 더 웃기게 만들 간단한 규칙은 뭐야?"},{"id":"party_answer_007","deck":"party","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"party","en":"What would be the perfect group chat name for this room?","ko":"이 멤버들 단톡방 이름을 짓는다면?"},{"id":"party_answer_008","deck":"party","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"party","en":"What is one thing this group would make unnecessarily funny?","ko":"이 멤버들이 괜히 웃기게 만들 것 같은 일은?"},{"id":"party_choice_001","deck":"party","cardType":"choice","modes":["this_or_that"],"tone":"party","en":"Group chat legend or real-life legend?","ko":"단톡방 레전드 vs 현실 레전드?"},{"id":"party_choice_002","deck":"party","cardType":"choice","modes":["this_or_that"],"tone":"party","en":"Host the party or leave early?","ko":"파티 주최하기 vs 일찍 빠지기?"},{"id":"party_choice_003","deck":"party","cardType":"choice","modes":["this_or_that"],"tone":"party","en":"Karaoke night or game night?","ko":"노래방 밤 vs 게임 밤?"},{"id":"party_choice_004","deck":"party","cardType":"choice","modes":["this_or_that"],"tone":"party","en":"One huge table or many small groups?","ko":"큰 테이블 하나 vs 작은 그룹 여러 개?"},{"id":"party_choice_005","deck":"party","cardType":"choice","modes":["this_or_that"],"tone":"party","en":"Start the dance floor or start the deep talk?","ko":"춤판 열기 vs 깊은 얘기 시작하기?"},{"id":"party_choice_006","deck":"party","cardType":"choice","modes":["this_or_that"],"tone":"party","en":"Plan the night or follow the chaos?","ko":"계획대로 vs 흘러가는 대로?"},{"id":"party_choice_007","deck":"party","cardType":"choice","modes":["this_or_that"],"tone":"party","en":"Take the group photo or avoid the group photo?","ko":"단체 사진 찍기 vs 단체 사진 피하기?"},{"id":"party_choice_008","deck":"party","cardType":"choice","modes":["this_or_that"],"tone":"party","en":"Make new friends or stick with your people?","ko":"새 친구 만들기 vs 익숙한 사람들과 있기?"},{"id":"party_choice_009","deck":"party","cardType":"choice","modes":["this_or_that"],"tone":"party","en":"Bring the snacks or bring the playlist?","ko":"간식 담당 vs 플레이리스트 담당?"},{"id":"party_choice_010","deck":"party","cardType":"choice","modes":["this_or_that"],"tone":"party","en":"Stay until the end or leave at the perfect time?","ko":"끝까지 있기 vs 완벽한 타이밍에 빠지기?"},{"id":"party_vote_001","deck":"party","cardType":"vote","modes":["whos_most_likely"],"tone":"party","en":"Who here would ghost the group chat for a week?","ko":"여기서 단톡방 일주일 잠수 탈 사람은?"},{"id":"party_vote_002","deck":"party","cardType":"vote","modes":["whos_most_likely"],"tone":"party","en":"Who here would survive best without their phone?","ko":"여기서 폰 없이 가장 잘 버틸 사람은?"},{"id":"party_vote_003","deck":"party","cardType":"vote","modes":["whos_most_likely"],"tone":"party","en":"Who here would accidentally become the group leader?","ko":"어쩌다 보니 리더가 될 것 같은 사람은?"},{"id":"party_vote_004","deck":"party","cardType":"vote","modes":["whos_most_likely"],"tone":"party","en":"Who here would plan a trip and ignore the plan?","ko":"여행 계획을 짜놓고 안 지킬 것 같은 사람은?"},{"id":"party_vote_005","deck":"party","cardType":"vote","modes":["whos_most_likely"],"tone":"party","en":"Who here would give the best advice at 2 a.m.?","ko":"새벽 2시에 제일 좋은 조언을 해줄 사람은?"},{"id":"party_vote_006","deck":"party","cardType":"vote","modes":["whos_most_likely"],"tone":"party","en":"Who here has the most chaotic good energy?","ko":"여기서 가장 선한데 정신없는 에너지를 가진 사람은?"},{"id":"party_vote_007","deck":"party","cardType":"vote","modes":["whos_most_likely"],"tone":"party","en":"Who here would be in charge of the playlist?","ko":"플레이리스트 담당이 될 것 같은 사람은?"},{"id":"party_vote_008","deck":"party","cardType":"vote","modes":["whos_most_likely"],"tone":"party","en":"Who here would start talking to strangers first?","ko":"처음 보는 사람에게 먼저 말 걸 것 같은 사람은?"},{"id":"party_vote_009","deck":"party","cardType":"vote","modes":["whos_most_likely"],"tone":"party","en":"Who here would remember everyone's drink order?","ko":"모두의 주문을 기억할 것 같은 사람은?"},{"id":"party_vote_010","deck":"party","cardType":"vote","modes":["whos_most_likely"],"tone":"party","en":"Who here would be the first to suggest another place?","ko":"2차 가자고 제일 먼저 말할 것 같은 사람은?"},{"id":"party_vote_011","deck":"party","cardType":"vote","modes":["whos_most_likely"],"tone":"party","en":"Who here would make a stranger feel included?","ko":"처음 온 사람을 가장 편하게 해줄 사람은?"},{"id":"party_vote_012","deck":"party","cardType":"vote","modes":["whos_most_likely"],"tone":"party","en":"Who here would turn a small moment into a running joke?","ko":"작은 순간을 계속 웃긴 밈으로 만들 사람은?"},{"id":"party_vote_013","deck":"party","cardType":"vote","modes":["whos_most_likely"],"tone":"party","en":"Who here would be most prepared for a surprise plan?","ko":"갑작스러운 계획에도 가장 준비돼 있을 사람은?"},{"id":"party_vote_014","deck":"party","cardType":"vote","modes":["whos_most_likely"],"tone":"party","en":"Who here would keep the group from getting lost?","ko":"길 잃지 않게 제일 잘 챙길 사람은?"},{"id":"party_vote_015","deck":"party","cardType":"vote","modes":["whos_most_likely"],"tone":"party","en":"Who here would find the best place to sit?","ko":"제일 좋은 자리를 찾아낼 사람은?"},{"id":"party_vote_016","deck":"party","cardType":"vote","modes":["whos_most_likely"],"tone":"party","en":"Who here would make the best toast?","ko":"가장 좋은 건배사를 할 것 같은 사람은?"},{"id":"party_vote_017","deck":"party","cardType":"vote","modes":["whos_most_likely"],"tone":"party","en":"Who here would notice when someone needs a break?","ko":"누군가 쉬고 싶어 할 때 제일 먼저 알아챌 사람은?"},{"id":"party_vote_018","deck":"party","cardType":"vote","modes":["whos_most_likely"],"tone":"party","en":"Who here would make the recap sound funnier than the night?","ko":"후기를 실제보다 더 웃기게 말할 사람은?"},{"id":"party_story_001","deck":"party","cardType":"story","modes":["classic_flip","hot_seat"],"tone":"party","en":"Tell a short story about a group plan that changed at the last second.","ko":"막판에 확 바뀐 약속 있었지? 그때 얘기해봐."},{"id":"party_story_002","deck":"party","cardType":"story","modes":["classic_flip","hot_seat"],"tone":"party","en":"Tell a short story about a night that turned out better than expected.","ko":"기대 안 했는데 의외로 좋았던 밤 있어?"},{"id":"party_story_003","deck":"party","cardType":"story","modes":["classic_flip","hot_seat"],"tone":"party","en":"Tell a short story about a group photo moment.","ko":"단체 사진 찍다 생긴 웃긴 일 있어?"},{"id":"party_story_004","deck":"party","cardType":"story","modes":["classic_flip","hot_seat"],"tone":"party","en":"Tell a short story about a hangout that became a tradition.","ko":"어쩌다 보니 전통이 된 모임 있어?"},{"id":"deep_answer_001","deck":"deep","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"deep","en":"What kind of person makes you feel calm?","ko":"어떤 사람과 있을 때 마음이 차분해져?","follow":{"ko":"왜 그렇게 느끼는지 한 문장만 더.","en":"Add one sentence on why."}},{"id":"deep_answer_002","deck":"deep","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"deep","en":"What is something you understand better now than before?","ko":"예전보다 지금 더 잘 이해하게 된 건 뭐야?","follow":{"ko":"비슷한 사람 있으면 끄덕여줘.","en":"Nod if you're the same."}},{"id":"deep_answer_003","deck":"deep","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"deep","en":"What is a small boundary that matters to you?","ko":"나에게 중요한 작은 선은 뭐야?","follow":{"ko":"왜 그렇게 느끼는지 한 문장만 더.","en":"Add one sentence on why."}},{"id":"deep_answer_004","deck":"deep","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"deep","en":"What is something you want to get better at slowly?","ko":"천천히 더 잘하고 싶은 건 뭐야?","follow":{"ko":"비슷한 사람 있으면 끄덕여줘.","en":"Nod if you're the same."}},{"id":"deep_answer_005","deck":"deep","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"deep","en":"What kind of day feels truly restful to you?","ko":"나에게 진짜 쉬는 날은 어떤 하루야?","follow":{"ko":"왜 그렇게 느끼는지 한 문장만 더.","en":"Add one sentence on why."}},{"id":"deep_answer_006","deck":"deep","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"deep","en":"What is something you no longer rush?","ko":"이제는 서두르지 않게 된 건 뭐야?","follow":{"ko":"비슷한 사람 있으면 끄덕여줘.","en":"Nod if you're the same."}},{"id":"deep_answer_007","deck":"deep","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"deep","en":"What makes you feel quietly supported?","ko":"조용히 지지받는다고 느끼게 하는 건?","follow":{"ko":"왜 그렇게 느끼는지 한 문장만 더.","en":"Add one sentence on why."}},{"id":"deep_answer_008","deck":"deep","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"deep","en":"What is a value you want to keep in your daily life?","ko":"일상에서 지키고 싶은 가치는 뭐야?","follow":{"ko":"비슷한 사람 있으면 끄덕여줘.","en":"Nod if you're the same."}},{"id":"deep_answer_009","deck":"deep","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"deep","en":"What is something simple that makes you feel grounded?","ko":"나를 안정되게 해주는 단순한 건 뭐야?","follow":{"ko":"왜 그렇게 느끼는지 한 문장만 더.","en":"Add one sentence on why."}},{"id":"deep_answer_010","deck":"deep","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"deep","en":"What is a lesson you learned in a gentle way?","ko":"부드럽게 배운 인생의 작은 교훈은 뭐야?","follow":{"ko":"비슷한 사람 있으면 끄덕여줘.","en":"Nod if you're the same."}},{"id":"deep_choice_001","deck":"deep","cardType":"choice","modes":["this_or_that"],"tone":"deep","en":"Know the truth or keep the peace?","ko":"불편한 진실 vs 그냥 평화?","follow":{"ko":"소수파가 먼저 이유를 말해줘.","en":"The minority side explains first."}},{"id":"deep_choice_002","deck":"deep","cardType":"choice","modes":["this_or_that"],"tone":"deep","en":"More courage or more patience?","ko":"더 용감해지기 vs 더 잘 참기?","follow":{"ko":"소수파가 먼저 이유를 말해줘.","en":"The minority side explains first."}},{"id":"deep_choice_003","deck":"deep","cardType":"choice","modes":["this_or_that"],"tone":"deep","en":"A fresh start or a clear answer?","ko":"새로운 시작 vs 명확한 답?","follow":{"ko":"소수파가 먼저 이유를 말해줘.","en":"The minority side explains first."}},{"id":"deep_choice_004","deck":"deep","cardType":"choice","modes":["this_or_that"],"tone":"deep","en":"Be understood or be accepted?","ko":"이해받기 vs 받아들여지기?","follow":{"ko":"소수파가 먼저 이유를 말해줘.","en":"The minority side explains first."}},{"id":"deep_story_001","deck":"deep","cardType":"story","modes":["classic_flip","hot_seat"],"tone":"deep","en":"Tell a short story about a moment that changed your perspective.","ko":"생각이 확 바뀐 순간 있었어? 언제야?","follow":{"ko":"들은 사람 중 한 명이 비슷한 경험 이어가기.","en":"Someone who listened shares a similar moment."}},{"id":"deep_story_002","deck":"deep","cardType":"story","modes":["classic_flip","hot_seat"],"tone":"deep","en":"Tell a short story about a kindness you still remember.","ko":"아직도 기억나는 친절, 하나 있어?","follow":{"ko":"그 이야기에 제목을 붙여준다면?","en":"Give that story a title."}},{"id":"deep_story_003","deck":"deep","cardType":"story","modes":["classic_flip","hot_seat"],"tone":"deep","en":"Tell a short story about a time you surprised yourself.","ko":"스스로한테 놀란 적 있어? 언제?","follow":{"ko":"들은 사람 중 한 명이 비슷한 경험 이어가기.","en":"Someone who listened shares a similar moment."}},{"id":"deep_story_004","deck":"deep","cardType":"story","modes":["classic_flip","hot_seat"],"tone":"deep","en":"Tell a short story about something you used to see differently.","ko":"예전엔 다르게 봤는데 지금은 달라진 거 있어?","follow":{"ko":"그 이야기에 제목을 붙여준다면?","en":"Give that story a title."}},{"id":"deep_story_005","deck":"deep","cardType":"story","modes":["classic_flip","hot_seat"],"tone":"deep","en":"Tell a short story about a time you chose rest.","ko":"그냥 쉬기로 했던 순간 있어? 어땠어?","follow":{"ko":"들은 사람 중 한 명이 비슷한 경험 이어가기.","en":"Someone who listened shares a similar moment."}},{"id":"deep_story_006","deck":"deep","cardType":"story","modes":["classic_flip","hot_seat"],"tone":"deep","en":"Tell a short story about a small promise you kept.","ko":"지키겠다고 한 작은 약속, 끝까지 지킨 거 있어?","follow":{"ko":"그 이야기에 제목을 붙여준다면?","en":"Give that story a title."}},{"id":"deep_story_007","deck":"deep","cardType":"story","modes":["classic_flip","hot_seat"],"tone":"deep","en":"Tell a short story about a place that helped you think.","ko":"생각 정리할 때 가는 곳 있어? 어디야?","follow":{"ko":"들은 사람 중 한 명이 비슷한 경험 이어가기.","en":"Someone who listened shares a similar moment."}},{"id":"deep_story_008","deck":"deep","cardType":"story","modes":["classic_flip","hot_seat"],"tone":"deep","en":"Tell a short story about a conversation you appreciated.","ko":"고마웠던 대화 하나, 기억나는 거 있어?","follow":{"ko":"그 이야기에 제목을 붙여준다면?","en":"Give that story a title."}},{"id":"deep_deep_light_001","deck":"deep","cardType":"deep_light","modes":["classic_flip","hot_seat"],"tone":"deep","en":"When do you feel most like yourself?","ko":"언제 가장 나답다고 느껴?","follow":{"ko":"답한 사람에게 딱 하나만 더 물어봐.","en":"Ask the answerer one more question — just one."}},{"id":"deep_deep_light_002","deck":"deep","cardType":"deep_light","modes":["classic_flip","hot_seat"],"tone":"deep","en":"What kind of person makes you feel safe?","ko":"어떤 사람과 있을 때 마음이 편해져?","follow":{"ko":"가장 공감된 사람, 손 들어볼까?","en":"Who related the most? Raise a hand."}},{"id":"deep_deep_light_003","deck":"deep","cardType":"deep_light","modes":["classic_flip","hot_seat"],"tone":"deep","en":"What is something you care less about now?","ko":"예전보다 덜 신경 쓰게 된 건 뭐야?","follow":{"ko":"그 답 듣고 떠오른 사람 있으면 말해줘.","en":"Did the answer remind you of anyone? Say so."}},{"id":"deep_deep_light_004","deck":"deep","cardType":"deep_light","modes":["classic_flip","hot_seat"],"tone":"deep","en":"What belief have you changed your mind about?","ko":"생각이 바뀐 믿음이나 가치관은?","follow":{"ko":"답한 사람에게 딱 하나만 더 물어봐.","en":"Ask the answerer one more question — just one."}},{"id":"deep_deep_light_005","deck":"deep","cardType":"deep_light","modes":["classic_flip","hot_seat"],"tone":"deep","en":"What part of your life feels different from what people see?","ko":"사람들이 보는 모습과 실제로 다른 부분은?","follow":{"ko":"가장 공감된 사람, 손 들어볼까?","en":"Who related the most? Raise a hand."}},{"id":"deep_deep_light_006","deck":"deep","cardType":"deep_light","modes":["classic_flip","hot_seat"],"tone":"deep","en":"What is a worry you are slowly letting go of?","ko":"조금씩 내려놓고 있는 걱정은 뭐야?","follow":{"ko":"그 답 듣고 떠오른 사람 있으면 말해줘.","en":"Did the answer remind you of anyone? Say so."}},{"id":"deep_deep_light_007","deck":"deep","cardType":"deep_light","modes":["classic_flip","hot_seat"],"tone":"deep","en":"What makes you feel quietly proud of yourself?","ko":"조용히 스스로가 뿌듯해지는 순간은?","follow":{"ko":"답한 사람에게 딱 하나만 더 물어봐.","en":"Ask the answerer one more question — just one."}},{"id":"deep_deep_light_008","deck":"deep","cardType":"deep_light","modes":["classic_flip","hot_seat"],"tone":"deep","en":"What kind of compliment stays with you?","ko":"오래 기억에 남는 칭찬은 어떤 칭찬이야?","follow":{"ko":"가장 공감된 사람, 손 들어볼까?","en":"Who related the most? Raise a hand."}},{"id":"deep_deep_light_009","deck":"deep","cardType":"deep_light","modes":["classic_flip","hot_seat"],"tone":"deep","en":"What is something you want to protect about yourself?","ko":"내 안에서 지키고 싶은 부분은 뭐야?","follow":{"ko":"그 답 듣고 떠오른 사람 있으면 말해줘.","en":"Did the answer remind you of anyone? Say so."}},{"id":"deep_deep_light_010","deck":"deep","cardType":"deep_light","modes":["classic_flip","hot_seat"],"tone":"deep","en":"What does a good day feel like to you lately?","ko":"요즘 나에게 좋은 하루는 어떤 느낌이야?","follow":{"ko":"답한 사람에게 딱 하나만 더 물어봐.","en":"Ask the answerer one more question — just one."}},{"id":"deep_deep_light_011","deck":"deep","cardType":"deep_light","modes":["classic_flip","hot_seat"],"tone":"deep","en":"What helps you trust someone over time?","ko":"시간이 지날수록 사람을 믿게 만드는 건 뭐야?","follow":{"ko":"가장 공감된 사람, 손 들어볼까?","en":"Who related the most? Raise a hand."}},{"id":"deep_deep_light_012","deck":"deep","cardType":"deep_light","modes":["classic_flip","hot_seat"],"tone":"deep","en":"What is something you are learning to accept?","ko":"받아들이는 법을 배우고 있는 건 뭐야?","follow":{"ko":"그 답 듣고 떠오른 사람 있으면 말해줘.","en":"Did the answer remind you of anyone? Say so."}},{"id":"deep_deep_light_013","deck":"deep","cardType":"deep_light","modes":["classic_flip","hot_seat"],"tone":"deep","en":"What kind of silence feels comfortable to you?","ko":"어떤 침묵이 편하게 느껴져?","follow":{"ko":"답한 사람에게 딱 하나만 더 물어봐.","en":"Ask the answerer one more question — just one."}},{"id":"deep_deep_light_014","deck":"deep","cardType":"deep_light","modes":["classic_flip","hot_seat"],"tone":"deep","en":"What is a small sign that you are doing okay?","ko":"내가 괜찮다는 걸 알려주는 작은 신호는?","follow":{"ko":"가장 공감된 사람, 손 들어볼까?","en":"Who related the most? Raise a hand."}},{"id":"deep_deep_light_015","deck":"deep","cardType":"deep_light","modes":["classic_flip","hot_seat"],"tone":"deep","en":"What makes a place feel safe to you?","ko":"어떤 공간이 안전하게 느껴져?","follow":{"ko":"그 답 듣고 떠오른 사람 있으면 말해줘.","en":"Did the answer remind you of anyone? Say so."}},{"id":"deep_deep_light_016","deck":"deep","cardType":"deep_light","modes":["classic_flip","hot_seat"],"tone":"deep","en":"What is something you want to remember more often?","ko":"더 자주 기억하고 싶은 건 뭐야?","follow":{"ko":"답한 사람에게 딱 하나만 더 물어봐.","en":"Ask the answerer one more question — just one."}},{"id":"deep_deep_light_017","deck":"deep","cardType":"deep_light","modes":["classic_flip","hot_seat"],"tone":"deep","en":"What kind of support feels best to you?","ko":"나에게 가장 잘 맞는 응원은 어떤 거야?","follow":{"ko":"가장 공감된 사람, 손 들어볼까?","en":"Who related the most? Raise a hand."}},{"id":"deep_deep_light_018","deck":"deep","cardType":"deep_light","modes":["classic_flip","hot_seat"],"tone":"deep","en":"What is a version of yourself you are growing into?","ko":"나는 어떤 모습으로 조금씩 변해가고 있어?","follow":{"ko":"그 답 듣고 떠오른 사람 있으면 말해줘.","en":"Did the answer remind you of anyone? Say so."}},{"id":"couple_answer_001","deck":"couple","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"couple","en":"What small thing I do makes you feel cared for?","ko":"내가 하는 작은 행동 중 챙김받는 느낌이 드는 건?","follow":{"ko":"답 듣고 떠오른 우리 순간 하나 말해줘.","en":"Share one moment of ours that comes to mind."}},{"id":"couple_answer_002","deck":"couple","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"couple","en":"What random moment with me do you still remember?","ko":"아직도 기억나는 우리 둘의 사소한 순간은?","follow":{"ko":"그 말 듣고 어땠는지 한마디.","en":"Say one word about how that felt to hear."}},{"id":"couple_answer_003","deck":"couple","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"couple","en":"What should we do more often together?","ko":"우리가 같이 더 자주 했으면 하는 건?","follow":{"ko":"같은 질문, 이번엔 반대로 물어봐.","en":"Now ask the same question back."}},{"id":"couple_answer_004","deck":"couple","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"couple","en":"What was your honest first impression of me?","ko":"솔직히 나의 첫인상은 어땠어?","follow":{"ko":"답 듣고 떠오른 우리 순간 하나 말해줘.","en":"Share one moment of ours that comes to mind."}},{"id":"couple_answer_005","deck":"couple","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"couple","en":"What kind of date feels most like us?","ko":"어떤 데이트가 가장 우리답다고 느껴져?","follow":{"ko":"그 말 듣고 어땠는지 한마디.","en":"Say one word about how that felt to hear."}},{"id":"couple_answer_006","deck":"couple","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"couple","en":"What tiny habit of mine do you secretly like?","ko":"내 습관 중 은근히 마음에 드는 건?","follow":{"ko":"같은 질문, 이번엔 반대로 물어봐.","en":"Now ask the same question back."}},{"id":"couple_answer_007","deck":"couple","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"couple","en":"What is one thing we are surprisingly good at together?","ko":"우리가 같이 하면 생각보다 잘하는 건?","follow":{"ko":"답 듣고 떠오른 우리 순간 하나 말해줘.","en":"Share one moment of ours that comes to mind."}},{"id":"couple_answer_008","deck":"couple","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"couple","en":"What should our next small adventure be?","ko":"우리의 다음 작은 모험은 뭐가 좋을까?","follow":{"ko":"그 말 듣고 어땠는지 한마디.","en":"Say one word about how that felt to hear."}},{"id":"couple_answer_009","deck":"couple","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"couple","en":"What is one simple thing that makes you feel closer to me?","ko":"나와 더 가까워진다고 느끼게 하는 작은 일은?","follow":{"ko":"같은 질문, 이번엔 반대로 물어봐.","en":"Now ask the same question back."}},{"id":"couple_answer_010","deck":"couple","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"couple","en":"What is something I do that makes you laugh?","ko":"내가 하는 행동 중 너를 웃게 만드는 건?","follow":{"ko":"답 듣고 떠오른 우리 순간 하나 말해줘.","en":"Share one moment of ours that comes to mind."}},{"id":"couple_answer_011","deck":"couple","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"couple","en":"What little tradition should we start?","ko":"우리만의 작은 전통을 만든다면 뭐가 좋을까?","follow":{"ko":"그 말 듣고 어땠는지 한마디.","en":"Say one word about how that felt to hear."}},{"id":"couple_answer_012","deck":"couple","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"couple","en":"What is a tiny detail about me that you noticed?","ko":"네가 알아챈 나의 작은 디테일은 뭐야?","follow":{"ko":"같은 질문, 이번엔 반대로 물어봐.","en":"Now ask the same question back."}},{"id":"couple_answer_013","deck":"couple","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"couple","en":"What is one thing we handle well as a pair?","ko":"우리가 둘이서 잘 해내는 건 뭐야?","follow":{"ko":"답 듣고 떠오른 우리 순간 하나 말해줘.","en":"Share one moment of ours that comes to mind."}},{"id":"couple_answer_014","deck":"couple","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"couple","en":"What is something you want us to try once?","ko":"우리 한 번쯤 같이 해보고 싶은 건 뭐야?","follow":{"ko":"그 말 듣고 어땠는지 한마디.","en":"Say one word about how that felt to hear."}},{"id":"couple_answer_015","deck":"couple","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"couple","en":"What makes our conversations feel easy?","ko":"우리 대화가 편하게 느껴지는 이유는 뭐야?","follow":{"ko":"같은 질문, 이번엔 반대로 물어봐.","en":"Now ask the same question back."}},{"id":"couple_answer_016","deck":"couple","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"couple","en":"What is a small way I can support you better?","ko":"내가 너를 더 잘 응원할 수 있는 작은 방법은?","follow":{"ko":"답 듣고 떠오른 우리 순간 하나 말해줘.","en":"Share one moment of ours that comes to mind."}},{"id":"couple_answer_017","deck":"couple","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"couple","en":"What is something about us that feels lucky?","ko":"우리 사이에서 운이 좋다고 느껴지는 건 뭐야?","follow":{"ko":"그 말 듣고 어땠는지 한마디.","en":"Say one word about how that felt to hear."}},{"id":"couple_answer_018","deck":"couple","cardType":"answer","modes":["classic_flip","hot_seat"],"tone":"couple","en":"What should we celebrate more often?","ko":"우리가 더 자주 축하하면 좋을 건 뭐야?","follow":{"ko":"같은 질문, 이번엔 반대로 물어봐.","en":"Now ask the same question back."}},{"id":"couple_choice_001","deck":"couple","cardType":"choice","modes":["this_or_that"],"tone":"couple","en":"A planned date or a surprise date?","ko":"계획된 데이트 vs 깜짝 데이트?","follow":{"ko":"고른 이유를 서로 한 문장씩.","en":"Each gives one sentence on why."}},{"id":"couple_choice_002","deck":"couple","cardType":"choice","modes":["this_or_that"],"tone":"couple","en":"Cook together or order something new?","ko":"같이 요리하기 vs 새로운 음식 시키기?","follow":{"ko":"고른 이유를 서로 한 문장씩.","en":"Each gives one sentence on why."}},{"id":"couple_choice_003","deck":"couple","cardType":"choice","modes":["this_or_that"],"tone":"couple","en":"A quiet walk or a loud adventure?","ko":"조용한 산책 vs 시끌벅적한 모험?","follow":{"ko":"고른 이유를 서로 한 문장씩.","en":"Each gives one sentence on why."}},{"id":"couple_choice_004","deck":"couple","cardType":"choice","modes":["this_or_that"],"tone":"couple","en":"More photos together or more inside jokes?","ko":"같이 찍은 사진 더 많이 vs 우리만의 농담 더 많이?","follow":{"ko":"고른 이유를 서로 한 문장씩.","en":"Each gives one sentence on why."}},{"id":"couple_choice_005","deck":"couple","cardType":"choice","modes":["this_or_that"],"tone":"couple","en":"A weekend trip or a perfect lazy day?","ko":"주말 여행 vs 완벽한 게으른 하루?","follow":{"ko":"고른 이유를 서로 한 문장씩.","en":"Each gives one sentence on why."}},{"id":"couple_choice_006","deck":"couple","cardType":"choice","modes":["this_or_that"],"tone":"couple","en":"Talk it out now or cool down first?","ko":"바로 이야기하기 vs 먼저 진정하기?","follow":{"ko":"고른 이유를 서로 한 문장씩.","en":"Each gives one sentence on why."}},{"id":"couple_story_001","deck":"couple","cardType":"story","modes":["classic_flip","hot_seat"],"tone":"couple","en":"Tell a short story about a moment that felt very us.","ko":"진짜 우리답다 싶었던 순간 있었지?","follow":{"ko":"그 순간을 한 단어로 표현하면?","en":"That moment in one word?"}},{"id":"couple_story_002","deck":"couple","cardType":"story","modes":["classic_flip","hot_seat"],"tone":"couple","en":"Tell a short story about a small thing we laughed about.","ko":"둘이 빵 터졌던 사소한 일 기억나?","follow":{"ko":"들은 사람이 기억나는 디테일 하나 더하기.","en":"The listener adds one detail they remember."}},{"id":"couple_story_003","deck":"couple","cardType":"story","modes":["classic_flip","hot_seat"],"tone":"couple","en":"Tell a short story about a date that did not go as planned.","ko":"계획대로 안 됐던 데이트 있었지? 그때 얘기.","follow":{"ko":"그 순간을 한 단어로 표현하면?","en":"That moment in one word?"}},{"id":"couple_story_004","deck":"couple","cardType":"story","modes":["classic_flip","hot_seat"],"tone":"couple","en":"Tell a short story about a time we made a good team.","ko":"우리 팀워크 좋았던 순간 있었잖아, 언제야?","follow":{"ko":"들은 사람이 기억나는 디테일 하나 더하기.","en":"The listener adds one detail they remember."}},{"id":"couple_story_005","deck":"couple","cardType":"story","modes":["classic_flip","hot_seat"],"tone":"couple","en":"Tell a short story about something ordinary that felt special.","ko":"평범했는데 이상하게 특별했던 날 있어?","follow":{"ko":"그 순간을 한 단어로 표현하면?","en":"That moment in one word?"}},{"id":"couple_story_006","deck":"couple","cardType":"story","modes":["classic_flip","hot_seat"],"tone":"couple","en":"Tell a short story about a time one of us saved the day.","ko":"둘 중 하나가 하루 살린 적 있지? 언제야?","follow":{"ko":"들은 사람이 기억나는 디테일 하나 더하기.","en":"The listener adds one detail they remember."}},{"id":"couple_story_007","deck":"couple","cardType":"story","modes":["classic_flip","hot_seat"],"tone":"couple","en":"Tell a short story about a place that reminds you of us.","ko":"우리 떠오르는 장소 있어? 어디야?","follow":{"ko":"그 순간을 한 단어로 표현하면?","en":"That moment in one word?"}},{"id":"couple_story_008","deck":"couple","cardType":"story","modes":["classic_flip","hot_seat"],"tone":"couple","en":"Tell a short story about a message you remember.","ko":"아직도 기억나는 메시지 있어?","follow":{"ko":"들은 사람이 기억나는 디테일 하나 더하기.","en":"The listener adds one detail they remember."}},{"id":"couple_story_009","deck":"couple","cardType":"story","modes":["classic_flip","hot_seat"],"tone":"couple","en":"Tell a short story about a moment we handled better than expected.","ko":"생각보다 잘 넘겼던 우리 순간 있었지?","follow":{"ko":"그 순간을 한 단어로 표현하면?","en":"That moment in one word?"}},{"id":"couple_story_010","deck":"couple","cardType":"story","modes":["classic_flip","hot_seat"],"tone":"couple","en":"Tell a short story about something we learned about each other.","ko":"서로에 대해 새로 알게 된 거 있어?","follow":{"ko":"들은 사람이 기억나는 디테일 하나 더하기.","en":"The listener adds one detail they remember."}},{"id":"couple_story_011","deck":"couple","cardType":"story","modes":["classic_flip","hot_seat"],"tone":"couple","en":"Tell a short story about a quiet moment you liked.","ko":"둘이 조용히 있어서 좋았던 순간 있어?","follow":{"ko":"그 순간을 한 단어로 표현하면?","en":"That moment in one word?"}},{"id":"couple_story_012","deck":"couple","cardType":"story","modes":["classic_flip","hot_seat"],"tone":"couple","en":"Tell a short story about a time we made something better together.","ko":"둘이 같이 더 좋게 만든 일 있어?","follow":{"ko":"들은 사람이 기억나는 디테일 하나 더하기.","en":"The listener adds one detail they remember."}},{"id":"couple_deep_light_001","deck":"couple","cardType":"deep_light","modes":["classic_flip","hot_seat"],"tone":"couple","en":"What helps you feel close to me?","ko":"나와 가까워진다고 느끼게 하는 건 뭐야?","follow":{"ko":"그 답에 고맙다면 그냥 '고마워' 한마디.","en":"If the answer means something, just say thanks."}},{"id":"couple_deep_light_002","deck":"couple","cardType":"deep_light","modes":["classic_flip","hot_seat"],"tone":"couple","en":"What kind of support feels best from me?","ko":"내가 해주는 응원 중 가장 잘 맞는 건?","follow":{"ko":"그 답에 고맙다면 그냥 '고마워' 한마디.","en":"If the answer means something, just say thanks."}},{"id":"couple_deep_light_003","deck":"couple","cardType":"deep_light","modes":["classic_flip","hot_seat"],"tone":"couple","en":"What is something you want us to protect?","ko":"우리가 지켜가고 싶은 건 뭐야?","follow":{"ko":"그 답에 고맙다면 그냥 '고마워' 한마디.","en":"If the answer means something, just say thanks."}},{"id":"couple_deep_light_004","deck":"couple","cardType":"deep_light","modes":["classic_flip","hot_seat"],"tone":"couple","en":"What makes this feel like a safe place for us?","ko":"우리 사이가 안전하게 느껴지는 이유는 뭐야?","follow":{"ko":"그 답에 고맙다면 그냥 '고마워' 한마디.","en":"If the answer means something, just say thanks."}},{"id":"party_taboo_001","deck":"party","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Describe what you did last weekend","ko":"주말에 뭐 했는지 설명하기","bannedEn":["home","sleep","tired","phone"],"bannedKo":["집","잠","피곤","폰"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"party_taboo_002","deck":"party","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Describe your morning routine","ko":"아침 루틴 설명하기","bannedEn":["wake","coffee","wash","alarm"],"bannedKo":["일어","커피","씻","알람"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"party_taboo_003","deck":"party","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Explain your favorite food without naming it","ko":"최애 음식 이름 빼고 설명하기","bannedEn":["delicious","spicy","sweet","rice"],"bannedKo":["맛있","맵","달","밥"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"party_taboo_004","deck":"party","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Describe your hometown","ko":"고향 설명하기","bannedEn":["city","far","famous","food"],"bannedKo":["도시","멀","유명","음식"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"party_taboo_005","deck":"party","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Explain what your job or study is","ko":"무슨 일/공부 하는지 설명하기","bannedEn":["work","money","computer","study"],"bannedKo":["일","돈","컴퓨터","공부"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"party_taboo_006","deck":"party","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Describe your last trip","ko":"최근 여행 설명하기","bannedEn":["plane","hotel","photo","beach"],"bannedKo":["비행기","호텔","사진","바다"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"party_taboo_007","deck":"party","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Explain a movie you love without the title","ko":"좋아하는 영화 제목 빼고 설명하기","bannedEn":["actor","ending","famous","scene"],"bannedKo":["배우","결말","유명","장면"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"party_taboo_008","deck":"party","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Describe this group to a stranger","ko":"이 모임을 처음 보는 사람에게 설명하기","bannedEn":["friend","fun","drink","talk"],"bannedKo":["친구","재밌","술","얘기"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"funny_taboo_001","deck":"funny","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Explain the internet to someone from 100 years ago","ko":"100년 전 사람에게 인터넷 설명하기","bannedEn":["computer","phone","online","search"],"bannedKo":["컴퓨터","폰","온라인","검색"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"funny_taboo_002","deck":"funny","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Describe a cat without saying any animal word","ko":"동물 단어 없이 고양이 설명하기","bannedEn":["animal","pet","meow","fur"],"bannedKo":["동물","반려","야옹","털"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"funny_taboo_003","deck":"funny","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Explain how to tie shoelaces out loud","ko":"신발끈 묶는 법 말로만 설명하기","bannedEn":["loop","pull","cross","knot"],"bannedKo":["고리","당기","교차","매듭"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"funny_taboo_004","deck":"funny","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Hype up water like it's a new product","ko":"물을 신상품처럼 광고하기","bannedEn":["water","drink","clear","thirsty"],"bannedKo":["물","마시","투명","목"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"funny_taboo_005","deck":"funny","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Explain your phone to a medieval knight","ko":"중세 기사에게 스마트폰 설명하기","bannedEn":["call","screen","app","battery"],"bannedKo":["전화","화면","앱","배터리"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"funny_taboo_006","deck":"funny","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Describe sleep to someone who never sleeps","ko":"잠 안 자는 사람에게 잠 설명하기","bannedEn":["eyes","bed","dream","night"],"bannedKo":["눈","침대","꿈","밤"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"funny_taboo_007","deck":"funny","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Sell an umbrella without mentioning rain","ko":"비 얘기 없이 우산 팔기","bannedEn":["rain","wet","sky","water"],"bannedKo":["비","젖","하늘","물"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"funny_taboo_008","deck":"funny","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Explain a banana without its name or color","ko":"이름과 색 빼고 바나나 설명하기","bannedEn":["yellow","fruit","peel","monkey"],"bannedKo":["노랑","과일","껍질","원숭이"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"party_taboo_009","deck":"party","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Describe your ideal day off","ko":"완벽한 휴일 설명하기","bannedEn":["rest","late","fun","relax"],"bannedKo":["쉬","늦잠","재밌","여유"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"party_taboo_010","deck":"party","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Explain how you get to work or school","ko":"출근/등교 길 설명하기","bannedEn":["bus","subway","walk","far"],"bannedKo":["버스","지하철","걷","멀"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"party_taboo_011","deck":"party","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Describe your favorite season","ko":"좋아하는 계절 설명하기","bannedEn":["cold","hot","warm","weather"],"bannedKo":["춥","덥","따뜻","날씨"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"party_taboo_012","deck":"party","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Explain a hobby you enjoy","ko":"즐기는 취미 설명하기","bannedEn":["fun","time","practice","skill"],"bannedKo":["재밌","시간","연습","실력"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"party_taboo_013","deck":"party","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Describe your phone's home screen","ko":"폰 홈 화면 설명하기","bannedEn":["app","icon","photo","screen"],"bannedKo":["앱","아이콘","사진","화면"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"party_taboo_014","deck":"party","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Explain what makes a good party","ko":"좋은 파티의 조건 설명하기","bannedEn":["people","music","food","fun"],"bannedKo":["사람","음악","음식","재밌"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"party_taboo_015","deck":"party","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Describe your dream vacation spot","ko":"꿈의 휴가지 설명하기","bannedEn":["beach","mountain","far","hotel"],"bannedKo":["바다","산","멀","호텔"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"party_taboo_016","deck":"party","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Explain your go-to comfort activity","ko":"마음 편해지는 활동 설명하기","bannedEn":["home","rest","alone","quiet"],"bannedKo":["집","쉬","혼자","조용"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"funny_taboo_009","deck":"funny","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Explain a refrigerator to an alien","ko":"외계인에게 냉장고 설명하기","bannedEn":["cold","food","box","door"],"bannedKo":["차갑","음식","상자","문"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"funny_taboo_010","deck":"funny","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Describe rain without weather words","ko":"날씨 단어 없이 비 설명하기","bannedEn":["sky","wet","cloud","drop"],"bannedKo":["하늘","젖","구름","방울"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"funny_taboo_011","deck":"funny","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Sell socks like a luxury item","ko":"양말을 명품처럼 팔기","bannedEn":["foot","warm","cotton","wear"],"bannedKo":["발","따뜻","면","신"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"funny_taboo_012","deck":"funny","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Explain a mirror without its name","ko":"이름 빼고 거울 설명하기","bannedEn":["face","glass","reflect","see"],"bannedKo":["얼굴","유리","비추","보"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"funny_taboo_013","deck":"funny","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Describe a clock to someone who ignores time","ko":"시간 무시하는 사람에게 시계 설명하기","bannedEn":["time","hour","tick","hand"],"bannedKo":["시간","시","똑딱","바늘"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"funny_taboo_014","deck":"funny","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Hype up sleep like a luxury experience","ko":"잠을 럭셔리 경험처럼 광고하기","bannedEn":["eyes","bed","night","rest"],"bannedKo":["눈","침대","밤","쉬"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"funny_taboo_015","deck":"funny","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Explain ice cream to someone who's never had it","ko":"아이스크림 처음인 사람에게 설명하기","bannedEn":["cold","sweet","melt","cream"],"bannedKo":["차갑","달","녹","크림"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}},{"id":"funny_taboo_016","deck":"funny","cardType":"taboo","modes":["taboo_round"],"minPlayers":3,"maxPlayers":8,"en":"Describe a staircase out loud","ko":"계단을 말로만 설명하기","bannedEn":["up","down","step","floor"],"bannedKo":["위","아래","계단","층"],"follow":{"en":"Got caught using a banned word? That's a penalty.","ko":"금지어 썼으면 바로 벌칙!"}}]};
+const DECKS_FILE = {
+  "version": "0.1",
+  "decks": [
+    {
+      "id": "warm_up",
+      "name": {
+        "en": "Warm Up",
+        "ko": "워밍업"
+      },
+      "description": {
+        "en": "Easy, low-pressure cards for the first round.",
+        "ko": "첫 라운드에 쓰기 좋은 가볍고 부담 없는 카드."
+      }
+    },
+    {
+      "id": "funny",
+      "name": {
+        "en": "Funny",
+        "ko": "웃긴 질문"
+      },
+      "description": {
+        "en": "Playful cards for laughter and harmless reactions.",
+        "ko": "웃음과 가벼운 반응을 만드는 장난스러운 카드."
+      }
+    },
+    {
+      "id": "deep",
+      "name": {
+        "en": "Deep",
+        "ko": "깊은 얘기"
+      },
+      "description": {
+        "en": "Reflective cards that stay safe and conversational.",
+        "ko": "부담스럽지 않게 조금 더 깊은 대화를 여는 카드."
+      }
+    },
+    {
+      "id": "couple",
+      "name": {
+        "en": "Couple",
+        "ko": "커플"
+      },
+      "description": {
+        "en": "Two-player cards for couples or a clearly defined pair.",
+        "ko": "커플 또는 명확한 2인 페어를 위한 카드."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 2
+    },
+    {
+      "id": "party",
+      "name": {
+        "en": "Party",
+        "ko": "파티"
+      },
+      "description": {
+        "en": "Group cards for voting, quick reactions, and high replay.",
+        "ko": "지목, 빠른 반응, 여러 명의 플레이에 맞춘 카드."
+      }
+    }
+  ]
+};
+const CARDS = CARDS_FILE.cards;
+const DECKS = DECKS_FILE.decks;
+
+/* ===== Install link shown on the share image (edit when the app store URL exists) ===== */
+const SHARE_URL = "talkflip.app";
+// Visible language options. Add "both" back to re-enable the KR·EN (bilingual) mode.
+const LANG_OPTIONS = ["ko", "en"];
+
+/* ===== Ads (Google AdSense H5 Games Ads / Ad Placement API) =====
+   Leave ADSENSE_CLIENT empty to run fully ad-free. Set it to your approved
+   AdSense publisher id (e.g. "ca-pub-1234567890123456") and deploy over HTTPS
+   on a domain added to your AdSense account to activate ads. */
+const ADSENSE_CLIENT = "";            // "" = ads OFF
+const ADS_TEST = false;               // true = request test ads for your AdSense test setup
+const INTERSTITIAL_COOLDOWN_MS = 90000;
+
+/* ===== Viral "Spicy" deck (web test only — not in the iOS core matrix yet) =====
+   Intentional callout / confession / hot-take cards built to be screenshotted and
+   to make people tag a friend. Kept separate from the safe core decks. */
+const VIRAL_DECK = {
+  id: "spicy",
+  name: { en: "Spicy", ko: "매운맛" },
+  description: {
+    en: "Callout, confession, no-filter cards made to screenshot.",
+    ko: "캡처해서 보내고 싶어지는 지목·솔직·매운맛 카드."
+  }
+};
+const VIRAL_CARDS = [
+  // vote (Who's Most Likely) — tag-a-friend callouts
+  { id:"spicy_vote_001", deck:"spicy", cardType:"vote", modes:["whos_most_likely"], en:"Who completely changes personality depending on who they're with?", ko:"같이 있는 사람 따라 성격이 완전히 바뀌는 사람은?" },
+  { id:"spicy_vote_002", deck:"spicy", cardType:"vote", modes:["whos_most_likely"], en:"Who'd ghost everyone, then reappear like nothing happened?", ko:"잠수 타다가 갑자기 나타나서 아무 일 없던 척할 사람은?" },
+  { id:"spicy_vote_003", deck:"spicy", cardType:"vote", modes:["whos_most_likely"], en:"Who texts \"might not make it 😭\" 30 minutes before the plan?", ko:"약속 30분 전에 '나 못 갈 듯ㅠ' 보낼 사람은?" },
+  { id:"spicy_vote_004", deck:"spicy", cardType:"vote", modes:["whos_most_likely"], en:"Who holds a grudge over the pettiest thing the longest?", ko:"사소한 거에 제일 오래 삐져 있을 사람은?" },
+  { id:"spicy_vote_005", deck:"spicy", cardType:"vote", modes:["whos_most_likely"], en:"Who vanishes from the group chat the second they start dating?", ko:"연애 시작하면 단톡방에서 증발할 사람은?" },
+  { id:"spicy_vote_006", deck:"spicy", cardType:"vote", modes:["whos_most_likely"], en:"Who starts giving deep life advice the moment they drink?", ko:"술만 마시면 갑자기 인생 상담 시작할 사람은?" },
+  { id:"spicy_vote_007", deck:"spicy", cardType:"vote", modes:["whos_most_likely"], en:"Whose texts would be most damaging if screenshotted?", ko:"보낸 톡 캡처당하면 제일 곤란해질 사람은?" },
+  { id:"spicy_vote_008", deck:"spicy", cardType:"vote", modes:["whos_most_likely"], en:"Who explains literally everything with their MBTI?", ko:"모든 걸 MBTI로 설명하려 드는 사람은?" },
+  { id:"spicy_vote_009", deck:"spicy", cardType:"vote", modes:["whos_most_likely"], en:"Who's texting someone \"you up?\" at 3am?", ko:"새벽 3시에 '자?' 톡 보낼 사람은?" },
+  { id:"spicy_vote_010", deck:"spicy", cardType:"vote", modes:["whos_most_likely"], en:"Who here gets famous first?", ko:"여기서 제일 먼저 유명해질 사람은?" },
+  { id:"spicy_vote_011", deck:"spicy", cardType:"vote", modes:["whos_most_likely"], en:"Who lives with 9,999 unread notifications?", ko:"알림 9999개 쌓아두고 사는 사람은?" },
+  { id:"spicy_vote_012", deck:"spicy", cardType:"vote", modes:["whos_most_likely"], en:"Who's most likely to get back with an ex?", ko:"헤어진 전 애인이랑 다시 사귈 사람은?" },
+
+  // choice (This or That) — hot-take dilemmas
+  { id:"spicy_choice_001", deck:"spicy", cardType:"choice", modes:["this_or_that"], en:"Leave on read or leave on unread?", ko:"읽씹 vs 안읽씹?" },
+  { id:"spicy_choice_002", deck:"spicy", cardType:"choice", modes:["this_or_that"], en:"Secretly stalk your ex's feed or block them for good?", ko:"전 애인 SNS 몰래 보기 vs 아예 차단하기?" },
+  { id:"spicy_choice_003", deck:"spicy", cardType:"choice", modes:["this_or_that"], en:"Tell your friend their relationship is a disaster or fake support?", ko:"친구의 끔찍한 연애 솔직히 말하기 vs 응원하는 척하기?" },
+  { id:"spicy_choice_004", deck:"spicy", cardType:"choice", modes:["this_or_that"], en:"Mildly disliked by everyone or deeply hated by one person?", ko:"모두에게 약간 미움받기 vs 한 명에게 깊게 미움받기?" },
+  { id:"spicy_choice_005", deck:"spicy", cardType:"choice", modes:["this_or_that"], en:"Reveal your search history or your call log?", ko:"내 검색기록 공개 vs 통화목록 공개?" },
+  { id:"spicy_choice_006", deck:"spicy", cardType:"choice", modes:["this_or_that"], en:"No social media for a year or no delivery food for a year?", ko:"1년간 SNS 금지 vs 1년간 배달음식 금지?" },
+  { id:"spicy_choice_007", deck:"spicy", cardType:"choice", modes:["this_or_that"], en:"Confess to your crush and get rejected, or never know?", ko:"짝사랑에게 고백하고 차이기 vs 영원히 모른 채 살기?" },
+  { id:"spicy_choice_008", deck:"spicy", cardType:"choice", modes:["this_or_that"], en:"Every lie you've told exposed or every secret revealed?", ko:"내 모든 거짓말 들통나기 vs 모든 비밀 공개되기?" },
+  { id:"spicy_choice_009", deck:"spicy", cardType:"choice", modes:["this_or_that"], en:"Always be 10 minutes late or always be the one waiting?", ko:"항상 10분 지각 vs 항상 기다리는 쪽?" },
+  { id:"spicy_choice_010", deck:"spicy", cardType:"choice", modes:["this_or_that"], en:"Read everyone's mind for a day or have everyone read yours?", ko:"하루 동안 남 속마음 다 읽기 vs 내 속마음 다 읽히기?" },
+
+  // answer (Classic Flip / Hot Seat) — confession & light roast
+  { id:"spicy_answer_001", deck:"spicy", cardType:"answer", modes:["classic_flip","hot_seat"], en:"Your most \"NPC\" moment nobody knows about?", ko:"남들은 모르는 너만의 가장 'NPC' 같은 순간은?" },
+  { id:"spicy_answer_002", deck:"spicy", cardType:"answer", modes:["classic_flip","hot_seat"], en:"A message you pretended not to see but totally read?", ko:"안 읽은 척했지만 사실 다 본 메시지는?" },
+  { id:"spicy_answer_003", deck:"spicy", cardType:"answer", modes:["classic_flip","hot_seat"], en:"A moment that still makes you kick your blanket at night?", ko:"아직도 이불킥하게 만드는 순간은?" },
+  { id:"spicy_answer_004", deck:"spicy", cardType:"answer", modes:["classic_flip","hot_seat"], en:"Your biggest red flag you hate to admit?", ko:"인정하기 싫지만 너의 가장 큰 'red flag'는?" },
+  { id:"spicy_answer_005", deck:"spicy", cardType:"answer", modes:["classic_flip","hot_seat"], en:"One thing you'd still say to an ex if you could?", ko:"전 애인한테 아직도 하고 싶은 말 한마디는?" },
+  { id:"spicy_answer_006", deck:"spicy", cardType:"answer", modes:["classic_flip","hot_seat"], en:"The last slightly embarrassing thing you searched?", ko:"마지막으로 살짝 부끄럽게 검색한 건?" },
+  { id:"spicy_answer_007", deck:"spicy", cardType:"answer", modes:["classic_flip","hot_seat"], en:"A small lie you tell way too often?", ko:"너무 자주 하는 작은 거짓말은?" },
+  { id:"spicy_answer_008", deck:"spicy", cardType:"answer", modes:["classic_flip","hot_seat"], en:"Something you'd quit immediately if money weren't an issue?", ko:"돈만 아니면 당장 그만둘 일은?" },
+
+  // expansion — more callouts (vote)
+  { id:"spicy_vote_013", deck:"spicy", cardType:"vote", modes:["whos_most_likely"], en:"Who reads every message and never replies?", ko:"메시지 다 읽고 답 안 하는 사람은?" },
+  { id:"spicy_vote_014", deck:"spicy", cardType:"vote", modes:["whos_most_likely"], en:"Who replies with just \"lol\" in 0.5 seconds?", ko:"0.5초 만에 'ㅋㅋㅋ'만 보내는 사람은?" },
+  { id:"spicy_vote_015", deck:"spicy", cardType:"vote", modes:["whos_most_likely"], en:"Who takes 100 selfies just to pick one?", ko:"셀카 100장 찍고 한 장 고르는 사람은?" },
+  { id:"spicy_vote_016", deck:"spicy", cardType:"vote", modes:["whos_most_likely"], en:"Who orders late-night food while \"on a diet\"?", ko:"다이어트한다며 야식 시킬 사람은?" },
+  { id:"spicy_vote_017", deck:"spicy", cardType:"vote", modes:["whos_most_likely"], en:"Who talks more in the group chat after the hangout than during it?", ko:"모임 끝나고 단톡방에서 더 떠들 사람은?" },
+  { id:"spicy_vote_018", deck:"spicy", cardType:"vote", modes:["whos_most_likely"], en:"Who refuses to open GPS even when totally lost?", ko:"길 잃고도 끝까지 내비 안 켤 사람은?" },
+  { id:"spicy_vote_019", deck:"spicy", cardType:"vote", modes:["whos_most_likely"], en:"Who googles the ending while watching the movie?", ko:"영화 보면서 결말 미리 검색할 사람은?" },
+  { id:"spicy_vote_020", deck:"spicy", cardType:"vote", modes:["whos_most_likely"], en:"Who becomes best friends with the taxi driver?", ko:"택시 타면 기사님이랑 절친 될 사람은?" },
+
+  // expansion — hot-take dilemmas (choice)
+  { id:"spicy_choice_011", deck:"spicy", cardType:"choice", modes:["this_or_that"], en:"Stay friends with an ex or total strangers?", ko:"전 애인이랑 친구로 남기 vs 완전 남남?" },
+  { id:"spicy_choice_012", deck:"spicy", cardType:"choice", modes:["this_or_that"], en:"Get kicked from the group chat or 999+ notifications forever?", ko:"단톡방 강퇴 vs 평생 알림 999+?" },
+  { id:"spicy_choice_013", deck:"spicy", cardType:"choice", modes:["this_or_that"], en:"Reveal your cringe videos or your search history?", ko:"내 흑역사 영상 공개 vs 검색기록 공개?" },
+  { id:"spicy_choice_014", deck:"spicy", cardType:"choice", modes:["this_or_that"], en:"Only truth for 24 hours or only lies for 24 hours?", ko:"24시간 진심만 vs 24시간 거짓말만?" },
+  { id:"spicy_choice_015", deck:"spicy", cardType:"choice", modes:["this_or_that"], en:"Left on read by your crush or left on unread?", ko:"짝사랑에게 읽씹 vs 안읽씹?" },
+  { id:"spicy_choice_016", deck:"spicy", cardType:"choice", modes:["this_or_that"], en:"No filters on any selfie or one unedited profile pic forever?", ko:"모든 셀카 보정 금지 vs 평생 무보정 프사?" },
+
+  // expansion — confessions (answer)
+  { id:"spicy_answer_009", deck:"spicy", cardType:"answer", modes:["classic_flip","hot_seat"], en:"What friend habit pushed you to the edge of cutting them off?", ko:"친구의 어떤 행동에 손절 직전까지 갔어?" },
+  { id:"spicy_answer_010", deck:"spicy", cardType:"answer", modes:["classic_flip","hot_seat"], en:"The longest you've ever had a one-sided crush?", ko:"가장 오래 짝사랑한 기간은?" },
+  { id:"spicy_answer_011", deck:"spicy", cardType:"answer", modes:["classic_flip","hot_seat"], en:"The most embarrassing song on your playlist if exposed?", ko:"들키면 제일 부끄러운 플레이리스트 속 노래는?" },
+  { id:"spicy_answer_012", deck:"spicy", cardType:"answer", modes:["classic_flip","hot_seat"], en:"Ever woken up to \"I sent THAT text?\"", ko:"술 깨고 '내가 그 톡을 보냈다고?' 한 적 있어?" },
+  { id:"spicy_answer_013", deck:"spicy", cardType:"answer", modes:["classic_flip","hot_seat"], en:"Something you act cool about but secretly obsess over?", ko:"쿨한 척하지만 사실 집착하는 건?" },
+  { id:"spicy_answer_014", deck:"spicy", cardType:"answer", modes:["classic_flip","hot_seat"], en:"The most impulsive thing you've ever bought?", ko:"가장 충동적으로 산 물건은?" }
+];
+DECKS.push(VIRAL_DECK);
+VIRAL_CARDS.forEach(c => CARDS.push(c));
+
+/* ===== Enums / titles (mirror Models.swift) ===== */
+const MODES = ["classic_flip","this_or_that","whos_most_likely","hot_seat","taboo_round"];
+// Filmable / most-shareable modes go first and get a badge (#2 viral placement).
+const MODE_ORDER = ["whos_most_likely","taboo_round","this_or_that","classic_flip","hot_seat"];
+const FILMABLE = new Set(["whos_most_likely","taboo_round"]);
+// Minimum players per mode (MVP guide §3).
+const MODE_MIN = { classic_flip: 1, this_or_that: 1, whos_most_likely: 3, hot_seat: 2, taboo_round: 3 };
+const MODE_ICON = { classic_flip: "🃏", this_or_that: "⚖️", whos_most_likely: "👉", hot_seat: "🔥", taboo_round: "🤐" };
+const DECK_EMOJI = { warm_up: "☀️", funny: "😂", deep: "🌙", couple: "💗", party: "🎉", spicy: "🌶️" };
+const DECK_TINT = {
+  warm_up: "#ffb020", funny: "#ff9f1c", deep: "#5b6bff", couple: "#ff3d8b", party: "#b13bff", spicy: "#ff3b30"
+};
+
+/* ===== Custom line-icon set (replaces emoji for a store-grade look) ===== */
+const ICON = {
+  // UI
+  close: '<line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/>',
+  plus: '<line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>',
+  minus: '<line x1="5" y1="12" x2="19" y2="12"/>',
+  chevron: '<polyline points="9 6 15 12 9 18"/>',
+  check: '<polyline points="20 6 9 17 4 12"/>',
+  heart: '<path d="M20.8 5.6a5.2 5.2 0 0 0-7.4 0L12 7l-1.4-1.4a5.2 5.2 0 1 0-7.4 7.4L12 21l8.8-8a5.2 5.2 0 0 0 0-7.4z"/>',
+  heart_fill: '<path fill="currentColor" stroke="none" d="M20.8 5.6a5.2 5.2 0 0 0-7.4 0L12 7l-1.4-1.4a5.2 5.2 0 1 0-7.4 7.4L12 21l8.8-8a5.2 5.2 0 0 0 0-7.4z"/>',
+  send: '<line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>',
+  users: '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+  camera: '<path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/>',
+  shuffle: '<polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/>',
+  sparkle: '<path d="M12 3 13.6 10.4 21 12 13.6 13.6 12 21 10.4 13.6 3 12 10.4 10.4Z"/><path d="M19 4 19.5 6.5 22 7 19.5 7.5 19 10 18.5 7.5 16 7 18.5 6.5Z"/>',
+  grid: '<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>',
+  layers: '<polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/>',
+  zap: '<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>',
+  settings: '<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>',
+  trash: '<polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/>',
+  info: '<circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>',
+  lock: '<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',
+  // Modes
+  mode_classic_flip: '<rect x="3" y="6" width="12" height="15" rx="2"/><path d="M8 6V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2h-2"/>',
+  mode_this_or_that: '<rect x="3" y="6" width="18" height="12" rx="3"/><line x1="12" y1="6" x2="12" y2="18"/>',
+  mode_whos_most_likely: '<path d="M3 8l4 4 5-7 5 7 4-4-2 11H5z"/>',
+  mode_hot_seat: '<rect x="9" y="2" width="6" height="11" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="8" y1="22" x2="16" y2="22"/>',
+  mode_taboo_round: '<path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.2A8.4 8.4 0 0 1 4 11.5 8.5 8.5 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/><line x1="8.5" y1="8.5" x2="15.5" y2="15.5"/>',
+  // Decks
+  deck_warm_up: '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.2" y1="4.2" x2="5.6" y2="5.6"/><line x1="18.4" y1="18.4" x2="19.8" y2="19.8"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.2" y1="19.8" x2="5.6" y2="18.4"/><line x1="18.4" y1="5.6" x2="19.8" y2="4.2"/>',
+  deck_funny: '<circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>',
+  deck_deep: '<path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/>',
+  deck_couple: '<path d="M20.8 5.6a5.2 5.2 0 0 0-7.4 0L12 7l-1.4-1.4a5.2 5.2 0 1 0-7.4 7.4L12 21l8.8-8a5.2 5.2 0 0 0 0-7.4z"/>',
+  deck_party: '<path d="M12 3 13.6 10.4 21 12 13.6 13.6 12 21 10.4 13.6 3 12 10.4 10.4Z"/><path d="M19 4 19.5 6.5 22 7 19.5 7.5 19 10 18.5 7.5 16 7 18.5 6.5Z"/>',
+  deck_spicy: '<path d="M12 3c2.5 3.5 5 5.5 5 9.5a5 5 0 0 1-10 0c0-1.8.8-3.2 2-4.3-.2 1.4.6 2.3 1.5 2.6C9.5 8.7 10.5 6.3 12 3z"/>'
+};
+function svgIcon(name, size){
+  size = size || 22;
+  return '<svg class="ic" viewBox="0 0 24 24" width="' + size + '" height="' + size +
+    '" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round">' +
+    (ICON[name] || "") + '</svg>';
+}
+const BRAND_MARK =
+  '<svg class="mark" width="26" height="26" viewBox="0 0 28 28" aria-hidden="true">' +
+  '<defs><linearGradient id="bmk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5b6bff"/><stop offset="1" stop-color="#ff3d8b"/></linearGradient></defs>' +
+  '<rect width="28" height="28" rx="8" fill="url(#bmk)"/>' +
+  '<rect x="7" y="6" width="11" height="14" rx="2.4" fill="#fff" opacity="0.55" transform="rotate(8 14 14)"/>' +
+  '<rect x="10" y="8" width="11" height="14" rx="2.4" fill="#fff" transform="rotate(-7 14 14)"/>' +
+  '</svg>';
+const MODE_TITLE = {
+  classic_flip: "Classic Flip", this_or_that: "This or That",
+  whos_most_likely: "Who's Most Likely", hot_seat: "Hot Seat", taboo_round: "Taboo Round"
+};
+const MODE_KO = {
+  classic_flip: "클래식", this_or_that: "밸런스",
+  whos_most_likely: "누가 제일", hot_seat: "핫시트", taboo_round: "금지어"
+};
+function representativeMode(type){
+  switch(type){
+    case "taboo": return "taboo_round";
+    case "vote": return "whos_most_likely";
+    case "choice": return "this_or_that";
+    default: return "classic_flip";
+  }
+}
+const GRADIENTS = {
+  taboo: ["#ff3b30","#ff9500"], vote: ["#af52de","#ff2d55"], choice: ["#007aff","#32ade6"],
+  story: ["#5856d6","#00c7be"], deep_light: ["#5856d6","#00c7be"], answer: ["#007aff","#5856d6"]
+};
+
+/* ===== UIText (mirror Models.swift) ===== */
+function UIText(lang){
+  const ko = lang !== "en";
+  return {
+    ko,
+    heroTitle: ko ? "분위기, 한 장으로 뒤집어." : "Flip the room.",
+    heroSubtitle: ko ? "한 장 넘기면 바로 리액션이 나오는 대화 게임." : "Flip a card and the reactions start.",
+    heroKicker: ko ? "오늘 한 장만 뽑는다면" : "If you flip just one",
+    heroFooter: ko ? "시작을 눌러봐. 안 맞으면 패스. 리액션은 계속." : "Tap Start. Pass if it misses. Keep the reactions.",
+    shuffle: ko ? "셔플" : "Shuffle",
+    sectionLanguage: ko ? "언어" : "Language",
+    sectionPlayers: ko ? "인원" : "Players",
+    sectionMode: ko ? "모드" : "Mode",
+    sectionDeck: ko ? "덱" : "Deck",
+    start: ko ? "시작" : "Start",
+    favorites: ko ? "즐겨찾기" : "Favorites",
+    playersCount: n => ko ? `${n}명` : `${n} players`,
+    close: ko ? "닫기" : "Close",
+    pass: ko ? "패스" : "Pass",
+    showFollow: ko ? "추가 질문 보기" : "Show follow-up",
+    hideFollow: ko ? "추가 질문 숨기기" : "Hide follow-up",
+    save: ko ? "저장" : "Save",
+    saved: ko ? "저장됨" : "Saved",
+    share: ko ? "공유" : "Share",
+    scoreLabel: ko ? "점수" : "Score",
+    penaltyLabel: ko ? "벌점" : "Penalty",
+    caught: ko ? "걸림" : "Caught",
+    cleared: ko ? "통과" : "Cleared",
+    bannedWords: ko ? "금지어" : "Banned words",
+    timesUp: ko ? "시간 종료" : "Time's up",
+    turnLabel: n => ko ? `${n}번째 턴` : `Turn ${n}`,
+    deckComplete: ko ? "덱 완료" : "Deck complete",
+    roundComplete: ko ? "라운드 완료" : "Round complete",
+    completeSubtitle: ko ? "카드를 다 봤어요." : "You've seen all the cards.",
+    playAgain: ko ? "다시 하기" : "Play again",
+    playAnotherQuick: ko ? "짧은 라운드 한 번 더" : "Play another quick round",
+    changeSetup: ko ? "설정 바꾸기" : "Change setup",
+    favoritesEmptyTitle: ko ? "아직 저장한 카드가 없어요" : "No saved cards yet",
+    favoritesEmptyBody: ko ? "게임 중 마음에 드는 카드를 하트로 저장해 보세요." : "Tap the heart on a card you like during a game.",
+    insights: ko ? "카드 통계" : "Card insights",
+    statSeen: ko ? "표시" : "Shown",
+    statPassed: ko ? "패스" : "Passed",
+    statFavorited: ko ? "저장됨" : "Saved",
+    statShared: ko ? "공유" : "Shared",
+    done: ko ? "완료" : "Done",
+    remove: ko ? "삭제" : "Remove",
+    download: ko ? "이미지 저장" : "Download",
+    recap: ko ? "요약" : "Recap",
+    recapShareBtn: ko ? "라운드 요약 공유" : "Share recap",
+    recapHeadline: ko ? "오늘의 라운드" : "Tonight's round",
+    playedLabel: ko ? "플레이한 카드" : "Cards played",
+    passesLabel: ko ? "패스" : "Passes",
+    picksTitle: ko ? "오늘의 픽" : "Tonight's picks",
+    noPicksLine: ko ? "이번 판엔 저장한 카드가 없어요. 다음 판엔 ♥로 남겨봐!" : "No saved cards this round. Tap ♥ next time!",
+    filmBadge: ko ? "📸 찍기 좋아요" : "📸 Film this",
+    minPlayers: n => ko ? `${n}명+` : `${n}+`,
+    cardsCount: n => ko ? `${n}장` : `${n} cards`,
+    ready: ko ? "준비됨" : "Ready",
+    quickStart: ko ? "바로 시작" : "Quick start",
+    deckDependencyHint: ko ? "모드에 따라 쓸 수 있는 덱이 달라져요" : "Available decks change by mode",
+    turnHint: ko ? "한 장씩 답하고 다음 사람에게 폰을 넘겨요" : "Answer, then pass the phone to the next player",
+    settings: ko ? "설정" : "Settings",
+    about: ko ? "정보" : "About",
+    aboutBody: ko ? "친구·커플·모임에서 랜덤 카드를 뽑으며 즐기는 질문 게임." : "A random question card game for friends, couples, and hangouts.",
+    versionLabel: ko ? "버전" : "Version",
+    privacy: ko ? "개인정보" : "Privacy",
+    privacyBody: ko ? "즐겨찾기·통계는 이 기기에만 저장되고 서버로 전송되지 않아요." : "Favorites and stats stay on this device and are never sent to a server.",
+    resetStats: ko ? "저장·통계 초기화" : "Reset saved & stats",
+    resetConfirm: ko ? "저장한 카드와 통계를 모두 지울까요?" : "Clear all saved cards and stats?",
+    obSkip: ko ? "건너뛰기" : "Skip",
+    obNext: ko ? "다음" : "Next",
+    obStart: ko ? "시작하기" : "Let's go",
+    onboard: ko ? [
+      { title: "TalkFlip", body: "친구·커플·모임에서 랜덤 카드를 뽑으며 즐기는 질문 게임." },
+      { title: "고르고, 뽑고, 답하고", body: "모드와 덱을 고른 뒤 카드를 뽑아 답하거나 투표해요. 안 맞으면 패스!" },
+      { title: "찍고, 공유하고", body: "마음에 든 카드는 하트로 저장하고, 공유 버튼으로 친구에게 보내요." }
+    ] : [
+      { title: "TalkFlip", body: "A random question card game for friends, couples, and hangouts." },
+      { title: "Pick, flip, answer", body: "Choose a mode and deck, then flip cards to answer or vote. Pass if it misses!" },
+      { title: "Save & share", body: "Save the cards you love and send them to friends with one tap." }
+    ],
+    filmNudge: ko ? "📸 이 순간, 찍어서 올려봐" : "📸 Film this moment and post it",
+    filmNudgeEnd: ko ? "방금 그 리액션 영상으로 남겼어? #TalkFlip 달고 올려봐" : "Caught that reaction on video? Post it with #TalkFlip",
+    primaryAction: (mode, step) => {
+      switch(mode){
+        case "this_or_that": return ko ? "다음 선택" : "Next pick";
+        case "whos_most_likely": return ko ? "다음 투표" : "Next vote";
+        case "taboo_round": return ko ? "다음 주제" : "Next topic";
+        case "hot_seat": { const l = step===1 ? "2/2" : "1/2"; return ko ? `답변 ${l}` : `Answer ${l}`; }
+        default: return ko ? "다음 카드" : "Next card";
+      }
+    },
+    verdictLabel: v => {
+      switch(v.kind){
+        case "normal": return null;
+        case "smallDeck": return ko ? "카드가 적은 덱" : "Small deck";
+        case "quickRound": return ko ? "짧은 라운드" : "Quick Round";
+        case "shortRound": return ko ? "짧은 라운드" : "Short round";
+        case "disabled":
+          if(v.reason==="coupleOnly") return ko ? "2명 전용" : "2 players only";
+          if(v.reason==="needThreePlus") return ko ? "3명 이상" : "3+ players";
+          return ko ? "이 모드엔 없어요" : "Not in this mode";
+      }
+    }
+  };
+}
+
+/* ===== Availability (mirror ContentStore.swift) ===== */
+function defaultRange(type){
+  return (type==="vote"||type==="taboo") ? [3,8] : [1,8];
+}
+function resolvedRange(card, deck){
+  const d = defaultRange(card.cardType);
+  const min = Math.max(card.minPlayers ?? d[0], deck.minPlayers ?? 1);
+  const max = Math.min(card.maxPlayers ?? d[1], deck.maxPlayers ?? 8);
+  return [min,max];
+}
+function cardsFor(mode, deck, players){
+  return CARDS.filter(c =>
+    c.deck === deck.id &&
+    c.modes.includes(mode) &&
+    (()=>{ const r = resolvedRange(c, deck); return players >= r[0] && players <= r[1]; })()
+  );
+}
+function verdict(mode, count, deck, players){
+  if(deck.id==="couple" && players!==2) return {kind:"disabled", reason:"coupleOnly", playable:false};
+  if((mode==="whos_most_likely"||mode==="taboo_round") && players<3) return {kind:"disabled", reason:"needThreePlus", playable:false};
+  if(mode==="hot_seat"){
+    if(count>=18) return {kind:"normal", playable:true};
+    if(count>=12) return {kind:"shortRound", playable:true};
+    return {kind:"disabled", reason:"notEnoughCards", playable:false};
+  }
+  if(mode==="this_or_that"){
+    if(count>=8) return {kind:"normal", playable:true};
+    if(count>=5) return {kind:"quickRound", playable:true};
+    return {kind:"disabled", reason:"notEnoughCards", playable:false};
+  }
+  // classic_flip, whos_most_likely, taboo_round
+  if(count>=8) return {kind:"normal", playable:true};
+  if(count>=6) return {kind:"smallDeck", playable:true};
+  return {kind:"disabled", reason:"notEnoughCards", playable:false};
+}
+function availability(mode, players){
+  return DECKS.map(deck => {
+    const pool = cardsFor(mode, deck, players);
+    return { deck, cardCount: pool.length, verdict: verdict(mode, pool.length, deck, players) };
+  });
+}
+
+/* ===== Stats store (mirror CardStatsStore.swift, localStorage) ===== */
+const STATS_KEY = "talkflip.cardStats.v1";
+const FAV_KEY = "talkflip.favoriteIDs.v1";
+const Stats = {
+  stats: JSON.parse(localStorage.getItem(STATS_KEY) || "{}"),
+  favs: new Set(JSON.parse(localStorage.getItem(FAV_KEY) || "[]")),
+  _saveStats(){ localStorage.setItem(STATS_KEY, JSON.stringify(this.stats)); },
+  _saveFavs(){ localStorage.setItem(FAV_KEY, JSON.stringify([...this.favs])); },
+  _ensure(id){ if(!this.stats[id]) this.stats[id] = {shown:0,passed:0,favorited:0,shared:0}; return this.stats[id]; },
+  recordShown(id){ this._ensure(id).shown++; this._saveStats(); },
+  recordPassed(id){ this._ensure(id).passed++; this._saveStats(); },
+  recordShared(id){ const s=this._ensure(id); s.shared=(s.shared||0)+1; this._saveStats(); },
+  toggleFavorite(id){
+    if(this.favs.has(id)){ this.favs.delete(id); this._saveFavs(); return false; }
+    this.favs.add(id); this._ensure(id).favorited++; this._saveStats(); this._saveFavs(); return true;
+  },
+  isFavorite(id){ return this.favs.has(id); },
+  totals(){ let shown=0,passed=0,shared=0; for(const v of Object.values(this.stats)){ shown+=v.shown||0; passed+=v.passed||0; shared+=v.shared||0; } return {shown,passed,shared}; }
+};
+
+/* ===== Haptics (best-effort on supporting devices) ===== */
+function haptic(ms){ if(navigator.vibrate) navigator.vibrate(ms); }
+
+/* ===== Game session (mirror Session.swift) ===== */
+const QUICK = 5;
+class GameSession {
+  constructor(mode, deck, language, players, cards, isQuickRound){
+    this.mode = mode; this.deck = deck; this.language = language; this.players = players;
+    this.isQuickRound = isQuickRound;
+    this.allCards = shuffle([...cards]);
+    this.dealOffset = 0;
+    if(isQuickRound){
+      this.cards = this.allCards.slice(0, QUICK);
+      this.dealOffset = this.cards.length;
+    } else {
+      this.cards = this.allCards;
+    }
+    this.currentIndex = 0; this.shownCount = 0; this.answeredInHotSeat = 0;
+    this.hotSeatTurn = 1; this.score = 0; this.penalties = 0;
+    this.tabooSecondsLeft = 30; this.showFollow = false;
+    this.seenOrder = []; this.seenIds = new Set(); this.passedCount = 0; this.sessionFavs = new Set();
+  }
+  markSeen(id){ if(!this.seenIds.has(id)){ this.seenIds.add(id); this.seenOrder.push(id); } }
+  get currentCard(){ return this.currentIndex < this.cards.length ? this.cards[this.currentIndex] : null; }
+  get isComplete(){ return this.currentCard === null; }
+  get canPlayAnotherQuickRound(){ return this.isQuickRound && this.allCards.length > QUICK; }
+  get progressText(){ return `${Math.min(this.currentIndex+1, this.cards.length)} / ${this.cards.length}`; }
+  _deferToBack(){
+    if(this.currentIndex >= this.cards.length) return;
+    const c = this.cards.splice(this.currentIndex,1)[0];
+    this.cards.push(c);
+  }
+  next(){
+    this.showFollow = false; this._resetTaboo(); this.shownCount++; this.currentIndex++;
+    if(this.mode==="hot_seat"){
+      this.answeredInHotSeat++;
+      if(this.answeredInHotSeat>=2){ this.answeredInHotSeat=0; this.hotSeatTurn++; this._deferToBack(); }
+    }
+  }
+  pass(){ this.passedCount++; this.showFollow=false; this._resetTaboo(); this._deferToBack(); }
+  tick(){ if(this.mode==="taboo_round" && this.tabooSecondsLeft>0) this.tabooSecondsLeft--; }
+  addPoint(){ this.score++; this.next(); }
+  addPenalty(){ this.penalties++; this.next(); }
+  restart(){
+    if(this.isQuickRound){
+      if(this.dealOffset>=this.allCards.length){ this.allCards=shuffle(this.allCards); this.dealOffset=0; }
+      const end = Math.min(this.dealOffset+QUICK, this.allCards.length);
+      this.cards = this.allCards.slice(this.dealOffset, end);
+      this.dealOffset = end;
+    } else {
+      this.allCards = shuffle(this.allCards); this.cards = this.allCards;
+    }
+    this.currentIndex=0; this.shownCount=0; this.answeredInHotSeat=0; this.hotSeatTurn=1;
+    this.score=0; this.penalties=0; this.tabooSecondsLeft=30; this.showFollow=false;
+    this.seenOrder=[]; this.seenIds=new Set(); this.passedCount=0; this.sessionFavs=new Set();
+  }
+  _resetTaboo(){ if(this.mode==="taboo_round") this.tabooSecondsLeft=30; }
+}
+function shuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+
+/* ===== App state ===== */
+const state = {
+  language: "ko", players: 3, mode: "whos_most_likely", deckId: null,
+  session: null, heroIndex: 0, timerHandle: null, onboardStep: 0
+};
+
+const root = document.getElementById("phone");
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function deckName(deck){ return state.language==="en" ? deck.name.en : deck.name.ko; }
+function deckDesc(deck){ return state.language==="en" ? deck.description.en : deck.description.ko; }
+
+function firstPlayableDeck(){
+  const a = availability(state.mode, state.players).find(x => x.verdict.playable);
+  return a ? a.deck.id : null;
+}
+function selectedAvailability(){
+  if(!state.deckId) return null;
+  return availability(state.mode, state.players).find(x => x.deck.id === state.deckId);
+}
+
+/* ===== Render: setup ===== */
+const ONBOARD_KEY = "talkflip.onboarded.v1";
+function renderOnboarding(){
+  const t = UIText(state.language);
+  const steps = t.onboard;
+  const i = Math.min(state.onboardStep || 0, steps.length - 1);
+  const s = steps[i];
+  const arts = [
+    `<div class="ob-art">${BRAND_MARK}</div>`,
+    `<div class="ob-art"><div class="ob-circle">${svgIcon('grid',46)}</div></div>`,
+    `<div class="ob-art"><div class="ob-circle">${svgIcon('heart',36)}${svgIcon('send',36)}</div></div>`
+  ];
+  root.innerHTML = `
+    <div class="onboard">
+      <button class="ob-skip" id="obSkip">${esc(t.obSkip)}</button>
+      <div class="ob-main">
+        ${arts[i]}
+        <h2 class="ob-title">${esc(s.title)}</h2>
+        <p class="ob-text">${esc(s.body)}</p>
+      </div>
+      <div class="ob-foot">
+        <div class="ob-dots">${steps.map((_,k)=>`<span class="${k===i?'on':''}"></span>`).join("")}</div>
+        <button class="btn-start" id="obNext"><span class="bs-main">${i<steps.length-1?esc(t.obNext):esc(t.obStart)}</span></button>
+      </div>
+    </div>`;
+  document.getElementById("obSkip").onclick = () => { haptic(8); finishOnboarding(); };
+  document.getElementById("obNext").onclick = () => {
+    haptic(8);
+    if(i < steps.length - 1){ state.onboardStep = i + 1; renderOnboarding(); }
+    else finishOnboarding();
+  };
+}
+function finishOnboarding(){
+  try { localStorage.setItem(ONBOARD_KEY, "1"); } catch(e){}
+  renderSetup();
+}
+
+function quickStart(){
+  const modes = ["whos_most_likely","this_or_that","classic_flip","hot_seat","taboo_round"];
+  const decks = ["spicy","funny","party","warm_up","couple","deep"];
+  for(const m of modes){
+    const av = availability(m, state.players);
+    for(const dId of decks){
+      const it = av.find(x => x.deck.id === dId && x.verdict.playable);
+      if(it){ state.mode = m; state.deckId = dId; quickStartGo(); return; }
+    }
+  }
+  for(const m of modes){
+    const it = availability(m, state.players).find(x => x.verdict.playable);
+    if(it){ state.mode = m; state.deckId = it.deck.id; quickStartGo(); return; }
+  }
+}
+function quickStartGo(){ haptic(15); startGame(); }
+
+function renderSetup(){
+  const t = UIText(state.language);
+  const heroCards = CARDS.filter(c => c.cardType !== "taboo");
+  const hc = heroCards.length ? heroCards[state.heroIndex % heroCards.length] : null;
+  const heroText = !hc ? (t.ko ? "누가 제일 먼저 분위기를 터뜨릴까?" : "Who breaks the ice first?")
+    : (state.language==="en" ? hc.en : hc.ko);
+
+  const avail = availability(state.mode, state.players)
+    .slice().sort((a, b) => (b.verdict.playable ? 1 : 0) - (a.verdict.playable ? 1 : 0));
+  const selDeck = DECKS.find(d => d.id === state.deckId);
+
+  root.innerHTML = `
+    <div class="topbar">
+      <div class="brand">${BRAND_MARK}<span>TalkFlip</span></div>
+      <div class="topbar-actions">
+        <button class="icon-btn" id="settingsBtn" aria-label="${esc(t.settings)}">${svgIcon('settings',18)}</button>
+        <button class="icon-btn" id="favBtn" aria-label="${esc(t.favorites)}">${svgIcon(Stats.favs.size>0?'heart_fill':'heart',19)}</button>
+      </div>
+    </div>
+
+    <div class="scroll">
+      <div class="hero-tag">${esc(t.heroTitle)}</div>
+
+      <div class="herocard">
+        <div class="kicker"><span>${esc(t.heroKicker)}</span><button id="heroShuffle">${svgIcon('shuffle',14)} ${esc(t.shuffle)}</button></div>
+        <div class="q">${esc(heroText)}</div>
+        <div class="ghost">FLIP</div>
+      </div>
+
+      <div class="glabel">${svgIcon('users',16)} ${esc(t.sectionPlayers)}</div>
+      <div class="players-row">
+        <div class="players">
+          <div class="who">${svgIcon('users',22)}<span class="val">${esc(t.playersCount(state.players))}</span></div>
+          <div class="pm"><button id="pMinus" aria-label="−">${svgIcon('minus',22)}</button><button id="pPlus" aria-label="+">${svgIcon('plus',22)}</button></div>
+        </div>
+        <button class="quick-btn" id="quickStart">${svgIcon('zap',20)}<span>${esc(t.quickStart)}</span></button>
+      </div>
+
+      <div class="glabel">${svgIcon('grid',16)} ${esc(t.sectionMode)}</div>
+      <div class="modegrid" id="modeGrid">
+        ${MODE_ORDER.map(m => `<button class="modecell ${state.mode===m?'active':''} ${FILMABLE.has(m)?'filmable':''}" data-m="${m}">
+          ${FILMABLE.has(m)?`<span class="m-film">${svgIcon('camera',13)}</span>`:""}
+          <div class="m-ico">${svgIcon('mode_'+m,28)}</div>
+          <div class="m-title">${esc(t.ko ? MODE_KO[m] : MODE_TITLE[m])}</div>
+          <div class="m-min">${svgIcon('users',12)} ${esc(t.minPlayers(MODE_MIN[m]))}</div>
+        </button>`).join("")}
+      </div>
+
+      <div class="glabel">${svgIcon('layers',16)} ${esc(t.sectionDeck)}</div>
+      ${avail.some(x=>!x.verdict.playable) ? `<div class="hint">${esc(t.deckDependencyHint)}</div>` : ""}
+      <div id="deckList">
+        ${avail.map(item => {
+          const sel = state.deckId === item.deck.id;
+          const pl = item.verdict.playable;
+          const label = t.verdictLabel(item.verdict);
+          const tint = DECK_TINT[item.deck.id] || "#5b6bff";
+          return `<div class="deckrow ${sel?'active':''} ${pl?'':'disabled'}" data-d="${item.deck.id}" data-pl="${pl}" role="button" tabindex="${pl?0:-1}" aria-disabled="${pl?'false':'true'}" aria-label="${esc(deckName(item.deck))}">
+            <div class="d-top">
+              <div class="d-badge" style="background:${tint}26;color:${tint};">${svgIcon('deck_'+item.deck.id,24)}</div>
+              <div class="d-status">
+                ${pl ? `<span class="cnt">${esc(t.cardsCount(item.cardCount))}</span>` : ""}
+                ${label ? `<span class="vd" style="color:${pl?'var(--brand2)':'var(--muted)'}">${esc(label)}</span>` : ""}
+              </div>
+            </div>
+            <div class="name">${esc(deckName(item.deck))}</div>
+            <div class="desc">${esc(deckDesc(item.deck))}</div>
+          </div>`;
+        }).join("")}
+      </div>
+    </div>
+
+    <div class="startbar">
+      <button class="btn-start" id="startBtn" ${state.deckId?'':'disabled'}>${esc(t.start)} →</button>
+    </div>
+  `;
+
+  document.getElementById("favBtn").onclick = () => { haptic(8); openFavorites(); };
+  document.getElementById("settingsBtn").onclick = () => { haptic(8); openSettings(); };
+  document.getElementById("heroShuffle").onclick = () => { haptic(8); state.heroIndex = Math.floor(Math.random()*Math.max(heroCards.length,1)); renderSetup(); };
+  document.getElementById("quickStart").onclick = () => { haptic(12); quickStart(); };
+  document.getElementById("pMinus").onclick = () => { state.players = Math.max(1, state.players-1); ensureDeck(); renderSetup(); };
+  document.getElementById("pPlus").onclick = () => { state.players = Math.min(8, state.players+1); ensureDeck(); renderSetup(); };
+  document.querySelectorAll("#modeGrid .modecell").forEach(b => b.onclick = () => { haptic(8); state.mode = b.dataset.m; state.deckId = firstPlayableDeck(); renderSetup(); });
+  document.querySelectorAll("#deckList .deckrow").forEach(b => {
+    const go = () => { if(b.dataset.pl !== "true") return; haptic(8); state.deckId = b.dataset.d; renderSetup(); };
+    b.onclick = go;
+    b.onkeydown = e => { if(e.key === "Enter" || e.key === " "){ e.preventDefault(); go(); } };
+  });
+  document.getElementById("startBtn").onclick = startGame;
+}
+
+function ensureDeck(){
+  const sel = selectedAvailability();
+  if(!sel || !sel.verdict.playable) state.deckId = firstPlayableDeck();
+}
+
+function startGame(){
+  const sel = selectedAvailability();
+  if(!sel) return;
+  const cards = cardsFor(state.mode, sel.deck, state.players);
+  const isQuick = sel.verdict.kind === "quickRound";
+  haptic(15);
+  state.session = new GameSession(state.mode, sel.deck, state.language, state.players, cards, isQuick);
+  renderGame();
+  startTimer();
+}
+
+function startTimer(){
+  stopTimer();
+  state.timerHandle = setInterval(() => {
+    const s = state.session;
+    if(!s || s.mode !== "taboo_round") return;
+    const before = s.tabooSecondsLeft;
+    s.tick();
+    if(before > 0 && s.tabooSecondsLeft === 0) haptic([20,40,20]);
+    const el = document.getElementById("timer");
+    if(el){
+      const t = UIText(s.language);
+      el.textContent = s.tabooSecondsLeft === 0 ? t.timesUp : s.tabooSecondsLeft + "s";
+      el.style.color = (s.tabooSecondsLeft === 0 || s.tabooSecondsLeft <= 5) ? "#ffd60a" : "#fff";
+    }
+  }, 1000);
+}
+function stopTimer(){ if(state.timerHandle){ clearInterval(state.timerHandle); state.timerHandle = null; } }
+
+/* ===== Render: game ===== */
+function renderGame(){
+  const s = state.session;
+  const t = UIText(s.language);
+
+  if(s.isComplete){ renderComplete(); return; }
+  const card = s.currentCard;
+  Stats.recordShown(card.id);
+  s.markSeen(card.id);
+
+  const grad = GRADIENTS[card.cardType] || GRADIENTS.answer;
+  const isTaboo = card.cardType === "taboo";
+
+  let body = `<div class="game">
+    <div class="gtop">
+      <button class="round-icon" id="closeBtn" aria-label="${esc(t.close)}">${svgIcon('close',18)}</button>
+      <div class="progress">
+        ${s.mode==="hot_seat" ? `<span>${esc(t.turnLabel(s.hotSeatTurn))}</span>` : ""}
+        <span>${esc(s.progressText)}</span>
+      </div>
+      <button class="round-icon" id="recapBtn" aria-label="${esc(t.recap)}">${svgIcon('send',17)}</button>
+    </div>
+    <div class="gamecard" id="gameCard" style="background:linear-gradient(140deg, ${grad[0]}, ${grad[1]});">
+      <div class="modetag">${esc((t.ko?MODE_KO:MODE_TITLE)[s.mode])}</div>
+      ${s.mode==="taboo_round" ? `<div class="timer" id="timer">${s.tabooSecondsLeft}s</div>` : ""}
+      ${s.language!=="en" ? `<div class="qko">${esc(card.ko)}</div>` : ""}
+      ${s.language!=="ko" ? `<div class="qen" style="${s.language==='both'?'opacity:0.85;':''}">${esc(card.en)}</div>` : ""}
+      ${isTaboo ? `<div class="banned-label">${esc(t.bannedWords)}</div>
+        <div class="banned">${(s.language==="en"?card.bannedEn:card.bannedKo||[]).map(w=>`<span class="chip">${esc(w)}</span>`).join("")}</div>` : ""}
+      ${s.showFollow && card.follow ? `<div class="follow">${esc(s.language==="en"?card.follow.en:card.follow.ko)}</div>` : ""}
+      <div class="ghost">FLIP</div>
+    </div>
+    ${FILMABLE.has(s.mode) ? `<div class="filmnudge">${esc(t.filmNudge)}</div>` : ""}
+    ${s.currentIndex===0 ? `<div class="turnhint">${esc(t.turnHint)}</div>` : ""}
+    <div class="controls" id="controls"></div>
+  </div>`;
+  root.innerHTML = body;
+
+  document.getElementById("closeBtn").onclick = exitGame;
+  const rb = document.getElementById("recapBtn"); if(rb) rb.onclick = () => { haptic(8); openRecap(s); };
+  renderControls(card);
+}
+
+function renderControls(card){
+  const s = state.session, t = UIText(s.language);
+  const c = document.getElementById("controls");
+  const actionRow = `<div class="actionbar">
+      <button class="btn bordered" id="favCard">${svgIcon(Stats.isFavorite(card.id)?'heart_fill':'heart',16)} ${esc(Stats.isFavorite(card.id)?t.saved:t.save)}</button>
+      <button class="btn bordered" id="shareCard">${svgIcon('send',16)} ${esc(t.share)}</button>
+    </div>`;
+
+  if(s.mode === "taboo_round"){
+    c.innerHTML = actionRow + `
+      <div class="row">
+        <span class="pill" style="background:rgba(52,199,89,0.15);color:#34c759;">${esc(t.scoreLabel)} ${s.score}</span>
+        <span class="pill" style="background:rgba(255,59,48,0.15);color:#ff3b30;">${esc(t.penaltyLabel)} ${s.penalties}</span>
+      </div>
+      <div class="row">
+        <button class="btn bordered" id="caught">${svgIcon('close',16)} ${esc(t.caught)}</button>
+        <button class="btn prominent" id="cleared">${svgIcon('check',16)} ${esc(t.cleared)}</button>
+      </div>`;
+    document.getElementById("caught").onclick = () => { haptic([10,30,10]); flipNext(() => s.addPenalty()); };
+    document.getElementById("cleared").onclick = () => { haptic(15); flipNext(() => s.addPoint()); };
+  } else {
+    const followBtn = card.follow ? `<button class="btn ghost" id="followBtn">${s.showFollow?esc(t.hideFollow):esc(t.showFollow)}</button>` : "";
+    c.innerHTML = actionRow + followBtn + `
+      <div class="row">
+        <button class="btn bordered" id="passBtn">${esc(t.pass)}</button>
+        <button class="btn prominent" id="nextBtn">${esc(t.primaryAction(s.mode, s.answeredInHotSeat))} →</button>
+      </div>`;
+    if(card.follow) document.getElementById("followBtn").onclick = () => { s.showFollow = !s.showFollow; renderGame(); };
+    document.getElementById("passBtn").onclick = () => { haptic(8); Stats.recordPassed(card.id); flipNext(() => s.pass()); };
+    document.getElementById("nextBtn").onclick = () => { flipNext(() => s.next()); };
+  }
+
+  document.getElementById("favCard").onclick = () => {
+    haptic(8);
+    const nowFav = Stats.toggleFavorite(card.id);
+    if(nowFav) s.sessionFavs.add(card.id); else s.sessionFavs.delete(card.id);
+    renderControls(card);
+  };
+  document.getElementById("shareCard").onclick = () => { haptic(8); openShare(card, s.language, s.mode); };
+}
+
+function flipNext(action){
+  haptic(12);
+  const el = document.getElementById("gameCard");
+  if(el) el.classList.add("flip");
+  setTimeout(() => { action(); renderGame(); }, 170);
+}
+
+function renderComplete(){
+  const s = state.session, t = UIText(s.language);
+  root.innerHTML = `<div class="game"><div class="complete">
+    <div class="party">${svgIcon('sparkle',62)}</div>
+    <h2>${esc(s.isQuickRound ? t.roundComplete : t.deckComplete)}</h2>
+    <p class="sub">${esc(t.completeSubtitle)}</p>
+    ${FILMABLE.has(s.mode) ? `<p style="color:var(--brand2);font-weight:800;font-size:14px;max-width:280px;">${esc(t.filmNudgeEnd)}</p>` : ""}
+    <div class="stack">
+      <button class="btn prominent" id="recapShare">${svgIcon('send',16)} ${esc(t.recapShareBtn)}</button>
+      <button class="btn bordered" id="again" ${(s.isQuickRound && !s.canPlayAnotherQuickRound)?'disabled':''}>${esc(s.isQuickRound ? t.playAnotherQuick : t.playAgain)}</button>
+      <button class="btn ghost" id="changeSetup">${esc(t.changeSetup)}</button>
+    </div>
+  </div></div>`;
+  document.getElementById("recapShare").onclick = () => { haptic(8); openRecap(s); };
+  const again = document.getElementById("again");
+  if(!(s.isQuickRound && !s.canPlayAnotherQuickRound)){
+    again.onclick = () => { haptic(15); showInterstitial("after-round", () => { s.restart(); renderGame(); }); };
+  } else {
+    again.style.opacity = "0.4";
+  }
+  document.getElementById("changeSetup").onclick = () => showInterstitial("to-home", exitGame);
+}
+
+function exitGame(){ stopTimer(); state.session = null; renderSetup(); }
+
+/* ===== Favorites modal ===== */
+function openFavorites(){
+  const t = UIText(state.language);
+  const favCards = CARDS.filter(c => Stats.isFavorite(c.id));
+  const totals = Stats.totals();
+  const overlay = document.createElement("div");
+  overlay.className = "modal-bg";
+  overlay.innerHTML = `<div class="modal">
+    <div class="mhead"><span class="t">${esc(t.favorites)}</span><button id="favDone">${esc(t.done)}</button></div>
+    <div class="mbody">
+      ${favCards.length === 0 ? `<div class="empty"><div class="big">♡</div><div style="font-weight:700;margin-top:8px;">${esc(t.favoritesEmptyTitle)}</div><div style="margin-top:6px;">${esc(t.favoritesEmptyBody)}</div></div>`
+        : favCards.map(c => `<div class="favitem" data-id="${c.id}">
+            ${state.language!=="en"?`<div class="fko">${esc(c.ko)}</div>`:""}
+            ${state.language!=="ko"?`<div class="fen">${esc(c.en)}</div>`:""}
+            <div class="frow">
+              <button class="share" data-share="${c.id}">${svgIcon('send',13)} ${esc(t.share)}</button>
+              <button class="rm" data-rm="${c.id}">${esc(t.remove)}</button>
+            </div>
+          </div>`).join("")
+      }
+      <div class="section-title">${esc(t.insights)}</div>
+      <div class="insights">
+        <div class="ir"><span>${esc(t.statSeen)}</span><span class="v">${totals.shown}</span></div>
+        <div class="ir"><span>${esc(t.statPassed)}</span><span class="v">${totals.passed}</span></div>
+        <div class="ir"><span>${esc(t.statShared)}</span><span class="v">${totals.shared}</span></div>
+        <div class="ir"><span>${esc(t.statFavorited)}</span><span class="v">${Stats.favs.size}</span></div>
+      </div>
+    </div>
+  </div>`;
+  document.body.appendChild(overlay);
+  overlay.querySelector("#favDone").onclick = () => overlay.remove();
+  overlay.onclick = e => { if(e.target === overlay) overlay.remove(); };
+  overlay.querySelectorAll("[data-rm]").forEach(b => b.onclick = () => { Stats.toggleFavorite(b.dataset.rm); overlay.remove(); openFavorites(); });
+  overlay.querySelectorAll("[data-share]").forEach(b => b.onclick = () => {
+    const c = CARDS.find(x => x.id === b.dataset.share);
+    openShare(c, state.language, representativeMode(c.cardType));
+  });
+}
+
+/* ===== Settings ===== */
+function openSettings(){
+  const t = UIText(state.language);
+  const overlay = document.createElement("div");
+  overlay.className = "modal-bg";
+  overlay.innerHTML = `<div class="modal">
+    <div class="mhead"><span class="t">${esc(t.settings)}</span><button id="setDone">${esc(t.done)}</button></div>
+    <div class="mbody">
+      <div class="set-label">${esc(t.sectionLanguage)}</div>
+      <div class="lang-seg lang-seg-wide" id="setLang">
+        ${LANG_OPTIONS.map(l => `<button data-l="${l}" class="${state.language===l?'active':''}">${l==="ko"?"KR":l==="en"?"EN":"KR·EN"}</button>`).join("")}
+      </div>
+
+      <div class="set-card">
+        <div class="set-row">${svgIcon('info',18)} <b>${esc(t.about)}</b></div>
+        <div class="set-sub">${esc(t.aboutBody)}</div>
+        <div class="set-sub">${esc(t.versionLabel)} 0.1</div>
+      </div>
+
+      <div class="set-card">
+        <div class="set-row">${svgIcon('lock',18)} <b>${esc(t.privacy)}</b></div>
+        <div class="set-sub">${esc(t.privacyBody)}</div>
+      </div>
+
+      <button class="btn bordered set-danger" id="resetBtn">${svgIcon('trash',16)} ${esc(t.resetStats)}</button>
+
+      <div class="set-links">
+        <a href="about${t.ko?'':'.en'}.html" target="_blank" rel="noopener">${t.ko?'소개':'About'}</a>
+        <a href="how-to-play${t.ko?'':'.en'}.html" target="_blank" rel="noopener">${t.ko?'플레이 방법':'How to play'}</a>
+        <a href="privacy${t.ko?'':'.en'}.html" target="_blank" rel="noopener">${t.ko?'개인정보 처리방침':'Privacy'}</a>
+        <a href="terms${t.ko?'':'.en'}.html" target="_blank" rel="noopener">${t.ko?'이용약관':'Terms'}</a>
+      </div>
+    </div>
+  </div>`;
+  document.body.appendChild(overlay);
+  overlay.querySelector("#setDone").onclick = () => overlay.remove();
+  overlay.onclick = e => { if(e.target === overlay) overlay.remove(); };
+  overlay.querySelectorAll("#setLang button").forEach(b => b.onclick = () => {
+    state.language = b.dataset.l; renderSetup(); overlay.remove(); openSettings();
+  });
+  overlay.querySelector("#resetBtn").onclick = () => {
+    if(confirm(t.resetConfirm)){
+      try { localStorage.removeItem(STATS_KEY); localStorage.removeItem(FAV_KEY); } catch(e){}
+      Stats.stats = {}; Stats.favs = new Set();
+      haptic(15); renderSetup(); overlay.remove();
+    }
+  };
+}
+
+/* ===== Share image (canvas render of ShareCardSnapshot) ===== */
+function makeShareCanvas(card, language, mode){
+  const W=1080, H=1600;
+  const cv = document.createElement("canvas"); cv.width=W; cv.height=H;
+  const ctx = cv.getContext("2d");
+  const grad = GRADIENTS[card.cardType] || GRADIENTS.answer;
+  const g = ctx.createLinearGradient(0,0,W,H);
+  g.addColorStop(0, grad[0]); g.addColorStop(1, grad[1]);
+  ctx.fillStyle = g; ctx.fillRect(0,0,W,H);
+  ctx.fillStyle = "#fff";
+
+  // header
+  ctx.textBaseline = "top";
+  ctx.font = "900 54px -apple-system, sans-serif";
+  ctx.fillText("TalkFlip", 78, 78);
+  ctx.globalAlpha = 0.72; ctx.font = "800 26px -apple-system, sans-serif";
+  ctx.fillText((language==="en"?MODE_TITLE:MODE_KO)[mode].toUpperCase(), 78, 146);
+  ctx.globalAlpha = 1;
+
+  // question text (centered vertical block)
+  const ko = language !== "en";
+  const en = language !== "ko";
+  let y = 470;
+  const wrap = (text, font, maxW) => {
+    ctx.font = font;
+    const words = text.split(/(\s+)/);
+    const lines = []; let line = "";
+    for(const w of words){
+      if(ctx.measureText(line + w).width > maxW && line){ lines.push(line.trimEnd()); line = w.trimStart(); }
+      else line += w;
+    }
+    if(line.trim()) lines.push(line.trim());
+    return lines;
+  };
+  const drawLines = (lines, font, lh, alpha) => {
+    ctx.font = font; ctx.globalAlpha = alpha;
+    for(const l of lines){ ctx.fillText(l, 78, y); y += lh; }
+    ctx.globalAlpha = 1;
+  };
+  if(ko){ drawLines(wrap(card.ko, "900 78px -apple-system, sans-serif", W-156), "900 78px -apple-system, sans-serif", 96, 1); y += 20; }
+  if(en){ const f = language==="both" ? "900 50px -apple-system, sans-serif" : "900 76px -apple-system, sans-serif"; drawLines(wrap(card.en, f, W-156), f, language==="both"?64:92, language==="both"?0.85:1); }
+
+  // banned words for taboo
+  if(card.cardType === "taboo"){
+    y += 30; ctx.globalAlpha = 0.7; ctx.font = "900 24px -apple-system, sans-serif";
+    ctx.fillText(ko ? "금지어" : "BANNED WORDS", 78, y); ctx.globalAlpha = 1; y += 44;
+    const words = (language==="en"?card.bannedEn:card.bannedKo) || [];
+    let x = 78; ctx.font = "900 32px -apple-system, sans-serif";
+    for(const w of words){
+      const tw = ctx.measureText(w).width + 48;
+      if(x + tw > W-78){ x = 78; y += 70; }
+      ctx.globalAlpha = 0.18; roundRect(ctx, x, y, tw, 56, 28); ctx.fill(); ctx.globalAlpha = 1;
+      ctx.fillText(w, x+24, y+12); x += tw + 16;
+    }
+  }
+
+  drawInstallFooter(ctx, W, H, language);
+  return cv;
+}
+function roundRect(ctx,x,y,w,h,r){ ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r); ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath(); }
+
+// shared canvas helpers
+function drawInstallFooter(ctx, W, H, language){
+  const ctaY = H - 220;
+  ctx.globalAlpha = 0.82; ctx.font = "700 30px -apple-system, sans-serif";
+  ctx.fillText(language==="en" ? "Tag a friend and play 👇" : "친구 태그하고 같이 해봐 👇", 78, ctaY);
+  ctx.font = "900 40px -apple-system, sans-serif";
+  const urlText = "▶ " + SHARE_URL;
+  const pillW = ctx.measureText(urlText).width + 56;
+  ctx.globalAlpha = 0.22; roundRect(ctx, 78, ctaY + 48, pillW, 78, 39); ctx.fill();
+  ctx.globalAlpha = 1; ctx.fillText(urlText, 78 + 28, ctaY + 48 + 19);
+  ctx.font = "900 34px -apple-system, sans-serif";
+  const tag = "#TalkFlip"; ctx.fillText(tag, W - 78 - ctx.measureText(tag).width, H - 92);
+}
+function wrapText(ctx, text, font, maxW){
+  ctx.font = font;
+  const words = String(text).split(/(\s+)/);
+  const lines = []; let line = "";
+  for(const w of words){
+    if(ctx.measureText(line + w).width > maxW && line){ lines.push(line.trimEnd()); line = w.trimStart(); }
+    else line += w;
+  }
+  if(line.trim()) lines.push(line.trim());
+  return lines;
+}
+
+function makeRecapCanvas(session){
+  const W=1080, H=1600;
+  const cv = document.createElement("canvas"); cv.width=W; cv.height=H;
+  const ctx = cv.getContext("2d");
+  const lang = session.language;
+  const t = UIText(lang);
+  const g = ctx.createLinearGradient(0,0,W,H);
+  g.addColorStop(0, "#7b2ff7"); g.addColorStop(1, "#f5067f");
+  ctx.fillStyle = g; ctx.fillRect(0,0,W,H);
+  ctx.fillStyle = "#fff"; ctx.textBaseline = "top";
+
+  // header
+  ctx.font = "900 54px -apple-system, sans-serif"; ctx.fillText("TalkFlip", 78, 78);
+  ctx.globalAlpha = 0.72; ctx.font = "800 26px -apple-system, sans-serif";
+  const deck = session.deck;
+  const sub = (lang==="en" ? deck.name.en : deck.name.ko) + " · " + ((lang==="en"?MODE_TITLE:MODE_KO)[session.mode] || "").toUpperCase();
+  ctx.fillText(sub, 78, 146); ctx.globalAlpha = 1;
+
+  // headline
+  ctx.font = "900 84px -apple-system, sans-serif"; ctx.fillText(t.recapHeadline, 78, 230);
+
+  // stats
+  let y = 360;
+  ctx.font = "800 38px -apple-system, sans-serif"; ctx.globalAlpha = 0.95;
+  ctx.fillText(`${t.playedLabel}: ${session.seenOrder.length}     ${t.passesLabel}: ${session.passedCount}`, 78, y);
+  y += 64;
+  if(session.mode === "taboo_round"){
+    ctx.fillText(`${t.scoreLabel}: ${session.score}     ${t.penaltyLabel}: ${session.penalties}`, 78, y);
+    y += 64;
+  }
+  ctx.globalAlpha = 1;
+
+  // picks
+  y += 36;
+  ctx.globalAlpha = 0.72; ctx.font = "900 30px -apple-system, sans-serif";
+  ctx.fillText(t.picksTitle.toUpperCase(), 78, y); ctx.globalAlpha = 1; y += 60;
+
+  let picks = [...session.sessionFavs].map(id => CARDS.find(c => c.id === id)).filter(Boolean);
+  if(picks.length === 0){
+    picks = session.seenOrder.slice(-3).map(id => CARDS.find(c => c.id === id)).filter(Boolean);
+  }
+  picks = picks.slice(0, 4);
+
+  const pickText = c => lang === "en" ? c.en : c.ko;
+  const maxW = W - 200;
+  const lh = 56;
+  if(picks.length === 0){
+    ctx.font = "600 36px -apple-system, sans-serif"; ctx.globalAlpha = 0.85;
+    for(const l of wrapText(ctx, t.noPicksLine, "600 36px -apple-system, sans-serif", maxW)){ ctx.fillText(l, 78, y); y += lh; }
+    ctx.globalAlpha = 1;
+  } else {
+    picks.forEach((c, i) => {
+      ctx.font = "900 44px -apple-system, sans-serif"; ctx.globalAlpha = 0.5;
+      ctx.fillText(`${i+1}`, 78, y); ctx.globalAlpha = 1;
+      const lines = wrapText(ctx, pickText(c), "800 42px -apple-system, sans-serif", maxW);
+      ctx.font = "800 42px -apple-system, sans-serif";
+      lines.forEach(l => { ctx.fillText(l, 150, y); y += lh; });
+      y += 22;
+    });
+  }
+
+  drawInstallFooter(ctx, W, H, lang);
+  return cv;
+}
+
+function showImageShareModal(url, title, filename, shareText){
+  const t = UIText(state.language);
+  const overlay = document.createElement("div");
+  overlay.className = "modal-bg";
+  overlay.innerHTML = `<div class="modal">
+    <div class="mhead"><span class="t">${esc(title)}</span><button id="shClose">${esc(t.done)}</button></div>
+    <div class="mbody"><div id="shareCanvasWrap">
+      <img src="${url}" alt="share card"/>
+      <div class="srow">
+        <button class="btn prominent" id="shSys">${esc(t.share)}</button>
+        <button class="btn bordered" id="shDl">${esc(t.download)}</button>
+      </div>
+    </div></div>
+  </div>`;
+  document.body.appendChild(overlay);
+  overlay.querySelector("#shClose").onclick = () => overlay.remove();
+  overlay.onclick = e => { if(e.target === overlay) overlay.remove(); };
+  overlay.querySelector("#shDl").onclick = () => { const a = document.createElement("a"); a.href = url; a.download = filename; a.click(); };
+  overlay.querySelector("#shSys").onclick = async () => {
+    try {
+      const blob = await (await fetch(url)).blob();
+      const file = new File([blob], "talkflip.png", {type:"image/png"});
+      if(navigator.canShare && navigator.canShare({files:[file]})){
+        await navigator.share({files:[file], text:"#TalkFlip"});
+      } else if(navigator.share){
+        await navigator.share({text: shareText});
+      } else {
+        alert(t.ko ? "이 브라우저는 시스템 공유를 지원하지 않아요. ‘이미지 저장’을 사용하세요." : "System share not supported. Use Download.");
+      }
+    } catch(e){ /* user canceled */ }
+  };
+}
+
+function openShare(card, language, mode){
+  Stats.recordShared(card.id);
+  const cv = makeShareCanvas(card, language, mode);
+  showImageShareModal(cv.toDataURL("image/png"), UIText(state.language).share,
+    "talkflip_" + card.id + ".png", (language==="en"?card.en:card.ko) + " #TalkFlip");
+}
+
+function openRecap(session){
+  const cv = makeRecapCanvas(session);
+  showImageShareModal(cv.toDataURL("image/png"), UIText(state.language).recap,
+    "talkflip_recap.png", "#TalkFlip");
+}
+
+/* ===== Ads ===== */
+let _adsReady = false;
+let _lastInterstitial = 0;
+function initAds(){
+  if(!ADSENSE_CLIENT || ADSENSE_CLIENT.indexOf("ca-pub-") !== 0) return; // disabled / not configured
+  try {
+    const s = document.createElement("script");
+    s.async = true; s.crossOrigin = "anonymous";
+    s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + ADSENSE_CLIENT;
+    if(ADS_TEST) s.setAttribute("data-adbreak-test", "on");
+    s.setAttribute("data-ad-frequency-hint", "60s");
+    document.head.appendChild(s);
+    window.adsbygoogle = window.adsbygoogle || [];
+    window.adsbygoogle.push({ preloadAdBreaks: "on" });
+    _adsReady = true;
+  } catch(e){ _adsReady = false; }
+}
+function _adBreak(o){ try { (window.adsbygoogle = window.adsbygoogle || []).push(o); } catch(e){ if(o.afterAd) o.afterAd(); } }
+// Interstitial at a natural break (session end). Frequency-capped; never blocks if ads are off.
+function showInterstitial(name, done){
+  done = done || function(){};
+  const now = Date.now();
+  if(!_adsReady || now - _lastInterstitial < INTERSTITIAL_COOLDOWN_MS){ done(); return; }
+  _lastInterstitial = now;
+  _adBreak({ type: "next", name: name || "interstitial", afterAd: done });
+}
+// Opt-in rewarded ad (ready for future "unlock"/bonus use). onReward fires only if fully viewed.
+function showRewarded(name, onReward, onDone){
+  onDone = onDone || function(){};
+  if(!_adsReady){ onDone(false); return; }
+  let granted = false;
+  _adBreak({
+    type: "reward", name: name || "reward",
+    beforeReward(show){ show(); },
+    adViewed(){ granted = true; if(onReward) onReward(); },
+    adDismissed(){},
+    afterAd(){ onDone(granted); }
+  });
+}
+
+/* ===== Boot ===== */
+function showSplash(){
+  const sp = document.createElement("div");
+  sp.className = "splash";
+  sp.innerHTML = `${BRAND_MARK}<div class="sp-name">TalkFlip</div>`;
+  root.appendChild(sp);
+  setTimeout(() => { sp.classList.add("hide"); setTimeout(() => sp.remove(), 420); }, 780);
+}
+
+state.deckId = firstPlayableDeck();
+let _onboarded = false;
+try { _onboarded = !!localStorage.getItem(ONBOARD_KEY); } catch(e){}
+if(_onboarded) renderSetup();
+else renderOnboarding();
+showSplash();
+initAds();
+</script>
+</body>
+</html>

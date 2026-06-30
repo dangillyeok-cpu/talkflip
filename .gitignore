@@ -1,0 +1,5 @@
+.DS_Store
+TalkFlip/DerivedData/
+TalkFlip/simulator-*.png
+*.xcuserstate
+xcuserdata/

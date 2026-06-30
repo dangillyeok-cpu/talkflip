@@ -1,0 +1,62 @@
+{
+  "version": "0.1",
+  "decks": [
+    {
+      "id": "warm_up",
+      "name": {
+        "en": "Warm Up",
+        "ko": "워밍업"
+      },
+      "description": {
+        "en": "Easy, low-pressure cards for the first round.",
+        "ko": "첫 라운드에 쓰기 좋은 가볍고 부담 없는 카드."
+      }
+    },
+    {
+      "id": "funny",
+      "name": {
+        "en": "Funny",
+        "ko": "웃긴 질문"
+      },
+      "description": {
+        "en": "Playful cards for laughter and harmless reactions.",
+        "ko": "웃음과 가벼운 반응을 만드는 장난스러운 카드."
+      }
+    },
+    {
+      "id": "deep",
+      "name": {
+        "en": "Deep",
+        "ko": "깊은 얘기"
+      },
+      "description": {
+        "en": "Reflective cards that stay safe and conversational.",
+        "ko": "부담스럽지 않게 조금 더 깊은 대화를 여는 카드."
+      }
+    },
+    {
+      "id": "couple",
+      "name": {
+        "en": "Couple",
+        "ko": "커플"
+      },
+      "description": {
+        "en": "Two-player cards for couples or a clearly defined pair.",
+        "ko": "커플 또는 명확한 2인 페어를 위한 카드."
+      },
+      "minPlayers": 2,
+      "maxPlayers": 2
+    },
+    {
+      "id": "party",
+      "name": {
+        "en": "Party",
+        "ko": "파티"
+      },
+      "description": {
+        "en": "Group cards for voting, quick reactions, and high replay.",
+        "ko": "지목, 빠른 반응, 여러 명의 플레이에 맞춘 카드."
+      }
+    }
+  ]
+}

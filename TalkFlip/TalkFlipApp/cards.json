@@ -1,0 +1,3513 @@
+{
+  "version": "0.1",
+  "cards": [
+    {
+      "id": "warm_up_answer_001",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What tiny thing instantly improves your mood?",
+      "ko": "기분을 바로 좋아지게 만드는 작은 일은 뭐야?"
+    },
+    {
+      "id": "warm_up_answer_002",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What app do you open way too often?",
+      "ko": "너무 자주 열게 되는 앱은 뭐야?"
+    },
+    {
+      "id": "warm_up_answer_003",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What food could rescue a bad day?",
+      "ko": "힘든 날을 살려주는 음식은 뭐야?"
+    },
+    {
+      "id": "warm_up_answer_004",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What is a small win you had recently?",
+      "ko": "최근에 있었던 작지만 기분 좋은 승리는?"
+    },
+    {
+      "id": "warm_up_answer_005",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "If today had a title, what would it be?",
+      "ko": "오늘 하루에 제목을 붙이면 뭐라고 할래?"
+    },
+    {
+      "id": "warm_up_answer_006",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What is one thing you never regret buying?",
+      "ko": "사고 나서 후회한 적 없는 물건은 뭐야?"
+    },
+    {
+      "id": "warm_up_answer_007",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What is your current comfort show or video?",
+      "ko": "요즘 편하게 틀어두는 영상이나 콘텐츠는?"
+    },
+    {
+      "id": "warm_up_answer_008",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What small routine makes your day feel better?",
+      "ko": "하루를 조금 낫게 만드는 작은 루틴은?"
+    },
+    {
+      "id": "warm_up_answer_009",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What is something you are surprisingly good at?",
+      "ko": "생각보다 내가 잘하는 건 뭐야?"
+    },
+    {
+      "id": "warm_up_answer_010",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What is your go-to snack lately?",
+      "ko": "요즘 자주 찾는 간식은 뭐야?"
+    },
+    {
+      "id": "warm_up_answer_011",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What is a song you can always listen to?",
+      "ko": "언제 들어도 좋은 노래는 뭐야?"
+    },
+    {
+      "id": "warm_up_answer_012",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What is your favorite time of day?",
+      "ko": "하루 중 가장 좋아하는 시간대는 언제야?"
+    },
+    {
+      "id": "warm_up_answer_013",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What is one thing you are looking forward to?",
+      "ko": "요즘 기대하고 있는 일 하나는 뭐야?"
+    },
+    {
+      "id": "warm_up_answer_014",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What is a place that makes you feel calm?",
+      "ko": "가면 마음이 편해지는 장소는 어디야?"
+    },
+    {
+      "id": "warm_up_answer_015",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What is something you liked as a kid and still like?",
+      "ko": "어릴 때도 좋아했고 지금도 좋아하는 건 뭐야?"
+    },
+    {
+      "id": "warm_up_answer_016",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What is your easiest way to recharge?",
+      "ko": "가장 쉽게 충전되는 방법은 뭐야?"
+    },
+    {
+      "id": "warm_up_answer_017",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What is a tiny habit you are glad you have?",
+      "ko": "내가 가진 작은 습관 중 마음에 드는 건?"
+    },
+    {
+      "id": "warm_up_answer_018",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What is something you always notice first?",
+      "ko": "어딜 가든 제일 먼저 보게 되는 건 뭐야?"
+    },
+    {
+      "id": "warm_up_answer_019",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What is a small thing that makes a room feel nice?",
+      "ko": "공간을 기분 좋게 만드는 작은 건 뭐야?"
+    },
+    {
+      "id": "warm_up_answer_020",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What is something you could talk about for ten minutes?",
+      "ko": "10분은 거뜬히 말할 수 있는 주제는 뭐야?"
+    },
+    {
+      "id": "warm_up_answer_021",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What is your favorite simple pleasure?",
+      "ko": "소소하지만 확실히 좋은 즐거움은 뭐야?"
+    },
+    {
+      "id": "warm_up_answer_022",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What is something that makes you feel at home?",
+      "ko": "집에 온 것처럼 편하게 느껴지는 건 뭐야?"
+    },
+    {
+      "id": "warm_up_answer_023",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What is a small thing you are picky about?",
+      "ko": "사소하지만 은근히 까다로운 부분은 뭐야?"
+    },
+    {
+      "id": "warm_up_answer_024",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What is one thing that made you smile this week?",
+      "ko": "이번 주에 웃게 만든 일 하나는 뭐야?"
+    },
+    {
+      "id": "warm_up_choice_001",
+      "deck": "warm_up",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Unlimited snacks or unlimited sleep?",
+      "ko": "간식 무제한 vs 잠 무제한?"
+    },
+    {
+      "id": "warm_up_choice_002",
+      "deck": "warm_up",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Always early or always lucky?",
+      "ko": "항상 일찍 도착하기 vs 항상 운 좋기?"
+    },
+    {
+      "id": "warm_up_choice_003",
+      "deck": "warm_up",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Coffee at midnight or ramen at midnight?",
+      "ko": "밤 12시 커피 vs 밤 12시 라면?"
+    },
+    {
+      "id": "warm_up_choice_004",
+      "deck": "warm_up",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Morning plans or late-night plans?",
+      "ko": "아침 약속 vs 밤 약속?"
+    },
+    {
+      "id": "warm_up_choice_005",
+      "deck": "warm_up",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "A cozy night in or a spontaneous night out?",
+      "ko": "집에서 편한 밤 vs 즉흥 외출?"
+    },
+    {
+      "id": "warm_up_choice_006",
+      "deck": "warm_up",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Perfect weather or perfect food?",
+      "ko": "완벽한 날씨 vs 완벽한 음식?"
+    },
+    {
+      "id": "warm_up_choice_007",
+      "deck": "warm_up",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "One long vacation or many short breaks?",
+      "ko": "긴 휴가 한 번 vs 짧은 휴식 여러 번?"
+    },
+    {
+      "id": "warm_up_choice_008",
+      "deck": "warm_up",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Text first or wait first?",
+      "ko": "먼저 연락하기 vs 기다리기?"
+    },
+    {
+      "id": "warm_up_choice_009",
+      "deck": "warm_up",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "A familiar favorite or something new?",
+      "ko": "익숙한 최애 vs 새로운 도전?"
+    },
+    {
+      "id": "warm_up_choice_010",
+      "deck": "warm_up",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Clean desk or cozy mess?",
+      "ko": "깔끔한 책상 vs 편한 어질러짐?"
+    },
+    {
+      "id": "warm_up_choice_011",
+      "deck": "warm_up",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Music on the way or silence on the way?",
+      "ko": "이동 중 음악 vs 이동 중 조용함?"
+    },
+    {
+      "id": "warm_up_choice_012",
+      "deck": "warm_up",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Plan everything or see what happens?",
+      "ko": "전부 계획하기 vs 되는대로 가보기?"
+    },
+    {
+      "id": "warm_up_story_001",
+      "deck": "warm_up",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "Tell a short story about a time you got unexpectedly lucky.",
+      "ko": "예상치 못하게 운이 좋았던 짧은 이야기를 해줘."
+    },
+    {
+      "id": "warm_up_story_002",
+      "deck": "warm_up",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "Tell a short story about a small moment that made your day.",
+      "ko": "하루를 기분 좋게 만든 작은 순간을 이야기해줘."
+    },
+    {
+      "id": "warm_up_story_003",
+      "deck": "warm_up",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "Tell a short story about something you tried for the first time.",
+      "ko": "처음 해봤던 일에 대한 짧은 이야기를 해줘."
+    },
+    {
+      "id": "warm_up_story_004",
+      "deck": "warm_up",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "Tell a short story about a place you want to visit again.",
+      "ko": "다시 가보고 싶은 장소에 대한 짧은 이야기를 해줘."
+    },
+    {
+      "id": "funny_answer_001",
+      "deck": "funny",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "funny",
+      "en": "What is your most useless but impressive talent?",
+      "ko": "쓸모는 없지만 묘하게 자랑스러운 재능은?"
+    },
+    {
+      "id": "funny_answer_002",
+      "deck": "funny",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "funny",
+      "en": "What is your strongest NPC behavior?",
+      "ko": "내가 봐도 가장 NPC 같은 행동은?"
+    },
+    {
+      "id": "funny_answer_003",
+      "deck": "funny",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "funny",
+      "en": "What tiny problem makes you way too dramatic?",
+      "ko": "별일 아닌데 내가 너무 드라마틱해지는 순간은?"
+    },
+    {
+      "id": "funny_answer_004",
+      "deck": "funny",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "funny",
+      "en": "If your brain had a loading tip, what would it say?",
+      "ko": "내 머릿속 로딩 화면에 팁이 뜬다면 뭐라고 나올까?"
+    },
+    {
+      "id": "funny_answer_005",
+      "deck": "funny",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "funny",
+      "en": "What opinion would you defend for no good reason?",
+      "ko": "딱히 이유는 없지만 끝까지 주장하고 싶은 의견은?"
+    },
+    {
+      "id": "funny_answer_006",
+      "deck": "funny",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "funny",
+      "en": "What is your most harmless red flag?",
+      "ko": "내 가장 무해한 레드 플래그는 뭐야?"
+    },
+    {
+      "id": "funny_answer_007",
+      "deck": "funny",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "funny",
+      "en": "What gives you fake confidence for no reason?",
+      "ko": "이유 없이 자신감 생기게 하는 건 뭐야?"
+    },
+    {
+      "id": "funny_answer_008",
+      "deck": "funny",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "funny",
+      "en": "What is something you pretend to hate but secretly enjoy?",
+      "ko": "싫어하는 척하지만 사실 은근 좋아하는 건?"
+    },
+    {
+      "id": "funny_answer_009",
+      "deck": "funny",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "funny",
+      "en": "What is your personal brain-rot habit?",
+      "ko": "나만의 무의미한 콘텐츠 소비 습관은 뭐야?"
+    },
+    {
+      "id": "funny_answer_010",
+      "deck": "funny",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "funny",
+      "en": "What is the most random thing you take seriously?",
+      "ko": "쓸데없는데 괜히 진지해지는 건 뭐야?"
+    },
+    {
+      "id": "funny_answer_011",
+      "deck": "funny",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "funny",
+      "en": "What small inconvenience instantly changes your whole personality?",
+      "ko": "작은 불편인데 내 성격을 바로 바꾸는 건?"
+    },
+    {
+      "id": "funny_answer_012",
+      "deck": "funny",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "funny",
+      "en": "What is a normal thing you are weirdly bad at?",
+      "ko": "남들은 평범하게 하는데 나는 이상하게 못하는 건?"
+    },
+    {
+      "id": "funny_answer_013",
+      "deck": "funny",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "funny",
+      "en": "What is your most dramatic food opinion?",
+      "ko": "음식에 대해 가장 과하게 진심인 의견은?"
+    },
+    {
+      "id": "funny_answer_014",
+      "deck": "funny",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "funny",
+      "en": "What is something you always overpack?",
+      "ko": "항상 괜히 많이 챙기게 되는 건 뭐야?"
+    },
+    {
+      "id": "funny_answer_015",
+      "deck": "funny",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "funny",
+      "en": "What is your most unnecessary little ritual?",
+      "ko": "굳이 안 해도 되는데 꼭 하는 작은 의식은?"
+    },
+    {
+      "id": "funny_answer_016",
+      "deck": "funny",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "funny",
+      "en": "What is a tiny thing that makes you feel rich?",
+      "ko": "별거 아닌데 괜히 부자 된 느낌이 드는 건?"
+    },
+    {
+      "id": "funny_answer_017",
+      "deck": "funny",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "funny",
+      "en": "What is your most oddly specific fear?",
+      "ko": "이상하게 구체적인 내 걱정거리는 뭐야?"
+    },
+    {
+      "id": "funny_answer_018",
+      "deck": "funny",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "funny",
+      "en": "What is something you are convinced you could win at?",
+      "ko": "왠지 내가 이길 수 있다고 확신하는 건 뭐야?"
+    },
+    {
+      "id": "funny_choice_001",
+      "deck": "funny",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "funny",
+      "en": "Main character energy or peaceful background character?",
+      "ko": "주인공 모드 vs 평화로운 배경 인물?"
+    },
+    {
+      "id": "funny_choice_002",
+      "deck": "funny",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "funny",
+      "en": "Perfect timing or perfect charm?",
+      "ko": "완벽한 타이밍 vs 완벽한 매력?"
+    },
+    {
+      "id": "funny_choice_003",
+      "deck": "funny",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "funny",
+      "en": "Never lose your keys or never lose your charger?",
+      "ko": "열쇠 절대 안 잃어버리기 vs 충전기 절대 안 잃어버리기?"
+    },
+    {
+      "id": "funny_choice_004",
+      "deck": "funny",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "funny",
+      "en": "Be funny in texts or funny in person?",
+      "ko": "문자로 웃기기 vs 실제로 웃기기?"
+    },
+    {
+      "id": "funny_choice_005",
+      "deck": "funny",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "funny",
+      "en": "Always know the gossip or always avoid the drama?",
+      "ko": "소문 다 알기 vs 드라마 전부 피하기?"
+    },
+    {
+      "id": "funny_choice_006",
+      "deck": "funny",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "funny",
+      "en": "Win every small argument or never get embarrassed?",
+      "ko": "사소한 말싸움 다 이기기 vs 절대 안 민망해지기?"
+    },
+    {
+      "id": "funny_choice_007",
+      "deck": "funny",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "funny",
+      "en": "Be slightly late forever or slightly overdressed forever?",
+      "ko": "항상 살짝 늦기 vs 항상 살짝 과하게 차려입기?"
+    },
+    {
+      "id": "funny_choice_008",
+      "deck": "funny",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "funny",
+      "en": "Have elite snack taste or elite meme taste?",
+      "ko": "간식 취향 천재 vs 밈 취향 천재?"
+    },
+    {
+      "id": "funny_choice_009",
+      "deck": "funny",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "funny",
+      "en": "Accidentally send the wrong text or accidentally like an old post?",
+      "ko": "문자 잘못 보내기 vs 옛날 게시물 실수로 좋아요?"
+    },
+    {
+      "id": "funny_choice_010",
+      "deck": "funny",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "funny",
+      "en": "Have too much confidence or too much curiosity?",
+      "ko": "자신감 과다 vs 호기심 과다?"
+    },
+    {
+      "id": "funny_vote_001",
+      "deck": "funny",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "tone": "funny",
+      "en": "Who here is most likely to make a tiny problem dramatic?",
+      "ko": "작은 문제를 가장 드라마틱하게 만들 사람은?"
+    },
+    {
+      "id": "funny_vote_002",
+      "deck": "funny",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "tone": "funny",
+      "en": "Who here gives the strongest 'I have a story' face?",
+      "ko": "지금 가장 '나 할 말 있어' 표정인 사람은?"
+    },
+    {
+      "id": "funny_vote_003",
+      "deck": "funny",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "tone": "funny",
+      "en": "Who here would become obsessed with a random hobby overnight?",
+      "ko": "갑자기 이상한 취미에 진심 될 사람은?"
+    },
+    {
+      "id": "funny_vote_004",
+      "deck": "funny",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "tone": "funny",
+      "en": "Who here would name the group chat something weird?",
+      "ko": "단톡방 이름을 제일 이상하게 지을 사람은?"
+    },
+    {
+      "id": "funny_vote_005",
+      "deck": "funny",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "tone": "funny",
+      "en": "Who here would order one thing and regret not ordering another?",
+      "ko": "주문하고 나서 남의 메뉴를 부러워할 사람은?"
+    },
+    {
+      "id": "funny_vote_006",
+      "deck": "funny",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "tone": "funny",
+      "en": "Who here would turn a simple plan into a full spreadsheet?",
+      "ko": "간단한 계획을 표로 만들 것 같은 사람은?"
+    },
+    {
+      "id": "funny_vote_007",
+      "deck": "funny",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "tone": "funny",
+      "en": "Who here would laugh first in a serious moment?",
+      "ko": "진지한 순간에 제일 먼저 웃을 것 같은 사람은?"
+    },
+    {
+      "id": "funny_vote_008",
+      "deck": "funny",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "tone": "funny",
+      "en": "Who here would accidentally start a group debate?",
+      "ko": "어쩌다 단체 토론을 시작할 것 같은 사람은?"
+    },
+    {
+      "id": "funny_story_001",
+      "deck": "funny",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "funny",
+      "en": "Tell a short story about a time you were confidently wrong.",
+      "ko": "자신만만하게 틀렸던 짧은 이야기를 해줘."
+    },
+    {
+      "id": "funny_story_002",
+      "deck": "funny",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "funny",
+      "en": "Tell a short story about a tiny mistake that got funnier later.",
+      "ko": "나중에 생각하니 웃겼던 작은 실수 이야기를 해줘."
+    },
+    {
+      "id": "funny_story_003",
+      "deck": "funny",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "funny",
+      "en": "Tell a short story about a time you tried to act normal.",
+      "ko": "아무렇지 않은 척하려 했던 짧은 이야기를 해줘."
+    },
+    {
+      "id": "funny_story_004",
+      "deck": "funny",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "funny",
+      "en": "Tell a short story about something that was not that deep, but felt huge.",
+      "ko": "별일 아닌데 그때는 엄청 크게 느껴졌던 이야기를 해줘."
+    },
+    {
+      "id": "party_answer_001",
+      "deck": "party",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "party",
+      "en": "What is your role in a group hangout?",
+      "ko": "모임에서 나는 보통 어떤 역할이야?"
+    },
+    {
+      "id": "party_answer_002",
+      "deck": "party",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "party",
+      "en": "What is one thing that makes a group instantly more fun?",
+      "ko": "모임을 바로 더 재밌게 만드는 건 뭐야?"
+    },
+    {
+      "id": "party_answer_003",
+      "deck": "party",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "party",
+      "en": "What is your go-to move when the room gets quiet?",
+      "ko": "분위기가 조용해질 때 내가 하는 행동은?"
+    },
+    {
+      "id": "party_answer_004",
+      "deck": "party",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "party",
+      "en": "What snack would you bring to this group?",
+      "ko": "이 모임에 간식을 가져온다면 뭘 가져올래?"
+    },
+    {
+      "id": "party_answer_005",
+      "deck": "party",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "party",
+      "en": "What group activity sounds more fun than it should?",
+      "ko": "생각보다 재밌을 것 같은 단체 활동은 뭐야?"
+    },
+    {
+      "id": "party_answer_006",
+      "deck": "party",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "party",
+      "en": "What is a simple rule that would make tonight funnier?",
+      "ko": "오늘을 더 웃기게 만들 간단한 규칙은 뭐야?"
+    },
+    {
+      "id": "party_answer_007",
+      "deck": "party",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "party",
+      "en": "What would be the perfect group chat name for this room?",
+      "ko": "이 멤버들 단톡방 이름을 짓는다면?"
+    },
+    {
+      "id": "party_answer_008",
+      "deck": "party",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "party",
+      "en": "What is one thing this group would make unnecessarily funny?",
+      "ko": "이 멤버들이 괜히 웃기게 만들 것 같은 일은?"
+    },
+    {
+      "id": "party_choice_001",
+      "deck": "party",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "party",
+      "en": "Group chat legend or real-life legend?",
+      "ko": "단톡방 레전드 vs 현실 레전드?"
+    },
+    {
+      "id": "party_choice_002",
+      "deck": "party",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "party",
+      "en": "Host the party or leave early?",
+      "ko": "파티 주최하기 vs 일찍 빠지기?"
+    },
+    {
+      "id": "party_choice_003",
+      "deck": "party",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "party",
+      "en": "Karaoke night or game night?",
+      "ko": "노래방 밤 vs 게임 밤?"
+    },
+    {
+      "id": "party_choice_004",
+      "deck": "party",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "party",
+      "en": "One huge table or many small groups?",
+      "ko": "큰 테이블 하나 vs 작은 그룹 여러 개?"
+    },
+    {
+      "id": "party_choice_005",
+      "deck": "party",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "party",
+      "en": "Start the dance floor or start the deep talk?",
+      "ko": "춤판 열기 vs 깊은 얘기 시작하기?"
+    },
+    {
+      "id": "party_choice_006",
+      "deck": "party",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "party",
+      "en": "Plan the night or follow the chaos?",
+      "ko": "밤을 계획하기 vs 혼돈을 따라가기?"
+    },
+    {
+      "id": "party_choice_007",
+      "deck": "party",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "party",
+      "en": "Take the group photo or avoid the group photo?",
+      "ko": "단체 사진 찍기 vs 단체 사진 피하기?"
+    },
+    {
+      "id": "party_choice_008",
+      "deck": "party",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "party",
+      "en": "Make new friends or stick with your people?",
+      "ko": "새 친구 만들기 vs 익숙한 사람들과 있기?"
+    },
+    {
+      "id": "party_choice_009",
+      "deck": "party",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "party",
+      "en": "Bring the snacks or bring the playlist?",
+      "ko": "간식 담당 vs 플레이리스트 담당?"
+    },
+    {
+      "id": "party_choice_010",
+      "deck": "party",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "party",
+      "en": "Stay until the end or leave at the perfect time?",
+      "ko": "끝까지 있기 vs 완벽한 타이밍에 빠지기?"
+    },
+    {
+      "id": "party_vote_001",
+      "deck": "party",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "tone": "party",
+      "en": "Who here is most likely to disappear from the group chat for a week?",
+      "ko": "여기서 단톡방을 일주일 동안 잠수탈 가능성이 가장 높은 사람은?"
+    },
+    {
+      "id": "party_vote_002",
+      "deck": "party",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "tone": "party",
+      "en": "Who here would survive best without their phone?",
+      "ko": "여기서 폰 없이 가장 잘 버틸 사람은?"
+    },
+    {
+      "id": "party_vote_003",
+      "deck": "party",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "tone": "party",
+      "en": "Who here would accidentally become the group leader?",
+      "ko": "어쩌다 보니 리더가 될 것 같은 사람은?"
+    },
+    {
+      "id": "party_vote_004",
+      "deck": "party",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "tone": "party",
+      "en": "Who here would plan a trip and ignore the plan?",
+      "ko": "여행 계획을 짜놓고 안 지킬 것 같은 사람은?"
+    },
+    {
+      "id": "party_vote_005",
+      "deck": "party",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "tone": "party",
+      "en": "Who here would give the best advice at 2 a.m.?",
+      "ko": "새벽 2시에 제일 좋은 조언을 해줄 사람은?"
+    },
+    {
+      "id": "party_vote_006",
+      "deck": "party",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "tone": "party",
+      "en": "Who here has the most chaotic good energy?",
+      "ko": "여기서 가장 선한데 정신없는 에너지를 가진 사람은?"
+    },
+    {
+      "id": "party_vote_007",
+      "deck": "party",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "tone": "party",
+      "en": "Who here would be in charge of the playlist?",
+      "ko": "플레이리스트 담당이 될 것 같은 사람은?"
+    },
+    {
+      "id": "party_vote_008",
+      "deck": "party",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "tone": "party",
+      "en": "Who here would start talking to strangers first?",
+      "ko": "처음 보는 사람에게 먼저 말 걸 것 같은 사람은?"
+    },
+    {
+      "id": "party_vote_009",
+      "deck": "party",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "tone": "party",
+      "en": "Who here would remember everyone's drink order?",
+      "ko": "모두의 주문을 기억할 것 같은 사람은?"
+    },
+    {
+      "id": "party_vote_010",
+      "deck": "party",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "tone": "party",
+      "en": "Who here would be the first to suggest another place?",
+      "ko": "2차 가자고 제일 먼저 말할 것 같은 사람은?"
+    },
+    {
+      "id": "party_vote_011",
+      "deck": "party",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "tone": "party",
+      "en": "Who here would make a stranger feel included?",
+      "ko": "처음 온 사람을 가장 편하게 해줄 사람은?"
+    },
+    {
+      "id": "party_vote_012",
+      "deck": "party",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "tone": "party",
+      "en": "Who here would turn a small moment into a running joke?",
+      "ko": "작은 순간을 계속 웃긴 밈으로 만들 사람은?"
+    },
+    {
+      "id": "party_vote_013",
+      "deck": "party",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "tone": "party",
+      "en": "Who here would be most prepared for a surprise plan?",
+      "ko": "갑작스러운 계획에도 가장 준비돼 있을 사람은?"
+    },
+    {
+      "id": "party_vote_014",
+      "deck": "party",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "tone": "party",
+      "en": "Who here would keep the group from getting lost?",
+      "ko": "길 잃지 않게 제일 잘 챙길 사람은?"
+    },
+    {
+      "id": "party_vote_015",
+      "deck": "party",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "tone": "party",
+      "en": "Who here would find the best place to sit?",
+      "ko": "제일 좋은 자리를 찾아낼 사람은?"
+    },
+    {
+      "id": "party_vote_016",
+      "deck": "party",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "tone": "party",
+      "en": "Who here would make the best toast?",
+      "ko": "가장 좋은 건배사를 할 것 같은 사람은?"
+    },
+    {
+      "id": "party_vote_017",
+      "deck": "party",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "tone": "party",
+      "en": "Who here would notice when someone needs a break?",
+      "ko": "누군가 쉬고 싶어 할 때 제일 먼저 알아챌 사람은?"
+    },
+    {
+      "id": "party_vote_018",
+      "deck": "party",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "tone": "party",
+      "en": "Who here would make the recap sound funnier than the night?",
+      "ko": "후기를 실제보다 더 웃기게 말할 사람은?"
+    },
+    {
+      "id": "party_story_001",
+      "deck": "party",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "party",
+      "en": "Tell a short story about a group plan that changed at the last second.",
+      "ko": "마지막 순간에 바뀐 단체 계획 이야기를 해줘."
+    },
+    {
+      "id": "party_story_002",
+      "deck": "party",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "party",
+      "en": "Tell a short story about a night that turned out better than expected.",
+      "ko": "생각보다 훨씬 좋았던 밤 이야기를 해줘."
+    },
+    {
+      "id": "party_story_003",
+      "deck": "party",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "party",
+      "en": "Tell a short story about a group photo moment.",
+      "ko": "단체 사진과 관련된 짧은 이야기를 해줘."
+    },
+    {
+      "id": "party_story_004",
+      "deck": "party",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "party",
+      "en": "Tell a short story about a hangout that became a tradition.",
+      "ko": "어쩌다 전통처럼 된 모임 이야기를 해줘."
+    },
+    {
+      "id": "deep_answer_001",
+      "deck": "deep",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "What kind of person makes you feel calm?",
+      "ko": "어떤 사람과 있을 때 마음이 차분해져?",
+      "follow": {
+        "ko": "왜 그렇게 느끼는지 한 문장만 더.",
+        "en": "Add one sentence on why."
+      }
+    },
+    {
+      "id": "deep_answer_002",
+      "deck": "deep",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "What is something you understand better now than before?",
+      "ko": "예전보다 지금 더 잘 이해하게 된 건 뭐야?",
+      "follow": {
+        "ko": "비슷한 사람 있으면 끄덕여줘.",
+        "en": "Nod if you're the same."
+      }
+    },
+    {
+      "id": "deep_answer_003",
+      "deck": "deep",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "What is a small boundary that matters to you?",
+      "ko": "나에게 중요한 작은 선은 뭐야?",
+      "follow": {
+        "ko": "왜 그렇게 느끼는지 한 문장만 더.",
+        "en": "Add one sentence on why."
+      }
+    },
+    {
+      "id": "deep_answer_004",
+      "deck": "deep",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "What is something you want to get better at slowly?",
+      "ko": "천천히 더 잘하고 싶은 건 뭐야?",
+      "follow": {
+        "ko": "비슷한 사람 있으면 끄덕여줘.",
+        "en": "Nod if you're the same."
+      }
+    },
+    {
+      "id": "deep_answer_005",
+      "deck": "deep",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "What kind of day feels truly restful to you?",
+      "ko": "나에게 진짜 쉬는 날은 어떤 하루야?",
+      "follow": {
+        "ko": "왜 그렇게 느끼는지 한 문장만 더.",
+        "en": "Add one sentence on why."
+      }
+    },
+    {
+      "id": "deep_answer_006",
+      "deck": "deep",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "What is something you no longer rush?",
+      "ko": "이제는 서두르지 않게 된 건 뭐야?",
+      "follow": {
+        "ko": "비슷한 사람 있으면 끄덕여줘.",
+        "en": "Nod if you're the same."
+      }
+    },
+    {
+      "id": "deep_answer_007",
+      "deck": "deep",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "What makes you feel quietly supported?",
+      "ko": "조용히 지지받는다고 느끼게 하는 건?",
+      "follow": {
+        "ko": "왜 그렇게 느끼는지 한 문장만 더.",
+        "en": "Add one sentence on why."
+      }
+    },
+    {
+      "id": "deep_answer_008",
+      "deck": "deep",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "What is a value you want to keep in your daily life?",
+      "ko": "일상에서 지키고 싶은 가치는 뭐야?",
+      "follow": {
+        "ko": "비슷한 사람 있으면 끄덕여줘.",
+        "en": "Nod if you're the same."
+      }
+    },
+    {
+      "id": "deep_answer_009",
+      "deck": "deep",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "What is something simple that makes you feel grounded?",
+      "ko": "나를 안정되게 해주는 단순한 건 뭐야?",
+      "follow": {
+        "ko": "왜 그렇게 느끼는지 한 문장만 더.",
+        "en": "Add one sentence on why."
+      }
+    },
+    {
+      "id": "deep_answer_010",
+      "deck": "deep",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "What is a lesson you learned in a gentle way?",
+      "ko": "부드럽게 배운 인생의 작은 교훈은 뭐야?",
+      "follow": {
+        "ko": "비슷한 사람 있으면 끄덕여줘.",
+        "en": "Nod if you're the same."
+      }
+    },
+    {
+      "id": "deep_choice_001",
+      "deck": "deep",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "deep",
+      "en": "Know the truth or keep the peace?",
+      "ko": "진실 알기 vs 평화 지키기?",
+      "follow": {
+        "ko": "소수파가 먼저 이유를 말해줘.",
+        "en": "The minority side explains first."
+      }
+    },
+    {
+      "id": "deep_choice_002",
+      "deck": "deep",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "deep",
+      "en": "More courage or more patience?",
+      "ko": "더 많은 용기 vs 더 많은 인내?",
+      "follow": {
+        "ko": "소수파가 먼저 이유를 말해줘.",
+        "en": "The minority side explains first."
+      }
+    },
+    {
+      "id": "deep_choice_003",
+      "deck": "deep",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "deep",
+      "en": "A fresh start or a clear answer?",
+      "ko": "새로운 시작 vs 명확한 답?",
+      "follow": {
+        "ko": "소수파가 먼저 이유를 말해줘.",
+        "en": "The minority side explains first."
+      }
+    },
+    {
+      "id": "deep_choice_004",
+      "deck": "deep",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "deep",
+      "en": "Be understood or be accepted?",
+      "ko": "이해받기 vs 받아들여지기?",
+      "follow": {
+        "ko": "소수파가 먼저 이유를 말해줘.",
+        "en": "The minority side explains first."
+      }
+    },
+    {
+      "id": "deep_story_001",
+      "deck": "deep",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "Tell a short story about a moment that changed your perspective.",
+      "ko": "생각이 조금 바뀌었던 순간을 이야기해줘.",
+      "follow": {
+        "ko": "들은 사람 중 한 명이 비슷한 경험 이어가기.",
+        "en": "Someone who listened shares a similar moment."
+      }
+    },
+    {
+      "id": "deep_story_002",
+      "deck": "deep",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "Tell a short story about a kindness you still remember.",
+      "ko": "아직 기억나는 친절에 대해 이야기해줘.",
+      "follow": {
+        "ko": "그 이야기에 제목을 붙여준다면?",
+        "en": "Give that story a title."
+      }
+    },
+    {
+      "id": "deep_story_003",
+      "deck": "deep",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "Tell a short story about a time you surprised yourself.",
+      "ko": "스스로에게 조금 놀랐던 순간을 이야기해줘.",
+      "follow": {
+        "ko": "들은 사람 중 한 명이 비슷한 경험 이어가기.",
+        "en": "Someone who listened shares a similar moment."
+      }
+    },
+    {
+      "id": "deep_story_004",
+      "deck": "deep",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "Tell a short story about something you used to see differently.",
+      "ko": "예전과 다르게 보게 된 것에 대해 이야기해줘.",
+      "follow": {
+        "ko": "그 이야기에 제목을 붙여준다면?",
+        "en": "Give that story a title."
+      }
+    },
+    {
+      "id": "deep_story_005",
+      "deck": "deep",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "Tell a short story about a time you chose rest.",
+      "ko": "쉬는 쪽을 선택했던 순간을 이야기해줘.",
+      "follow": {
+        "ko": "들은 사람 중 한 명이 비슷한 경험 이어가기.",
+        "en": "Someone who listened shares a similar moment."
+      }
+    },
+    {
+      "id": "deep_story_006",
+      "deck": "deep",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "Tell a short story about a small promise you kept.",
+      "ko": "지켰던 작은 약속에 대해 이야기해줘.",
+      "follow": {
+        "ko": "그 이야기에 제목을 붙여준다면?",
+        "en": "Give that story a title."
+      }
+    },
+    {
+      "id": "deep_story_007",
+      "deck": "deep",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "Tell a short story about a place that helped you think.",
+      "ko": "생각을 정리하게 해준 장소에 대해 이야기해줘.",
+      "follow": {
+        "ko": "들은 사람 중 한 명이 비슷한 경험 이어가기.",
+        "en": "Someone who listened shares a similar moment."
+      }
+    },
+    {
+      "id": "deep_story_008",
+      "deck": "deep",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "Tell a short story about a conversation you appreciated.",
+      "ko": "고마웠던 대화 하나를 이야기해줘.",
+      "follow": {
+        "ko": "그 이야기에 제목을 붙여준다면?",
+        "en": "Give that story a title."
+      }
+    },
+    {
+      "id": "deep_deep_light_001",
+      "deck": "deep",
+      "cardType": "deep_light",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "When do you feel most like yourself?",
+      "ko": "언제 가장 나답다고 느껴?",
+      "follow": {
+        "ko": "답한 사람에게 딱 하나만 더 물어봐.",
+        "en": "Ask the answerer one more question — just one."
+      }
+    },
+    {
+      "id": "deep_deep_light_002",
+      "deck": "deep",
+      "cardType": "deep_light",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "What kind of person makes you feel safe?",
+      "ko": "어떤 사람과 있을 때 마음이 편해져?",
+      "follow": {
+        "ko": "가장 공감된 사람, 손 들어볼까?",
+        "en": "Who related the most? Raise a hand."
+      }
+    },
+    {
+      "id": "deep_deep_light_003",
+      "deck": "deep",
+      "cardType": "deep_light",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "What is something you care less about now?",
+      "ko": "예전보다 덜 신경 쓰게 된 건 뭐야?",
+      "follow": {
+        "ko": "그 답 듣고 떠오른 사람 있으면 말해줘.",
+        "en": "Did the answer remind you of anyone? Say so."
+      }
+    },
+    {
+      "id": "deep_deep_light_004",
+      "deck": "deep",
+      "cardType": "deep_light",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "What belief have you changed your mind about?",
+      "ko": "생각이 바뀐 믿음이나 가치관은?",
+      "follow": {
+        "ko": "답한 사람에게 딱 하나만 더 물어봐.",
+        "en": "Ask the answerer one more question — just one."
+      }
+    },
+    {
+      "id": "deep_deep_light_005",
+      "deck": "deep",
+      "cardType": "deep_light",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "What part of your life feels different from what people see?",
+      "ko": "사람들이 보는 모습과 실제로 다른 부분은?",
+      "follow": {
+        "ko": "가장 공감된 사람, 손 들어볼까?",
+        "en": "Who related the most? Raise a hand."
+      }
+    },
+    {
+      "id": "deep_deep_light_006",
+      "deck": "deep",
+      "cardType": "deep_light",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "What is a worry you are slowly letting go of?",
+      "ko": "조금씩 내려놓고 있는 걱정은 뭐야?",
+      "follow": {
+        "ko": "그 답 듣고 떠오른 사람 있으면 말해줘.",
+        "en": "Did the answer remind you of anyone? Say so."
+      }
+    },
+    {
+      "id": "deep_deep_light_007",
+      "deck": "deep",
+      "cardType": "deep_light",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "What makes you feel quietly proud of yourself?",
+      "ko": "조용히 스스로가 뿌듯해지는 순간은?",
+      "follow": {
+        "ko": "답한 사람에게 딱 하나만 더 물어봐.",
+        "en": "Ask the answerer one more question — just one."
+      }
+    },
+    {
+      "id": "deep_deep_light_008",
+      "deck": "deep",
+      "cardType": "deep_light",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "What kind of compliment stays with you?",
+      "ko": "오래 기억에 남는 칭찬은 어떤 칭찬이야?",
+      "follow": {
+        "ko": "가장 공감된 사람, 손 들어볼까?",
+        "en": "Who related the most? Raise a hand."
+      }
+    },
+    {
+      "id": "deep_deep_light_009",
+      "deck": "deep",
+      "cardType": "deep_light",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "What is something you want to protect about yourself?",
+      "ko": "내 안에서 지키고 싶은 부분은 뭐야?",
+      "follow": {
+        "ko": "그 답 듣고 떠오른 사람 있으면 말해줘.",
+        "en": "Did the answer remind you of anyone? Say so."
+      }
+    },
+    {
+      "id": "deep_deep_light_010",
+      "deck": "deep",
+      "cardType": "deep_light",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "What does a good day feel like to you lately?",
+      "ko": "요즘 나에게 좋은 하루는 어떤 느낌이야?",
+      "follow": {
+        "ko": "답한 사람에게 딱 하나만 더 물어봐.",
+        "en": "Ask the answerer one more question — just one."
+      }
+    },
+    {
+      "id": "deep_deep_light_011",
+      "deck": "deep",
+      "cardType": "deep_light",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "What helps you trust someone over time?",
+      "ko": "시간이 지날수록 사람을 믿게 만드는 건 뭐야?",
+      "follow": {
+        "ko": "가장 공감된 사람, 손 들어볼까?",
+        "en": "Who related the most? Raise a hand."
+      }
+    },
+    {
+      "id": "deep_deep_light_012",
+      "deck": "deep",
+      "cardType": "deep_light",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "What is something you are learning to accept?",
+      "ko": "받아들이는 법을 배우고 있는 건 뭐야?",
+      "follow": {
+        "ko": "그 답 듣고 떠오른 사람 있으면 말해줘.",
+        "en": "Did the answer remind you of anyone? Say so."
+      }
+    },
+    {
+      "id": "deep_deep_light_013",
+      "deck": "deep",
+      "cardType": "deep_light",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "What kind of silence feels comfortable to you?",
+      "ko": "어떤 침묵이 편하게 느껴져?",
+      "follow": {
+        "ko": "답한 사람에게 딱 하나만 더 물어봐.",
+        "en": "Ask the answerer one more question — just one."
+      }
+    },
+    {
+      "id": "deep_deep_light_014",
+      "deck": "deep",
+      "cardType": "deep_light",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "What is a small sign that you are doing okay?",
+      "ko": "내가 괜찮다는 걸 알려주는 작은 신호는?",
+      "follow": {
+        "ko": "가장 공감된 사람, 손 들어볼까?",
+        "en": "Who related the most? Raise a hand."
+      }
+    },
+    {
+      "id": "deep_deep_light_015",
+      "deck": "deep",
+      "cardType": "deep_light",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "What makes a place feel safe to you?",
+      "ko": "어떤 공간이 안전하게 느껴져?",
+      "follow": {
+        "ko": "그 답 듣고 떠오른 사람 있으면 말해줘.",
+        "en": "Did the answer remind you of anyone? Say so."
+      }
+    },
+    {
+      "id": "deep_deep_light_016",
+      "deck": "deep",
+      "cardType": "deep_light",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "What is something you want to remember more often?",
+      "ko": "더 자주 기억하고 싶은 건 뭐야?",
+      "follow": {
+        "ko": "답한 사람에게 딱 하나만 더 물어봐.",
+        "en": "Ask the answerer one more question — just one."
+      }
+    },
+    {
+      "id": "deep_deep_light_017",
+      "deck": "deep",
+      "cardType": "deep_light",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "What kind of support feels best to you?",
+      "ko": "나에게 가장 잘 맞는 응원은 어떤 거야?",
+      "follow": {
+        "ko": "가장 공감된 사람, 손 들어볼까?",
+        "en": "Who related the most? Raise a hand."
+      }
+    },
+    {
+      "id": "deep_deep_light_018",
+      "deck": "deep",
+      "cardType": "deep_light",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "deep",
+      "en": "What is a version of yourself you are growing into?",
+      "ko": "나는 어떤 모습으로 조금씩 변해가고 있어?",
+      "follow": {
+        "ko": "그 답 듣고 떠오른 사람 있으면 말해줘.",
+        "en": "Did the answer remind you of anyone? Say so."
+      }
+    },
+    {
+      "id": "couple_answer_001",
+      "deck": "couple",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "What small thing I do makes you feel cared for?",
+      "ko": "내가 하는 작은 행동 중 챙김받는 느낌이 드는 건?",
+      "follow": {
+        "ko": "답 듣고 떠오른 우리 순간 하나 말해줘.",
+        "en": "Share one moment of ours that comes to mind."
+      }
+    },
+    {
+      "id": "couple_answer_002",
+      "deck": "couple",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "What random moment with me do you still remember?",
+      "ko": "아직도 기억나는 우리 둘의 사소한 순간은?",
+      "follow": {
+        "ko": "그 말 듣고 어땠는지 한마디.",
+        "en": "Say one word about how that felt to hear."
+      }
+    },
+    {
+      "id": "couple_answer_003",
+      "deck": "couple",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "What should we do more often together?",
+      "ko": "우리가 같이 더 자주 했으면 하는 건?",
+      "follow": {
+        "ko": "같은 질문, 이번엔 반대로 물어봐.",
+        "en": "Now ask the same question back."
+      }
+    },
+    {
+      "id": "couple_answer_004",
+      "deck": "couple",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "What was your honest first impression of me?",
+      "ko": "솔직히 나의 첫인상은 어땠어?",
+      "follow": {
+        "ko": "답 듣고 떠오른 우리 순간 하나 말해줘.",
+        "en": "Share one moment of ours that comes to mind."
+      }
+    },
+    {
+      "id": "couple_answer_005",
+      "deck": "couple",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "What kind of date feels most like us?",
+      "ko": "어떤 데이트가 가장 우리답다고 느껴져?",
+      "follow": {
+        "ko": "그 말 듣고 어땠는지 한마디.",
+        "en": "Say one word about how that felt to hear."
+      }
+    },
+    {
+      "id": "couple_answer_006",
+      "deck": "couple",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "What tiny habit of mine do you secretly like?",
+      "ko": "내 습관 중 은근히 마음에 드는 건?",
+      "follow": {
+        "ko": "같은 질문, 이번엔 반대로 물어봐.",
+        "en": "Now ask the same question back."
+      }
+    },
+    {
+      "id": "couple_answer_007",
+      "deck": "couple",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "What is one thing we are surprisingly good at together?",
+      "ko": "우리가 같이 하면 생각보다 잘하는 건?",
+      "follow": {
+        "ko": "답 듣고 떠오른 우리 순간 하나 말해줘.",
+        "en": "Share one moment of ours that comes to mind."
+      }
+    },
+    {
+      "id": "couple_answer_008",
+      "deck": "couple",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "What should our next small adventure be?",
+      "ko": "우리의 다음 작은 모험은 뭐가 좋을까?",
+      "follow": {
+        "ko": "그 말 듣고 어땠는지 한마디.",
+        "en": "Say one word about how that felt to hear."
+      }
+    },
+    {
+      "id": "couple_answer_009",
+      "deck": "couple",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "What is one simple thing that makes you feel closer to me?",
+      "ko": "나와 더 가까워진다고 느끼게 하는 작은 일은?",
+      "follow": {
+        "ko": "같은 질문, 이번엔 반대로 물어봐.",
+        "en": "Now ask the same question back."
+      }
+    },
+    {
+      "id": "couple_answer_010",
+      "deck": "couple",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "What is something I do that makes you laugh?",
+      "ko": "내가 하는 행동 중 너를 웃게 만드는 건?",
+      "follow": {
+        "ko": "답 듣고 떠오른 우리 순간 하나 말해줘.",
+        "en": "Share one moment of ours that comes to mind."
+      }
+    },
+    {
+      "id": "couple_answer_011",
+      "deck": "couple",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "What little tradition should we start?",
+      "ko": "우리만의 작은 전통을 만든다면 뭐가 좋을까?",
+      "follow": {
+        "ko": "그 말 듣고 어땠는지 한마디.",
+        "en": "Say one word about how that felt to hear."
+      }
+    },
+    {
+      "id": "couple_answer_012",
+      "deck": "couple",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "What is a tiny detail about me that you noticed?",
+      "ko": "네가 알아챈 나의 작은 디테일은 뭐야?",
+      "follow": {
+        "ko": "같은 질문, 이번엔 반대로 물어봐.",
+        "en": "Now ask the same question back."
+      }
+    },
+    {
+      "id": "couple_answer_013",
+      "deck": "couple",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "What is one thing we handle well as a pair?",
+      "ko": "우리가 둘이서 잘 해내는 건 뭐야?",
+      "follow": {
+        "ko": "답 듣고 떠오른 우리 순간 하나 말해줘.",
+        "en": "Share one moment of ours that comes to mind."
+      }
+    },
+    {
+      "id": "couple_answer_014",
+      "deck": "couple",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "What is something you want us to try once?",
+      "ko": "우리 한 번쯤 같이 해보고 싶은 건 뭐야?",
+      "follow": {
+        "ko": "그 말 듣고 어땠는지 한마디.",
+        "en": "Say one word about how that felt to hear."
+      }
+    },
+    {
+      "id": "couple_answer_015",
+      "deck": "couple",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "What makes our conversations feel easy?",
+      "ko": "우리 대화가 편하게 느껴지는 이유는 뭐야?",
+      "follow": {
+        "ko": "같은 질문, 이번엔 반대로 물어봐.",
+        "en": "Now ask the same question back."
+      }
+    },
+    {
+      "id": "couple_answer_016",
+      "deck": "couple",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "What is a small way I can support you better?",
+      "ko": "내가 너를 더 잘 응원할 수 있는 작은 방법은?",
+      "follow": {
+        "ko": "답 듣고 떠오른 우리 순간 하나 말해줘.",
+        "en": "Share one moment of ours that comes to mind."
+      }
+    },
+    {
+      "id": "couple_answer_017",
+      "deck": "couple",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "What is something about us that feels lucky?",
+      "ko": "우리 사이에서 운이 좋다고 느껴지는 건 뭐야?",
+      "follow": {
+        "ko": "그 말 듣고 어땠는지 한마디.",
+        "en": "Say one word about how that felt to hear."
+      }
+    },
+    {
+      "id": "couple_answer_018",
+      "deck": "couple",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "What should we celebrate more often?",
+      "ko": "우리가 더 자주 축하하면 좋을 건 뭐야?",
+      "follow": {
+        "ko": "같은 질문, 이번엔 반대로 물어봐.",
+        "en": "Now ask the same question back."
+      }
+    },
+    {
+      "id": "couple_choice_001",
+      "deck": "couple",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "couple",
+      "en": "A planned date or a surprise date?",
+      "ko": "계획된 데이트 vs 깜짝 데이트?",
+      "follow": {
+        "ko": "고른 이유를 서로 한 문장씩.",
+        "en": "Each gives one sentence on why."
+      }
+    },
+    {
+      "id": "couple_choice_002",
+      "deck": "couple",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "couple",
+      "en": "Cook together or order something new?",
+      "ko": "같이 요리하기 vs 새로운 음식 시키기?",
+      "follow": {
+        "ko": "고른 이유를 서로 한 문장씩.",
+        "en": "Each gives one sentence on why."
+      }
+    },
+    {
+      "id": "couple_choice_003",
+      "deck": "couple",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "couple",
+      "en": "A quiet walk or a loud adventure?",
+      "ko": "조용한 산책 vs 시끌벅적한 모험?",
+      "follow": {
+        "ko": "고른 이유를 서로 한 문장씩.",
+        "en": "Each gives one sentence on why."
+      }
+    },
+    {
+      "id": "couple_choice_004",
+      "deck": "couple",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "couple",
+      "en": "More photos together or more inside jokes?",
+      "ko": "같이 찍은 사진 더 많이 vs 우리만의 농담 더 많이?",
+      "follow": {
+        "ko": "고른 이유를 서로 한 문장씩.",
+        "en": "Each gives one sentence on why."
+      }
+    },
+    {
+      "id": "couple_choice_005",
+      "deck": "couple",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "couple",
+      "en": "A weekend trip or a perfect lazy day?",
+      "ko": "주말 여행 vs 완벽한 게으른 하루?",
+      "follow": {
+        "ko": "고른 이유를 서로 한 문장씩.",
+        "en": "Each gives one sentence on why."
+      }
+    },
+    {
+      "id": "couple_choice_006",
+      "deck": "couple",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "tone": "couple",
+      "en": "Talk it out now or cool down first?",
+      "ko": "바로 이야기하기 vs 먼저 진정하기?",
+      "follow": {
+        "ko": "고른 이유를 서로 한 문장씩.",
+        "en": "Each gives one sentence on why."
+      }
+    },
+    {
+      "id": "couple_story_001",
+      "deck": "couple",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "Tell a short story about a moment that felt very us.",
+      "ko": "정말 우리답다고 느꼈던 순간을 이야기해줘.",
+      "follow": {
+        "ko": "그 순간을 한 단어로 표현하면?",
+        "en": "That moment in one word?"
+      }
+    },
+    {
+      "id": "couple_story_002",
+      "deck": "couple",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "Tell a short story about a small thing we laughed about.",
+      "ko": "우리가 같이 웃었던 작은 일을 이야기해줘.",
+      "follow": {
+        "ko": "들은 사람이 기억나는 디테일 하나 더하기.",
+        "en": "The listener adds one detail they remember."
+      }
+    },
+    {
+      "id": "couple_story_003",
+      "deck": "couple",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "Tell a short story about a date that did not go as planned.",
+      "ko": "계획대로 되지 않았던 데이트 이야기를 해줘.",
+      "follow": {
+        "ko": "그 순간을 한 단어로 표현하면?",
+        "en": "That moment in one word?"
+      }
+    },
+    {
+      "id": "couple_story_004",
+      "deck": "couple",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "Tell a short story about a time we made a good team.",
+      "ko": "우리가 좋은 팀 같았던 순간을 이야기해줘.",
+      "follow": {
+        "ko": "들은 사람이 기억나는 디테일 하나 더하기.",
+        "en": "The listener adds one detail they remember."
+      }
+    },
+    {
+      "id": "couple_story_005",
+      "deck": "couple",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "Tell a short story about something ordinary that felt special.",
+      "ko": "평범했지만 특별하게 느껴졌던 일을 이야기해줘.",
+      "follow": {
+        "ko": "그 순간을 한 단어로 표현하면?",
+        "en": "That moment in one word?"
+      }
+    },
+    {
+      "id": "couple_story_006",
+      "deck": "couple",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "Tell a short story about a time one of us saved the day.",
+      "ko": "둘 중 한 명이 하루를 살렸던 순간을 이야기해줘.",
+      "follow": {
+        "ko": "들은 사람이 기억나는 디테일 하나 더하기.",
+        "en": "The listener adds one detail they remember."
+      }
+    },
+    {
+      "id": "couple_story_007",
+      "deck": "couple",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "Tell a short story about a place that reminds you of us.",
+      "ko": "우리가 떠오르는 장소에 대해 이야기해줘.",
+      "follow": {
+        "ko": "그 순간을 한 단어로 표현하면?",
+        "en": "That moment in one word?"
+      }
+    },
+    {
+      "id": "couple_story_008",
+      "deck": "couple",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "Tell a short story about a message you remember.",
+      "ko": "기억에 남는 메시지에 대해 이야기해줘.",
+      "follow": {
+        "ko": "들은 사람이 기억나는 디테일 하나 더하기.",
+        "en": "The listener adds one detail they remember."
+      }
+    },
+    {
+      "id": "couple_story_009",
+      "deck": "couple",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "Tell a short story about a moment we handled better than expected.",
+      "ko": "생각보다 잘 넘겼던 우리 순간을 이야기해줘.",
+      "follow": {
+        "ko": "그 순간을 한 단어로 표현하면?",
+        "en": "That moment in one word?"
+      }
+    },
+    {
+      "id": "couple_story_010",
+      "deck": "couple",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "Tell a short story about something we learned about each other.",
+      "ko": "서로에 대해 새로 알게 된 일을 이야기해줘.",
+      "follow": {
+        "ko": "들은 사람이 기억나는 디테일 하나 더하기.",
+        "en": "The listener adds one detail they remember."
+      }
+    },
+    {
+      "id": "couple_story_011",
+      "deck": "couple",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "Tell a short story about a quiet moment you liked.",
+      "ko": "좋았던 조용한 순간을 이야기해줘.",
+      "follow": {
+        "ko": "그 순간을 한 단어로 표현하면?",
+        "en": "That moment in one word?"
+      }
+    },
+    {
+      "id": "couple_story_012",
+      "deck": "couple",
+      "cardType": "story",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "Tell a short story about a time we made something better together.",
+      "ko": "우리가 함께 더 좋게 만들었던 일을 이야기해줘.",
+      "follow": {
+        "ko": "들은 사람이 기억나는 디테일 하나 더하기.",
+        "en": "The listener adds one detail they remember."
+      }
+    },
+    {
+      "id": "couple_deep_light_001",
+      "deck": "couple",
+      "cardType": "deep_light",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "What helps you feel close to me?",
+      "ko": "나와 가까워진다고 느끼게 하는 건 뭐야?",
+      "follow": {
+        "ko": "그 답에 고맙다면 그냥 '고마워' 한마디.",
+        "en": "If the answer means something, just say thanks."
+      }
+    },
+    {
+      "id": "couple_deep_light_002",
+      "deck": "couple",
+      "cardType": "deep_light",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "What kind of support feels best from me?",
+      "ko": "내가 해주는 응원 중 가장 잘 맞는 건?",
+      "follow": {
+        "ko": "그 답에 고맙다면 그냥 '고마워' 한마디.",
+        "en": "If the answer means something, just say thanks."
+      }
+    },
+    {
+      "id": "couple_deep_light_003",
+      "deck": "couple",
+      "cardType": "deep_light",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "What is something you want us to protect?",
+      "ko": "우리가 지켜가고 싶은 건 뭐야?",
+      "follow": {
+        "ko": "그 답에 고맙다면 그냥 '고마워' 한마디.",
+        "en": "If the answer means something, just say thanks."
+      }
+    },
+    {
+      "id": "couple_deep_light_004",
+      "deck": "couple",
+      "cardType": "deep_light",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "tone": "couple",
+      "en": "What makes this feel like a safe place for us?",
+      "ko": "우리 사이가 안전하게 느껴지는 이유는 뭐야?",
+      "follow": {
+        "ko": "그 답에 고맙다면 그냥 '고마워' 한마디.",
+        "en": "If the answer means something, just say thanks."
+      }
+    },
+    {
+      "id": "party_taboo_001",
+      "deck": "party",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Describe what you did last weekend",
+      "ko": "주말에 뭐 했는지 설명하기",
+      "bannedEn": [
+        "home",
+        "sleep",
+        "tired",
+        "phone"
+      ],
+      "bannedKo": [
+        "집",
+        "잠",
+        "피곤",
+        "폰"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "party_taboo_002",
+      "deck": "party",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Describe your morning routine",
+      "ko": "아침 루틴 설명하기",
+      "bannedEn": [
+        "wake",
+        "coffee",
+        "wash",
+        "alarm"
+      ],
+      "bannedKo": [
+        "일어",
+        "커피",
+        "씻",
+        "알람"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "party_taboo_003",
+      "deck": "party",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Explain your favorite food without naming it",
+      "ko": "최애 음식 이름 빼고 설명하기",
+      "bannedEn": [
+        "delicious",
+        "spicy",
+        "sweet",
+        "rice"
+      ],
+      "bannedKo": [
+        "맛있",
+        "맵",
+        "달",
+        "밥"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "party_taboo_004",
+      "deck": "party",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Describe your hometown",
+      "ko": "고향 설명하기",
+      "bannedEn": [
+        "city",
+        "far",
+        "famous",
+        "food"
+      ],
+      "bannedKo": [
+        "도시",
+        "멀",
+        "유명",
+        "음식"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "party_taboo_005",
+      "deck": "party",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Explain what your job or study is",
+      "ko": "무슨 일/공부 하는지 설명하기",
+      "bannedEn": [
+        "work",
+        "money",
+        "computer",
+        "study"
+      ],
+      "bannedKo": [
+        "일",
+        "돈",
+        "컴퓨터",
+        "공부"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "party_taboo_006",
+      "deck": "party",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Describe your last trip",
+      "ko": "최근 여행 설명하기",
+      "bannedEn": [
+        "plane",
+        "hotel",
+        "photo",
+        "beach"
+      ],
+      "bannedKo": [
+        "비행기",
+        "호텔",
+        "사진",
+        "바다"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "party_taboo_007",
+      "deck": "party",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Explain a movie you love without the title",
+      "ko": "좋아하는 영화 제목 빼고 설명하기",
+      "bannedEn": [
+        "actor",
+        "ending",
+        "famous",
+        "scene"
+      ],
+      "bannedKo": [
+        "배우",
+        "결말",
+        "유명",
+        "장면"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "party_taboo_008",
+      "deck": "party",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Describe this group to a stranger",
+      "ko": "이 모임을 처음 보는 사람에게 설명하기",
+      "bannedEn": [
+        "friend",
+        "fun",
+        "drink",
+        "talk"
+      ],
+      "bannedKo": [
+        "친구",
+        "재밌",
+        "술",
+        "얘기"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "funny_taboo_001",
+      "deck": "funny",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Explain the internet to someone from 100 years ago",
+      "ko": "100년 전 사람에게 인터넷 설명하기",
+      "bannedEn": [
+        "computer",
+        "phone",
+        "online",
+        "search"
+      ],
+      "bannedKo": [
+        "컴퓨터",
+        "폰",
+        "온라인",
+        "검색"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "funny_taboo_002",
+      "deck": "funny",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Describe a cat without saying any animal word",
+      "ko": "동물 단어 없이 고양이 설명하기",
+      "bannedEn": [
+        "animal",
+        "pet",
+        "meow",
+        "fur"
+      ],
+      "bannedKo": [
+        "동물",
+        "반려",
+        "야옹",
+        "털"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "funny_taboo_003",
+      "deck": "funny",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Explain how to tie shoelaces out loud",
+      "ko": "신발끈 묶는 법 말로만 설명하기",
+      "bannedEn": [
+        "loop",
+        "pull",
+        "cross",
+        "knot"
+      ],
+      "bannedKo": [
+        "고리",
+        "당기",
+        "교차",
+        "매듭"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "funny_taboo_004",
+      "deck": "funny",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Hype up water like it's a new product",
+      "ko": "물을 신상품처럼 광고하기",
+      "bannedEn": [
+        "water",
+        "drink",
+        "clear",
+        "thirsty"
+      ],
+      "bannedKo": [
+        "물",
+        "마시",
+        "투명",
+        "목"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "funny_taboo_005",
+      "deck": "funny",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Explain your phone to a medieval knight",
+      "ko": "중세 기사에게 스마트폰 설명하기",
+      "bannedEn": [
+        "call",
+        "screen",
+        "app",
+        "battery"
+      ],
+      "bannedKo": [
+        "전화",
+        "화면",
+        "앱",
+        "배터리"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "funny_taboo_006",
+      "deck": "funny",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Describe sleep to someone who never sleeps",
+      "ko": "잠 안 자는 사람에게 잠 설명하기",
+      "bannedEn": [
+        "eyes",
+        "bed",
+        "dream",
+        "night"
+      ],
+      "bannedKo": [
+        "눈",
+        "침대",
+        "꿈",
+        "밤"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "funny_taboo_007",
+      "deck": "funny",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Sell an umbrella without mentioning rain",
+      "ko": "비 얘기 없이 우산 팔기",
+      "bannedEn": [
+        "rain",
+        "wet",
+        "sky",
+        "water"
+      ],
+      "bannedKo": [
+        "비",
+        "젖",
+        "하늘",
+        "물"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "funny_taboo_008",
+      "deck": "funny",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Explain a banana without its name or color",
+      "ko": "이름과 색 빼고 바나나 설명하기",
+      "bannedEn": [
+        "yellow",
+        "fruit",
+        "peel",
+        "monkey"
+      ],
+      "bannedKo": [
+        "노랑",
+        "과일",
+        "껍질",
+        "원숭이"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "party_taboo_009",
+      "deck": "party",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Describe your ideal day off",
+      "ko": "완벽한 휴일 설명하기",
+      "bannedEn": [
+        "rest",
+        "late",
+        "fun",
+        "relax"
+      ],
+      "bannedKo": [
+        "쉬",
+        "늦잠",
+        "재밌",
+        "여유"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "party_taboo_010",
+      "deck": "party",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Explain how you get to work or school",
+      "ko": "출근/등교 길 설명하기",
+      "bannedEn": [
+        "bus",
+        "subway",
+        "walk",
+        "far"
+      ],
+      "bannedKo": [
+        "버스",
+        "지하철",
+        "걷",
+        "멀"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "party_taboo_011",
+      "deck": "party",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Describe your favorite season",
+      "ko": "좋아하는 계절 설명하기",
+      "bannedEn": [
+        "cold",
+        "hot",
+        "warm",
+        "weather"
+      ],
+      "bannedKo": [
+        "춥",
+        "덥",
+        "따뜻",
+        "날씨"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "party_taboo_012",
+      "deck": "party",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Explain a hobby you enjoy",
+      "ko": "즐기는 취미 설명하기",
+      "bannedEn": [
+        "fun",
+        "time",
+        "practice",
+        "skill"
+      ],
+      "bannedKo": [
+        "재밌",
+        "시간",
+        "연습",
+        "실력"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "party_taboo_013",
+      "deck": "party",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Describe your phone's home screen",
+      "ko": "폰 홈 화면 설명하기",
+      "bannedEn": [
+        "app",
+        "icon",
+        "photo",
+        "screen"
+      ],
+      "bannedKo": [
+        "앱",
+        "아이콘",
+        "사진",
+        "화면"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "party_taboo_014",
+      "deck": "party",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Explain what makes a good party",
+      "ko": "좋은 파티의 조건 설명하기",
+      "bannedEn": [
+        "people",
+        "music",
+        "food",
+        "fun"
+      ],
+      "bannedKo": [
+        "사람",
+        "음악",
+        "음식",
+        "재밌"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "party_taboo_015",
+      "deck": "party",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Describe your dream vacation spot",
+      "ko": "꿈의 휴가지 설명하기",
+      "bannedEn": [
+        "beach",
+        "mountain",
+        "far",
+        "hotel"
+      ],
+      "bannedKo": [
+        "바다",
+        "산",
+        "멀",
+        "호텔"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "party_taboo_016",
+      "deck": "party",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Explain your go-to comfort activity",
+      "ko": "마음 편해지는 활동 설명하기",
+      "bannedEn": [
+        "home",
+        "rest",
+        "alone",
+        "quiet"
+      ],
+      "bannedKo": [
+        "집",
+        "쉬",
+        "혼자",
+        "조용"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "funny_taboo_009",
+      "deck": "funny",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Explain a refrigerator to an alien",
+      "ko": "외계인에게 냉장고 설명하기",
+      "bannedEn": [
+        "cold",
+        "food",
+        "box",
+        "door"
+      ],
+      "bannedKo": [
+        "차갑",
+        "음식",
+        "상자",
+        "문"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "funny_taboo_010",
+      "deck": "funny",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Describe rain without weather words",
+      "ko": "날씨 단어 없이 비 설명하기",
+      "bannedEn": [
+        "sky",
+        "wet",
+        "cloud",
+        "drop"
+      ],
+      "bannedKo": [
+        "하늘",
+        "젖",
+        "구름",
+        "방울"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "funny_taboo_011",
+      "deck": "funny",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Sell socks like a luxury item",
+      "ko": "양말을 명품처럼 팔기",
+      "bannedEn": [
+        "foot",
+        "warm",
+        "cotton",
+        "wear"
+      ],
+      "bannedKo": [
+        "발",
+        "따뜻",
+        "면",
+        "신"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "funny_taboo_012",
+      "deck": "funny",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Explain a mirror without its name",
+      "ko": "이름 빼고 거울 설명하기",
+      "bannedEn": [
+        "face",
+        "glass",
+        "reflect",
+        "see"
+      ],
+      "bannedKo": [
+        "얼굴",
+        "유리",
+        "비추",
+        "보"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "funny_taboo_013",
+      "deck": "funny",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Describe a clock to someone who ignores time",
+      "ko": "시간 무시하는 사람에게 시계 설명하기",
+      "bannedEn": [
+        "time",
+        "hour",
+        "tick",
+        "hand"
+      ],
+      "bannedKo": [
+        "시간",
+        "시",
+        "똑딱",
+        "바늘"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "funny_taboo_014",
+      "deck": "funny",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Hype up sleep like a luxury experience",
+      "ko": "잠을 럭셔리 경험처럼 광고하기",
+      "bannedEn": [
+        "eyes",
+        "bed",
+        "night",
+        "rest"
+      ],
+      "bannedKo": [
+        "눈",
+        "침대",
+        "밤",
+        "쉬"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "funny_taboo_015",
+      "deck": "funny",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Explain ice cream to someone who's never had it",
+      "ko": "아이스크림 처음인 사람에게 설명하기",
+      "bannedEn": [
+        "cold",
+        "sweet",
+        "melt",
+        "cream"
+      ],
+      "bannedKo": [
+        "차갑",
+        "달",
+        "녹",
+        "크림"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    },
+    {
+      "id": "funny_taboo_016",
+      "deck": "funny",
+      "cardType": "taboo",
+      "modes": [
+        "taboo_round"
+      ],
+      "minPlayers": 3,
+      "maxPlayers": 8,
+      "en": "Describe a staircase out loud",
+      "ko": "계단을 말로만 설명하기",
+      "bannedEn": [
+        "up",
+        "down",
+        "step",
+        "floor"
+      ],
+      "bannedKo": [
+        "위",
+        "아래",
+        "계단",
+        "층"
+      ],
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      }
+    }
+  ]
+}
