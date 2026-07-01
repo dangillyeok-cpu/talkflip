@@ -6,6 +6,8 @@
   <url><loc>https://wealthviewlounge.com/guides</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://wealthviewlounge.com/guide-icebreaker</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://wealthviewlounge.com/guide-drinks</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wealthviewlounge.com/guide-party</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wealthviewlounge.com/guide-couple</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://wealthviewlounge.com/ideas</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://wealthviewlounge.com/privacy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://wealthviewlounge.com/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
@@ -14,6 +16,8 @@
   <url><loc>https://wealthviewlounge.com/guides.en</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://wealthviewlounge.com/guide-icebreaker.en</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://wealthviewlounge.com/guide-drinks.en</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wealthviewlounge.com/guide-party.en</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wealthviewlounge.com/guide-couple.en</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://wealthviewlounge.com/ideas.en</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
   <url><loc>https://wealthviewlounge.com/privacy.en</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://wealthviewlounge.com/terms.en</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
