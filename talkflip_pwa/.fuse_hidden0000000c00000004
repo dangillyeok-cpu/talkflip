@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>아이디어 광장 · TalkFlip</title>
+<meta name="description" content="TalkFlip 질문 카드 아이디어를 보내고, 채택된 카드를 구경하는 아이디어 광장. 좋은 질문은 실제 게임에 실려요." />
+<link rel="stylesheet" href="pages.css" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5582757393756677" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="topbar"><div class="bar">
+  <a class="brand" href="./">TalkFlip</a>
+  <div class="langswitch"><a class="on" href="ideas.html">한국어</a><span>·</span><a href="ideas.en.html">EN</a></div>
+</div></div>
+<div class="wrap">
+  <h1>아이디어 광장</h1>
+  <p class="lead">여러분의 질문 하나가 다음 카드가 됩니다. 좋은 아이디어는 검토 후 실제 게임에 실려요.</p>
+
+  <p>TalkFlip은 사용자와 함께 카드를 채워갑니다. 친구·커플·모임에서 "이런 질문 있으면 재밌겠다" 싶었던 게 있다면 아래에서 보내주세요. 채택되면 게임 안에서 만날 수 있어요.</p>
+
+  <h2>이런 카드를 찾고 있어요</h2>
+  <ul>
+    <li>누구나 <b>3초 안에</b> 답할 수 있는 가벼운 질문</li>
+    <li>정답이 없는, 대답마다 리액션이 나오는 질문</li>
+    <li>웃기거나, 궁금하거나, 살짝 고민되는 선택</li>
+    <li>특정인을 비방하거나 외모·수입·정치·종교 같은 민감한 주제는 <b>제외</b></li>
+  </ul>
+
+  <h2>먼저 올라온 아이디어</h2>
+  <p class="muted">채택되거나 검토 중인 아이디어 예시예요.</p>
+
+  <div class="idea"><span class="status picked">채택됨</span><span class="chip">웃긴 질문</span><div class="q">지금 휴대폰 사진첩에서 가장 최근 사진, 설명 없이 보여준다면?</div></div>
+  <div class="idea"><span class="status picked">채택됨</span><span class="chip">밸런스</span><div class="q">평생 여름만 vs 평생 겨울만, 하나만 고른다면?</div></div>
+  <div class="idea"><span class="status picked">채택됨</span><span class="chip">커플</span><div class="q">우리가 처음 만난 날, 상대의 첫인상을 한 단어로?</div></div>
+  <div class="idea"><span class="status">검토 중</span><span class="chip">파티</span><div class="q">여기서 무인도에 딱 한 명 데려간다면 누구, 그리고 왜?</div></div>
+  <div class="idea"><span class="status">검토 중</span><span class="chip">깊은 얘기</span><div class="q">10년 전 나에게 딱 한 문장만 보낼 수 있다면?</div></div>
+  <div class="idea"><span class="status">검토 중</span><span class="chip">워밍업</span><div class="q">오늘 아침에 제일 먼저 한 생각은?</div></div>
+
+  <h2>아이디어 보내기</h2>
+  <div class="ideaform">
+    <label for="deck">카테고리(덱)</label>
+    <select id="deck">
+      <option>워밍업</option>
+      <option>웃긴 질문</option>
+      <option>깊은 얘기</option>
+      <option>커플</option>
+      <option>파티</option>
+      <option>매운맛</option>
+      <option>기타</option>
+    </select>
+
+    <label for="idea">질문 / 카드 내용</label>
+    <textarea id="idea" placeholder="예) 여기서 가장 먼저 부자가 될 것 같은 사람은?"></textarea>
+
+    <label for="nick">닉네임 (선택)</label>
+    <input id="nick" type="text" placeholder="채택 시 표기할 이름 (비워도 돼요)" />
+
+    <div><button class="btn-send" id="send">이메일로 보내기</button></div>
+    <p class="formnote">보내기를 누르면 메일 앱이 열려요. 검토 후 좋은 카드는 게임에 실립니다. 개인정보는 저장하지 않아요.</p>
+  </div>
+
+  <a class="cta" href="./">▶ 지금 플레이하기</a>
+
+  <footer>
+    <nav>
+      <a href="./">▶ 플레이</a>
+      <a href="about.html">소개</a>
+      <a href="how-to-play.html">플레이 방법</a>
+      <a href="ideas.html">아이디어</a>
+      <a href="privacy.html">개인정보 처리방침</a>
+      <a href="terms.html">이용약관</a>
+    </nav>
+    <div>문의: dangillyeok@gmail.com</div>
+    <div>© 2026 TalkFlip</div>
+  </footer>
+</div>
+<script>
+document.getElementById("send").addEventListener("click", function(){
+  var deck = document.getElementById("deck").value;
+  var idea = document.getElementById("idea").value.trim();
+  var nick = document.getElementById("nick").value.trim();
+  if(!idea){ document.getElementById("idea").focus(); return; }
+  var subject = "[TalkFlip 아이디어] " + deck;
+  var body = "카테고리: " + deck + "\n\n질문/카드 내용:\n" + idea + "\n\n닉네임: " + (nick || "(없음)");
+  window.location.href = "mailto:dangillyeok@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+});
+</script>
+</body>
+</html>

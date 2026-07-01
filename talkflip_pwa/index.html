@@ -9,7 +9,20 @@
 <meta name="theme-color" content="#5b6bff" />
 <meta name="apple-mobile-web-app-title" content="TalkFlip" />
 <link rel="apple-touch-icon" href="icons/apple-touch-icon-180.png" />
-<title>TalkFlip</title>
+<title>TalkFlip — 분위기, 한 장으로 뒤집어</title>
+<meta name="description" content="분위기를 한 장으로 뒤집는 대화 카드 게임 TalkFlip. 친구·커플·모임에서 랜덤 질문 카드를 뽑아 답하고 투표하며 즐겨요. 설치 없이 링크 하나로 바로 시작." />
+<link rel="canonical" href="https://wealthviewlounge.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="TalkFlip" />
+<meta property="og:title" content="TalkFlip — 분위기, 한 장으로 뒤집어" />
+<meta property="og:description" content="친구·커플·모임에서 뽑는 랜덤 질문 카드 게임. 설치 없이 링크 하나로 바로 시작." />
+<meta property="og:url" content="https://wealthviewlounge.com/" />
+<meta property="og:image" content="https://wealthviewlounge.com/icons/icon-512.png" />
+<meta property="og:locale" content="ko_KR" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="TalkFlip — 분위기, 한 장으로 뒤집어" />
+<meta name="twitter:description" content="친구·커플·모임에서 뽑는 랜덤 질문 카드 게임. 설치 없이 링크 하나로 바로 시작." />
+<meta name="twitter:image" content="https://wealthviewlounge.com/icons/icon-512.png" />
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5582757393756677" crossorigin="anonymous"></script>
 <style>
   :root {
@@ -191,6 +204,7 @@
   .complete h2 { font-size: 32px; font-weight: 900; margin: 0; letter-spacing: -0.5px; }
   .complete .sub { color: var(--muted); font-weight: 600; margin: 0; }
   .complete .stack { display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 280px; margin-top: 8px; }
+  .idea-link { margin-top: 6px; font-size: 13px; font-weight: 700; color: var(--muted); text-decoration: none; }
 
   /* Modal */
   .modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,0.55); display: flex; align-items: flex-end; justify-content: center; z-index: 50; backdrop-filter: blur(2px); animation: fade .2s ease; }
@@ -571,6 +585,7 @@ function UIText(lang){
     deckComplete: ko ? "덱 완료" : "Deck complete",
     roundComplete: ko ? "라운드 완료" : "Round complete",
     completeSubtitle: ko ? "카드를 다 봤어요." : "You've seen all the cards.",
+    ideaCta: ko ? "넣고 싶은 질문이 있어? 아이디어 보내기 →" : "Got a question for the game? Send an idea →",
     playAgain: ko ? "다시 하기" : "Play again",
     playAnotherQuick: ko ? "짧은 라운드 한 번 더" : "Play another quick round",
     changeSetup: ko ? "설정 바꾸기" : "Change setup",
@@ -1097,6 +1112,7 @@ function renderComplete(){
       <button class="btn bordered" id="again" ${(s.isQuickRound && !s.canPlayAnotherQuickRound)?'disabled':''}>${esc(s.isQuickRound ? t.playAnotherQuick : t.playAgain)}</button>
       <button class="btn ghost" id="changeSetup">${esc(t.changeSetup)}</button>
     </div>
+    <a class="idea-link" href="ideas${t.ko?'':'.en'}.html" target="_blank" rel="noopener">${esc(t.ideaCta)}</a>
   </div></div>`;
   document.getElementById("recapShare").onclick = () => { haptic(8); openRecap(s); };
   const again = document.getElementById("again");
@@ -1178,6 +1194,8 @@ function openSettings(){
       <div class="set-links">
         <a href="about${t.ko?'':'.en'}.html" target="_blank" rel="noopener">${t.ko?'소개':'About'}</a>
         <a href="how-to-play${t.ko?'':'.en'}.html" target="_blank" rel="noopener">${t.ko?'플레이 방법':'How to play'}</a>
+        <a href="guides${t.ko?'':'.en'}.html" target="_blank" rel="noopener">${t.ko?'가이드':'Guides'}</a>
+        <a href="ideas${t.ko?'':'.en'}.html" target="_blank" rel="noopener">${t.ko?'아이디어 광장':'Idea Board'}</a>
         <a href="privacy${t.ko?'':'.en'}.html" target="_blank" rel="noopener">${t.ko?'개인정보 처리방침':'Privacy'}</a>
         <a href="terms${t.ko?'':'.en'}.html" target="_blank" rel="noopener">${t.ko?'이용약관':'Terms'}</a>
       </div>

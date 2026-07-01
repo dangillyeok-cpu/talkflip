@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Idea Board · TalkFlip</title>
+<meta name="description" content="Send your TalkFlip question-card ideas and browse picks on the Idea Board. Great questions make it into the real game." />
+<link rel="stylesheet" href="pages.css" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5582757393756677" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="topbar"><div class="bar">
+  <a class="brand" href="./">TalkFlip</a>
+  <div class="langswitch"><a href="ideas.html">한국어</a><span>·</span><a class="on" href="ideas.en.html">EN</a></div>
+</div></div>
+<div class="wrap">
+  <h1>Idea Board</h1>
+  <p class="lead">One question from you could become the next card. Great ideas get added to the game after review.</p>
+
+  <p>TalkFlip grows with its players. If you've ever thought "this question would be fun" at a hangout, with a partner, or among friends, send it below. If it's picked, you'll meet it inside the game.</p>
+
+  <h2>What we're looking for</h2>
+  <ul>
+    <li>Light questions anyone can answer in about <b>three seconds</b></li>
+    <li>No "right answer" — prompts that spark reactions</li>
+    <li>Funny, curious, or a slightly tough choice</li>
+    <li>No attacks on real people, and no sensitive topics like appearance, income, politics, or religion</li>
+  </ul>
+
+  <h2>Recent ideas</h2>
+  <p class="muted">Examples of ideas that were picked or are under review.</p>
+
+  <div class="idea"><span class="status picked">Picked</span><span class="chip">Funny</span><div class="q">Show the most recent photo in your camera roll with no explanation — what is it?</div></div>
+  <div class="idea"><span class="status picked">Picked</span><span class="chip">This or That</span><div class="q">Summer forever or winter forever — pick one.</div></div>
+  <div class="idea"><span class="status picked">Picked</span><span class="chip">Couple</span><div class="q">One word for your first impression of me the day we met?</div></div>
+  <div class="idea"><span class="status">Reviewing</span><span class="chip">Party</span><div class="q">If you could take just one person here to a desert island, who — and why?</div></div>
+  <div class="idea"><span class="status">Reviewing</span><span class="chip">Deep</span><div class="q">One sentence you'd send to yourself ten years ago?</div></div>
+  <div class="idea"><span class="status">Reviewing</span><span class="chip">Warm Up</span><div class="q">What was the very first thought you had this morning?</div></div>
+
+  <h2>Send an idea</h2>
+  <div class="ideaform">
+    <label for="deck">Category (deck)</label>
+    <select id="deck">
+      <option>Warm Up</option>
+      <option>Funny</option>
+      <option>Deep</option>
+      <option>Couple</option>
+      <option>Party</option>
+      <option>Spicy</option>
+      <option>Other</option>
+    </select>
+
+    <label for="idea">Question / card text</label>
+    <textarea id="idea" placeholder="e.g. Who here is most likely to get rich first?"></textarea>
+
+    <label for="nick">Nickname (optional)</label>
+    <input id="nick" type="text" placeholder="Name to credit if picked (optional)" />
+
+    <div><button class="btn-send" id="send">Send by email</button></div>
+    <p class="formnote">Tapping Send opens your mail app. Good cards are added to the game after review. We don't store personal data.</p>
+  </div>
+
+  <a class="cta" href="./">▶ Play now</a>
+
+  <footer>
+    <nav>
+      <a href="./">▶ Play</a>
+      <a href="about.en.html">About</a>
+      <a href="how-to-play.en.html">How to play</a>
+            <a href="guides.en.html">Guides</a>
+<a href="ideas.en.html">Ideas</a>
+      <a href="privacy.en.html">Privacy Policy</a>
+      <a href="terms.en.html">Terms</a>
+    </nav>
+    <div>Contact: dangillyeok@gmail.com</div>
+    <div>© 2026 TalkFlip</div>
+  </footer>
+</div>
+<script>
+document.getElementById("send").addEventListener("click", function(){
+  var deck = document.getElementById("deck").value;
+  var idea = document.getElementById("idea").value.trim();
+  var nick = document.getElementById("nick").value.trim();
+  if(!idea){ document.getElementById("idea").focus(); return; }
+  var subject = "[TalkFlip idea] " + deck;
+  var body = "Category: " + deck + "\n\nQuestion / card:\n" + idea + "\n\nNickname: " + (nick || "(none)");
+  window.location.href = "mailto:dangillyeok@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
