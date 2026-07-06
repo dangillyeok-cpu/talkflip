@@ -90,6 +90,15 @@
     padding: 8px 14px; border-radius: 30px; background: linear-gradient(100deg, var(--brand1), var(--brand2)); }
   .a2hs-x { flex: 0 0 auto; border: none; background: none; cursor: pointer; color: var(--muted); font-size: 15px; padding: 2px 4px; line-height: 1; }
 
+  /* Scenario presets */
+  .scenegrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 2px 0 4px; }
+  .scenecell { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 7px;
+    padding: 13px 6px; border: 1px solid var(--line); border-radius: 15px; background: var(--surface);
+    color: var(--text); cursor: pointer; font: inherit; box-shadow: var(--shadow); transition: transform .06s ease; }
+  .scenecell .sc-ico { color: var(--brand1); display: flex; }
+  .scenecell .sc-label { font-size: 12.5px; font-weight: 800; text-align: center; line-height: 1.2; letter-spacing: -0.2px; }
+  .scenecell:active { transform: scale(0.96); }
+
   /* Hero */
   .hero-tag { font-size: 22px; font-weight: 900; line-height: 1.12; letter-spacing: -0.6px; margin: 4px 2px 12px; }
   .hero-tag .accent { background: linear-gradient(100deg, var(--brand1), var(--brand2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
@@ -473,6 +482,14 @@ const MODE_ORDER = ["whos_most_likely","taboo_round","this_or_that","classic_fli
 const FILMABLE = new Set(["whos_most_likely","taboo_round"]);
 // Minimum players per mode (MVP guide §3).
 const MODE_MIN = { classic_flip: 1, this_or_that: 1, whos_most_likely: 3, hot_seat: 2, taboo_round: 3 };
+const SCENARIOS = [
+  { id:"first",   ko:"처음 만난 사이", en:"First meeting", icon:"sparkle",  mode:"classic_flip",     deck:"warm_up", players:3 },
+  { id:"friends", ko:"친구 모임",     en:"Friends",       icon:"users",    mode:"whos_most_likely", deck:"funny",   players:4 },
+  { id:"couple",  ko:"커플·연인",     en:"Couple",        icon:"heart",    mode:"this_or_that",     deck:"couple",  players:2 },
+  { id:"drinks",  ko:"회식·술자리",   en:"Drinks",        icon:"sc_cup",   mode:"whos_most_likely", deck:"party",   players:4 },
+  { id:"family",  ko:"가족 모임",     en:"Family",        icon:"sc_home",  mode:"classic_flip",     deck:"funny",   players:4 },
+  { id:"party",   ko:"파티",          en:"Party",         icon:"sc_party", mode:"whos_most_likely", deck:"party",   players:5 }
+];
 const MODE_ICON = { classic_flip: "🃏", this_or_that: "⚖️", whos_most_likely: "👉", hot_seat: "🔥", taboo_round: "🤐" };
 const DECK_EMOJI = { warm_up: "☀️", funny: "😂", deep: "🌙", couple: "💗", party: "🎉", spicy: "🌶️" };
 const DECK_TINT = {
@@ -513,7 +530,11 @@ const ICON = {
   deck_deep: '<path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/>',
   deck_couple: '<path d="M20.8 5.6a5.2 5.2 0 0 0-7.4 0L12 7l-1.4-1.4a5.2 5.2 0 1 0-7.4 7.4L12 21l8.8-8a5.2 5.2 0 0 0 0-7.4z"/>',
   deck_party: '<path d="M12 3 13.6 10.4 21 12 13.6 13.6 12 21 10.4 13.6 3 12 10.4 10.4Z"/><path d="M19 4 19.5 6.5 22 7 19.5 7.5 19 10 18.5 7.5 16 7 18.5 6.5Z"/>',
-  deck_spicy: '<path d="M12 3c2.5 3.5 5 5.5 5 9.5a5 5 0 0 1-10 0c0-1.8.8-3.2 2-4.3-.2 1.4.6 2.3 1.5 2.6C9.5 8.7 10.5 6.3 12 3z"/>'
+  deck_spicy: '<path d="M12 3c2.5 3.5 5 5.5 5 9.5a5 5 0 0 1-10 0c0-1.8.8-3.2 2-4.3-.2 1.4.6 2.3 1.5 2.6C9.5 8.7 10.5 6.3 12 3z"/>',
+  // Scenarios
+  sc_cup: '<path d="M5 4h11v8a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4z"/><path d="M16 6h2a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-2"/><line x1="5" y1="20" x2="16" y2="20"/>',
+  sc_home: '<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><rect x="10" y="14" width="4" height="6"/>',
+  sc_party: '<path d="M2 22l6.5-15L17 15.5z"/><path d="M14.5 6.5a2.5 2.5 0 0 1 2.5-2.5"/><line x1="19" y1="3" x2="19" y2="6"/><line x1="20.5" y1="8" x2="22.5" y2="8"/>'
 };
 function svgIcon(name, size){
   size = size || 22;
@@ -560,6 +581,8 @@ function UIText(lang){
     heroFooter: ko ? "시작을 눌러봐. 안 맞으면 패스. 리액션은 계속." : "Tap Start. Pass if it misses. Keep the reactions.",
     shuffle: ko ? "셔플" : "Shuffle",
     sectionLanguage: ko ? "언어" : "Language",
+    sectionScenario: ko ? "상황" : "Occasion",
+    scenarioHint: ko ? "탭하면 딱 맞는 게임이 바로 시작돼요" : "Tap to start a tailored round instantly",
     sectionPlayers: ko ? "인원" : "Players",
     sectionMode: ko ? "모드" : "Mode",
     sectionDeck: ko ? "덱" : "Deck",
@@ -868,6 +891,19 @@ function quickStart(){
 }
 function quickStartGo(){ haptic(15); startGame(); }
 
+function startScenario(sc){
+  let p = Math.max(1, Math.min(8, sc.players));
+  if(p < MODE_MIN[sc.mode]) p = MODE_MIN[sc.mode];
+  state.players = p;
+  state.mode = sc.mode;
+  const av = availability(state.mode, state.players);
+  const want = av.find(x => x.deck.id === sc.deck && x.verdict.playable);
+  const fb = av.find(x => x.verdict.playable);
+  state.deckId = want ? sc.deck : (fb ? fb.deck.id : sc.deck);
+  haptic(15);
+  startGame();
+}
+
 function renderSetup(){
   const t = UIText(state.language);
   const heroCards = CARDS.filter(c => c.cardType !== "taboo");
@@ -898,6 +934,15 @@ function renderSetup(){
         <div class="kicker"><span>${esc(t.heroKicker)}</span><button id="heroShuffle">${svgIcon('shuffle',14)} ${esc(t.shuffle)}</button></div>
         <div class="q">${esc(heroText)}</div>
         <div class="ghost">FLIP</div>
+      </div>
+
+      <div class="glabel">${svgIcon('sparkle',16)} ${esc(t.sectionScenario)}</div>
+      <div class="hint">${esc(t.scenarioHint)}</div>
+      <div class="scenegrid" id="sceneGrid">
+        ${SCENARIOS.map(sc => `<button class="scenecell" data-s="${sc.id}">
+          <span class="sc-ico">${svgIcon(sc.icon,22)}</span>
+          <span class="sc-label">${esc(t.ko ? sc.ko : sc.en)}</span>
+        </button>`).join("")}
       </div>
 
       <div class="glabel">${svgIcon('users',16)} ${esc(t.sectionPlayers)}</div>
@@ -951,6 +996,10 @@ function renderSetup(){
   document.getElementById("settingsBtn").onclick = () => { haptic(8); openSettings(); };
   document.getElementById("heroShuffle").onclick = () => { haptic(8); state.heroIndex = Math.floor(Math.random()*Math.max(heroCards.length,1)); renderSetup(); };
   document.getElementById("quickStart").onclick = () => { haptic(12); quickStart(); };
+  document.querySelectorAll("#sceneGrid .scenecell").forEach(b => b.onclick = () => {
+    const sc = SCENARIOS.find(s => s.id === b.dataset.s);
+    if(sc){ haptic(12); startScenario(sc); }
+  });
   document.getElementById("pMinus").onclick = () => { state.players = Math.max(1, state.players-1); ensureDeck(); renderSetup(); };
   document.getElementById("pPlus").onclick = () => { state.players = Math.min(8, state.players+1); ensureDeck(); renderSetup(); };
   document.querySelectorAll("#modeGrid .modecell").forEach(b => b.onclick = () => { haptic(8); state.mode = b.dataset.m; state.deckId = firstPlayableDeck(); renderSetup(); });
