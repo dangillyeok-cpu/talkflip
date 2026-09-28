@@ -4,8 +4,8 @@
 
 - `index.html` — 새 게임 UI (카드 / 지목 / 결과). 기존 파일 대체.
 - `cards.js` — 카드 데이터. **생성 파일** — 루트에서 `node build.mjs`. cards.json + `data/spicy.json`(매운맛 50장) + `data/extras.json`(추가 카드)을 합치고, 지목 카드마다 칭호(`trait`) 태그를 붙임(`data/traits.json`). 금지어 카드는 제외.
-- `decks/{party,spicy,funny,warm_up,deep,couple}.html` — 덱별 정적 페이지(설명 + 질문 전체 + 시작 버튼). **생성 파일**. 시작 버튼은 `../?deck=spicy` 로 들어오고, index.html이 이 파라미터로 덱을 고른 뒤 URL에서 지움.
-- `penalty.html` — 술게임 벌칙 룰렛 랜딩(벌칙 30개 목록 + 룰렛 버튼 `./?roulette`). **생성 파일**, 소스는 `data/penalties.json`.
+- `decks/{party,spicy,funny,warm_up,deep,couple}.html` + `.en.html` — 덱별 정적 페이지(설명 + 질문 전체 + 시작 버튼), 한/영. **생성 파일**. 시작 버튼은 `../?deck=spicy` 로 들어오고, index.html이 이 파라미터로 덱을 고른 뒤 URL에서 지움.
+- `penalty.html` / `penalty.en.html` — 술게임 벌칙 룰렛 랜딩(한/영)(벌칙 30개 목록 + 룰렛 버튼 `./?roulette`). **생성 파일**, 소스는 `data/penalties.json`.
 - `sw.js` — 캐시 이름은 `talkflip-v21-<해시>`. 해시는 index.html·cards.js·manifest 내용에서 빌드가 자동 계산하므로, 빌드만 돌리면 기존 사용자도 새 화면을 받음. 문구 등을 손으로 고쳤을 때도 배포 전에 `node build.mjs` 한 번.
 - `manifest.webmanifest` — 테마색만 다크로.
 
