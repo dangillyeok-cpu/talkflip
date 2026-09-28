@@ -173,7 +173,7 @@ const ADSENSE_CLIENT = "ca-pub-5582757393756677";
 const INTERSTITIAL_COOLDOWN_MS = 90000;
 const ROUND_SIZE = 10;
 const VOTE_PER_ROUND = 4;
-const KEY = { players:"tf2.players", deck:"tf2.deck", lang:"tf2.lang", hinted:"tf2.hinted" };
+const KEY = { players:"tf2.players", deck:"tf2.deck", lang:"tf2.lang", hinted:"tf2.hinted", seen:"tf2.seen" };
 // Balance-card national stats (worker/). Same-origin /api in production, wrangler dev on localhost.
 // Override for testing or a *.workers.dev deploy: localStorage.setItem("tf2.api", "https://….workers.dev/api")
 const STATS_API = (() => { try { const o = localStorage.getItem("tf2.api"); if(o) return o; } catch(e){} return (location.hostname === "localhost" || location.hostname === "127.0.0.1") ? "http://localhost:8787/api" : "/api"; })();
@@ -241,6 +241,7 @@ const state = {
   soloPicks: {},         // cardId -> choiceIndex (solo choice)
   abVotes: {},           // cardId -> [countA, countB]  (group choice, one tap per hand)
   namesAsked: false,
+  seen: (() => { try { return JSON.parse(localStorage.getItem("tf2.seen") || "{}"); } catch(e){ return {}; } })(),   // deck:pool -> [cardId] dealt so far
   stats: {},             // cardId -> {a,b,n,pa,pb} from the stats API (prefetched per round)
   sent: {}               // cardId -> true once this phone's answer was posted
 };
@@ -249,6 +250,23 @@ function save(){ try { localStorage.setItem(KEY.players, JSON.stringify(state.pl
 const mode = () => DECK[state.deckId].players === 2 || state.players.length === 2 ? "couple" : state.players.length >= 3 ? "group" : "solo";
 
 /* ===================== round building ===================== */
+// No repeats until a pool is used up: cards already dealt are remembered per deck+pool (localStorage),
+// unseen ones are dealt first, and once a pool runs dry a new cycle starts with the leftovers.
+function loadSeen(){ try { return JSON.parse(localStorage.getItem(KEY.seen) || "{}"); } catch(e){ return {}; } }
+function saveSeen(){ try { localStorage.setItem(KEY.seen, JSON.stringify(state.seen)); } catch(e){} }
+function takeFresh(pool, n, key){
+  const seen = new Set(state.seen[key] || []);
+  const fresh = shuffle(pool.filter(c => !seen.has(c.id)));
+  let out = fresh.slice(0, n);
+  if(out.length < n){
+    const rest = shuffle(pool.filter(c => seen.has(c.id))).slice(0, n - out.length);
+    out = out.concat(rest);
+    state.seen[key] = rest.map(c => c.id);              // pool exhausted: new cycle starts with what we just reused
+  } else {
+    state.seen[key] = [...seen, ...out.map(c => c.id)];
+  }
+  return out;
+}
 function shuffle(a){ a = a.slice(); for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
 function buildRound(){
   const deck = state.deckId;
@@ -260,7 +278,7 @@ function buildRound(){
     let votes = inDeck.filter(c => c.cardType === "vote");
     if(votes.length < VOTE_PER_ROUND) votes = votes.concat(CARDS.filter(c => c.cardType === "vote" && ["party","funny"].includes(c.deck)));
     const others = inDeck.filter(c => c.cardType !== "vote");
-    picked = shuffle(votes).slice(0, VOTE_PER_ROUND).concat(shuffle(others).slice(0, ROUND_SIZE - VOTE_PER_ROUND));
+    picked = takeFresh(votes, VOTE_PER_ROUND, deck + ":vote").concat(takeFresh(others, ROUND_SIZE - VOTE_PER_ROUND, deck + ":other"));
     picked = shuffle(picked);
     // never start with a vote card twice in a row? keep first card non-vote so the first swipe is instant
     const firstNonVote = picked.findIndex(c => c.cardType !== "vote");
@@ -268,11 +286,12 @@ function buildRound(){
   } else if(m === "couple"){
     let choices = inDeck.filter(c => c.cardType === "choice");
     if(choices.length < ROUND_SIZE) choices = choices.concat(CARDS.filter(c => c.cardType === "choice" && c.deck === "couple"), CARDS.filter(c => c.cardType === "choice" && c.deck === "warm_up"));
-    const seen = new Set(); choices = choices.filter(c => !seen.has(c.id) && seen.add(c.id));
-    picked = shuffle(choices).slice(0, ROUND_SIZE);
+    const dup = new Set(); choices = choices.filter(c => !dup.has(c.id) && dup.add(c.id));
+    picked = takeFresh(choices, ROUND_SIZE, deck + ":choice");
   } else {
-    picked = shuffle(inDeck.filter(c => c.cardType !== "vote")).slice(0, ROUND_SIZE);
+    picked = takeFresh(inDeck.filter(c => c.cardType !== "vote"), ROUND_SIZE, deck + ":solo");
   }
+  saveSeen();
   state.round = picked; state.idx = 0; state.votes = {}; state.picks = {}; state.soloPicks = {}; state.abVotes = {}; state.usedPenalties = new Set(); state.sent = {};
   fetchStats();
 }

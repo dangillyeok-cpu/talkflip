@@ -374,6 +374,76 @@
       "cardType": "answer",
       "ko": "애인이나 썸한테 절대 못 보여주는 내 모습은?",
       "en": "The side of you a partner or crush must never see?"
+    },
+    {
+      "id": "spicy_story_001",
+      "deck": "spicy",
+      "cardType": "story",
+      "ko": "취해서 한 최악의 결정 썰",
+      "en": "The worst decision you ever made drunk"
+    },
+    {
+      "id": "spicy_story_002",
+      "deck": "spicy",
+      "cardType": "story",
+      "ko": "전 애인이랑 제일 크게 싸운 이유 썰",
+      "en": "The biggest fight you had with an ex, and what it was about"
+    },
+    {
+      "id": "spicy_story_003",
+      "deck": "spicy",
+      "cardType": "story",
+      "ko": "부모님한테 들킬 뻔한 거짓말 썰",
+      "en": "A lie your parents almost caught"
+    },
+    {
+      "id": "spicy_story_004",
+      "deck": "spicy",
+      "cardType": "story",
+      "ko": "돈 때문에 사람이랑 틀어진 썰",
+      "en": "A time money came between you and someone"
+    },
+    {
+      "id": "spicy_story_005",
+      "deck": "spicy",
+      "cardType": "story",
+      "ko": "뒷담화하다 본인한테 들킨 썰",
+      "en": "A time you got caught talking behind someone's back"
+    },
+    {
+      "id": "spicy_story_006",
+      "deck": "spicy",
+      "cardType": "story",
+      "ko": "잠수 탔다가 돌아온 진짜 이유 썰",
+      "en": "The real reason you ghosted and came back"
+    },
+    {
+      "id": "spicy_story_007",
+      "deck": "spicy",
+      "cardType": "story",
+      "ko": "소개팅에서 5분 만에 나오고 싶었던 썰",
+      "en": "A blind date you wanted to leave within five minutes"
+    },
+    {
+      "id": "spicy_story_008",
+      "deck": "spicy",
+      "cardType": "story",
+      "ko": "단톡방에 잘못 보낸 톡 썰",
+      "en": "A text you sent to the wrong group chat"
+    },
+    {
+      "id": "spicy_story_009",
+      "deck": "spicy",
+      "cardType": "story",
+      "ko": "지금 생각하면 그때 왜 그랬지 싶은 연애 썰",
+      "en": "A relationship moment that makes you cringe now"
+    },
+    {
+      "id": "spicy_story_010",
+      "deck": "spicy",
+      "cardType": "story",
+      "ko": "이 자리 사람 몰래 한 일 썰. 오늘 공개",
+      "en": "Something you did behind the back of someone here. Tell it tonight"
     }
   ]
 }

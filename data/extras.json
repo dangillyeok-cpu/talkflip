@@ -358,6 +358,345 @@
       "cardType": "choice",
       "ko": "몸으로 하는 게임 vs 보드게임?",
       "en": "Party games or board games?"
+    },
+    {
+      "id": "couple_choice_x06",
+      "deck": "couple",
+      "cardType": "choice",
+      "ko": "기념일에 손편지 vs 기념일에 선물?",
+      "en": "Handwritten letter or a gift on anniversaries?"
+    },
+    {
+      "id": "couple_choice_x07",
+      "deck": "couple",
+      "cardType": "choice",
+      "ko": "매일 짧은 통화 vs 주말에 긴 만남?",
+      "en": "Short call every day or one long weekend together?"
+    },
+    {
+      "id": "couple_choice_x08",
+      "deck": "couple",
+      "cardType": "choice",
+      "ko": "싸우면 바로 풀기 vs 하루 식히고 풀기?",
+      "en": "Make up right away or cool off for a day first?"
+    },
+    {
+      "id": "couple_choice_x09",
+      "deck": "couple",
+      "cardType": "choice",
+      "ko": "애인 친구 모임 같이 가기 vs 각자 놀기?",
+      "en": "Join each other's friend hangouts or keep them separate?"
+    },
+    {
+      "id": "couple_choice_x10",
+      "deck": "couple",
+      "cardType": "choice",
+      "ko": "커플 아이템 하기 vs 절대 안 하기?",
+      "en": "Matching couple items or never?"
+    },
+    {
+      "id": "couple_choice_x11",
+      "deck": "couple",
+      "cardType": "choice",
+      "ko": "사진 많이 찍는 데이트 vs 폰 넣어두는 데이트?",
+      "en": "Photo-heavy dates or phones-away dates?"
+    },
+    {
+      "id": "couple_choice_x12",
+      "deck": "couple",
+      "cardType": "choice",
+      "ko": "상대 취미에 같이 빠지기 vs 각자 취미 존중?",
+      "en": "Get into each other's hobbies or keep your own?"
+    },
+    {
+      "id": "couple_choice_x13",
+      "deck": "couple",
+      "cardType": "choice",
+      "ko": "서프라이즈 이벤트 vs 미리 다 말해주기?",
+      "en": "Surprises or telling each other everything in advance?"
+    },
+    {
+      "id": "couple_choice_x14",
+      "deck": "couple",
+      "cardType": "choice",
+      "ko": "데이트 비용 반반 vs 번갈아 내기?",
+      "en": "Split every bill or take turns paying?"
+    },
+    {
+      "id": "couple_choice_x15",
+      "deck": "couple",
+      "cardType": "choice",
+      "ko": "애인 앞에서 노래 부르기 vs 춤추기?",
+      "en": "Sing for your partner or dance for them?"
+    },
+    {
+      "id": "couple_choice_x16",
+      "deck": "couple",
+      "cardType": "choice",
+      "ko": "잠들 때까지 통화 vs 굿나잇 톡 한 줄?",
+      "en": "Call until you fall asleep or one goodnight text?"
+    },
+    {
+      "id": "couple_choice_x17",
+      "deck": "couple",
+      "cardType": "choice",
+      "ko": "같이 요리 vs 같이 배달?",
+      "en": "Cook together or order in together?"
+    },
+    {
+      "id": "couple_choice_x18",
+      "deck": "couple",
+      "cardType": "choice",
+      "ko": "애인 SNS 전부 팔로우 vs 서로 SNS 안 보기?",
+      "en": "Follow all of each other's accounts or stay off each other's SNS?"
+    },
+    {
+      "id": "couple_choice_x19",
+      "deck": "couple",
+      "cardType": "choice",
+      "ko": "여행은 계획대로 vs 발길 닿는 대로?",
+      "en": "Trips by the itinerary or wherever the day takes you?"
+    },
+    {
+      "id": "couple_choice_x20",
+      "deck": "couple",
+      "cardType": "choice",
+      "ko": "연애 초 설렘 vs 오래된 편안함?",
+      "en": "Early-days butterflies or long-term comfort?"
+    },
+    {
+      "id": "couple_choice_x21",
+      "deck": "couple",
+      "cardType": "choice",
+      "ko": "싸울 때 말로 풀기 vs 글로 풀기?",
+      "en": "Talk it out or write it out after a fight?"
+    },
+    {
+      "id": "couple_choice_x22",
+      "deck": "couple",
+      "cardType": "choice",
+      "ko": "애인 부모님 먼저 만나기 vs 내 부모님 먼저 소개?",
+      "en": "Meet their parents first or introduce yours first?"
+    },
+    {
+      "id": "couple_choice_x23",
+      "deck": "couple",
+      "cardType": "choice",
+      "ko": "기념일 다 챙기기 vs 100일·1주년만?",
+      "en": "Celebrate every milestone or just the big ones?"
+    },
+    {
+      "id": "couple_choice_x24",
+      "deck": "couple",
+      "cardType": "choice",
+      "ko": "취향 똑같은 연인 vs 취향 정반대 연인?",
+      "en": "A partner with the same taste or the exact opposite?"
+    },
+    {
+      "id": "party_answer_x01",
+      "deck": "party",
+      "cardType": "answer",
+      "ko": "오늘 이 모임에 온 진짜 이유는?",
+      "en": "The real reason you showed up tonight?"
+    },
+    {
+      "id": "party_answer_x02",
+      "deck": "party",
+      "cardType": "answer",
+      "ko": "여기서 제일 처음 친해진 사람은? 계기는?",
+      "en": "Who here did you get close to first? How?"
+    },
+    {
+      "id": "party_answer_x03",
+      "deck": "party",
+      "cardType": "answer",
+      "ko": "이 모임에 별명을 짓는다면?",
+      "en": "If this group had a nickname, what would it be?"
+    },
+    {
+      "id": "party_answer_x04",
+      "deck": "party",
+      "cardType": "answer",
+      "ko": "우리 단톡방 최고 명장면은?",
+      "en": "Best moment in our group chat, ever?"
+    },
+    {
+      "id": "party_answer_x05",
+      "deck": "party",
+      "cardType": "answer",
+      "ko": "다음 모임 장소를 내가 정한다면 어디?",
+      "en": "If you picked the next hangout spot, where?"
+    },
+    {
+      "id": "party_answer_x06",
+      "deck": "party",
+      "cardType": "answer",
+      "ko": "여기 있는 사람 중 나랑 제일 닮은 사람은? 어디가?",
+      "en": "Who here is most like you? In what way?"
+    },
+    {
+      "id": "party_answer_x07",
+      "deck": "party",
+      "cardType": "answer",
+      "ko": "이 모임에서 내 역할을 한 단어로?",
+      "en": "Your role in this group, in one word?"
+    },
+    {
+      "id": "party_answer_x08",
+      "deck": "party",
+      "cardType": "answer",
+      "ko": "오늘 집에 가서 제일 먼저 할 일은?",
+      "en": "First thing you'll do when you get home tonight?"
+    },
+    {
+      "id": "party_answer_x09",
+      "deck": "party",
+      "cardType": "answer",
+      "ko": "우리끼리 여행 가면 누가 뭐 맡을 것 같아?",
+      "en": "If we traveled together, who would handle what?"
+    },
+    {
+      "id": "party_answer_x10",
+      "deck": "party",
+      "cardType": "answer",
+      "ko": "이 자리에서 제일 고마운 사람 한 명, 이유는?",
+      "en": "One person here you're grateful for, and why?"
+    },
+    {
+      "id": "party_story_x01",
+      "deck": "party",
+      "cardType": "story",
+      "ko": "이 모임 멤버 때문에 웃겨 죽을 뻔한 썰 하나",
+      "en": "A time someone here nearly killed you laughing"
+    },
+    {
+      "id": "party_story_x02",
+      "deck": "party",
+      "cardType": "story",
+      "ko": "여기 있는 사람이랑 처음 만난 날 썰",
+      "en": "The day you first met someone here"
+    },
+    {
+      "id": "party_story_x03",
+      "deck": "party",
+      "cardType": "story",
+      "ko": "단체로 뭔가 망했던 썰. 여행이든 행사든",
+      "en": "A time this group collectively failed. Trip, event, anything"
+    },
+    {
+      "id": "party_story_x04",
+      "deck": "party",
+      "cardType": "story",
+      "ko": "우리 중 누군가 취해서 한 짓 썰. 본인도 됨",
+      "en": "Something one of us did drunk. You count too"
+    },
+    {
+      "id": "party_story_x05",
+      "deck": "party",
+      "cardType": "story",
+      "ko": "이 모임에서 제일 오래 기억에 남는 순간 썰",
+      "en": "The moment with this group you'll remember longest"
+    },
+    {
+      "id": "party_story_x06",
+      "deck": "party",
+      "cardType": "story",
+      "ko": "내가 늦어서 벌어진 일 썰",
+      "en": "A time you were late and things went sideways"
+    },
+    {
+      "id": "party_story_x07",
+      "deck": "party",
+      "cardType": "story",
+      "ko": "사진으로 남았으면 대박이었을 순간 썰",
+      "en": "A moment that should have been photographed"
+    },
+    {
+      "id": "party_story_x08",
+      "deck": "party",
+      "cardType": "story",
+      "ko": "이 멤버들이랑 다시 한 번 하고 싶은 일, 그때 얘기",
+      "en": "Something you'd do again with this crew, and how it went the first time"
+    },
+    {
+      "id": "funny_vote_x03",
+      "deck": "funny",
+      "cardType": "vote",
+      "ko": "배달 앱 리뷰를 소설처럼 쓸 것 같은 사람은?",
+      "en": "Who writes delivery reviews like a novel?",
+      "trait": "drama"
+    },
+    {
+      "id": "funny_vote_x04",
+      "deck": "funny",
+      "cardType": "vote",
+      "ko": "길에서 강아지 보면 주인보다 먼저 인사할 것 같은 사람은?",
+      "en": "Who greets the dog before the owner?",
+      "trait": "hype"
+    },
+    {
+      "id": "funny_vote_x05",
+      "deck": "funny",
+      "cardType": "vote",
+      "ko": "셀프 계산대 앞에서 제일 오래 헤맬 것 같은 사람은?",
+      "en": "Who gets stuck longest at self-checkout?",
+      "trait": "npc"
+    },
+    {
+      "id": "funny_vote_x06",
+      "deck": "funny",
+      "cardType": "vote",
+      "ko": "노래방에서 발라드만 부를 것 같은 사람은?",
+      "en": "Who only sings ballads at karaoke?",
+      "trait": "counselor"
+    },
+    {
+      "id": "funny_vote_x07",
+      "deck": "funny",
+      "cardType": "vote",
+      "ko": "여행 가서 사진만 200장 찍을 것 같은 사람은?",
+      "en": "Who takes 200 photos on one trip?",
+      "trait": "star"
+    },
+    {
+      "id": "funny_vote_x08",
+      "deck": "funny",
+      "cardType": "vote",
+      "ko": "엘리베이터 닫힘 버튼을 제일 많이 누를 것 같은 사람은?",
+      "en": "Who mashes the elevator close button the most?",
+      "trait": "chaos"
+    },
+    {
+      "id": "funny_vote_x09",
+      "deck": "funny",
+      "cardType": "vote",
+      "ko": "회의 중에 딴짓하다 걸릴 것 같은 사람은?",
+      "en": "Who gets caught slacking in a meeting?",
+      "trait": "ghost"
+    },
+    {
+      "id": "funny_vote_x10",
+      "deck": "funny",
+      "cardType": "vote",
+      "ko": "캠핑 가면 혼자 텐트 다 칠 것 같은 사람은?",
+      "en": "Who ends up pitching the whole tent alone?",
+      "trait": "leader"
+    },
+    {
+      "id": "funny_vote_x11",
+      "deck": "funny",
+      "cardType": "vote",
+      "ko": "편의점 신상 나오면 제일 먼저 먹어볼 것 같은 사람은?",
+      "en": "Who tries every new convenience-store snack first?",
+      "trait": "hype"
+    },
+    {
+      "id": "funny_vote_x12",
+      "deck": "funny",
+      "cardType": "vote",
+      "ko": "알람 10개 맞춰놓고 다 끌 것 같은 사람은?",
+      "en": "Who sets ten alarms and sleeps through all of them?",
+      "trait": "ghost"
     }
   ]
 }
