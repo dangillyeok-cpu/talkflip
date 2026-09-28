@@ -226,7 +226,8 @@ const L = obj => obj[state.lang] || obj.ko;
 
 /* ===================== state ===================== */
 const state = {
-  lang: (() => { let l = null; try { l = localStorage.getItem(KEY.lang); } catch(e){} if(l === "ko" || l === "en") return l; return (navigator.language||"ko").toLowerCase().startsWith("ko") ? "ko" : "en"; })(),
+  // ?lang=en (from the English static pages) wins, then the saved choice, then the browser language
+  lang: (() => { let l = null; try { l = new URLSearchParams(location.search).get("lang"); } catch(e){} if(l === "ko" || l === "en") return l; try { l = localStorage.getItem(KEY.lang); } catch(e){} if(l === "ko" || l === "en") return l; return (navigator.language||"ko").toLowerCase().startsWith("ko") ? "ko" : "en"; })(),
   // ?deck=spicy (from /decks/*.html) wins over the saved deck; the param is then dropped from the URL
   deckId: (() => {
     try { const q = new URLSearchParams(location.search).get("deck"); if(q && DECK[q]){ history.replaceState(null, "", location.pathname); return q; } } catch(e){}
@@ -791,7 +792,9 @@ try {
   }
 } catch(e){}
 // ?roulette (from penalty.html): open the wheel over the first card
-try { if(new URLSearchParams(location.search).has("roulette")){ history.replaceState(null, "", location.pathname); openRoulette(null); } } catch(e){}
+try { if(new URLSearchParams(location.search).has("roulette")) openRoulette(null); } catch(e){}
+// drop any deep-link params (?deck, ?lang, ?roulette) once they have been applied
+try { if(location.search) history.replaceState(null, "", location.pathname); } catch(e){}
 initAds();
 if("serviceWorker" in navigator){
   window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(()=>{}));

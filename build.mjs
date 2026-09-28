@@ -139,43 +139,105 @@ const TYPE_LABEL = {
 };
 const TYPE_ORDER = ["vote", "choice", "answer", "story", "deep_light"];
 
-function deckPage(d) {
+// Page chrome strings. Static pages exist in ko (x.html) and en (x.en.html) like the rest of the site.
+const PG = {
+  ko: {
+    ext: ".html", play: "▶ 플레이", about: "소개", guides: "플레이 &amp; 가이드", faq: "FAQ", privacy: "개인정보 처리방침", terms: "이용약관", contact: "문의",
+    deckTitle: (d, n) => `${d.ko} 덱 질문 ${n}개`, deckH1: (d) => `${d.ko} 덱`, chip: (d, n) => `${d.ko} · ${n}장${d.players ? " · 2명" : ""}`,
+    count: (n) => `${n}장`, startTop: "▶ 이 덱으로 바로 시작", startSticky: (d) => `▶ ${d.ko} 덱으로 시작`,
+    startNote: "설치 없이 브라우저에서 바로. 링크를 열면 첫 카드가 나와요.", composition: "카드 구성", otherDecks: "다른 덱", more: "더 읽기",
+    penaltyLink: "술게임 벌칙 룰렛", guidesLink: "플레이 방법 &amp; 가이드", partyGuide: "모임 질문 게임", coupleGuide: "커플 질문", drinksGuide: "술자리 질문 가이드",
+    passPenalty: "패스하면 벌칙", deckDesc: (d, n, summary) => `TalkFlip ${d.ko} 덱 — ${d.tagline_ko} ${n}장 전체 질문 목록. ${summary}.`, sample: "예: ",
+    pen: {
+      title: (n) => `술게임 벌칙 룰렛 · 벌칙 ${n}가지`, desc: (n) => `술자리·모임에서 바로 쓰는 벌칙 ${n}가지와 랜덤 벌칙 룰렛. 술 없이도 되는 벌칙 위주라 누구나 참여 가능. 버튼 한 번으로 룰렛 돌리기.`,
+      chip: (n) => `벌칙 ${n}가지`, h1: "술게임 벌칙 룰렛", lead: "\"벌칙 뭐 하지?\"에서 멈추지 마. 버튼 한 번이면 룰렛이 골라줘.",
+      body: "지목 게임에서 제일 많이 찍힌 사람, 밸런스에서 소수파, 질문에 패스한 사람. 벌칙은 필요한데 매번 생각하기 귀찮을 때 쓰는 랜덤 벌칙 룰렛이에요. 술 없이도 되는 벌칙 위주라 안 마시는 사람도, 카페에서도 돼요. 폰 하나면 끝.",
+      cta: "▶ 룰렛 돌리기", note: "TalkFlip 게임 안에서 열려요. 지목 카드에서 \"벌칙\" 버튼을 눌러도 같은 룰렛.", howTitle: "이렇게 써요",
+      how: ["<b>지목 카드</b>에서 제일 많이 찍힌 사람 → 벌칙 버튼 → 룰렛.", "<b>밸런스</b>에서 소수파 전원 벌칙. 동률이면 다 같이.", "질문에 <b>패스</b>하면 벌칙. 매운맛 덱은 이 룰이 기본.", "선은 지키기. 하기 싫은 벌칙은 \"흑역사 하나 털기\"로 대체."],
+      listTitle: (n) => `벌칙 ${n}가지`, seeAlso: "같이 보기", spicyDeck: "매운맛 덱 질문", partyDeck: "파티 덱 질문", howToPlay: "플레이 방법",
+    },
+  },
+  en: {
+    ext: ".en.html", play: "▶ Play", about: "About", guides: "How to Play &amp; Guides", faq: "FAQ", privacy: "Privacy Policy", terms: "Terms", contact: "Contact",
+    deckTitle: (d, n) => `${d.en} deck: ${n} questions`, deckH1: (d) => `${d.en} deck`, chip: (d, n) => `${d.en} · ${n} cards${d.players ? " · 2 players" : ""}`,
+    count: (n) => `${n} cards`, startTop: "▶ Start with this deck", startSticky: (d) => `▶ Start ${d.en}`,
+    startNote: "No install, right in the browser. Open the link and the first card is there.", composition: "What's inside", otherDecks: "Other decks", more: "Read more",
+    penaltyLink: "Penalty wheel", guidesLink: "How to play &amp; guides", partyGuide: "Party question games", coupleGuide: "Couple questions", drinksGuide: "Drinking questions guide",
+    passPenalty: "Pass = penalty", deckDesc: (d, n, summary) => `TalkFlip ${d.en} deck: ${d.tagline_en} All ${n} questions. ${summary}.`, sample: "e.g. ",
+    pen: {
+      title: (n) => `Drinking Game Penalty Wheel · ${n} penalties`, desc: (n) => `${n} party penalties and a random penalty wheel for drinking games and hangouts. Mostly no-alcohol penalties, so everyone can play. One tap to spin.`,
+      chip: (n) => `${n} penalties`, h1: "Penalty Wheel", lead: "Stuck on \"so what's the penalty?\" One tap and the wheel decides.",
+      body: "The most-voted person on a point card, the smaller side on a this-or-that, whoever passes on a question. When you need a penalty but can't be bothered to invent one, spin. Most penalties work without alcohol, so non-drinkers and café tables are fine. One phone is all it takes.",
+      cta: "▶ Spin the wheel", note: "Opens inside the TalkFlip game. The Penalty button on point cards is the same wheel.", howTitle: "How to use it",
+      how: ["<b>Point cards:</b> most-voted person → Penalty button → spin.", "<b>This or that:</b> the smaller side takes a penalty. Tie means everyone.", "<b>Pass</b> on a question, take a penalty. The Spicy deck runs on this rule.", "Keep it decent. Swap any penalty you hate for \"tell one embarrassing story\"."],
+      listTitle: (n) => `All ${n} penalties`, seeAlso: "See also", spicyDeck: "Spicy deck questions", partyDeck: "Party deck questions", howToPlay: "How to play",
+    },
+  },
+};
+const hreflang = (base) => `<link rel="alternate" hreflang="ko" href="${SITE}/${base}" />
+<link rel="alternate" hreflang="en" href="${SITE}/${base}.en" />
+<link rel="alternate" hreflang="x-default" href="${SITE}/${base}" />`;
+const langSwitch = (koHref, enHref, lang) => `<div class="langswitch"><a${lang === "ko" ? ' class="on"' : ""} href="${koHref}">한국어</a><span>·</span><a${lang === "en" ? ' class="on"' : ""} href="${enHref}">EN</a></div>`;
+const footer = (P, up) => `  <footer>
+    <nav>
+      <a href="${up}">${P.play}</a>
+      <a href="${up}about${P.ext}">${P.about}</a>
+      <a href="${up}guides${P.ext}">${P.guides}</a>
+      <a href="${up}faq${P.ext}">${P.faq}</a>
+      <a href="${up}privacy${P.ext}">${P.privacy}</a>
+      <a href="${up}terms${P.ext}">${P.terms}</a>
+    </nav>
+    <div>${P.contact}: dangillyeok@gmail.com</div>
+    <div>© 2026 TalkFlip</div>
+  </footer>`;
+const stickyScript = `  <script>
+    // floating start button only once the top one has scrolled away
+    (function(){ var s=document.getElementById("sticky"), t=document.getElementById("topCta"); if(!("IntersectionObserver" in window)){ s.classList.add("show"); return; }
+      new IntersectionObserver(function(e){ s.classList.toggle("show", !e[0].isIntersecting && e[0].boundingClientRect.top < 0); }).observe(t); })();
+  </script>`;
+
+function deckPage(d, lang) {
+  const P = PG[lang];
+  const name = d[lang];
   const mine = cards.filter((c) => c.deck === d.id);
   const groups = TYPE_ORDER.map((t) => [t, mine.filter((c) => c.cardType === t)]).filter(([, l]) => l.length);
-  const summary = groups.map(([t, l]) => `${TYPE_LABEL[t].ko} ${l.length}장`).join(" · ");
-  const desc = `TalkFlip ${d.ko} 덱 — ${d.tagline_ko} ${mine.length}장 전체 질문 목록. ${summary}.`;
-  const sample = mine.slice(0, 3).map((c) => c.ko).join(" / ");
+  const summary = groups.map(([t, l]) => `${TYPE_LABEL[t][lang]} ${P.count(l.length)}`).join(" · ");
+  const desc = P.deckDesc(d, mine.length, summary);
+  const sample = mine.slice(0, 3).map((c) => c[lang]).join(" / ");
+  const pageUrl = `${SITE}/decks/${d.id}${lang === "en" ? ".en" : ""}`;
+  const appHref = `../?deck=${d.id}${lang === "en" ? "&lang=en" : ""}`;
   const ld = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: `${d.ko} 덱 질문 ${mine.length}개`,
+    headline: P.deckTitle(d, mine.length),
     description: desc,
-    inLanguage: "ko",
+    inLanguage: lang,
     dateModified: new Date().toISOString().slice(0, 10),
     author: { "@type": "Organization", name: "TalkFlip" },
     publisher: { "@type": "Organization", name: "TalkFlip" },
-    mainEntityOfPage: `${SITE}/decks/${d.id}`,
+    mainEntityOfPage: pageUrl,
   };
-  const others = DECKS.filter((x) => x.id !== d.id).map((x) => `<a href="${x.id}.html">${esc(x.ko)}</a>`).join(" · ");
+  const others = DECKS.filter((x) => x.id !== d.id).map((x) => `<a href="${x.id}${P.ext}">${esc(x[lang])}</a>`).join(" · ");
   const sections = groups.map(([t, l]) => `
-  <h2 id="${t}">${esc(TYPE_LABEL[t].ko)} <span class="muted">${l.length}장 · ${esc(TYPE_LABEL[t].hint_ko)}</span></h2>
+  <h2 id="${t}">${esc(TYPE_LABEL[t][lang])} <span class="muted">${P.count(l.length)} · ${esc(TYPE_LABEL[t]["hint_" + lang])}</span></h2>
   <ol class="qs">
-${l.map((c) => `    <li>${esc(c.ko)}${c.follow ? `<small>${esc(c.follow.ko)}</small>` : c.penalty ? `<small>패스하면 벌칙</small>` : ""}</li>`).join("\n")}
+${l.map((c) => `    <li>${esc(c[lang])}${c.follow ? `<small>${esc(c.follow[lang])}</small>` : c.penalty ? `<small>${esc(P.passPenalty)}</small>` : ""}</li>`).join("\n")}
   </ol>`).join("\n");
 
   return `<!DOCTYPE html>
-<html lang="ko">
+<html lang="${lang}">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>${esc(d.ko)} 덱 질문 ${mine.length}개 · TalkFlip</title>
+<title>${esc(P.deckTitle(d, mine.length))} · TalkFlip</title>
 <meta name="description" content="${esc(desc)}" />
-<link rel="canonical" href="${SITE}/decks/${d.id}" />
+<link rel="canonical" href="${pageUrl}" />
+${hreflang(`decks/${d.id}`)}
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="TalkFlip" />
-<meta property="og:title" content="${esc(d.ko)} 덱 질문 ${mine.length}개 · TalkFlip" />
-<meta property="og:description" content="${esc(d.tagline_ko)} 예: ${esc(sample)}" />
-<meta property="og:url" content="${SITE}/decks/${d.id}" />
+<meta property="og:title" content="${esc(P.deckTitle(d, mine.length))} · TalkFlip" />
+<meta property="og:description" content="${esc(d["tagline_" + lang])} ${esc(P.sample)}${esc(sample)}" />
+<meta property="og:url" content="${pageUrl}" />
 <meta property="og:image" content="${SITE}/og.png" />
 <meta name="theme-color" content="${d.accent}" />
 <link rel="stylesheet" href="../pages.css" />
@@ -203,47 +265,32 @@ ${JSON.stringify(ld, null, 2)}
 <body>
 <div class="topbar"><div class="bar">
   <a class="brand" href="../">TalkFlip</a>
-  <div class="langswitch"><a href="../guides.html">가이드</a><span>·</span><a class="on" href="./${d.id}.html">덱</a></div>
+  ${langSwitch(`${d.id}.html`, `${d.id}.en.html`, lang)}
 </div></div>
 <div class="wrap deckhead">
-  <span class="chip">${esc(d.ko)} · ${mine.length}장${d.players ? " · 2명" : ""}</span>
-  <h1>${esc(d.ko)} 덱</h1>
-  <p class="lead">${esc(d.tagline_ko)}</p>
+  <span class="chip">${esc(P.chip(d, mine.length))}</span>
+  <h1>${esc(P.deckH1(d))}</h1>
+  <p class="lead">${esc(d["tagline_" + lang])}</p>
 
-  <p>${esc(d.desc_ko)}</p>
-  <ul class="best">${d.best_ko.map((b) => `<li>${esc(b)}</li>`).join("")}</ul>
+  <p>${esc(d["desc_" + lang])}</p>
+  <ul class="best">${d["best_" + lang].map((b) => `<li>${esc(b)}</li>`).join("")}</ul>
 
-  <a class="cta" id="topCta" href="../?deck=${d.id}">▶ 이 덱으로 바로 시작</a>
-  <p class="muted" style="margin-top:8px">설치 없이 브라우저에서 바로. 링크를 열면 첫 카드가 나와요.</p>
+  <a class="cta" id="topCta" href="${appHref}">${P.startTop}</a>
+  <p class="muted" style="margin-top:8px">${esc(P.startNote)}</p>
 
-  <h2>카드 구성</h2>
+  <h2>${P.composition}</h2>
   <p>${esc(summary)}</p>
-  <div class="jump">${groups.map(([t]) => `<a href="#${t}">${esc(TYPE_LABEL[t].ko)}</a>`).join("")}</div>
+  <div class="jump">${groups.map(([t]) => `<a href="#${t}">${esc(TYPE_LABEL[t][lang])}</a>`).join("")}</div>
 ${sections}
 
-  <div class="sticky" id="sticky"><a class="cta" href="../?deck=${d.id}" tabindex="-1" aria-hidden="true">▶ ${esc(d.ko)} 덱으로 시작</a></div>
-  <script>
-    // floating start button only once the top one has scrolled away
-    (function(){ var s=document.getElementById("sticky"), t=document.getElementById("topCta"); if(!("IntersectionObserver" in window)){ s.classList.add("show"); return; }
-      new IntersectionObserver(function(e){ s.classList.toggle("show", !e[0].isIntersecting && e[0].boundingClientRect.top < 0); }).observe(t); })();
-  </script>
+  <div class="sticky" id="sticky"><a class="cta" href="${appHref}" tabindex="-1" aria-hidden="true">${esc(P.startSticky(d))}</a></div>
+${stickyScript}
 
-  <h2>다른 덱</h2>
+  <h2>${P.otherDecks}</h2>
   <p>${others}</p>
-  <p>더 읽기: <a href="../penalty.html">술게임 벌칙 룰렛</a> · <a href="../guides.html">플레이 방법 &amp; 가이드</a> · <a href="../guide-party.html">모임 질문 게임</a> · <a href="../guide-couple.html">커플 질문</a></p>
+  <p>${P.more}: <a href="../penalty${P.ext}">${P.penaltyLink}</a> · <a href="../guides${P.ext}">${P.guidesLink}</a> · <a href="../guide-party${P.ext}">${P.partyGuide}</a> · <a href="../guide-couple${P.ext}">${P.coupleGuide}</a></p>
 
-  <footer>
-    <nav>
-      <a href="../">▶ 플레이</a>
-      <a href="../about.html">소개</a>
-      <a href="../guides.html">플레이 &amp; 가이드</a>
-      <a href="../faq.html">FAQ</a>
-      <a href="../privacy.html">개인정보 처리방침</a>
-      <a href="../terms.html">이용약관</a>
-    </nav>
-    <div>문의: dangillyeok@gmail.com</div>
-    <div>© 2026 TalkFlip</div>
-  </footer>
+${footer(P, "../")}
 </div>
 </body>
 </html>
@@ -251,10 +298,10 @@ ${sections}
 }
 
 fs.mkdirSync(path.join(OUT, "decks"), { recursive: true });
-for (const d of DECKS) {
-  fs.writeFileSync(path.join(OUT, "decks", `${d.id}.html`), deckPage(d));
+for (const d of DECKS) for (const lang of ["ko", "en"]) {
+  fs.writeFileSync(path.join(OUT, "decks", `${d.id}${PG[lang].ext}`), deckPage(d, lang));
 }
-console.log(`wrote talkflip_pwa/decks/{${DECKS.map((d) => d.id).join(",")}}.html`);
+console.log(`wrote talkflip_pwa/decks/{${DECKS.map((d) => d.id).join(",")}}.html + .en.html`);
 
 /* ---------- iOS bundle: TalkFlip/TalkFlipApp/cards.json + decks.json ---------- */
 // The SwiftUI app (v1 UI) decodes TalkCard { id, deck, cardType, modes, en, ko, follow?, … } and
@@ -295,34 +342,36 @@ if (fs.existsSync(IOS)) {
 }
 
 /* ---------- write penalty.html (벌칙 룰렛 landing) ---------- */
-function penaltyPage() {
+function penaltyPage(lang) {
+  const P = PG[lang], T = P.pen;
   const n = PENALTIES.length;
-  const title = `술게임 벌칙 룰렛 · 벌칙 ${n}가지`;
-  const desc = `술자리·모임에서 바로 쓰는 벌칙 ${n}가지와 랜덤 벌칙 룰렛. 술 없이도 되는 벌칙 위주라 누구나 참여 가능. 버튼 한 번으로 룰렛 돌리기.`;
+  const pageUrl = `${SITE}/penalty${lang === "en" ? ".en" : ""}`;
+  const appHref = `./?roulette${lang === "en" ? "&lang=en" : ""}`;
   const ld = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: title,
-    description: desc,
-    inLanguage: "ko",
+    headline: T.title(n),
+    description: T.desc(n),
+    inLanguage: lang,
     dateModified: new Date().toISOString().slice(0, 10),
     author: { "@type": "Organization", name: "TalkFlip" },
     publisher: { "@type": "Organization", name: "TalkFlip" },
-    mainEntityOfPage: `${SITE}/penalty`,
+    mainEntityOfPage: pageUrl,
   };
   return `<!DOCTYPE html>
-<html lang="ko">
+<html lang="${lang}">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>${esc(title)} · TalkFlip</title>
-<meta name="description" content="${esc(desc)}" />
-<link rel="canonical" href="${SITE}/penalty" />
+<title>${esc(T.title(n))} · TalkFlip</title>
+<meta name="description" content="${esc(T.desc(n))}" />
+<link rel="canonical" href="${pageUrl}" />
+${hreflang("penalty")}
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="TalkFlip" />
-<meta property="og:title" content="${esc(title)} · TalkFlip" />
-<meta property="og:description" content="${esc(desc)}" />
-<meta property="og:url" content="${SITE}/penalty" />
+<meta property="og:title" content="${esc(T.title(n))} · TalkFlip" />
+<meta property="og:description" content="${esc(T.desc(n))}" />
+<meta property="og:url" content="${pageUrl}" />
 <meta property="og:image" content="${SITE}/og.png" />
 <link rel="stylesheet" href="pages.css" />
 <style>
@@ -341,59 +390,42 @@ ${JSON.stringify(ld, null, 2)}
 <body>
 <div class="topbar"><div class="bar">
   <a class="brand" href="./">TalkFlip</a>
-  <div class="langswitch"><a href="guides.html">가이드</a><span>·</span><a class="on" href="penalty.html">벌칙</a></div>
+  ${langSwitch("penalty.html", "penalty.en.html", lang)}
 </div></div>
 <div class="wrap">
-  <span class="chip">벌칙 ${n}가지</span>
-  <h1>술게임 벌칙 룰렛</h1>
-  <p class="lead">"벌칙 뭐 하지?"에서 멈추지 마. 버튼 한 번이면 룰렛이 골라줘.</p>
+  <span class="chip">${esc(T.chip(n))}</span>
+  <h1>${esc(T.h1)}</h1>
+  <p class="lead">${esc(T.lead)}</p>
 
-  <p>지목 게임에서 제일 많이 찍힌 사람, 밸런스에서 소수파, 질문에 패스한 사람. 벌칙은 필요한데 매번 생각하기 귀찮을 때 쓰는 랜덤 벌칙 룰렛이에요. 술 없이도 되는 벌칙 위주라 안 마시는 사람도, 카페에서도 돼요. 폰 하나면 끝.</p>
+  <p>${esc(T.body)}</p>
 
-  <a class="cta" id="topCta" href="./?roulette">▶ 룰렛 돌리기</a>
-  <p class="muted" style="margin-top:8px">TalkFlip 게임 안에서 열려요. 지목 카드에서 "벌칙" 버튼을 눌러도 같은 룰렛.</p>
+  <a class="cta" id="topCta" href="${appHref}">${T.cta}</a>
+  <p class="muted" style="margin-top:8px">${esc(T.note)}</p>
 
-  <h2>이렇게 써요</h2>
+  <h2>${T.howTitle}</h2>
   <ul>
-    <li><b>지목 카드</b>에서 제일 많이 찍힌 사람 → 벌칙 버튼 → 룰렛.</li>
-    <li><b>밸런스</b>에서 소수파 전원 벌칙. 동률이면 다 같이.</li>
-    <li>질문에 <b>패스</b>하면 벌칙. 매운맛 덱은 이 룰이 기본.</li>
-    <li>선은 지키기. 하기 싫은 벌칙은 "흑역사 하나 털기"로 대체.</li>
+${T.how.map((h) => `    <li>${h}</li>`).join("\n")}
   </ul>
 
-  <h2>벌칙 ${n}가지</h2>
+  <h2>${esc(T.listTitle(n))}</h2>
   <ol class="qs">
-${PENALTIES.map((p) => `    <li>${esc(p.ko)}</li>`).join("\n")}
+${PENALTIES.map((p) => `    <li>${esc(p[lang])}</li>`).join("\n")}
   </ol>
 
-  <div class="sticky" id="sticky"><a class="cta" href="./?roulette" tabindex="-1" aria-hidden="true">▶ 룰렛 돌리기</a></div>
-  <script>
-    (function(){ var s=document.getElementById("sticky"), t=document.getElementById("topCta"); if(!("IntersectionObserver" in window)){ s.classList.add("show"); return; }
-      new IntersectionObserver(function(e){ s.classList.toggle("show", !e[0].isIntersecting && e[0].boundingClientRect.top < 0); }).observe(t); })();
-  </script>
+  <div class="sticky" id="sticky"><a class="cta" href="${appHref}" tabindex="-1" aria-hidden="true">${T.cta}</a></div>
+${stickyScript}
 
-  <h2>같이 보기</h2>
-  <p><a href="decks/spicy.html">매운맛 덱 질문</a> · <a href="decks/party.html">파티 덱 질문</a> · <a href="guide-drinks.html">술자리 질문 가이드</a> · <a href="guides.html">플레이 방법</a></p>
+  <h2>${T.seeAlso}</h2>
+  <p><a href="decks/spicy${P.ext}">${T.spicyDeck}</a> · <a href="decks/party${P.ext}">${T.partyDeck}</a> · <a href="guide-drinks${P.ext}">${P.drinksGuide}</a> · <a href="guides${P.ext}">${T.howToPlay}</a></p>
 
-  <footer>
-    <nav>
-      <a href="./">▶ 플레이</a>
-      <a href="about.html">소개</a>
-      <a href="guides.html">플레이 &amp; 가이드</a>
-      <a href="faq.html">FAQ</a>
-      <a href="privacy.html">개인정보 처리방침</a>
-      <a href="terms.html">이용약관</a>
-    </nav>
-    <div>문의: dangillyeok@gmail.com</div>
-    <div>© 2026 TalkFlip</div>
-  </footer>
+${footer(P, "")}
 </div>
 </body>
 </html>
 `;
 }
-fs.writeFileSync(path.join(OUT, "penalty.html"), penaltyPage());
-console.log("wrote talkflip_pwa/penalty.html");
+for (const lang of ["ko", "en"]) fs.writeFileSync(path.join(OUT, `penalty${PG[lang].ext}`), penaltyPage(lang));
+console.log("wrote talkflip_pwa/penalty.html + penalty.en.html");
 
 /* ---------- sw.js cache version = vN + content hash ---------- */
 // Old clients keep the previous app shell until the cache name changes. Hash the
