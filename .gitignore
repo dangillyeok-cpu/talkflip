@@ -3,3 +3,5 @@ TalkFlip/DerivedData/
 TalkFlip/simulator-*.png
 *.xcuserstate
 xcuserdata/
+worker/node_modules/
+worker/.wrangler/

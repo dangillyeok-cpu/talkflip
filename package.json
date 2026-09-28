@@ -1,0 +1,14 @@
+{
+  "name": "talkflip",
+  "private": true,
+  "version": "2.0.0",
+  "description": "TalkFlip \u2014 conversation card game PWA (talkflip_pwa/) and content data",
+  "scripts": {
+    "build": "node build.mjs",
+    "check": "node build.mjs --check",
+    "validate": "node validate_cards.mjs",
+    "serve": "python -m http.server 8080 --directory talkflip_pwa",
+    "worker:dev": "cd worker && npx wrangler dev",
+    "worker:deploy": "cd worker && npx wrangler deploy"
+  }
+}

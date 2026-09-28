@@ -764,7 +764,7 @@
       ],
       "tone": "funny",
       "en": "Who here is most likely to make a tiny problem dramatic?",
-      "ko": "작은 문제를 가장 드라마틱하게 만들 사람은?"
+      "ko": "작은 문제를 가장 드라마틱하게 만들 것 같은 사람은?"
     },
     {
       "id": "funny_vote_002",
@@ -786,7 +786,7 @@
       ],
       "tone": "funny",
       "en": "Who here would become obsessed with a random hobby overnight?",
-      "ko": "갑자기 이상한 취미에 진심 될 사람은?"
+      "ko": "갑자기 이상한 취미에 진심이 될 것 같은 사람은?"
     },
     {
       "id": "funny_vote_004",
@@ -797,7 +797,7 @@
       ],
       "tone": "funny",
       "en": "Who here would name the group chat something weird?",
-      "ko": "단톡방 이름을 제일 이상하게 지을 사람은?"
+      "ko": "단톡방 이름을 제일 이상하게 지을 것 같은 사람은?"
     },
     {
       "id": "funny_vote_005",
@@ -808,7 +808,7 @@
       ],
       "tone": "funny",
       "en": "Who here would order one thing and regret not ordering another?",
-      "ko": "주문하고 나서 남의 메뉴를 부러워할 사람은?"
+      "ko": "주문하고 나서 남의 메뉴를 부러워할 것 같은 사람은?"
     },
     {
       "id": "funny_vote_006",
@@ -1106,7 +1106,7 @@
       ],
       "tone": "party",
       "en": "Who here would ghost the group chat for a week?",
-      "ko": "여기서 단톡방 일주일 잠수 탈 사람은?"
+      "ko": "여기서 단톡방 일주일 잠수 탈 것 같은 사람은?"
     },
     {
       "id": "party_vote_002",
@@ -1117,7 +1117,7 @@
       ],
       "tone": "party",
       "en": "Who here would survive best without their phone?",
-      "ko": "여기서 폰 없이 가장 잘 버틸 사람은?"
+      "ko": "여기서 폰 없이 가장 잘 버틸 것 같은 사람은?"
     },
     {
       "id": "party_vote_003",
@@ -1150,7 +1150,7 @@
       ],
       "tone": "party",
       "en": "Who here would give the best advice at 2 a.m.?",
-      "ko": "새벽 2시에 제일 좋은 조언을 해줄 사람은?"
+      "ko": "새벽 2시에 제일 좋은 조언을 해줄 것 같은 사람은?"
     },
     {
       "id": "party_vote_006",
@@ -1161,7 +1161,7 @@
       ],
       "tone": "party",
       "en": "Who here has the most chaotic good energy?",
-      "ko": "여기서 가장 선한데 정신없는 에너지를 가진 사람은?"
+      "ko": "여기서 제일 착한데 제일 정신없는 사람은?"
     },
     {
       "id": "party_vote_007",
@@ -1216,7 +1216,7 @@
       ],
       "tone": "party",
       "en": "Who here would make a stranger feel included?",
-      "ko": "처음 온 사람을 가장 편하게 해줄 사람은?"
+      "ko": "처음 온 사람을 가장 편하게 해줄 것 같은 사람은?"
     },
     {
       "id": "party_vote_012",
@@ -1227,7 +1227,7 @@
       ],
       "tone": "party",
       "en": "Who here would turn a small moment into a running joke?",
-      "ko": "작은 순간을 계속 웃긴 밈으로 만들 사람은?"
+      "ko": "작은 순간을 계속 웃긴 밈으로 만들 것 같은 사람은?"
     },
     {
       "id": "party_vote_013",
@@ -1238,7 +1238,7 @@
       ],
       "tone": "party",
       "en": "Who here would be most prepared for a surprise plan?",
-      "ko": "갑작스러운 계획에도 가장 준비돼 있을 사람은?"
+      "ko": "갑작스러운 계획에도 가장 준비돼 있을 것 같은 사람은?"
     },
     {
       "id": "party_vote_014",
@@ -1249,7 +1249,7 @@
       ],
       "tone": "party",
       "en": "Who here would keep the group from getting lost?",
-      "ko": "길 잃지 않게 제일 잘 챙길 사람은?"
+      "ko": "길 잃지 않게 제일 잘 챙길 것 같은 사람은?"
     },
     {
       "id": "party_vote_015",
@@ -1260,7 +1260,7 @@
       ],
       "tone": "party",
       "en": "Who here would find the best place to sit?",
-      "ko": "제일 좋은 자리를 찾아낼 사람은?"
+      "ko": "제일 좋은 자리를 찾아낼 것 같은 사람은?"
     },
     {
       "id": "party_vote_016",
@@ -1282,7 +1282,7 @@
       ],
       "tone": "party",
       "en": "Who here would notice when someone needs a break?",
-      "ko": "누군가 쉬고 싶어 할 때 제일 먼저 알아챌 사람은?"
+      "ko": "누군가 쉬고 싶어 할 때 제일 먼저 알아챌 것 같은 사람은?"
     },
     {
       "id": "party_vote_018",
@@ -1293,7 +1293,7 @@
       ],
       "tone": "party",
       "en": "Who here would make the recap sound funnier than the night?",
-      "ko": "후기를 실제보다 더 웃기게 말할 사람은?"
+      "ko": "후기를 실제보다 더 웃기게 말할 것 같은 사람은?"
     },
     {
       "id": "party_story_001",

@@ -1,0 +1,80 @@
+{
+  "traits": {
+    "ghost": {
+      "ko": "오늘의 잠수왕",
+      "en": "The Ghost",
+      "sub_ko": "읽씹은 기본, 잠수는 옵션",
+      "sub_en": "Seen. Not replied."
+    },
+    "hype": {
+      "ko": "2차 선동가",
+      "en": "Hype Machine",
+      "sub_ko": "집에 갈 생각이 없음",
+      "sub_en": "Never going home"
+    },
+    "npc": {
+      "ko": "단톡 NPC",
+      "en": "Group Chat NPC",
+      "sub_ko": "ㅋㅋㅋ 한 줄로 생존",
+      "sub_en": "Survives on \"lol\""
+    },
+    "drama": {
+      "ko": "드라마 주인공",
+      "en": "Main Character",
+      "sub_ko": "별일 아닌데 별일임",
+      "sub_en": "Everything is a plot twist"
+    },
+    "counselor": {
+      "ko": "새벽 상담사",
+      "en": "2AM Counselor",
+      "sub_ko": "취하면 명언 제조",
+      "sub_en": "Wisdom after midnight"
+    },
+    "leader": {
+      "ko": "어쩌다 리더",
+      "en": "Accidental Leader",
+      "sub_ko": "안 하려다 다 함",
+      "sub_en": "Didn't sign up, does it anyway"
+    },
+    "chaos": {
+      "ko": "인간 변수",
+      "en": "Wild Card",
+      "sub_ko": "계획은 참고용",
+      "sub_en": "Plans are suggestions"
+    },
+    "star": {
+      "ko": "미래의 셀럽",
+      "en": "Future Celeb",
+      "sub_ko": "어디서든 주목받음",
+      "sub_en": "Always in the spotlight"
+    }
+  },
+  "voteTraits": {
+    "funny_vote_001": "drama",
+    "funny_vote_002": "drama",
+    "funny_vote_003": "chaos",
+    "funny_vote_004": "chaos",
+    "funny_vote_005": "npc",
+    "funny_vote_006": "leader",
+    "funny_vote_007": "hype",
+    "funny_vote_008": "chaos",
+    "party_vote_001": "ghost",
+    "party_vote_002": "npc",
+    "party_vote_003": "leader",
+    "party_vote_004": "chaos",
+    "party_vote_005": "counselor",
+    "party_vote_006": "chaos",
+    "party_vote_007": "hype",
+    "party_vote_008": "star",
+    "party_vote_009": "counselor",
+    "party_vote_010": "hype",
+    "party_vote_011": "counselor",
+    "party_vote_012": "hype",
+    "party_vote_013": "leader",
+    "party_vote_014": "leader",
+    "party_vote_015": "leader",
+    "party_vote_016": "hype",
+    "party_vote_017": "counselor",
+    "party_vote_018": "drama"
+  }
+}

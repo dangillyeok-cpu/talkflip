@@ -394,7 +394,7 @@
         "hot_seat"
       ],
       "en": "Tell a short story about a time you got unexpectedly lucky.",
-      "ko": "예상치 못하게 운이 좋았던 짧은 이야기를 해줘."
+      "ko": "예상 못 하게 운 좋았던 적 있어? 언제야?"
     },
     {
       "id": "warm_up_story_002",
@@ -405,7 +405,7 @@
         "hot_seat"
       ],
       "en": "Tell a short story about a small moment that made your day.",
-      "ko": "하루를 기분 좋게 만든 작은 순간을 이야기해줘."
+      "ko": "최근에 하루를 살린 사소한 순간은?"
     },
     {
       "id": "warm_up_story_003",
@@ -416,7 +416,7 @@
         "hot_seat"
       ],
       "en": "Tell a short story about something you tried for the first time.",
-      "ko": "처음 해봤던 일에 대한 짧은 이야기를 해줘."
+      "ko": "최근에 처음 해본 거 있어? 어땠어?"
     },
     {
       "id": "warm_up_story_004",
@@ -427,7 +427,7 @@
         "hot_seat"
       ],
       "en": "Tell a short story about a place you want to visit again.",
-      "ko": "다시 가보고 싶은 장소에 대한 짧은 이야기를 해줘."
+      "ko": "다시 가보고 싶은 곳 있어? 왜 거기야?"
     },
     {
       "id": "funny_answer_001",
@@ -764,7 +764,7 @@
       ],
       "tone": "funny",
       "en": "Who here is most likely to make a tiny problem dramatic?",
-      "ko": "작은 문제를 가장 드라마틱하게 만들 사람은?"
+      "ko": "작은 문제를 가장 드라마틱하게 만들 것 같은 사람은?"
     },
     {
       "id": "funny_vote_002",
@@ -786,7 +786,7 @@
       ],
       "tone": "funny",
       "en": "Who here would become obsessed with a random hobby overnight?",
-      "ko": "갑자기 이상한 취미에 진심 될 사람은?"
+      "ko": "갑자기 이상한 취미에 진심이 될 것 같은 사람은?"
     },
     {
       "id": "funny_vote_004",
@@ -797,7 +797,7 @@
       ],
       "tone": "funny",
       "en": "Who here would name the group chat something weird?",
-      "ko": "단톡방 이름을 제일 이상하게 지을 사람은?"
+      "ko": "단톡방 이름을 제일 이상하게 지을 것 같은 사람은?"
     },
     {
       "id": "funny_vote_005",
@@ -808,7 +808,7 @@
       ],
       "tone": "funny",
       "en": "Who here would order one thing and regret not ordering another?",
-      "ko": "주문하고 나서 남의 메뉴를 부러워할 사람은?"
+      "ko": "주문하고 나서 남의 메뉴를 부러워할 것 같은 사람은?"
     },
     {
       "id": "funny_vote_006",
@@ -853,7 +853,7 @@
       ],
       "tone": "funny",
       "en": "Tell a short story about a time you were confidently wrong.",
-      "ko": "자신만만하게 틀렸던 짧은 이야기를 해줘."
+      "ko": "완전 자신 있게 틀렸던 적 있지? 풀어봐."
     },
     {
       "id": "funny_story_002",
@@ -865,7 +865,7 @@
       ],
       "tone": "funny",
       "en": "Tell a short story about a tiny mistake that got funnier later.",
-      "ko": "나중에 생각하니 웃겼던 작은 실수 이야기를 해줘."
+      "ko": "그땐 실수였는데 지금 생각하면 웃긴 일 있어?"
     },
     {
       "id": "funny_story_003",
@@ -877,7 +877,7 @@
       ],
       "tone": "funny",
       "en": "Tell a short story about a time you tried to act normal.",
-      "ko": "아무렇지 않은 척하려 했던 짧은 이야기를 해줘."
+      "ko": "속으론 당황했는데 아무렇지 않은 척한 적 있어?"
     },
     {
       "id": "funny_story_004",
@@ -889,7 +889,7 @@
       ],
       "tone": "funny",
       "en": "Tell a short story about something that was not that deep, but felt huge.",
-      "ko": "별일 아닌데 그때는 엄청 크게 느껴졌던 이야기를 해줘."
+      "ko": "별것 아닌데 그때는 엄청 크게 느껴졌던 일 있어?"
     },
     {
       "id": "party_answer_001",
@@ -1051,7 +1051,7 @@
       ],
       "tone": "party",
       "en": "Plan the night or follow the chaos?",
-      "ko": "밤을 계획하기 vs 혼돈을 따라가기?"
+      "ko": "계획대로 vs 흘러가는 대로?"
     },
     {
       "id": "party_choice_007",
@@ -1105,8 +1105,8 @@
         "whos_most_likely"
       ],
       "tone": "party",
-      "en": "Who here is most likely to disappear from the group chat for a week?",
-      "ko": "여기서 단톡방을 일주일 동안 잠수탈 가능성이 가장 높은 사람은?"
+      "en": "Who here would ghost the group chat for a week?",
+      "ko": "여기서 단톡방 일주일 잠수 탈 것 같은 사람은?"
     },
     {
       "id": "party_vote_002",
@@ -1117,7 +1117,7 @@
       ],
       "tone": "party",
       "en": "Who here would survive best without their phone?",
-      "ko": "여기서 폰 없이 가장 잘 버틸 사람은?"
+      "ko": "여기서 폰 없이 가장 잘 버틸 것 같은 사람은?"
     },
     {
       "id": "party_vote_003",
@@ -1150,7 +1150,7 @@
       ],
       "tone": "party",
       "en": "Who here would give the best advice at 2 a.m.?",
-      "ko": "새벽 2시에 제일 좋은 조언을 해줄 사람은?"
+      "ko": "새벽 2시에 제일 좋은 조언을 해줄 것 같은 사람은?"
     },
     {
       "id": "party_vote_006",
@@ -1161,7 +1161,7 @@
       ],
       "tone": "party",
       "en": "Who here has the most chaotic good energy?",
-      "ko": "여기서 가장 선한데 정신없는 에너지를 가진 사람은?"
+      "ko": "여기서 제일 착한데 제일 정신없는 사람은?"
     },
     {
       "id": "party_vote_007",
@@ -1216,7 +1216,7 @@
       ],
       "tone": "party",
       "en": "Who here would make a stranger feel included?",
-      "ko": "처음 온 사람을 가장 편하게 해줄 사람은?"
+      "ko": "처음 온 사람을 가장 편하게 해줄 것 같은 사람은?"
     },
     {
       "id": "party_vote_012",
@@ -1227,7 +1227,7 @@
       ],
       "tone": "party",
       "en": "Who here would turn a small moment into a running joke?",
-      "ko": "작은 순간을 계속 웃긴 밈으로 만들 사람은?"
+      "ko": "작은 순간을 계속 웃긴 밈으로 만들 것 같은 사람은?"
     },
     {
       "id": "party_vote_013",
@@ -1238,7 +1238,7 @@
       ],
       "tone": "party",
       "en": "Who here would be most prepared for a surprise plan?",
-      "ko": "갑작스러운 계획에도 가장 준비돼 있을 사람은?"
+      "ko": "갑작스러운 계획에도 가장 준비돼 있을 것 같은 사람은?"
     },
     {
       "id": "party_vote_014",
@@ -1249,7 +1249,7 @@
       ],
       "tone": "party",
       "en": "Who here would keep the group from getting lost?",
-      "ko": "길 잃지 않게 제일 잘 챙길 사람은?"
+      "ko": "길 잃지 않게 제일 잘 챙길 것 같은 사람은?"
     },
     {
       "id": "party_vote_015",
@@ -1260,7 +1260,7 @@
       ],
       "tone": "party",
       "en": "Who here would find the best place to sit?",
-      "ko": "제일 좋은 자리를 찾아낼 사람은?"
+      "ko": "제일 좋은 자리를 찾아낼 것 같은 사람은?"
     },
     {
       "id": "party_vote_016",
@@ -1282,7 +1282,7 @@
       ],
       "tone": "party",
       "en": "Who here would notice when someone needs a break?",
-      "ko": "누군가 쉬고 싶어 할 때 제일 먼저 알아챌 사람은?"
+      "ko": "누군가 쉬고 싶어 할 때 제일 먼저 알아챌 것 같은 사람은?"
     },
     {
       "id": "party_vote_018",
@@ -1293,7 +1293,7 @@
       ],
       "tone": "party",
       "en": "Who here would make the recap sound funnier than the night?",
-      "ko": "후기를 실제보다 더 웃기게 말할 사람은?"
+      "ko": "후기를 실제보다 더 웃기게 말할 것 같은 사람은?"
     },
     {
       "id": "party_story_001",
@@ -1305,7 +1305,7 @@
       ],
       "tone": "party",
       "en": "Tell a short story about a group plan that changed at the last second.",
-      "ko": "마지막 순간에 바뀐 단체 계획 이야기를 해줘."
+      "ko": "막판에 확 바뀐 약속 있었지? 그때 얘기해봐."
     },
     {
       "id": "party_story_002",
@@ -1317,7 +1317,7 @@
       ],
       "tone": "party",
       "en": "Tell a short story about a night that turned out better than expected.",
-      "ko": "생각보다 훨씬 좋았던 밤 이야기를 해줘."
+      "ko": "기대 안 했는데 의외로 좋았던 밤 있어?"
     },
     {
       "id": "party_story_003",
@@ -1329,7 +1329,7 @@
       ],
       "tone": "party",
       "en": "Tell a short story about a group photo moment.",
-      "ko": "단체 사진과 관련된 짧은 이야기를 해줘."
+      "ko": "단체 사진 찍다 생긴 웃긴 일 있어?"
     },
     {
       "id": "party_story_004",
@@ -1341,7 +1341,7 @@
       ],
       "tone": "party",
       "en": "Tell a short story about a hangout that became a tradition.",
-      "ko": "어쩌다 전통처럼 된 모임 이야기를 해줘."
+      "ko": "어쩌다 보니 전통이 된 모임 있어?"
     },
     {
       "id": "deep_answer_001",
@@ -1512,7 +1512,7 @@
       ],
       "tone": "deep",
       "en": "Know the truth or keep the peace?",
-      "ko": "진실 알기 vs 평화 지키기?",
+      "ko": "불편한 진실 vs 그냥 평화?",
       "follow": {
         "ko": "소수파가 먼저 이유를 말해줘.",
         "en": "The minority side explains first."
@@ -1527,7 +1527,7 @@
       ],
       "tone": "deep",
       "en": "More courage or more patience?",
-      "ko": "더 많은 용기 vs 더 많은 인내?",
+      "ko": "더 용감해지기 vs 더 잘 참기?",
       "follow": {
         "ko": "소수파가 먼저 이유를 말해줘.",
         "en": "The minority side explains first."
@@ -1573,7 +1573,7 @@
       ],
       "tone": "deep",
       "en": "Tell a short story about a moment that changed your perspective.",
-      "ko": "생각이 조금 바뀌었던 순간을 이야기해줘.",
+      "ko": "생각이 확 바뀐 순간 있었어? 언제야?",
       "follow": {
         "ko": "들은 사람 중 한 명이 비슷한 경험 이어가기.",
         "en": "Someone who listened shares a similar moment."
@@ -1589,7 +1589,7 @@
       ],
       "tone": "deep",
       "en": "Tell a short story about a kindness you still remember.",
-      "ko": "아직 기억나는 친절에 대해 이야기해줘.",
+      "ko": "아직도 기억나는 친절, 하나 있어?",
       "follow": {
         "ko": "그 이야기에 제목을 붙여준다면?",
         "en": "Give that story a title."
@@ -1605,7 +1605,7 @@
       ],
       "tone": "deep",
       "en": "Tell a short story about a time you surprised yourself.",
-      "ko": "스스로에게 조금 놀랐던 순간을 이야기해줘.",
+      "ko": "스스로한테 놀란 적 있어? 언제?",
       "follow": {
         "ko": "들은 사람 중 한 명이 비슷한 경험 이어가기.",
         "en": "Someone who listened shares a similar moment."
@@ -1621,7 +1621,7 @@
       ],
       "tone": "deep",
       "en": "Tell a short story about something you used to see differently.",
-      "ko": "예전과 다르게 보게 된 것에 대해 이야기해줘.",
+      "ko": "예전엔 다르게 봤는데 지금은 달라진 거 있어?",
       "follow": {
         "ko": "그 이야기에 제목을 붙여준다면?",
         "en": "Give that story a title."
@@ -1637,7 +1637,7 @@
       ],
       "tone": "deep",
       "en": "Tell a short story about a time you chose rest.",
-      "ko": "쉬는 쪽을 선택했던 순간을 이야기해줘.",
+      "ko": "그냥 쉬기로 했던 순간 있어? 어땠어?",
       "follow": {
         "ko": "들은 사람 중 한 명이 비슷한 경험 이어가기.",
         "en": "Someone who listened shares a similar moment."
@@ -1653,7 +1653,7 @@
       ],
       "tone": "deep",
       "en": "Tell a short story about a small promise you kept.",
-      "ko": "지켰던 작은 약속에 대해 이야기해줘.",
+      "ko": "지키겠다고 한 작은 약속, 끝까지 지킨 거 있어?",
       "follow": {
         "ko": "그 이야기에 제목을 붙여준다면?",
         "en": "Give that story a title."
@@ -1669,7 +1669,7 @@
       ],
       "tone": "deep",
       "en": "Tell a short story about a place that helped you think.",
-      "ko": "생각을 정리하게 해준 장소에 대해 이야기해줘.",
+      "ko": "생각 정리할 때 가는 곳 있어? 어디야?",
       "follow": {
         "ko": "들은 사람 중 한 명이 비슷한 경험 이어가기.",
         "en": "Someone who listened shares a similar moment."
@@ -1685,7 +1685,7 @@
       ],
       "tone": "deep",
       "en": "Tell a short story about a conversation you appreciated.",
-      "ko": "고마웠던 대화 하나를 이야기해줘.",
+      "ko": "고마웠던 대화 하나, 기억나는 거 있어?",
       "follow": {
         "ko": "그 이야기에 제목을 붙여준다면?",
         "en": "Give that story a title."
@@ -2367,7 +2367,7 @@
       ],
       "tone": "couple",
       "en": "Tell a short story about a moment that felt very us.",
-      "ko": "정말 우리답다고 느꼈던 순간을 이야기해줘.",
+      "ko": "진짜 우리답다 싶었던 순간 있었지?",
       "follow": {
         "ko": "그 순간을 한 단어로 표현하면?",
         "en": "That moment in one word?"
@@ -2383,7 +2383,7 @@
       ],
       "tone": "couple",
       "en": "Tell a short story about a small thing we laughed about.",
-      "ko": "우리가 같이 웃었던 작은 일을 이야기해줘.",
+      "ko": "둘이 빵 터졌던 사소한 일 기억나?",
       "follow": {
         "ko": "들은 사람이 기억나는 디테일 하나 더하기.",
         "en": "The listener adds one detail they remember."
@@ -2399,7 +2399,7 @@
       ],
       "tone": "couple",
       "en": "Tell a short story about a date that did not go as planned.",
-      "ko": "계획대로 되지 않았던 데이트 이야기를 해줘.",
+      "ko": "계획대로 안 됐던 데이트 있었지? 그때 얘기.",
       "follow": {
         "ko": "그 순간을 한 단어로 표현하면?",
         "en": "That moment in one word?"
@@ -2415,7 +2415,7 @@
       ],
       "tone": "couple",
       "en": "Tell a short story about a time we made a good team.",
-      "ko": "우리가 좋은 팀 같았던 순간을 이야기해줘.",
+      "ko": "우리 팀워크 좋았던 순간 있었잖아, 언제야?",
       "follow": {
         "ko": "들은 사람이 기억나는 디테일 하나 더하기.",
         "en": "The listener adds one detail they remember."
@@ -2431,7 +2431,7 @@
       ],
       "tone": "couple",
       "en": "Tell a short story about something ordinary that felt special.",
-      "ko": "평범했지만 특별하게 느껴졌던 일을 이야기해줘.",
+      "ko": "평범했는데 이상하게 특별했던 날 있어?",
       "follow": {
         "ko": "그 순간을 한 단어로 표현하면?",
         "en": "That moment in one word?"
@@ -2447,7 +2447,7 @@
       ],
       "tone": "couple",
       "en": "Tell a short story about a time one of us saved the day.",
-      "ko": "둘 중 한 명이 하루를 살렸던 순간을 이야기해줘.",
+      "ko": "둘 중 하나가 하루 살린 적 있지? 언제야?",
       "follow": {
         "ko": "들은 사람이 기억나는 디테일 하나 더하기.",
         "en": "The listener adds one detail they remember."
@@ -2463,7 +2463,7 @@
       ],
       "tone": "couple",
       "en": "Tell a short story about a place that reminds you of us.",
-      "ko": "우리가 떠오르는 장소에 대해 이야기해줘.",
+      "ko": "우리 떠오르는 장소 있어? 어디야?",
       "follow": {
         "ko": "그 순간을 한 단어로 표현하면?",
         "en": "That moment in one word?"
@@ -2479,7 +2479,7 @@
       ],
       "tone": "couple",
       "en": "Tell a short story about a message you remember.",
-      "ko": "기억에 남는 메시지에 대해 이야기해줘.",
+      "ko": "아직도 기억나는 메시지 있어?",
       "follow": {
         "ko": "들은 사람이 기억나는 디테일 하나 더하기.",
         "en": "The listener adds one detail they remember."
@@ -2495,7 +2495,7 @@
       ],
       "tone": "couple",
       "en": "Tell a short story about a moment we handled better than expected.",
-      "ko": "생각보다 잘 넘겼던 우리 순간을 이야기해줘.",
+      "ko": "생각보다 잘 넘겼던 우리 순간 있었지?",
       "follow": {
         "ko": "그 순간을 한 단어로 표현하면?",
         "en": "That moment in one word?"
@@ -2511,7 +2511,7 @@
       ],
       "tone": "couple",
       "en": "Tell a short story about something we learned about each other.",
-      "ko": "서로에 대해 새로 알게 된 일을 이야기해줘.",
+      "ko": "서로에 대해 새로 알게 된 거 있어?",
       "follow": {
         "ko": "들은 사람이 기억나는 디테일 하나 더하기.",
         "en": "The listener adds one detail they remember."
@@ -2527,7 +2527,7 @@
       ],
       "tone": "couple",
       "en": "Tell a short story about a quiet moment you liked.",
-      "ko": "좋았던 조용한 순간을 이야기해줘.",
+      "ko": "둘이 조용히 있어서 좋았던 순간 있어?",
       "follow": {
         "ko": "그 순간을 한 단어로 표현하면?",
         "en": "That moment in one word?"
@@ -2543,7 +2543,7 @@
       ],
       "tone": "couple",
       "en": "Tell a short story about a time we made something better together.",
-      "ko": "우리가 함께 더 좋게 만들었던 일을 이야기해줘.",
+      "ko": "둘이 같이 더 좋게 만든 일 있어?",
       "follow": {
         "ko": "들은 사람이 기억나는 디테일 하나 더하기.",
         "en": "The listener adds one detail they remember."

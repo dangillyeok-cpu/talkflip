@@ -1,0 +1,21 @@
+name = "talkflip-stats"
+main = "src/index.js"
+compatibility_date = "2025-06-01"
+
+# Same-origin API: https://wealthviewlounge.com/api/*  → this Worker (no CORS needed from the app).
+# Requires the wealthviewlounge.com zone to be on Cloudflare. If it is not, delete `routes`,
+# use the *.workers.dev URL wrangler prints after deploy, and set STATS_API in index.html to it.
+routes = [
+  { pattern = "wealthviewlounge.com/api/*", zone_name = "wealthviewlounge.com" }
+]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "talkflip-stats"
+database_id = "45ae5fb1-5280-4d5c-ad4c-2dcd7847b39a"
+
+[vars]
+# Origins allowed to call the API cross-origin (local dev + the site itself). Comma separated.
+ALLOWED_ORIGINS = "https://wealthviewlounge.com,http://localhost:8080,http://127.0.0.1:8080"
+# One submission per card per device per day. Set to "0" to disable.
+DEDUP = "1"

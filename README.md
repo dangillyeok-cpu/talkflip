@@ -9,6 +9,14 @@ This folder contains the MVP content guide and data contract for TalkFlip.
 - `cards.schema.json`: JSON Schema for card file shape
 - `cards.json`: production v1 card data
 - `validate_cards.mjs`: product-rule validator
+- `build.mjs`: web build — merges `cards.json` + `data/*.json` into `talkflip_pwa/cards.js`, generates `talkflip_pwa/decks/*.html`, rolls the service-worker cache version
+- `data/spicy.json`: Spicy deck (web only, 50 cards; vote cards carry `trait`)
+- `data/extras.json`: web-only extra cards for the core decks (ids end in `_xNN`)
+- `data/traits.json`: the 8 result titles + `trait` for every vote card in `cards.json`
+- `data/decks.web.json`: deck order, accent colors, and copy for the deck pages
+- `data/penalties.json`: penalty roulette list (web only) → `talkflip_pwa/penalty.html` + in-app wheel
+- `talkflip_pwa/`: the deployed site (Cloudflare Pages). See `talkflip_pwa/README.md`
+- `worker/`: balance-card national stats API (Cloudflare Worker + D1). See `worker/README.md`
 
 ## Validation
 
@@ -32,6 +40,19 @@ Example:
 ```js
 import Ajv2020 from "ajv/dist/2020.js";
 ```
+
+## Web build
+
+```bash
+node build.mjs          # write cards.js, decks/*.html, bump sw.js cache
+node build.mjs --check  # validate only
+```
+
+`talkflip_pwa/cards.js` and `talkflip_pwa/decks/*.html` are generated. Edit the sources
+(`cards.json`, `data/*.json`) and rebuild; never edit the outputs by hand.
+Outputs also include `talkflip_pwa/penalty.html`. Taboo cards are dropped for the web. Every vote card must have a `trait`
+(inline for `data/*.json`, via `data/traits.json` for `cards.json`), and every
+choice card must split on exactly one ` vs ` / ` or ` in both languages, or the build fails.
 
 ## MVP Mode Policy
 

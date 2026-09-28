@@ -1,0 +1,379 @@
+{
+  "version": "0.2",
+  "_comment": "Spicy deck, web only. 술자리·커플용 찐 질문. 선 넘을락 말락에서 멈춤: 전 애인·거짓말·돈·첫인상·비밀은 OK, 성적 콘텐츠·외모 비하·정치·종교는 금지(애드센스). vote 카드는 trait 필수.",
+  "cards": [
+    {
+      "id": "spicy_vote_001",
+      "deck": "spicy",
+      "cardType": "vote",
+      "trait": "drama",
+      "ko": "여기서 제일 먼저 손절당할 것 같은 사람은?",
+      "en": "Who here gets cut off first?"
+    },
+    {
+      "id": "spicy_vote_002",
+      "deck": "spicy",
+      "cardType": "vote",
+      "trait": "star",
+      "ko": "이 중 한 명이랑 무조건 사귀어야 한다면? 지금 찍어",
+      "en": "If you had to date one person here, who? Point now."
+    },
+    {
+      "id": "spicy_vote_003",
+      "deck": "spicy",
+      "cardType": "vote",
+      "trait": "drama",
+      "ko": "취해서 전 애인한테 톡 보낼 것 같은 사람은?",
+      "en": "Who drunk-texts their ex?"
+    },
+    {
+      "id": "spicy_vote_004",
+      "deck": "spicy",
+      "cardType": "vote",
+      "trait": "chaos",
+      "ko": "돈 빌려주면 못 돌려받을 것 같은 사람은?",
+      "en": "Who would never pay you back?"
+    },
+    {
+      "id": "spicy_vote_005",
+      "deck": "spicy",
+      "cardType": "vote",
+      "trait": "chaos",
+      "ko": "여기서 거짓말 제일 잘하는 사람은?",
+      "en": "Who's the best liar here?"
+    },
+    {
+      "id": "spicy_vote_006",
+      "deck": "spicy",
+      "cardType": "vote",
+      "trait": "drama",
+      "ko": "이 자리 끝나자마자 뒷담화 시작할 것 같은 사람은?",
+      "en": "Who starts gossiping the second this ends?"
+    },
+    {
+      "id": "spicy_vote_007",
+      "deck": "spicy",
+      "cardType": "vote",
+      "trait": "ghost",
+      "ko": "잠수 타다가 결혼 소식으로 등장할 것 같은 사람은?",
+      "en": "Who ghosts everyone and reappears with a wedding invite?"
+    },
+    {
+      "id": "spicy_vote_008",
+      "deck": "spicy",
+      "cardType": "vote",
+      "trait": "counselor",
+      "ko": "남 연애 상담은 잘하면서 본인 연애는 폭망일 것 같은 사람은?",
+      "en": "Who gives great dating advice and has a disaster love life?"
+    },
+    {
+      "id": "spicy_vote_009",
+      "deck": "spicy",
+      "cardType": "vote",
+      "trait": "ghost",
+      "ko": "계산할 때 화장실 갈 것 같은 사람은?",
+      "en": "Who goes to the bathroom right when the bill comes?"
+    },
+    {
+      "id": "spicy_vote_010",
+      "deck": "spicy",
+      "cardType": "vote",
+      "trait": "star",
+      "ko": "지금 폰 잠금 풀리면 제일 큰일 날 것 같은 사람은?",
+      "en": "Whose unlocked phone would cause the biggest scene right now?"
+    },
+    {
+      "id": "spicy_vote_011",
+      "deck": "spicy",
+      "cardType": "vote",
+      "trait": "counselor",
+      "ko": "취하면 울면서 인생 얘기할 것 같은 사람은?",
+      "en": "Who cries about life after a few drinks?"
+    },
+    {
+      "id": "spicy_vote_012",
+      "deck": "spicy",
+      "cardType": "vote",
+      "trait": "star",
+      "ko": "친구 애인한테 은근히 잘해줄 것 같은 사람은?",
+      "en": "Who's suspiciously nice to their friend's partner?"
+    },
+    {
+      "id": "spicy_vote_013",
+      "deck": "spicy",
+      "cardType": "vote",
+      "trait": "npc",
+      "ko": "소개팅 전에 상대 SNS 다 털어볼 것 같은 사람은?",
+      "en": "Who stalks every account before a first date?"
+    },
+    {
+      "id": "spicy_vote_014",
+      "deck": "spicy",
+      "cardType": "vote",
+      "trait": "leader",
+      "ko": "회식에서 상사한테 진심 말해버릴 것 같은 사람은?",
+      "en": "Who tells the boss what they really think at the team dinner?"
+    },
+    {
+      "id": "spicy_vote_015",
+      "deck": "spicy",
+      "cardType": "vote",
+      "trait": "ghost",
+      "ko": "여기서 제일 결혼 안 할 것 같은 사람은?",
+      "en": "Who's least likely to ever get married?"
+    },
+    {
+      "id": "spicy_vote_016",
+      "deck": "spicy",
+      "cardType": "vote",
+      "trait": "hype",
+      "ko": "단톡방에서 자기 얘기만 하는 사람은?",
+      "en": "Who only talks about themselves in the group chat?"
+    },
+    {
+      "id": "spicy_vote_017",
+      "deck": "spicy",
+      "cardType": "vote",
+      "trait": "chaos",
+      "ko": "헤어지고 3일 만에 새 사람 만날 것 같은 사람은?",
+      "en": "Who's dating someone new three days after a breakup?"
+    },
+    {
+      "id": "spicy_vote_018",
+      "deck": "spicy",
+      "cardType": "vote",
+      "trait": "npc",
+      "ko": "내 뒷담화 제일 재밌게 할 것 같은 사람은?",
+      "en": "Who tells the best stories about you behind your back?"
+    },
+    {
+      "id": "spicy_vote_019",
+      "deck": "spicy",
+      "cardType": "vote",
+      "trait": "hype",
+      "ko": "돈 없다면서 2차 가자고 할 것 같은 사람은?",
+      "en": "Who says they're broke and then suggests round two?"
+    },
+    {
+      "id": "spicy_vote_020",
+      "deck": "spicy",
+      "cardType": "vote",
+      "trait": "leader",
+      "ko": "첫인상 제일 별로였던 사람은? 솔직히 찍어",
+      "en": "Whose first impression was the worst? Be honest."
+    },
+    {
+      "id": "spicy_choice_001",
+      "deck": "spicy",
+      "cardType": "choice",
+      "ko": "전 애인 결혼식 가기 vs 축의금만 보내기?",
+      "en": "Go to your ex's wedding or just send a gift?"
+    },
+    {
+      "id": "spicy_choice_002",
+      "deck": "spicy",
+      "cardType": "choice",
+      "ko": "애인 폰 마음대로 보기 vs 내 폰 절대 안 보여주기?",
+      "en": "Full access to your partner's phone or nobody ever sees yours?"
+    },
+    {
+      "id": "spicy_choice_003",
+      "deck": "spicy",
+      "cardType": "choice",
+      "ko": "친구 애인이 바람피우는 걸 봤다면, 말하기 vs 모른 척하기?",
+      "en": "You catch a friend's partner cheating: tell them or stay quiet?"
+    },
+    {
+      "id": "spicy_choice_004",
+      "deck": "spicy",
+      "cardType": "choice",
+      "ko": "월급 2배인데 친구 없는 도시 vs 지금 월급에 지금 친구들?",
+      "en": "Double salary in a city with no friends or this salary with these friends?"
+    },
+    {
+      "id": "spicy_choice_005",
+      "deck": "spicy",
+      "cardType": "choice",
+      "ko": "짝사랑 앞에서 취해서 고백 vs 평생 말 못 하기?",
+      "en": "Drunk-confess to your crush or never say a word?"
+    },
+    {
+      "id": "spicy_choice_006",
+      "deck": "spicy",
+      "cardType": "choice",
+      "ko": "연애 흑역사 전부 공개 vs 통장 잔고 공개?",
+      "en": "Reveal your entire dating history or your bank balance?"
+    },
+    {
+      "id": "spicy_choice_007",
+      "deck": "spicy",
+      "cardType": "choice",
+      "ko": "애인의 전 애인이랑 밥 한 끼 vs 애인 부모님이랑 단둘이 1박?",
+      "en": "Dinner with your partner's ex or an overnight trip alone with their parents?"
+    },
+    {
+      "id": "spicy_choice_008",
+      "deck": "spicy",
+      "cardType": "choice",
+      "ko": "첫사랑이랑 재회 vs 첫사랑 기억 삭제?",
+      "en": "Reunite with your first love or erase the memory?"
+    },
+    {
+      "id": "spicy_choice_009",
+      "deck": "spicy",
+      "cardType": "choice",
+      "ko": "여기 있는 사람 중 한 명이랑 1년 동거 vs 1년 독방?",
+      "en": "Live with someone here for a year or alone in one room for a year?"
+    },
+    {
+      "id": "spicy_choice_010",
+      "deck": "spicy",
+      "cardType": "choice",
+      "ko": "거짓말 탐지기 달고 하루 vs 속마음 자막 달고 하루?",
+      "en": "A day wired to a lie detector or a day with your thoughts subtitled?"
+    },
+    {
+      "id": "spicy_choice_011",
+      "deck": "spicy",
+      "cardType": "choice",
+      "ko": "내 카톡 전체를 부모님한테 공개 vs 전 애인한테 공개?",
+      "en": "Your parents read all your texts or your ex does?"
+    },
+    {
+      "id": "spicy_choice_012",
+      "deck": "spicy",
+      "cardType": "choice",
+      "ko": "10억 받고 5년 연애 금지 vs 그냥 살기?",
+      "en": "A million dollars and no dating for five years or life as it is?"
+    },
+    {
+      "id": "spicy_choice_013",
+      "deck": "spicy",
+      "cardType": "choice",
+      "ko": "바람 한 번 당하기 vs 거짓말 100번 당하기?",
+      "en": "Cheated on once or lied to a hundred times?"
+    },
+    {
+      "id": "spicy_choice_014",
+      "deck": "spicy",
+      "cardType": "choice",
+      "ko": "취해서 한 말 다 기억나기 vs 하나도 기억 안 나기?",
+      "en": "Remember everything you said drunk or nothing at all?"
+    },
+    {
+      "id": "spicy_choice_015",
+      "deck": "spicy",
+      "cardType": "choice",
+      "ko": "소개팅에서 내 흑역사 다 말하기 vs 상대 흑역사 다 듣기?",
+      "en": "Tell all your embarrassing stories on a first date or hear all of theirs?"
+    },
+    {
+      "id": "spicy_choice_016",
+      "deck": "spicy",
+      "cardType": "choice",
+      "ko": "폰 잠금 없애기 vs 검색기록 자동 공유?",
+      "en": "No lock on your phone or your search history auto-shared?"
+    },
+    {
+      "id": "spicy_answer_001",
+      "deck": "spicy",
+      "cardType": "answer",
+      "ko": "이 자리에서 제일 오래 숨긴 거짓말 하나 털어놔",
+      "en": "Confess the lie you've kept longest from the people here.",
+      "penalty": true
+    },
+    {
+      "id": "spicy_answer_002",
+      "deck": "spicy",
+      "cardType": "answer",
+      "ko": "여기 있는 사람한테 설렌 적 있어? 누구야",
+      "en": "Ever had a crush on someone here? Who?",
+      "penalty": true
+    },
+    {
+      "id": "spicy_answer_003",
+      "deck": "spicy",
+      "cardType": "answer",
+      "ko": "전 애인한테 진짜 하고 싶은 말, 지금 해봐",
+      "en": "What you actually want to say to your ex. Say it now."
+    },
+    {
+      "id": "spicy_answer_004",
+      "deck": "spicy",
+      "cardType": "answer",
+      "ko": "부모님이 절대 모르는 비밀 하나?",
+      "en": "One secret your parents will never know?"
+    },
+    {
+      "id": "spicy_answer_005",
+      "deck": "spicy",
+      "cardType": "answer",
+      "ko": "지금까지 제일 후회하는 톡 한 줄은?",
+      "en": "The one text you regret most?"
+    },
+    {
+      "id": "spicy_answer_006",
+      "deck": "spicy",
+      "cardType": "answer",
+      "ko": "여기서 첫인상이랑 지금이 제일 다른 사람은? 어떻게?",
+      "en": "Who here changed the most from your first impression? How?"
+    },
+    {
+      "id": "spicy_answer_007",
+      "deck": "spicy",
+      "cardType": "answer",
+      "ko": "취해서 한 짓 중 아직 아무한테도 말 안 한 거, 오늘 말해",
+      "en": "The drunk thing you've never told anyone. Tonight's the night.",
+      "penalty": true
+    },
+    {
+      "id": "spicy_answer_008",
+      "deck": "spicy",
+      "cardType": "answer",
+      "ko": "여기 있는 사람한테 서운했는데 말 안 한 거, 지금 말해",
+      "en": "Something someone here did that hurt and you never said. Say it."
+    },
+    {
+      "id": "spicy_answer_009",
+      "deck": "spicy",
+      "cardType": "answer",
+      "ko": "연애하면서 제일 찌질했던 순간은?",
+      "en": "Your most pathetic moment in a relationship?"
+    },
+    {
+      "id": "spicy_answer_010",
+      "deck": "spicy",
+      "cardType": "answer",
+      "ko": "취해서 보낸 최악의 톡, 받은 사람은 누구?",
+      "en": "Worst drunk text you ever sent. Who got it?"
+    },
+    {
+      "id": "spicy_answer_011",
+      "deck": "spicy",
+      "cardType": "answer",
+      "ko": "돈 때문에 사람 잃어본 적 있어?",
+      "en": "Ever lost someone over money?"
+    },
+    {
+      "id": "spicy_answer_012",
+      "deck": "spicy",
+      "cardType": "answer",
+      "ko": "여기서 나랑 제일 안 맞는 사람은? 이유는 착하게",
+      "en": "Who here are you least compatible with? Be nice about why."
+    },
+    {
+      "id": "spicy_answer_013",
+      "deck": "spicy",
+      "cardType": "answer",
+      "ko": "전 애인이든 짝사랑이든, 아직 SNS 몰래 들어가 보는 사람 있어?",
+      "en": "An ex, a crush, anyone: whose profile do you still secretly check?"
+    },
+    {
+      "id": "spicy_answer_014",
+      "deck": "spicy",
+      "cardType": "answer",
+      "ko": "애인이나 썸한테 절대 못 보여주는 내 모습은?",
+      "en": "The side of you a partner or crush must never see?"
+    }
+  ]
+}
