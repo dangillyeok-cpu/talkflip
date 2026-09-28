@@ -1355,8 +1355,8 @@
       "en": "What kind of person makes you feel calm?",
       "ko": "어떤 사람과 있을 때 마음이 차분해져?",
       "follow": {
-        "ko": "왜 그렇게 느끼는지 한 문장만 더.",
-        "en": "Add one sentence on why."
+        "en": "Add one sentence on why.",
+        "ko": "왜 그렇게 느끼는지 한 문장만 더."
       }
     },
     {
@@ -1371,8 +1371,8 @@
       "en": "What is something you understand better now than before?",
       "ko": "예전보다 지금 더 잘 이해하게 된 건 뭐야?",
       "follow": {
-        "ko": "비슷한 사람 있으면 끄덕여줘.",
-        "en": "Nod if you're the same."
+        "en": "Nod if you're the same.",
+        "ko": "비슷한 사람 있으면 끄덕여줘."
       }
     },
     {
@@ -1387,8 +1387,8 @@
       "en": "What is a small boundary that matters to you?",
       "ko": "나에게 중요한 작은 선은 뭐야?",
       "follow": {
-        "ko": "왜 그렇게 느끼는지 한 문장만 더.",
-        "en": "Add one sentence on why."
+        "en": "Add one sentence on why.",
+        "ko": "왜 그렇게 느끼는지 한 문장만 더."
       }
     },
     {
@@ -1403,8 +1403,8 @@
       "en": "What is something you want to get better at slowly?",
       "ko": "천천히 더 잘하고 싶은 건 뭐야?",
       "follow": {
-        "ko": "비슷한 사람 있으면 끄덕여줘.",
-        "en": "Nod if you're the same."
+        "en": "Nod if you're the same.",
+        "ko": "비슷한 사람 있으면 끄덕여줘."
       }
     },
     {
@@ -1419,8 +1419,8 @@
       "en": "What kind of day feels truly restful to you?",
       "ko": "나에게 진짜 쉬는 날은 어떤 하루야?",
       "follow": {
-        "ko": "왜 그렇게 느끼는지 한 문장만 더.",
-        "en": "Add one sentence on why."
+        "en": "Add one sentence on why.",
+        "ko": "왜 그렇게 느끼는지 한 문장만 더."
       }
     },
     {
@@ -1435,8 +1435,8 @@
       "en": "What is something you no longer rush?",
       "ko": "이제는 서두르지 않게 된 건 뭐야?",
       "follow": {
-        "ko": "비슷한 사람 있으면 끄덕여줘.",
-        "en": "Nod if you're the same."
+        "en": "Nod if you're the same.",
+        "ko": "비슷한 사람 있으면 끄덕여줘."
       }
     },
     {
@@ -1451,8 +1451,8 @@
       "en": "What makes you feel quietly supported?",
       "ko": "조용히 지지받는다고 느끼게 하는 건?",
       "follow": {
-        "ko": "왜 그렇게 느끼는지 한 문장만 더.",
-        "en": "Add one sentence on why."
+        "en": "Add one sentence on why.",
+        "ko": "왜 그렇게 느끼는지 한 문장만 더."
       }
     },
     {
@@ -1467,8 +1467,8 @@
       "en": "What is a value you want to keep in your daily life?",
       "ko": "일상에서 지키고 싶은 가치는 뭐야?",
       "follow": {
-        "ko": "비슷한 사람 있으면 끄덕여줘.",
-        "en": "Nod if you're the same."
+        "en": "Nod if you're the same.",
+        "ko": "비슷한 사람 있으면 끄덕여줘."
       }
     },
     {
@@ -1483,8 +1483,8 @@
       "en": "What is something simple that makes you feel grounded?",
       "ko": "나를 안정되게 해주는 단순한 건 뭐야?",
       "follow": {
-        "ko": "왜 그렇게 느끼는지 한 문장만 더.",
-        "en": "Add one sentence on why."
+        "en": "Add one sentence on why.",
+        "ko": "왜 그렇게 느끼는지 한 문장만 더."
       }
     },
     {
@@ -1499,8 +1499,8 @@
       "en": "What is a lesson you learned in a gentle way?",
       "ko": "부드럽게 배운 인생의 작은 교훈은 뭐야?",
       "follow": {
-        "ko": "비슷한 사람 있으면 끄덕여줘.",
-        "en": "Nod if you're the same."
+        "en": "Nod if you're the same.",
+        "ko": "비슷한 사람 있으면 끄덕여줘."
       }
     },
     {
@@ -1514,8 +1514,8 @@
       "en": "Know the truth or keep the peace?",
       "ko": "불편한 진실 vs 그냥 평화?",
       "follow": {
-        "ko": "소수파가 먼저 이유를 말해줘.",
-        "en": "The minority side explains first."
+        "en": "The minority side explains first.",
+        "ko": "소수파가 먼저 이유를 말해줘."
       }
     },
     {
@@ -1529,8 +1529,8 @@
       "en": "More courage or more patience?",
       "ko": "더 용감해지기 vs 더 잘 참기?",
       "follow": {
-        "ko": "소수파가 먼저 이유를 말해줘.",
-        "en": "The minority side explains first."
+        "en": "The minority side explains first.",
+        "ko": "소수파가 먼저 이유를 말해줘."
       }
     },
     {
@@ -1544,8 +1544,8 @@
       "en": "A fresh start or a clear answer?",
       "ko": "새로운 시작 vs 명확한 답?",
       "follow": {
-        "ko": "소수파가 먼저 이유를 말해줘.",
-        "en": "The minority side explains first."
+        "en": "The minority side explains first.",
+        "ko": "소수파가 먼저 이유를 말해줘."
       }
     },
     {
@@ -1559,8 +1559,8 @@
       "en": "Be understood or be accepted?",
       "ko": "이해받기 vs 받아들여지기?",
       "follow": {
-        "ko": "소수파가 먼저 이유를 말해줘.",
-        "en": "The minority side explains first."
+        "en": "The minority side explains first.",
+        "ko": "소수파가 먼저 이유를 말해줘."
       }
     },
     {
@@ -1575,8 +1575,8 @@
       "en": "Tell a short story about a moment that changed your perspective.",
       "ko": "생각이 확 바뀐 순간 있었어? 언제야?",
       "follow": {
-        "ko": "들은 사람 중 한 명이 비슷한 경험 이어가기.",
-        "en": "Someone who listened shares a similar moment."
+        "en": "Someone who listened shares a similar moment.",
+        "ko": "들은 사람 중 한 명이 비슷한 경험 이어가기."
       }
     },
     {
@@ -1591,8 +1591,8 @@
       "en": "Tell a short story about a kindness you still remember.",
       "ko": "아직도 기억나는 친절, 하나 있어?",
       "follow": {
-        "ko": "그 이야기에 제목을 붙여준다면?",
-        "en": "Give that story a title."
+        "en": "Give that story a title.",
+        "ko": "그 이야기에 제목을 붙여준다면?"
       }
     },
     {
@@ -1607,8 +1607,8 @@
       "en": "Tell a short story about a time you surprised yourself.",
       "ko": "스스로한테 놀란 적 있어? 언제?",
       "follow": {
-        "ko": "들은 사람 중 한 명이 비슷한 경험 이어가기.",
-        "en": "Someone who listened shares a similar moment."
+        "en": "Someone who listened shares a similar moment.",
+        "ko": "들은 사람 중 한 명이 비슷한 경험 이어가기."
       }
     },
     {
@@ -1623,8 +1623,8 @@
       "en": "Tell a short story about something you used to see differently.",
       "ko": "예전엔 다르게 봤는데 지금은 달라진 거 있어?",
       "follow": {
-        "ko": "그 이야기에 제목을 붙여준다면?",
-        "en": "Give that story a title."
+        "en": "Give that story a title.",
+        "ko": "그 이야기에 제목을 붙여준다면?"
       }
     },
     {
@@ -1639,8 +1639,8 @@
       "en": "Tell a short story about a time you chose rest.",
       "ko": "그냥 쉬기로 했던 순간 있어? 어땠어?",
       "follow": {
-        "ko": "들은 사람 중 한 명이 비슷한 경험 이어가기.",
-        "en": "Someone who listened shares a similar moment."
+        "en": "Someone who listened shares a similar moment.",
+        "ko": "들은 사람 중 한 명이 비슷한 경험 이어가기."
       }
     },
     {
@@ -1655,8 +1655,8 @@
       "en": "Tell a short story about a small promise you kept.",
       "ko": "지키겠다고 한 작은 약속, 끝까지 지킨 거 있어?",
       "follow": {
-        "ko": "그 이야기에 제목을 붙여준다면?",
-        "en": "Give that story a title."
+        "en": "Give that story a title.",
+        "ko": "그 이야기에 제목을 붙여준다면?"
       }
     },
     {
@@ -1671,8 +1671,8 @@
       "en": "Tell a short story about a place that helped you think.",
       "ko": "생각 정리할 때 가는 곳 있어? 어디야?",
       "follow": {
-        "ko": "들은 사람 중 한 명이 비슷한 경험 이어가기.",
-        "en": "Someone who listened shares a similar moment."
+        "en": "Someone who listened shares a similar moment.",
+        "ko": "들은 사람 중 한 명이 비슷한 경험 이어가기."
       }
     },
     {
@@ -1687,8 +1687,8 @@
       "en": "Tell a short story about a conversation you appreciated.",
       "ko": "고마웠던 대화 하나, 기억나는 거 있어?",
       "follow": {
-        "ko": "그 이야기에 제목을 붙여준다면?",
-        "en": "Give that story a title."
+        "en": "Give that story a title.",
+        "ko": "그 이야기에 제목을 붙여준다면?"
       }
     },
     {
@@ -1703,8 +1703,8 @@
       "en": "When do you feel most like yourself?",
       "ko": "언제 가장 나답다고 느껴?",
       "follow": {
-        "ko": "답한 사람에게 딱 하나만 더 물어봐.",
-        "en": "Ask the answerer one more question — just one."
+        "en": "Ask the answerer one more question — just one.",
+        "ko": "답한 사람에게 딱 하나만 더 물어봐."
       }
     },
     {
@@ -1719,8 +1719,8 @@
       "en": "What kind of person makes you feel safe?",
       "ko": "어떤 사람과 있을 때 마음이 편해져?",
       "follow": {
-        "ko": "가장 공감된 사람, 손 들어볼까?",
-        "en": "Who related the most? Raise a hand."
+        "en": "Who related the most? Raise a hand.",
+        "ko": "가장 공감된 사람, 손 들어볼까?"
       }
     },
     {
@@ -1735,8 +1735,8 @@
       "en": "What is something you care less about now?",
       "ko": "예전보다 덜 신경 쓰게 된 건 뭐야?",
       "follow": {
-        "ko": "그 답 듣고 떠오른 사람 있으면 말해줘.",
-        "en": "Did the answer remind you of anyone? Say so."
+        "en": "Did the answer remind you of anyone? Say so.",
+        "ko": "그 답 듣고 떠오른 사람 있으면 말해줘."
       }
     },
     {
@@ -1751,8 +1751,8 @@
       "en": "What belief have you changed your mind about?",
       "ko": "생각이 바뀐 믿음이나 가치관은?",
       "follow": {
-        "ko": "답한 사람에게 딱 하나만 더 물어봐.",
-        "en": "Ask the answerer one more question — just one."
+        "en": "Ask the answerer one more question — just one.",
+        "ko": "답한 사람에게 딱 하나만 더 물어봐."
       }
     },
     {
@@ -1767,8 +1767,8 @@
       "en": "What part of your life feels different from what people see?",
       "ko": "사람들이 보는 모습과 실제로 다른 부분은?",
       "follow": {
-        "ko": "가장 공감된 사람, 손 들어볼까?",
-        "en": "Who related the most? Raise a hand."
+        "en": "Who related the most? Raise a hand.",
+        "ko": "가장 공감된 사람, 손 들어볼까?"
       }
     },
     {
@@ -1783,8 +1783,8 @@
       "en": "What is a worry you are slowly letting go of?",
       "ko": "조금씩 내려놓고 있는 걱정은 뭐야?",
       "follow": {
-        "ko": "그 답 듣고 떠오른 사람 있으면 말해줘.",
-        "en": "Did the answer remind you of anyone? Say so."
+        "en": "Did the answer remind you of anyone? Say so.",
+        "ko": "그 답 듣고 떠오른 사람 있으면 말해줘."
       }
     },
     {
@@ -1799,8 +1799,8 @@
       "en": "What makes you feel quietly proud of yourself?",
       "ko": "조용히 스스로가 뿌듯해지는 순간은?",
       "follow": {
-        "ko": "답한 사람에게 딱 하나만 더 물어봐.",
-        "en": "Ask the answerer one more question — just one."
+        "en": "Ask the answerer one more question — just one.",
+        "ko": "답한 사람에게 딱 하나만 더 물어봐."
       }
     },
     {
@@ -1815,8 +1815,8 @@
       "en": "What kind of compliment stays with you?",
       "ko": "오래 기억에 남는 칭찬은 어떤 칭찬이야?",
       "follow": {
-        "ko": "가장 공감된 사람, 손 들어볼까?",
-        "en": "Who related the most? Raise a hand."
+        "en": "Who related the most? Raise a hand.",
+        "ko": "가장 공감된 사람, 손 들어볼까?"
       }
     },
     {
@@ -1831,8 +1831,8 @@
       "en": "What is something you want to protect about yourself?",
       "ko": "내 안에서 지키고 싶은 부분은 뭐야?",
       "follow": {
-        "ko": "그 답 듣고 떠오른 사람 있으면 말해줘.",
-        "en": "Did the answer remind you of anyone? Say so."
+        "en": "Did the answer remind you of anyone? Say so.",
+        "ko": "그 답 듣고 떠오른 사람 있으면 말해줘."
       }
     },
     {
@@ -1847,8 +1847,8 @@
       "en": "What does a good day feel like to you lately?",
       "ko": "요즘 나에게 좋은 하루는 어떤 느낌이야?",
       "follow": {
-        "ko": "답한 사람에게 딱 하나만 더 물어봐.",
-        "en": "Ask the answerer one more question — just one."
+        "en": "Ask the answerer one more question — just one.",
+        "ko": "답한 사람에게 딱 하나만 더 물어봐."
       }
     },
     {
@@ -1863,8 +1863,8 @@
       "en": "What helps you trust someone over time?",
       "ko": "시간이 지날수록 사람을 믿게 만드는 건 뭐야?",
       "follow": {
-        "ko": "가장 공감된 사람, 손 들어볼까?",
-        "en": "Who related the most? Raise a hand."
+        "en": "Who related the most? Raise a hand.",
+        "ko": "가장 공감된 사람, 손 들어볼까?"
       }
     },
     {
@@ -1879,8 +1879,8 @@
       "en": "What is something you are learning to accept?",
       "ko": "받아들이는 법을 배우고 있는 건 뭐야?",
       "follow": {
-        "ko": "그 답 듣고 떠오른 사람 있으면 말해줘.",
-        "en": "Did the answer remind you of anyone? Say so."
+        "en": "Did the answer remind you of anyone? Say so.",
+        "ko": "그 답 듣고 떠오른 사람 있으면 말해줘."
       }
     },
     {
@@ -1895,8 +1895,8 @@
       "en": "What kind of silence feels comfortable to you?",
       "ko": "어떤 침묵이 편하게 느껴져?",
       "follow": {
-        "ko": "답한 사람에게 딱 하나만 더 물어봐.",
-        "en": "Ask the answerer one more question — just one."
+        "en": "Ask the answerer one more question — just one.",
+        "ko": "답한 사람에게 딱 하나만 더 물어봐."
       }
     },
     {
@@ -1911,8 +1911,8 @@
       "en": "What is a small sign that you are doing okay?",
       "ko": "내가 괜찮다는 걸 알려주는 작은 신호는?",
       "follow": {
-        "ko": "가장 공감된 사람, 손 들어볼까?",
-        "en": "Who related the most? Raise a hand."
+        "en": "Who related the most? Raise a hand.",
+        "ko": "가장 공감된 사람, 손 들어볼까?"
       }
     },
     {
@@ -1927,8 +1927,8 @@
       "en": "What makes a place feel safe to you?",
       "ko": "어떤 공간이 안전하게 느껴져?",
       "follow": {
-        "ko": "그 답 듣고 떠오른 사람 있으면 말해줘.",
-        "en": "Did the answer remind you of anyone? Say so."
+        "en": "Did the answer remind you of anyone? Say so.",
+        "ko": "그 답 듣고 떠오른 사람 있으면 말해줘."
       }
     },
     {
@@ -1943,8 +1943,8 @@
       "en": "What is something you want to remember more often?",
       "ko": "더 자주 기억하고 싶은 건 뭐야?",
       "follow": {
-        "ko": "답한 사람에게 딱 하나만 더 물어봐.",
-        "en": "Ask the answerer one more question — just one."
+        "en": "Ask the answerer one more question — just one.",
+        "ko": "답한 사람에게 딱 하나만 더 물어봐."
       }
     },
     {
@@ -1959,8 +1959,8 @@
       "en": "What kind of support feels best to you?",
       "ko": "나에게 가장 잘 맞는 응원은 어떤 거야?",
       "follow": {
-        "ko": "가장 공감된 사람, 손 들어볼까?",
-        "en": "Who related the most? Raise a hand."
+        "en": "Who related the most? Raise a hand.",
+        "ko": "가장 공감된 사람, 손 들어볼까?"
       }
     },
     {
@@ -1975,8 +1975,8 @@
       "en": "What is a version of yourself you are growing into?",
       "ko": "나는 어떤 모습으로 조금씩 변해가고 있어?",
       "follow": {
-        "ko": "그 답 듣고 떠오른 사람 있으면 말해줘.",
-        "en": "Did the answer remind you of anyone? Say so."
+        "en": "Did the answer remind you of anyone? Say so.",
+        "ko": "그 답 듣고 떠오른 사람 있으면 말해줘."
       }
     },
     {
@@ -1991,8 +1991,8 @@
       "en": "What small thing I do makes you feel cared for?",
       "ko": "내가 하는 작은 행동 중 챙김받는 느낌이 드는 건?",
       "follow": {
-        "ko": "답 듣고 떠오른 우리 순간 하나 말해줘.",
-        "en": "Share one moment of ours that comes to mind."
+        "en": "Share one moment of ours that comes to mind.",
+        "ko": "답 듣고 떠오른 우리 순간 하나 말해줘."
       }
     },
     {
@@ -2007,8 +2007,8 @@
       "en": "What random moment with me do you still remember?",
       "ko": "아직도 기억나는 우리 둘의 사소한 순간은?",
       "follow": {
-        "ko": "그 말 듣고 어땠는지 한마디.",
-        "en": "Say one word about how that felt to hear."
+        "en": "Say one word about how that felt to hear.",
+        "ko": "그 말 듣고 어땠는지 한마디."
       }
     },
     {
@@ -2023,8 +2023,8 @@
       "en": "What should we do more often together?",
       "ko": "우리가 같이 더 자주 했으면 하는 건?",
       "follow": {
-        "ko": "같은 질문, 이번엔 반대로 물어봐.",
-        "en": "Now ask the same question back."
+        "en": "Now ask the same question back.",
+        "ko": "같은 질문, 이번엔 반대로 물어봐."
       }
     },
     {
@@ -2039,8 +2039,8 @@
       "en": "What was your honest first impression of me?",
       "ko": "솔직히 나의 첫인상은 어땠어?",
       "follow": {
-        "ko": "답 듣고 떠오른 우리 순간 하나 말해줘.",
-        "en": "Share one moment of ours that comes to mind."
+        "en": "Share one moment of ours that comes to mind.",
+        "ko": "답 듣고 떠오른 우리 순간 하나 말해줘."
       }
     },
     {
@@ -2055,8 +2055,8 @@
       "en": "What kind of date feels most like us?",
       "ko": "어떤 데이트가 가장 우리답다고 느껴져?",
       "follow": {
-        "ko": "그 말 듣고 어땠는지 한마디.",
-        "en": "Say one word about how that felt to hear."
+        "en": "Say one word about how that felt to hear.",
+        "ko": "그 말 듣고 어땠는지 한마디."
       }
     },
     {
@@ -2071,8 +2071,8 @@
       "en": "What tiny habit of mine do you secretly like?",
       "ko": "내 습관 중 은근히 마음에 드는 건?",
       "follow": {
-        "ko": "같은 질문, 이번엔 반대로 물어봐.",
-        "en": "Now ask the same question back."
+        "en": "Now ask the same question back.",
+        "ko": "같은 질문, 이번엔 반대로 물어봐."
       }
     },
     {
@@ -2087,8 +2087,8 @@
       "en": "What is one thing we are surprisingly good at together?",
       "ko": "우리가 같이 하면 생각보다 잘하는 건?",
       "follow": {
-        "ko": "답 듣고 떠오른 우리 순간 하나 말해줘.",
-        "en": "Share one moment of ours that comes to mind."
+        "en": "Share one moment of ours that comes to mind.",
+        "ko": "답 듣고 떠오른 우리 순간 하나 말해줘."
       }
     },
     {
@@ -2103,8 +2103,8 @@
       "en": "What should our next small adventure be?",
       "ko": "우리의 다음 작은 모험은 뭐가 좋을까?",
       "follow": {
-        "ko": "그 말 듣고 어땠는지 한마디.",
-        "en": "Say one word about how that felt to hear."
+        "en": "Say one word about how that felt to hear.",
+        "ko": "그 말 듣고 어땠는지 한마디."
       }
     },
     {
@@ -2119,8 +2119,8 @@
       "en": "What is one simple thing that makes you feel closer to me?",
       "ko": "나와 더 가까워진다고 느끼게 하는 작은 일은?",
       "follow": {
-        "ko": "같은 질문, 이번엔 반대로 물어봐.",
-        "en": "Now ask the same question back."
+        "en": "Now ask the same question back.",
+        "ko": "같은 질문, 이번엔 반대로 물어봐."
       }
     },
     {
@@ -2135,8 +2135,8 @@
       "en": "What is something I do that makes you laugh?",
       "ko": "내가 하는 행동 중 너를 웃게 만드는 건?",
       "follow": {
-        "ko": "답 듣고 떠오른 우리 순간 하나 말해줘.",
-        "en": "Share one moment of ours that comes to mind."
+        "en": "Share one moment of ours that comes to mind.",
+        "ko": "답 듣고 떠오른 우리 순간 하나 말해줘."
       }
     },
     {
@@ -2151,8 +2151,8 @@
       "en": "What little tradition should we start?",
       "ko": "우리만의 작은 전통을 만든다면 뭐가 좋을까?",
       "follow": {
-        "ko": "그 말 듣고 어땠는지 한마디.",
-        "en": "Say one word about how that felt to hear."
+        "en": "Say one word about how that felt to hear.",
+        "ko": "그 말 듣고 어땠는지 한마디."
       }
     },
     {
@@ -2167,8 +2167,8 @@
       "en": "What is a tiny detail about me that you noticed?",
       "ko": "네가 알아챈 나의 작은 디테일은 뭐야?",
       "follow": {
-        "ko": "같은 질문, 이번엔 반대로 물어봐.",
-        "en": "Now ask the same question back."
+        "en": "Now ask the same question back.",
+        "ko": "같은 질문, 이번엔 반대로 물어봐."
       }
     },
     {
@@ -2183,8 +2183,8 @@
       "en": "What is one thing we handle well as a pair?",
       "ko": "우리가 둘이서 잘 해내는 건 뭐야?",
       "follow": {
-        "ko": "답 듣고 떠오른 우리 순간 하나 말해줘.",
-        "en": "Share one moment of ours that comes to mind."
+        "en": "Share one moment of ours that comes to mind.",
+        "ko": "답 듣고 떠오른 우리 순간 하나 말해줘."
       }
     },
     {
@@ -2199,8 +2199,8 @@
       "en": "What is something you want us to try once?",
       "ko": "우리 한 번쯤 같이 해보고 싶은 건 뭐야?",
       "follow": {
-        "ko": "그 말 듣고 어땠는지 한마디.",
-        "en": "Say one word about how that felt to hear."
+        "en": "Say one word about how that felt to hear.",
+        "ko": "그 말 듣고 어땠는지 한마디."
       }
     },
     {
@@ -2215,8 +2215,8 @@
       "en": "What makes our conversations feel easy?",
       "ko": "우리 대화가 편하게 느껴지는 이유는 뭐야?",
       "follow": {
-        "ko": "같은 질문, 이번엔 반대로 물어봐.",
-        "en": "Now ask the same question back."
+        "en": "Now ask the same question back.",
+        "ko": "같은 질문, 이번엔 반대로 물어봐."
       }
     },
     {
@@ -2231,8 +2231,8 @@
       "en": "What is a small way I can support you better?",
       "ko": "내가 너를 더 잘 응원할 수 있는 작은 방법은?",
       "follow": {
-        "ko": "답 듣고 떠오른 우리 순간 하나 말해줘.",
-        "en": "Share one moment of ours that comes to mind."
+        "en": "Share one moment of ours that comes to mind.",
+        "ko": "답 듣고 떠오른 우리 순간 하나 말해줘."
       }
     },
     {
@@ -2247,8 +2247,8 @@
       "en": "What is something about us that feels lucky?",
       "ko": "우리 사이에서 운이 좋다고 느껴지는 건 뭐야?",
       "follow": {
-        "ko": "그 말 듣고 어땠는지 한마디.",
-        "en": "Say one word about how that felt to hear."
+        "en": "Say one word about how that felt to hear.",
+        "ko": "그 말 듣고 어땠는지 한마디."
       }
     },
     {
@@ -2263,8 +2263,8 @@
       "en": "What should we celebrate more often?",
       "ko": "우리가 더 자주 축하하면 좋을 건 뭐야?",
       "follow": {
-        "ko": "같은 질문, 이번엔 반대로 물어봐.",
-        "en": "Now ask the same question back."
+        "en": "Now ask the same question back.",
+        "ko": "같은 질문, 이번엔 반대로 물어봐."
       }
     },
     {
@@ -2278,8 +2278,8 @@
       "en": "A planned date or a surprise date?",
       "ko": "계획된 데이트 vs 깜짝 데이트?",
       "follow": {
-        "ko": "고른 이유를 서로 한 문장씩.",
-        "en": "Each gives one sentence on why."
+        "en": "Each gives one sentence on why.",
+        "ko": "고른 이유를 서로 한 문장씩."
       }
     },
     {
@@ -2293,8 +2293,8 @@
       "en": "Cook together or order something new?",
       "ko": "같이 요리하기 vs 새로운 음식 시키기?",
       "follow": {
-        "ko": "고른 이유를 서로 한 문장씩.",
-        "en": "Each gives one sentence on why."
+        "en": "Each gives one sentence on why.",
+        "ko": "고른 이유를 서로 한 문장씩."
       }
     },
     {
@@ -2308,8 +2308,8 @@
       "en": "A quiet walk or a loud adventure?",
       "ko": "조용한 산책 vs 시끌벅적한 모험?",
       "follow": {
-        "ko": "고른 이유를 서로 한 문장씩.",
-        "en": "Each gives one sentence on why."
+        "en": "Each gives one sentence on why.",
+        "ko": "고른 이유를 서로 한 문장씩."
       }
     },
     {
@@ -2323,8 +2323,8 @@
       "en": "More photos together or more inside jokes?",
       "ko": "같이 찍은 사진 더 많이 vs 우리만의 농담 더 많이?",
       "follow": {
-        "ko": "고른 이유를 서로 한 문장씩.",
-        "en": "Each gives one sentence on why."
+        "en": "Each gives one sentence on why.",
+        "ko": "고른 이유를 서로 한 문장씩."
       }
     },
     {
@@ -2338,8 +2338,8 @@
       "en": "A weekend trip or a perfect lazy day?",
       "ko": "주말 여행 vs 완벽한 게으른 하루?",
       "follow": {
-        "ko": "고른 이유를 서로 한 문장씩.",
-        "en": "Each gives one sentence on why."
+        "en": "Each gives one sentence on why.",
+        "ko": "고른 이유를 서로 한 문장씩."
       }
     },
     {
@@ -2353,8 +2353,8 @@
       "en": "Talk it out now or cool down first?",
       "ko": "바로 이야기하기 vs 먼저 진정하기?",
       "follow": {
-        "ko": "고른 이유를 서로 한 문장씩.",
-        "en": "Each gives one sentence on why."
+        "en": "Each gives one sentence on why.",
+        "ko": "고른 이유를 서로 한 문장씩."
       }
     },
     {
@@ -2369,8 +2369,8 @@
       "en": "Tell a short story about a moment that felt very us.",
       "ko": "진짜 우리답다 싶었던 순간 있었지?",
       "follow": {
-        "ko": "그 순간을 한 단어로 표현하면?",
-        "en": "That moment in one word?"
+        "en": "That moment in one word?",
+        "ko": "그 순간을 한 단어로 표현하면?"
       }
     },
     {
@@ -2385,8 +2385,8 @@
       "en": "Tell a short story about a small thing we laughed about.",
       "ko": "둘이 빵 터졌던 사소한 일 기억나?",
       "follow": {
-        "ko": "들은 사람이 기억나는 디테일 하나 더하기.",
-        "en": "The listener adds one detail they remember."
+        "en": "The listener adds one detail they remember.",
+        "ko": "들은 사람이 기억나는 디테일 하나 더하기."
       }
     },
     {
@@ -2401,8 +2401,8 @@
       "en": "Tell a short story about a date that did not go as planned.",
       "ko": "계획대로 안 됐던 데이트 있었지? 그때 얘기.",
       "follow": {
-        "ko": "그 순간을 한 단어로 표현하면?",
-        "en": "That moment in one word?"
+        "en": "That moment in one word?",
+        "ko": "그 순간을 한 단어로 표현하면?"
       }
     },
     {
@@ -2417,8 +2417,8 @@
       "en": "Tell a short story about a time we made a good team.",
       "ko": "우리 팀워크 좋았던 순간 있었잖아, 언제야?",
       "follow": {
-        "ko": "들은 사람이 기억나는 디테일 하나 더하기.",
-        "en": "The listener adds one detail they remember."
+        "en": "The listener adds one detail they remember.",
+        "ko": "들은 사람이 기억나는 디테일 하나 더하기."
       }
     },
     {
@@ -2433,8 +2433,8 @@
       "en": "Tell a short story about something ordinary that felt special.",
       "ko": "평범했는데 이상하게 특별했던 날 있어?",
       "follow": {
-        "ko": "그 순간을 한 단어로 표현하면?",
-        "en": "That moment in one word?"
+        "en": "That moment in one word?",
+        "ko": "그 순간을 한 단어로 표현하면?"
       }
     },
     {
@@ -2449,8 +2449,8 @@
       "en": "Tell a short story about a time one of us saved the day.",
       "ko": "둘 중 하나가 하루 살린 적 있지? 언제야?",
       "follow": {
-        "ko": "들은 사람이 기억나는 디테일 하나 더하기.",
-        "en": "The listener adds one detail they remember."
+        "en": "The listener adds one detail they remember.",
+        "ko": "들은 사람이 기억나는 디테일 하나 더하기."
       }
     },
     {
@@ -2465,8 +2465,8 @@
       "en": "Tell a short story about a place that reminds you of us.",
       "ko": "우리 떠오르는 장소 있어? 어디야?",
       "follow": {
-        "ko": "그 순간을 한 단어로 표현하면?",
-        "en": "That moment in one word?"
+        "en": "That moment in one word?",
+        "ko": "그 순간을 한 단어로 표현하면?"
       }
     },
     {
@@ -2481,8 +2481,8 @@
       "en": "Tell a short story about a message you remember.",
       "ko": "아직도 기억나는 메시지 있어?",
       "follow": {
-        "ko": "들은 사람이 기억나는 디테일 하나 더하기.",
-        "en": "The listener adds one detail they remember."
+        "en": "The listener adds one detail they remember.",
+        "ko": "들은 사람이 기억나는 디테일 하나 더하기."
       }
     },
     {
@@ -2497,8 +2497,8 @@
       "en": "Tell a short story about a moment we handled better than expected.",
       "ko": "생각보다 잘 넘겼던 우리 순간 있었지?",
       "follow": {
-        "ko": "그 순간을 한 단어로 표현하면?",
-        "en": "That moment in one word?"
+        "en": "That moment in one word?",
+        "ko": "그 순간을 한 단어로 표현하면?"
       }
     },
     {
@@ -2513,8 +2513,8 @@
       "en": "Tell a short story about something we learned about each other.",
       "ko": "서로에 대해 새로 알게 된 거 있어?",
       "follow": {
-        "ko": "들은 사람이 기억나는 디테일 하나 더하기.",
-        "en": "The listener adds one detail they remember."
+        "en": "The listener adds one detail they remember.",
+        "ko": "들은 사람이 기억나는 디테일 하나 더하기."
       }
     },
     {
@@ -2529,8 +2529,8 @@
       "en": "Tell a short story about a quiet moment you liked.",
       "ko": "둘이 조용히 있어서 좋았던 순간 있어?",
       "follow": {
-        "ko": "그 순간을 한 단어로 표현하면?",
-        "en": "That moment in one word?"
+        "en": "That moment in one word?",
+        "ko": "그 순간을 한 단어로 표현하면?"
       }
     },
     {
@@ -2545,8 +2545,8 @@
       "en": "Tell a short story about a time we made something better together.",
       "ko": "둘이 같이 더 좋게 만든 일 있어?",
       "follow": {
-        "ko": "들은 사람이 기억나는 디테일 하나 더하기.",
-        "en": "The listener adds one detail they remember."
+        "en": "The listener adds one detail they remember.",
+        "ko": "들은 사람이 기억나는 디테일 하나 더하기."
       }
     },
     {
@@ -2561,8 +2561,8 @@
       "en": "What helps you feel close to me?",
       "ko": "나와 가까워진다고 느끼게 하는 건 뭐야?",
       "follow": {
-        "ko": "그 답에 고맙다면 그냥 '고마워' 한마디.",
-        "en": "If the answer means something, just say thanks."
+        "en": "If the answer means something, just say thanks.",
+        "ko": "그 답에 고맙다면 그냥 '고마워' 한마디."
       }
     },
     {
@@ -2577,8 +2577,8 @@
       "en": "What kind of support feels best from me?",
       "ko": "내가 해주는 응원 중 가장 잘 맞는 건?",
       "follow": {
-        "ko": "그 답에 고맙다면 그냥 '고마워' 한마디.",
-        "en": "If the answer means something, just say thanks."
+        "en": "If the answer means something, just say thanks.",
+        "ko": "그 답에 고맙다면 그냥 '고마워' 한마디."
       }
     },
     {
@@ -2593,8 +2593,8 @@
       "en": "What is something you want us to protect?",
       "ko": "우리가 지켜가고 싶은 건 뭐야?",
       "follow": {
-        "ko": "그 답에 고맙다면 그냥 '고마워' 한마디.",
-        "en": "If the answer means something, just say thanks."
+        "en": "If the answer means something, just say thanks.",
+        "ko": "그 답에 고맙다면 그냥 '고마워' 한마디."
       }
     },
     {
@@ -2609,8 +2609,8 @@
       "en": "What makes this feel like a safe place for us?",
       "ko": "우리 사이가 안전하게 느껴지는 이유는 뭐야?",
       "follow": {
-        "ko": "그 답에 고맙다면 그냥 '고마워' 한마디.",
-        "en": "If the answer means something, just say thanks."
+        "en": "If the answer means something, just say thanks.",
+        "ko": "그 답에 고맙다면 그냥 '고마워' 한마디."
       }
     },
     {
@@ -2624,6 +2624,10 @@
       "maxPlayers": 8,
       "en": "Describe what you did last weekend",
       "ko": "주말에 뭐 했는지 설명하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "home",
         "sleep",
@@ -2635,11 +2639,7 @@
         "잠",
         "피곤",
         "폰"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "party_taboo_002",
@@ -2652,6 +2652,10 @@
       "maxPlayers": 8,
       "en": "Describe your morning routine",
       "ko": "아침 루틴 설명하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "wake",
         "coffee",
@@ -2663,11 +2667,7 @@
         "커피",
         "씻",
         "알람"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "party_taboo_003",
@@ -2680,6 +2680,10 @@
       "maxPlayers": 8,
       "en": "Explain your favorite food without naming it",
       "ko": "최애 음식 이름 빼고 설명하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "delicious",
         "spicy",
@@ -2691,11 +2695,7 @@
         "맵",
         "달",
         "밥"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "party_taboo_004",
@@ -2708,6 +2708,10 @@
       "maxPlayers": 8,
       "en": "Describe your hometown",
       "ko": "고향 설명하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "city",
         "far",
@@ -2719,11 +2723,7 @@
         "멀",
         "유명",
         "음식"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "party_taboo_005",
@@ -2736,6 +2736,10 @@
       "maxPlayers": 8,
       "en": "Explain what your job or study is",
       "ko": "무슨 일/공부 하는지 설명하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "work",
         "money",
@@ -2747,11 +2751,7 @@
         "돈",
         "컴퓨터",
         "공부"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "party_taboo_006",
@@ -2764,6 +2764,10 @@
       "maxPlayers": 8,
       "en": "Describe your last trip",
       "ko": "최근 여행 설명하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "plane",
         "hotel",
@@ -2775,11 +2779,7 @@
         "호텔",
         "사진",
         "바다"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "party_taboo_007",
@@ -2792,6 +2792,10 @@
       "maxPlayers": 8,
       "en": "Explain a movie you love without the title",
       "ko": "좋아하는 영화 제목 빼고 설명하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "actor",
         "ending",
@@ -2803,11 +2807,7 @@
         "결말",
         "유명",
         "장면"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "party_taboo_008",
@@ -2820,6 +2820,10 @@
       "maxPlayers": 8,
       "en": "Describe this group to a stranger",
       "ko": "이 모임을 처음 보는 사람에게 설명하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "friend",
         "fun",
@@ -2831,11 +2835,7 @@
         "재밌",
         "술",
         "얘기"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "funny_taboo_001",
@@ -2848,6 +2848,10 @@
       "maxPlayers": 8,
       "en": "Explain the internet to someone from 100 years ago",
       "ko": "100년 전 사람에게 인터넷 설명하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "computer",
         "phone",
@@ -2859,11 +2863,7 @@
         "폰",
         "온라인",
         "검색"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "funny_taboo_002",
@@ -2876,6 +2876,10 @@
       "maxPlayers": 8,
       "en": "Describe a cat without saying any animal word",
       "ko": "동물 단어 없이 고양이 설명하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "animal",
         "pet",
@@ -2887,11 +2891,7 @@
         "반려",
         "야옹",
         "털"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "funny_taboo_003",
@@ -2904,6 +2904,10 @@
       "maxPlayers": 8,
       "en": "Explain how to tie shoelaces out loud",
       "ko": "신발끈 묶는 법 말로만 설명하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "loop",
         "pull",
@@ -2915,11 +2919,7 @@
         "당기",
         "교차",
         "매듭"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "funny_taboo_004",
@@ -2932,6 +2932,10 @@
       "maxPlayers": 8,
       "en": "Hype up water like it's a new product",
       "ko": "물을 신상품처럼 광고하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "water",
         "drink",
@@ -2943,11 +2947,7 @@
         "마시",
         "투명",
         "목"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "funny_taboo_005",
@@ -2960,6 +2960,10 @@
       "maxPlayers": 8,
       "en": "Explain your phone to a medieval knight",
       "ko": "중세 기사에게 스마트폰 설명하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "call",
         "screen",
@@ -2971,11 +2975,7 @@
         "화면",
         "앱",
         "배터리"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "funny_taboo_006",
@@ -2988,6 +2988,10 @@
       "maxPlayers": 8,
       "en": "Describe sleep to someone who never sleeps",
       "ko": "잠 안 자는 사람에게 잠 설명하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "eyes",
         "bed",
@@ -2999,11 +3003,7 @@
         "침대",
         "꿈",
         "밤"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "funny_taboo_007",
@@ -3016,6 +3016,10 @@
       "maxPlayers": 8,
       "en": "Sell an umbrella without mentioning rain",
       "ko": "비 얘기 없이 우산 팔기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "rain",
         "wet",
@@ -3027,11 +3031,7 @@
         "젖",
         "하늘",
         "물"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "funny_taboo_008",
@@ -3044,6 +3044,10 @@
       "maxPlayers": 8,
       "en": "Explain a banana without its name or color",
       "ko": "이름과 색 빼고 바나나 설명하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "yellow",
         "fruit",
@@ -3055,11 +3059,7 @@
         "과일",
         "껍질",
         "원숭이"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "party_taboo_009",
@@ -3072,6 +3072,10 @@
       "maxPlayers": 8,
       "en": "Describe your ideal day off",
       "ko": "완벽한 휴일 설명하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "rest",
         "late",
@@ -3083,11 +3087,7 @@
         "늦잠",
         "재밌",
         "여유"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "party_taboo_010",
@@ -3100,6 +3100,10 @@
       "maxPlayers": 8,
       "en": "Explain how you get to work or school",
       "ko": "출근/등교 길 설명하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "bus",
         "subway",
@@ -3111,11 +3115,7 @@
         "지하철",
         "걷",
         "멀"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "party_taboo_011",
@@ -3128,6 +3128,10 @@
       "maxPlayers": 8,
       "en": "Describe your favorite season",
       "ko": "좋아하는 계절 설명하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "cold",
         "hot",
@@ -3139,11 +3143,7 @@
         "덥",
         "따뜻",
         "날씨"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "party_taboo_012",
@@ -3156,6 +3156,10 @@
       "maxPlayers": 8,
       "en": "Explain a hobby you enjoy",
       "ko": "즐기는 취미 설명하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "fun",
         "time",
@@ -3167,11 +3171,7 @@
         "시간",
         "연습",
         "실력"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "party_taboo_013",
@@ -3184,6 +3184,10 @@
       "maxPlayers": 8,
       "en": "Describe your phone's home screen",
       "ko": "폰 홈 화면 설명하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "app",
         "icon",
@@ -3195,11 +3199,7 @@
         "아이콘",
         "사진",
         "화면"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "party_taboo_014",
@@ -3212,6 +3212,10 @@
       "maxPlayers": 8,
       "en": "Explain what makes a good party",
       "ko": "좋은 파티의 조건 설명하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "people",
         "music",
@@ -3223,11 +3227,7 @@
         "음악",
         "음식",
         "재밌"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "party_taboo_015",
@@ -3240,6 +3240,10 @@
       "maxPlayers": 8,
       "en": "Describe your dream vacation spot",
       "ko": "꿈의 휴가지 설명하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "beach",
         "mountain",
@@ -3251,11 +3255,7 @@
         "산",
         "멀",
         "호텔"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "party_taboo_016",
@@ -3268,6 +3268,10 @@
       "maxPlayers": 8,
       "en": "Explain your go-to comfort activity",
       "ko": "마음 편해지는 활동 설명하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "home",
         "rest",
@@ -3279,11 +3283,7 @@
         "쉬",
         "혼자",
         "조용"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "funny_taboo_009",
@@ -3296,6 +3296,10 @@
       "maxPlayers": 8,
       "en": "Explain a refrigerator to an alien",
       "ko": "외계인에게 냉장고 설명하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "cold",
         "food",
@@ -3307,11 +3311,7 @@
         "음식",
         "상자",
         "문"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "funny_taboo_010",
@@ -3324,6 +3324,10 @@
       "maxPlayers": 8,
       "en": "Describe rain without weather words",
       "ko": "날씨 단어 없이 비 설명하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "sky",
         "wet",
@@ -3335,11 +3339,7 @@
         "젖",
         "구름",
         "방울"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "funny_taboo_011",
@@ -3352,6 +3352,10 @@
       "maxPlayers": 8,
       "en": "Sell socks like a luxury item",
       "ko": "양말을 명품처럼 팔기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "foot",
         "warm",
@@ -3363,11 +3367,7 @@
         "따뜻",
         "면",
         "신"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "funny_taboo_012",
@@ -3380,6 +3380,10 @@
       "maxPlayers": 8,
       "en": "Explain a mirror without its name",
       "ko": "이름 빼고 거울 설명하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "face",
         "glass",
@@ -3391,11 +3395,7 @@
         "유리",
         "비추",
         "보"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "funny_taboo_013",
@@ -3408,6 +3408,10 @@
       "maxPlayers": 8,
       "en": "Describe a clock to someone who ignores time",
       "ko": "시간 무시하는 사람에게 시계 설명하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "time",
         "hour",
@@ -3419,11 +3423,7 @@
         "시",
         "똑딱",
         "바늘"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "funny_taboo_014",
@@ -3436,6 +3436,10 @@
       "maxPlayers": 8,
       "en": "Hype up sleep like a luxury experience",
       "ko": "잠을 럭셔리 경험처럼 광고하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "eyes",
         "bed",
@@ -3447,11 +3451,7 @@
         "침대",
         "밤",
         "쉬"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "funny_taboo_015",
@@ -3464,6 +3464,10 @@
       "maxPlayers": 8,
       "en": "Explain ice cream to someone who's never had it",
       "ko": "아이스크림 처음인 사람에게 설명하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "cold",
         "sweet",
@@ -3475,11 +3479,7 @@
         "달",
         "녹",
         "크림"
-      ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      ]
     },
     {
       "id": "funny_taboo_016",
@@ -3492,6 +3492,10 @@
       "maxPlayers": 8,
       "en": "Describe a staircase out loud",
       "ko": "계단을 말로만 설명하기",
+      "follow": {
+        "en": "Got caught using a banned word? That's a penalty.",
+        "ko": "금지어 썼으면 바로 벌칙!"
+      },
       "bannedEn": [
         "up",
         "down",
@@ -3503,11 +3507,1045 @@
         "아래",
         "계단",
         "층"
+      ]
+    },
+    {
+      "id": "spicy_vote_001",
+      "deck": "spicy",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
       ],
-      "follow": {
-        "en": "Got caught using a banned word? That's a penalty.",
-        "ko": "금지어 썼으면 바로 벌칙!"
-      }
+      "en": "Who here gets cut off first?",
+      "ko": "여기서 제일 먼저 손절당할 것 같은 사람은?"
+    },
+    {
+      "id": "spicy_vote_002",
+      "deck": "spicy",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "en": "If you had to date one person here, who? Point now.",
+      "ko": "이 중 한 명이랑 무조건 사귀어야 한다면? 지금 찍어"
+    },
+    {
+      "id": "spicy_vote_003",
+      "deck": "spicy",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "en": "Who drunk-texts their ex?",
+      "ko": "취해서 전 애인한테 톡 보낼 것 같은 사람은?"
+    },
+    {
+      "id": "spicy_vote_004",
+      "deck": "spicy",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "en": "Who would never pay you back?",
+      "ko": "돈 빌려주면 못 돌려받을 것 같은 사람은?"
+    },
+    {
+      "id": "spicy_vote_005",
+      "deck": "spicy",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "en": "Who's the best liar here?",
+      "ko": "여기서 거짓말 제일 잘하는 사람은?"
+    },
+    {
+      "id": "spicy_vote_006",
+      "deck": "spicy",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "en": "Who starts gossiping the second this ends?",
+      "ko": "이 자리 끝나자마자 뒷담화 시작할 것 같은 사람은?"
+    },
+    {
+      "id": "spicy_vote_007",
+      "deck": "spicy",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "en": "Who ghosts everyone and reappears with a wedding invite?",
+      "ko": "잠수 타다가 결혼 소식으로 등장할 것 같은 사람은?"
+    },
+    {
+      "id": "spicy_vote_008",
+      "deck": "spicy",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "en": "Who gives great dating advice and has a disaster love life?",
+      "ko": "남 연애 상담은 잘하면서 본인 연애는 폭망일 것 같은 사람은?"
+    },
+    {
+      "id": "spicy_vote_009",
+      "deck": "spicy",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "en": "Who goes to the bathroom right when the bill comes?",
+      "ko": "계산할 때 화장실 갈 것 같은 사람은?"
+    },
+    {
+      "id": "spicy_vote_010",
+      "deck": "spicy",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "en": "Whose unlocked phone would cause the biggest scene right now?",
+      "ko": "지금 폰 잠금 풀리면 제일 큰일 날 것 같은 사람은?"
+    },
+    {
+      "id": "spicy_vote_011",
+      "deck": "spicy",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "en": "Who cries about life after a few drinks?",
+      "ko": "취하면 울면서 인생 얘기할 것 같은 사람은?"
+    },
+    {
+      "id": "spicy_vote_012",
+      "deck": "spicy",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "en": "Who's suspiciously nice to their friend's partner?",
+      "ko": "친구 애인한테 은근히 잘해줄 것 같은 사람은?"
+    },
+    {
+      "id": "spicy_vote_013",
+      "deck": "spicy",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "en": "Who stalks every account before a first date?",
+      "ko": "소개팅 전에 상대 SNS 다 털어볼 것 같은 사람은?"
+    },
+    {
+      "id": "spicy_vote_014",
+      "deck": "spicy",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "en": "Who tells the boss what they really think at the team dinner?",
+      "ko": "회식에서 상사한테 진심 말해버릴 것 같은 사람은?"
+    },
+    {
+      "id": "spicy_vote_015",
+      "deck": "spicy",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "en": "Who's least likely to ever get married?",
+      "ko": "여기서 제일 결혼 안 할 것 같은 사람은?"
+    },
+    {
+      "id": "spicy_vote_016",
+      "deck": "spicy",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "en": "Who only talks about themselves in the group chat?",
+      "ko": "단톡방에서 자기 얘기만 하는 사람은?"
+    },
+    {
+      "id": "spicy_vote_017",
+      "deck": "spicy",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "en": "Who's dating someone new three days after a breakup?",
+      "ko": "헤어지고 3일 만에 새 사람 만날 것 같은 사람은?"
+    },
+    {
+      "id": "spicy_vote_018",
+      "deck": "spicy",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "en": "Who tells the best stories about you behind your back?",
+      "ko": "내 뒷담화 제일 재밌게 할 것 같은 사람은?"
+    },
+    {
+      "id": "spicy_vote_019",
+      "deck": "spicy",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "en": "Who says they're broke and then suggests round two?",
+      "ko": "돈 없다면서 2차 가자고 할 것 같은 사람은?"
+    },
+    {
+      "id": "spicy_vote_020",
+      "deck": "spicy",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "en": "Whose first impression was the worst? Be honest.",
+      "ko": "첫인상 제일 별로였던 사람은? 솔직히 찍어"
+    },
+    {
+      "id": "spicy_choice_001",
+      "deck": "spicy",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Go to your ex's wedding or just send a gift?",
+      "ko": "전 애인 결혼식 가기 vs 축의금만 보내기?"
+    },
+    {
+      "id": "spicy_choice_002",
+      "deck": "spicy",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Full access to your partner's phone or nobody ever sees yours?",
+      "ko": "애인 폰 마음대로 보기 vs 내 폰 절대 안 보여주기?"
+    },
+    {
+      "id": "spicy_choice_003",
+      "deck": "spicy",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "You catch a friend's partner cheating: tell them or stay quiet?",
+      "ko": "친구 애인이 바람피우는 걸 봤다면, 말하기 vs 모른 척하기?"
+    },
+    {
+      "id": "spicy_choice_004",
+      "deck": "spicy",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Double salary in a city with no friends or this salary with these friends?",
+      "ko": "월급 2배인데 친구 없는 도시 vs 지금 월급에 지금 친구들?"
+    },
+    {
+      "id": "spicy_choice_005",
+      "deck": "spicy",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Drunk-confess to your crush or never say a word?",
+      "ko": "짝사랑 앞에서 취해서 고백 vs 평생 말 못 하기?"
+    },
+    {
+      "id": "spicy_choice_006",
+      "deck": "spicy",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Reveal your entire dating history or your bank balance?",
+      "ko": "연애 흑역사 전부 공개 vs 통장 잔고 공개?"
+    },
+    {
+      "id": "spicy_choice_007",
+      "deck": "spicy",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Dinner with your partner's ex or an overnight trip alone with their parents?",
+      "ko": "애인의 전 애인이랑 밥 한 끼 vs 애인 부모님이랑 단둘이 1박?"
+    },
+    {
+      "id": "spicy_choice_008",
+      "deck": "spicy",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Reunite with your first love or erase the memory?",
+      "ko": "첫사랑이랑 재회 vs 첫사랑 기억 삭제?"
+    },
+    {
+      "id": "spicy_choice_009",
+      "deck": "spicy",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Live with someone here for a year or alone in one room for a year?",
+      "ko": "여기 있는 사람 중 한 명이랑 1년 동거 vs 1년 독방?"
+    },
+    {
+      "id": "spicy_choice_010",
+      "deck": "spicy",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "A day wired to a lie detector or a day with your thoughts subtitled?",
+      "ko": "거짓말 탐지기 달고 하루 vs 속마음 자막 달고 하루?"
+    },
+    {
+      "id": "spicy_choice_011",
+      "deck": "spicy",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Your parents read all your texts or your ex does?",
+      "ko": "내 카톡 전체를 부모님한테 공개 vs 전 애인한테 공개?"
+    },
+    {
+      "id": "spicy_choice_012",
+      "deck": "spicy",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "A million dollars and no dating for five years or life as it is?",
+      "ko": "10억 받고 5년 연애 금지 vs 그냥 살기?"
+    },
+    {
+      "id": "spicy_choice_013",
+      "deck": "spicy",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Cheated on once or lied to a hundred times?",
+      "ko": "바람 한 번 당하기 vs 거짓말 100번 당하기?"
+    },
+    {
+      "id": "spicy_choice_014",
+      "deck": "spicy",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Remember everything you said drunk or nothing at all?",
+      "ko": "취해서 한 말 다 기억나기 vs 하나도 기억 안 나기?"
+    },
+    {
+      "id": "spicy_choice_015",
+      "deck": "spicy",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Tell all your embarrassing stories on a first date or hear all of theirs?",
+      "ko": "소개팅에서 내 흑역사 다 말하기 vs 상대 흑역사 다 듣기?"
+    },
+    {
+      "id": "spicy_choice_016",
+      "deck": "spicy",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "No lock on your phone or your search history auto-shared?",
+      "ko": "폰 잠금 없애기 vs 검색기록 자동 공유?"
+    },
+    {
+      "id": "spicy_answer_001",
+      "deck": "spicy",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "Confess the lie you've kept longest from the people here.",
+      "ko": "이 자리에서 제일 오래 숨긴 거짓말 하나 털어놔"
+    },
+    {
+      "id": "spicy_answer_002",
+      "deck": "spicy",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "Ever had a crush on someone here? Who?",
+      "ko": "여기 있는 사람한테 설렌 적 있어? 누구야"
+    },
+    {
+      "id": "spicy_answer_003",
+      "deck": "spicy",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What you actually want to say to your ex. Say it now.",
+      "ko": "전 애인한테 진짜 하고 싶은 말, 지금 해봐"
+    },
+    {
+      "id": "spicy_answer_004",
+      "deck": "spicy",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "One secret your parents will never know?",
+      "ko": "부모님이 절대 모르는 비밀 하나?"
+    },
+    {
+      "id": "spicy_answer_005",
+      "deck": "spicy",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "The one text you regret most?",
+      "ko": "지금까지 제일 후회하는 톡 한 줄은?"
+    },
+    {
+      "id": "spicy_answer_006",
+      "deck": "spicy",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "Who here changed the most from your first impression? How?",
+      "ko": "여기서 첫인상이랑 지금이 제일 다른 사람은? 어떻게?"
+    },
+    {
+      "id": "spicy_answer_007",
+      "deck": "spicy",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "The drunk thing you've never told anyone. Tonight's the night.",
+      "ko": "취해서 한 짓 중 아직 아무한테도 말 안 한 거, 오늘 말해"
+    },
+    {
+      "id": "spicy_answer_008",
+      "deck": "spicy",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "Something someone here did that hurt and you never said. Say it.",
+      "ko": "여기 있는 사람한테 서운했는데 말 안 한 거, 지금 말해"
+    },
+    {
+      "id": "spicy_answer_009",
+      "deck": "spicy",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "Your most pathetic moment in a relationship?",
+      "ko": "연애하면서 제일 찌질했던 순간은?"
+    },
+    {
+      "id": "spicy_answer_010",
+      "deck": "spicy",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "Worst drunk text you ever sent. Who got it?",
+      "ko": "취해서 보낸 최악의 톡, 받은 사람은 누구?"
+    },
+    {
+      "id": "spicy_answer_011",
+      "deck": "spicy",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "Ever lost someone over money?",
+      "ko": "돈 때문에 사람 잃어본 적 있어?"
+    },
+    {
+      "id": "spicy_answer_012",
+      "deck": "spicy",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "Who here are you least compatible with? Be nice about why.",
+      "ko": "여기서 나랑 제일 안 맞는 사람은? 이유는 착하게"
+    },
+    {
+      "id": "spicy_answer_013",
+      "deck": "spicy",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "An ex, a crush, anyone: whose profile do you still secretly check?",
+      "ko": "전 애인이든 짝사랑이든, 아직 SNS 몰래 들어가 보는 사람 있어?"
+    },
+    {
+      "id": "spicy_answer_014",
+      "deck": "spicy",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "The side of you a partner or crush must never see?",
+      "ko": "애인이나 썸한테 절대 못 보여주는 내 모습은?"
+    },
+    {
+      "id": "warm_up_answer_x01",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What song have you had on repeat lately?",
+      "ko": "요즘 가장 자주 듣는 노래는?"
+    },
+    {
+      "id": "warm_up_answer_x02",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "If your mood today were a color, what would it be?",
+      "ko": "오늘 기분을 색으로 표현하면?"
+    },
+    {
+      "id": "warm_up_answer_x03",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "A fun fact you learned recently?",
+      "ko": "최근에 새로 알게 된 재밌는 사실은?"
+    },
+    {
+      "id": "warm_up_answer_x04",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "Your idea of a perfect weekend morning?",
+      "ko": "주말 아침을 완벽하게 보내는 법은?"
+    },
+    {
+      "id": "warm_up_answer_x05",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "A small thing you're really into these days?",
+      "ko": "요즘 소소하게 빠져 있는 건?"
+    },
+    {
+      "id": "warm_up_answer_x06",
+      "deck": "warm_up",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What's the first thing you do after waking up?",
+      "ko": "일어나서 가장 먼저 하는 일은?"
+    },
+    {
+      "id": "warm_up_choice_x01",
+      "deck": "warm_up",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Mountains or ocean?",
+      "ko": "산 vs 바다?"
+    },
+    {
+      "id": "warm_up_choice_x02",
+      "deck": "warm_up",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Morning person or night owl?",
+      "ko": "아침형 vs 저녁형?"
+    },
+    {
+      "id": "warm_up_choice_x03",
+      "deck": "warm_up",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Homebody or always out?",
+      "ko": "집순이·집돌이 vs 밖순이·밖돌이?"
+    },
+    {
+      "id": "warm_up_choice_x04",
+      "deck": "warm_up",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Planned trip or spontaneous trip?",
+      "ko": "계획 여행 vs 즉흥 여행?"
+    },
+    {
+      "id": "funny_answer_x01",
+      "deck": "funny",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "The most baffling gift you've ever received?",
+      "ko": "지금까지 받은 선물 중 가장 황당했던 건?"
+    },
+    {
+      "id": "funny_answer_x02",
+      "deck": "funny",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "A weird habit only you know about?",
+      "ko": "나만 아는 이상한 습관 하나는?"
+    },
+    {
+      "id": "funny_answer_x03",
+      "deck": "funny",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "A lie you genuinely believed as a kid?",
+      "ko": "어릴 때 진심으로 믿었던 거짓말은?"
+    },
+    {
+      "id": "funny_answer_x04",
+      "deck": "funny",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "Your most embarrassing recent slip-up?",
+      "ko": "최근에 한 가장 창피한 실수는?"
+    },
+    {
+      "id": "funny_answer_x05",
+      "deck": "funny",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "Your proudest piece of totally useless knowledge?",
+      "ko": "쓸데없지만 자랑스러운 지식 하나는?"
+    },
+    {
+      "id": "funny_choice_x01",
+      "deck": "funny",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Funny but plain, or gorgeous but boring?",
+      "ko": "웃긴데 평범 vs 안 웃긴데 완벽?"
+    },
+    {
+      "id": "funny_choice_x02",
+      "deck": "funny",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Only one meme forever or no memes ever?",
+      "ko": "평생 밈 하나만 쓰기 vs 밈 영원히 금지?"
+    },
+    {
+      "id": "funny_choice_x03",
+      "deck": "funny",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Sneeze glitter or burp bubbles?",
+      "ko": "재채기하면 반짝이 vs 트림하면 비눗방울?"
+    },
+    {
+      "id": "funny_vote_x01",
+      "deck": "funny",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "en": "Who'd nail a surprise talent show?",
+      "ko": "갑자기 개인기 시키면 제일 잘할 것 같은 사람은?"
+    },
+    {
+      "id": "funny_vote_x02",
+      "deck": "funny",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "en": "Who laughs at their own jokes the most?",
+      "ko": "자기 개그에 자기가 제일 많이 웃는 사람은?"
+    },
+    {
+      "id": "deep_answer_x01",
+      "deck": "deep",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "Something you've changed your mind about recently?",
+      "ko": "최근에 생각이 바뀐 게 있다면?"
+    },
+    {
+      "id": "deep_answer_x02",
+      "deck": "deep",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What does success look like to you?",
+      "ko": "나에게 '성공'은 어떤 모습이야?"
+    },
+    {
+      "id": "deep_answer_x03",
+      "deck": "deep",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "Who are you most grateful for lately?",
+      "ko": "요즘 가장 고마운 사람은 누구야?"
+    },
+    {
+      "id": "deep_answer_x04",
+      "deck": "deep",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What would you say to yourself ten years from now?",
+      "ko": "10년 뒤의 나에게 하고 싶은 말은?"
+    },
+    {
+      "id": "deep_answer_x05",
+      "deck": "deep",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What keeps you going when things get hard?",
+      "ko": "힘들 때 나를 버티게 하는 건?"
+    },
+    {
+      "id": "deep_answer_x06",
+      "deck": "deep",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "A quiet pride others don't know about?",
+      "ko": "남들은 모르는 나만의 자부심은?"
+    },
+    {
+      "id": "deep_answer_x07",
+      "deck": "deep",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "An experience that helped you grow recently?",
+      "ko": "최근에 나를 성장시킨 경험은?"
+    },
+    {
+      "id": "deep_choice_x01",
+      "deck": "deep",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Stability or challenge?",
+      "ko": "안정 vs 도전?"
+    },
+    {
+      "id": "deep_choice_x02",
+      "deck": "deep",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Travel to the past or the future?",
+      "ko": "과거로 여행 vs 미래로 여행?"
+    },
+    {
+      "id": "deep_choice_x03",
+      "deck": "deep",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "A few close friends or a wide circle?",
+      "ko": "깊은 친구 몇 명 vs 넓은 인맥?"
+    },
+    {
+      "id": "couple_answer_x01",
+      "deck": "couple",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "Your most grateful moment with me today?",
+      "ko": "오늘 하루 중 나한테 제일 고마웠던 순간은?"
+    },
+    {
+      "id": "couple_answer_x02",
+      "deck": "couple",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "When do I look most lovable to you?",
+      "ko": "내가 언제 제일 사랑스러워 보여?"
+    },
+    {
+      "id": "couple_answer_x03",
+      "deck": "couple",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "A scene you remember from the day we met?",
+      "ko": "우리 처음 만난 날 기억나는 장면은?"
+    },
+    {
+      "id": "couple_answer_x04",
+      "deck": "couple",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "One thing you really want to do together next?",
+      "ko": "다음에 꼭 같이 하고 싶은 건?"
+    },
+    {
+      "id": "couple_answer_x05",
+      "deck": "couple",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "A feeling of yours I sometimes miss?",
+      "ko": "내가 가끔 놓치는 너의 마음은?"
+    },
+    {
+      "id": "couple_answer_x06",
+      "deck": "couple",
+      "cardType": "answer",
+      "modes": [
+        "classic_flip",
+        "hot_seat"
+      ],
+      "en": "What's a small habit of mine you find cute?",
+      "ko": "내 습관 중 귀엽다고 생각하는 건?"
+    },
+    {
+      "id": "couple_choice_x01",
+      "deck": "couple",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Date night in or out?",
+      "ko": "집 데이트 vs 밖 데이트?"
+    },
+    {
+      "id": "couple_choice_x02",
+      "deck": "couple",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Plan the trip or wing it?",
+      "ko": "여행은 계획파 vs 즉흥파?"
+    },
+    {
+      "id": "couple_choice_x03",
+      "deck": "couple",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Show love with words or with actions?",
+      "ko": "사랑 표현은 말로 vs 행동으로?"
+    },
+    {
+      "id": "couple_choice_x04",
+      "deck": "couple",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Late-night snack together or workout together?",
+      "ko": "함께 야식 vs 함께 운동?"
+    },
+    {
+      "id": "couple_choice_x05",
+      "deck": "couple",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Morning couple or night-owl couple?",
+      "ko": "아침형 커플 vs 밤형 커플?"
+    },
+    {
+      "id": "party_vote_x01",
+      "deck": "party",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "en": "Who'd survive longest on a desert island?",
+      "ko": "무인도에서 제일 오래 살아남을 것 같은 사람은?"
+    },
+    {
+      "id": "party_vote_x02",
+      "deck": "party",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "en": "Who'd hog the mic at karaoke?",
+      "ko": "노래방 가면 마이크 안 놓을 것 같은 사람은?"
+    },
+    {
+      "id": "party_vote_x03",
+      "deck": "party",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "en": "Who'd talk to a celebrity first if we met one?",
+      "ko": "길에서 연예인 만나면 제일 먼저 말 걸 것 같은 사람은?"
+    },
+    {
+      "id": "party_vote_x04",
+      "deck": "party",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "en": "Who's the worst with directions?",
+      "ko": "여기서 제일 방향치일 것 같은 사람은?"
+    },
+    {
+      "id": "party_vote_x05",
+      "deck": "party",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "en": "Who always blinks in group photos?",
+      "ko": "단체 사진에서 항상 눈 감는 사람은?"
+    },
+    {
+      "id": "party_vote_x06",
+      "deck": "party",
+      "cardType": "vote",
+      "modes": [
+        "whos_most_likely"
+      ],
+      "en": "Who's most likely to get married first?",
+      "ko": "여기서 제일 먼저 결혼할 것 같은 사람은?"
+    },
+    {
+      "id": "party_choice_x01",
+      "deck": "party",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Amusement park or camping?",
+      "ko": "놀이공원 vs 캠핑?"
+    },
+    {
+      "id": "party_choice_x02",
+      "deck": "party",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Big group trip or small trip?",
+      "ko": "단체 여행 vs 소수 여행?"
+    },
+    {
+      "id": "party_choice_x03",
+      "deck": "party",
+      "cardType": "choice",
+      "modes": [
+        "this_or_that"
+      ],
+      "en": "Party games or board games?",
+      "ko": "몸으로 하는 게임 vs 보드게임?"
     }
   ]
 }

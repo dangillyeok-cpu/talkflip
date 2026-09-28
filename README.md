@@ -7,7 +7,7 @@ This folder contains the MVP content guide and data contract for TalkFlip.
 - `TalkFlip_MVP_Card_Guide.md`: product and content rules
 - `decks.json`: deck metadata and deck-level player limits
 - `cards.schema.json`: JSON Schema for card file shape
-- `cards.json`: production v1 card data
+- `cards.json`: core card data (the contract; `validate_cards.mjs` checks this file only)
 - `validate_cards.mjs`: product-rule validator
 - `build.mjs`: web build — merges `cards.json` + `data/*.json` into `talkflip_pwa/cards.js`, generates `talkflip_pwa/decks/*.html`, rolls the service-worker cache version
 - `data/spicy.json`: Spicy deck (web only, 50 cards; vote cards carry `trait`)
@@ -48,7 +48,8 @@ node build.mjs          # write cards.js, decks/*.html, bump sw.js cache
 node build.mjs --check  # validate only
 ```
 
-`talkflip_pwa/cards.js` and `talkflip_pwa/decks/*.html` are generated. Edit the sources
+`talkflip_pwa/cards.js`, `talkflip_pwa/decks/*.html`, `talkflip_pwa/penalty.html` and the iOS bundle files
+`TalkFlip/TalkFlipApp/cards.json` + `decks.json` (core + extras + spicy, `modes` filled in) are generated. Edit the sources
 (`cards.json`, `data/*.json`) and rebuild; never edit the outputs by hand.
 Outputs also include `talkflip_pwa/penalty.html`. Taboo cards are dropped for the web. Every vote card must have a `trait`
 (inline for `data/*.json`, via `data/traits.json` for `cards.json`), and every

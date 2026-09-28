@@ -57,6 +57,17 @@
         "en": "Group cards for voting, quick reactions, and high replay.",
         "ko": "지목, 빠른 반응, 여러 명의 플레이에 맞춘 카드."
       }
+    },
+    {
+      "id": "spicy",
+      "name": {
+        "en": "Spicy",
+        "ko": "매운맛"
+      },
+      "description": {
+        "en": "Real questions for drinks and couples. Right up to the line, never over.",
+        "ko": "술자리·커플용 찐 질문. 선 넘을락 말락에서 멈춤."
+      }
     }
   ]
 }

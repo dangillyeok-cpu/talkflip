@@ -28,7 +28,8 @@
         "funny",
         "deep",
         "couple",
-        "party"
+        "party",
+        "spicy"
       ]
     },
     "cardType": {
@@ -71,7 +72,7 @@
       "properties": {
         "id": {
           "type": "string",
-          "pattern": "^(warm_up|funny|deep|couple|party)_(answer|choice|vote|story|deep_light|taboo)_[0-9]{3}$"
+          "pattern": "^(warm_up|funny|deep|couple|party|spicy)_(answer|choice|vote|story|deep_light|taboo)_([0-9]{3}|x[0-9]{2})$"
         },
         "deck": {
           "$ref": "#/$defs/deck"

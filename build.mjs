@@ -256,6 +256,44 @@ for (const d of DECKS) {
 }
 console.log(`wrote talkflip_pwa/decks/{${DECKS.map((d) => d.id).join(",")}}.html`);
 
+/* ---------- iOS bundle: TalkFlip/TalkFlipApp/cards.json + decks.json ---------- */
+// The SwiftUI app (v1 UI) decodes TalkCard { id, deck, cardType, modes, en, ko, follow?, … } and
+// Deck { id, name{en,ko}, description{en,ko}, minPlayers?, maxPlayers? }. It gets every card the
+// web has (core incl. taboo + extras + spicy); `modes` is derived from cardType for the web-only
+// cards. Unknown keys (trait, penalty) are ignored by Codable.
+const IOS = path.join(ROOT, "TalkFlip", "TalkFlipApp");
+const MODES_BY_TYPE = {
+  answer: ["classic_flip", "hot_seat"], story: ["classic_flip", "hot_seat"], deep_light: ["classic_flip", "hot_seat"],
+  choice: ["this_or_that"], vote: ["whos_most_likely"], taboo: ["taboo_round"],
+};
+const iosCard = (c) => {
+  const o = { id: c.id, deck: c.deck, cardType: c.cardType, modes: c.modes ?? MODES_BY_TYPE[c.cardType] };
+  for (const k of ["minPlayers", "maxPlayers", "tone"]) if (c[k] !== undefined) o[k] = c[k];
+  o.en = c.en; o.ko = c.ko;
+  if (c.follow) o.follow = { en: c.follow.en, ko: c.follow.ko };
+  if (c.bannedEn) o.bannedEn = c.bannedEn;
+  if (c.bannedKo) o.bannedKo = c.bannedKo;
+  if (!o.modes) fail(`${c.id}: no modes for iOS (cardType ${c.cardType})`);
+  return o;
+};
+const iosCards = [...core, ...spicy, ...extras].map(iosCard);
+const rootDecks = readJson("decks.json");
+const iosDecks = {
+  version: rootDecks.version,
+  decks: [
+    ...rootDecks.decks,
+    ...DECKS.filter((d) => !rootDecks.decks.some((r) => r.id === d.id)).map((d) => ({
+      id: d.id, name: { en: d.en, ko: d.ko }, description: { en: d.tagline_en, ko: d.tagline_ko },
+      ...(d.players ? { minPlayers: d.players, maxPlayers: d.players } : {}),
+    })),
+  ],
+};
+if (fs.existsSync(IOS)) {
+  fs.writeFileSync(path.join(IOS, "cards.json"), JSON.stringify({ version: readJson("cards.json").version, cards: iosCards }, null, 2) + "\n");
+  fs.writeFileSync(path.join(IOS, "decks.json"), JSON.stringify(iosDecks, null, 2) + "\n");
+  console.log(`wrote TalkFlip/TalkFlipApp/cards.json (${iosCards.length} cards) + decks.json (${iosDecks.decks.length} decks)`);
+}
+
 /* ---------- write penalty.html (벌칙 룰렛 landing) ---------- */
 function penaltyPage() {
   const n = PENALTIES.length;
