@@ -1,5 +1,5 @@
 /* TalkFlip service worker — offline app shell */
-const CACHE = "talkflip-v21-69ee8e85";
+const CACHE = "talkflip-v21-8f0184b9";
 const ASSETS = [
   "./",
   "./index.html",

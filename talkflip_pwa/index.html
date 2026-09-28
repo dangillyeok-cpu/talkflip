@@ -156,6 +156,8 @@
   .modal{width:100%;max-width:420px;max-height:100%;background:var(--s1);border-radius:24px;padding:16px;display:flex;flex-direction:column;gap:12px}
   /* preview is 1080x1600: cap its height so the modal (image + two buttons) always fits the screen */
   .modal img{display:block;width:auto;max-width:100%;max-height:calc(100vh - 220px);max-height:calc(100dvh - 220px);margin:0 auto;border-radius:16px}
+  .coach{position:fixed;left:50%;transform:translateX(-50%);top:calc(var(--sat) + 66px);background:var(--text);color:var(--ink);padding:9px 14px;border-radius:12px;font-size:13px;font-weight:700;white-space:nowrap;z-index:15;animation:fade .2s;pointer-events:none}
+  .coach::before{content:"";position:absolute;left:50%;top:-6px;width:12px;height:12px;background:var(--text);transform:translateX(-50%) rotate(45deg);border-radius:2px}
   .toast{position:fixed;left:50%;bottom:calc(var(--sab) + 90px);transform:translateX(-50%);background:var(--text);color:var(--ink);padding:10px 16px;border-radius:999px;font-size:13px;font-weight:700;z-index:40}
   .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 </style>
@@ -171,7 +173,7 @@ const ADSENSE_CLIENT = "ca-pub-5582757393756677";
 const INTERSTITIAL_COOLDOWN_MS = 90000;
 const ROUND_SIZE = 10;
 const VOTE_PER_ROUND = 4;
-const KEY = { players:"tf2.players", deck:"tf2.deck", lang:"tf2.lang" };
+const KEY = { players:"tf2.players", deck:"tf2.deck", lang:"tf2.lang", hinted:"tf2.hinted" };
 // Balance-card national stats (worker/). Same-origin /api in production, wrangler dev on localhost.
 // Override for testing or a *.workers.dev deploy: localStorage.setItem("tf2.api", "https://….workers.dev/api")
 const STATS_API = (() => { try { const o = localStorage.getItem("tf2.api"); if(o) return o; } catch(e){} return (location.hostname === "localhost" || location.hostname === "127.0.0.1") ? "http://localhost:8787/api" : "/api"; })();
@@ -198,7 +200,7 @@ const STR = {
     shareFail:"여기선 공유가 안 돼. 이미지 저장 눌러.",
     tagLine:"친구 태그하고 같이 해봐",
     roulette:"벌칙 룰렛", rouletteSub:"돌리면 룰렛이 정해줌. 선은 지키기.", rouletteFor:n => `${n} 벌칙`, spin:"돌리기", spinAgain:"다시 돌리기", penaltyBtn:"벌칙", rouletteReady:"?",
-    about:"소개", guides:"플레이 방법", penaltyPage:"벌칙 목록", privacy:"개인정보", terms:"약관"
+    coach:"↑ 탭해서 덱 바꾸기 · 설정은 오른쪽 ☰", about:"소개", guides:"플레이 방법", penaltyPage:"벌칙 목록", privacy:"개인정보", terms:"약관"
   },
   en: {
     next:"Swipe up for the next card", nextBtn:"Next card", skip:"Pass",
@@ -216,7 +218,7 @@ const STR = {
     shareFail:"Sharing isn't supported here. Use Save image.",
     tagLine:"Tag a friend and play",
     roulette:"Penalty wheel", rouletteSub:"Spin and the wheel decides. Keep it decent.", rouletteFor:n => `Penalty for ${n}`, spin:"Spin", spinAgain:"Spin again", penaltyBtn:"Penalty", rouletteReady:"?",
-    about:"About", guides:"How to play", penaltyPage:"Penalty list", privacy:"Privacy", terms:"Terms"
+    coach:"↑ Tap to switch decks · settings top right ☰", about:"About", guides:"How to play", penaltyPage:"Penalty list", privacy:"Privacy", terms:"Terms"
   }
 };
 const t = () => STR[state.lang];
@@ -307,7 +309,7 @@ function topBar(){
   const s = t(); const d = DECK[state.deckId];
   return `<div class="top">
     <button class="icon-btn" id="btnAgain" aria-label="${esc(s.again)}">${ic("close")}</button>
-    <div><button class="chip" id="btnDeck" aria-label="${esc(s.deckLabel)}">${esc(L({ko:d.ko,en:d.en}))}</button><span class="prog">${state.idx+1} / ${state.round.length}</span></div>
+    <div><button class="chip" id="btnDeck" aria-label="${esc(s.deckLabel)}">${esc(L({ko:d.ko,en:d.en}))}<span class="n">▾</span></button><span class="prog">${state.idx+1} / ${state.round.length}</span></div>
     <button class="icon-btn" id="btnMenu" aria-label="${esc(s.menuTitle)}">${ic("menu")}</button>
   </div>`;
 }
@@ -759,6 +761,16 @@ document.documentElement.lang = state.lang;
 save(); // persists a deck chosen via ?deck=
 buildRound();
 render();
+// first visit only: point at the deck chip and the menu, gone on the first touch or after 5s
+try {
+  if(!localStorage.getItem(KEY.hinted)){
+    localStorage.setItem(KEY.hinted, "1");
+    const c = document.createElement("div"); c.className = "coach"; c.textContent = t().coach; document.body.appendChild(c);
+    const off = () => { c.remove(); document.removeEventListener("pointerdown", off); };
+    setTimeout(() => document.addEventListener("pointerdown", off, { once:true }), 400);
+    setTimeout(off, 5000);
+  }
+} catch(e){}
 // ?roulette (from penalty.html): open the wheel over the first card
 try { if(new URLSearchParams(location.search).has("roulette")){ history.replaceState(null, "", location.pathname); openRoulette(null); } } catch(e){}
 initAds();
